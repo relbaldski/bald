@@ -1,5 +1,5 @@
 function TrigonLoader()
-    if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("TrigonLoader") then return end
+    if gethui():FindFirstChild("TrigonLoader") then return end
     local TrigonLoader = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local KeySection = Instance.new("Frame")
@@ -51,7 +51,7 @@ function TrigonLoader()
     --Properties:
 
     TrigonLoader.Name = "TrigonLoader"
-    TrigonLoader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    TrigonLoader.Parent = gethui()
     TrigonLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     TrigonLoader.DisplayOrder = 2
 
@@ -531,7 +531,7 @@ function TrigonLoader()
 end
 
 function TrigonMain()
-    if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("TrigonMain") then return end
+    if gethui():FindFirstChild("TrigonMain") then return end
     local TrigonMain = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local BottomMenuFrame = Instance.new("Frame")
@@ -596,7 +596,7 @@ function TrigonMain()
 
     TrigonMain.Name = "TrigonMain"
     TrigonMain.Enabled = false  
-    TrigonMain.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    TrigonMain.Parent = gethui()
     TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     MainFrame.Name = "MainFrame"
@@ -1198,7 +1198,7 @@ function TrigonMain()
 end
 
 function TrigonTopBar()
-    if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("TrigonTopBar") then return end
+    if gethui():FindFirstChild("TrigonTopBar") then return end
     local TrigonTopBar = Instance.new("ScreenGui")
     local TopbarFrame = Instance.new("Frame")
     local Right = Instance.new("Frame")
@@ -1217,7 +1217,7 @@ function TrigonTopBar()
     TrigonTopBar.IgnoreGuiInset = true
     TrigonTopBar.Name = "TrigonTopBar"
     TrigonTopBar.Enabled = false   
-    TrigonTopBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    TrigonTopBar.Parent = gethui()
     TrigonTopBar.ResetOnSpawn = false
     TrigonTopBar.ZIndexBehavior = Enum.ZIndexBehavior.Global
     TrigonTopBar.AutoLocalize = true
