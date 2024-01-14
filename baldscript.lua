@@ -1,3 +1,5 @@
+repeat  task.wait() until game:IsLoaded()
+print("v0.02")
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
@@ -1723,7 +1725,7 @@ function main()
     tbl.ScriptBox.Size = UDim2.new(0.952941, 0, 0.982121, 0)
     tbl.ScriptBox.TextColor3 = Color3.fromRGB(150, 150, 150)
     tbl.ScriptBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.ScriptBox_1.Text = "~~ Changelog v0.02 ~~\n    + Added changelog\n    + Added game script section (will be adding different game scripts soon)\n    + Added Console Logging\n\n~~ Changelog v0.01 ~~\n- Tridog release :o"
+    tbl.ScriptBox.Text = "~~ Changelog v0.02 ~~\n    + Added changelog\n    + Added game script section (will be adding different game scripts soon)\n    + Added Console Logging\n\n~~ Changelog v0.01 ~~\n- Tridog release :o"
     tbl.ScriptBox.MultiLine = true
     tbl.ScriptBox.CursorPosition = -1
     tbl.ScriptBox.Name = "ScriptBox"
@@ -4536,5 +4538,7 @@ end
 
 main()
 loader()
+
+
 
 
