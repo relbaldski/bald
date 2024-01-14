@@ -1,5 +1,4 @@
---v0.01
-
+--v0.02
 function topbar(ButtonName,Image,Left)
     task.wait(2)
     local RunService = game:GetService("RunService")
@@ -848,106 +847,150 @@ function loader()
         ProgressBar(30, "Setup Complete!", 1)
         wait(0.5)
         MainFrame.LoaderFrame.Visible = false
-        MainFrame.SelectorFrame.Visible = true
+        --MainFrame.SelectorFrame.Visible = true
 
-
+        local function  loadtrigon()
+            local buttonx23 = topbar("Trigon", "rbxassetid://15844306310", true)
+            Loader.Enabled = false
+            MainUI.Enabled = true
+            print(MainUI.Enabled)
+        end
 
         repeat
             task.wait() 
         until Loader and MainUI
 
         OptionR.Activated:Connect(function()
-            local buttonx23 = topbar("Trigon", "rbxassetid://15844306310", true)
-            Loader.Enabled = false
-            MainUI.Enabled = true
-            print(MainUI.Enabled)
+
         end)
+
+        loadtrigon()
     end)    
 end
 
 function main()
-    
 
     local tbl =
-    {
-        TrigonMain = Instance.new("ScreenGui"),
-        MainFrame = Instance.new("Frame"),
-        BottomMenuFrame = Instance.new("Frame"),
-        LeftFrame = Instance.new("Frame"),
-        ExitBtn = Instance.new("ImageButton"),
-        Icon = Instance.new("ImageLabel"),
-        UICorner = Instance.new("UICorner"),
-        RightFrame = Instance.new("Frame"),
-        Button = Instance.new("ImageButton"),
-        UIGradient = Instance.new("UIGradient"),
-        Icon_1 = Instance.new("ImageLabel"),
-        MenuList = Instance.new("Frame"),
-        UICorner_1 = Instance.new("UICorner"),
-        UIGridLayout = Instance.new("UIGridLayout"),
-        ExecBtn = Instance.new("ImageButton"),
-        Icon_2 = Instance.new("ImageLabel"),
-        UIStroke = Instance.new("UIStroke"),
-        UICorner_2 = Instance.new("UICorner"),
-        UIGradient_1 = Instance.new("UIGradient"),
-        CloudBtn = Instance.new("ImageButton"),
-        UIGradient_2 = Instance.new("UIGradient"),
-        Icon_3 = Instance.new("ImageLabel"),
-        UIStroke_1 = Instance.new("UIStroke"),
-        UICorner_3 = Instance.new("UICorner"),
-        LSBtn = Instance.new("ImageButton"),
-        UIGradient_3 = Instance.new("UIGradient"),
-        Icon_4 = Instance.new("ImageLabel"),
-        UIStroke_2 = Instance.new("UIStroke"),
-        UICorner_4 = Instance.new("UICorner"),
-        SettingsBtn = Instance.new("ImageButton"),
-        UIGradient_4 = Instance.new("UIGradient"),
-        Icon_5 = Instance.new("ImageLabel"),
-        UIStroke_3 = Instance.new("UIStroke"),
-        UICorner_5 = Instance.new("UICorner"),
-        UICorner_6 = Instance.new("UICorner"),
-        ExecFrame = Instance.new("Frame"),
-        Buttons = Instance.new("Frame"),
-        UIListLayout = Instance.new("UIListLayout"),
-        Button1 = Instance.new("ImageButton"),
-        Title = Instance.new("TextLabel"),
-        UIStroke_4 = Instance.new("UIStroke"),
-        UICorner_7 = Instance.new("UICorner"),
-        Button4 = Instance.new("ImageButton"),
-        Title_1 = Instance.new("TextLabel"),
-        UICorner_8 = Instance.new("UICorner"),
-        UIStroke_5 = Instance.new("UIStroke"),
-        Button3 = Instance.new("ImageButton"),
-        Title_2 = Instance.new("TextLabel"),
-        UICorner_9 = Instance.new("UICorner"),
-        UIStroke_6 = Instance.new("UIStroke"),
-        Button2 = Instance.new("ImageButton"),
-        Title_3 = Instance.new("TextLabel"),
-        UICorner_10 = Instance.new("UICorner"),
-        UIStroke_7 = Instance.new("UIStroke"),
-        UICorner_11 = Instance.new("UICorner"),
-        ScrollingFrame = Instance.new("ScrollingFrame"),
-        LocalScript = Instance.new("LocalScript"),
-        ScriptBox = Instance.new("TextBox"),
-        Highlighter = Instance.new("ModuleScript"),
-        lexer = Instance.new("ModuleScript"),
-        language = Instance.new("ModuleScript"),
-        theme = Instance.new("ModuleScript"),
-        types = Instance.new("ModuleScript"),
-        utility = Instance.new("ModuleScript"),
-        UICorner_12 = Instance.new("UICorner"),
-        CloudFrame = Instance.new("Frame"),
-        UICorner_13 = Instance.new("UICorner"),
-        TextLabel = Instance.new("TextLabel"),
-        LocalScriptFrame = Instance.new("Frame"),
-        UICorner_14 = Instance.new("UICorner"),
-        TextLabel_1 = Instance.new("TextLabel"),
-        SettingsFrame = Instance.new("Frame"),
-        UICorner_15 = Instance.new("UICorner"),
-        TextLabel_2 = Instance.new("TextLabel"),
-        LocalScript_1 = Instance.new("LocalScript")
-    }
+        {
+            TrigonMain = Instance.new("ScreenGui"),
+            MainFrame = Instance.new("Frame"),
+            BottomMenuFrame = Instance.new("Frame"),
+            LeftFrame = Instance.new("Frame"),
+            ExitBtn = Instance.new("ImageButton"),
+            Icon = Instance.new("ImageLabel"),
+            UICorner = Instance.new("UICorner"),
+            RightFrame = Instance.new("Frame"),
+            Button = Instance.new("ImageButton"),
+            UIGradient = Instance.new("UIGradient"),
+            Icon_1 = Instance.new("ImageLabel"),
+            MenuList = Instance.new("Frame"),
+            UICorner_1 = Instance.new("UICorner"),
+            UIGridLayout = Instance.new("UIGridLayout"),
+            HBtn = Instance.new("ImageButton"),
+            UIGradient_1 = Instance.new("UIGradient"),
+            Icon_2 = Instance.new("ImageLabel"),
+            UIStroke = Instance.new("UIStroke"),
+            UICorner_2 = Instance.new("UICorner"),
+            ExecBtn = Instance.new("ImageButton"),
+            Icon_3 = Instance.new("ImageLabel"),
+            UIStroke_1 = Instance.new("UIStroke"),
+            UICorner_3 = Instance.new("UICorner"),
+            UIGradient_2 = Instance.new("UIGradient"),
+            CloudBtn = Instance.new("ImageButton"),
+            UIGradient_3 = Instance.new("UIGradient"),
+            Icon_4 = Instance.new("ImageLabel"),
+            UIStroke_2 = Instance.new("UIStroke"),
+            UICorner_4 = Instance.new("UICorner"),
+            SettingsBtn = Instance.new("ImageButton"),
+            UIGradient_4 = Instance.new("UIGradient"),
+            Icon_5 = Instance.new("ImageLabel"),
+            UIStroke_3 = Instance.new("UIStroke"),
+            UICorner_5 = Instance.new("UICorner"),
+            UICorner_6 = Instance.new("UICorner"),
+            ExecFrame = Instance.new("Frame"),
+            Buttons = Instance.new("Frame"),
+            UIListLayout = Instance.new("UIListLayout"),
+            Button1 = Instance.new("ImageButton"),
+            UIStroke_4 = Instance.new("UIStroke"),
+            UICorner_7 = Instance.new("UICorner"),
+            Title = Instance.new("TextLabel"),
+            Button4 = Instance.new("ImageButton"),
+            Title_1 = Instance.new("TextLabel"),
+            UICorner_8 = Instance.new("UICorner"),
+            UIStroke_5 = Instance.new("UIStroke"),
+            Button3 = Instance.new("ImageButton"),
+            Title_2 = Instance.new("TextLabel"),
+            UICorner_9 = Instance.new("UICorner"),
+            UIStroke_6 = Instance.new("UIStroke"),
+            Button2 = Instance.new("ImageButton"),
+            Title_3 = Instance.new("TextLabel"),
+            UICorner_10 = Instance.new("UICorner"),
+            UIStroke_7 = Instance.new("UIStroke"),
+            UICorner_11 = Instance.new("UICorner"),
+            ScrollingFrame = Instance.new("ScrollingFrame"),
+            LocalScript = Instance.new("LocalScript"),
+            ScriptBox = Instance.new("TextBox"),
+            Highlighter = Instance.new("ModuleScript"),
+            lexer = Instance.new("ModuleScript"),
+            language = Instance.new("ModuleScript"),
+            theme = Instance.new("ModuleScript"),
+            types = Instance.new("ModuleScript"),
+            utility = Instance.new("ModuleScript"),
+            UICorner_12 = Instance.new("UICorner"),
+            logFrame = Instance.new("Frame"),
+            UICorner_13 = Instance.new("UICorner"),
+            logButtons = Instance.new("Frame"),
+            logOutput = Instance.new("Frame"),
+            Button_1 = Instance.new("ImageButton"),
+            TextLabel = Instance.new("TextLabel"),
+            UIListLayout_1 = Instance.new("UIListLayout"),
+            UIListLayout_2 = Instance.new("UIListLayout"),
+            logWarning = Instance.new("Frame"),
+            Button_2 = Instance.new("ImageButton"),
+            TextLabel_1 = Instance.new("TextLabel"),
+            UIListLayout_3 = Instance.new("UIListLayout"),
+            logError = Instance.new("Frame"),
+            Button_3 = Instance.new("ImageButton"),
+            TextLabel_2 = Instance.new("TextLabel"),
+            UIListLayout_4 = Instance.new("UIListLayout"),
+            logInfo = Instance.new("Frame"),
+            Button_4 = Instance.new("ImageButton"),
+            TextLabel_3 = Instance.new("TextLabel"),
+            UIListLayout_5 = Instance.new("UIListLayout"),
+            cclrbtn = Instance.new("ImageButton"),
+            Title_4 = Instance.new("TextLabel"),
+            UICorner_14 = Instance.new("UICorner"),
+            UIStroke_8 = Instance.new("UIStroke"),
+            TextLabel_4 = Instance.new("TextLabel"),
+            consoleFrame = Instance.new("ScrollingFrame"),
+            GlobalLog = Instance.new("LocalScript"),
+            TextBox = Instance.new("TextLabel"),
+            SettingsFrame = Instance.new("Frame"),
+            UICorner_15 = Instance.new("UICorner"),
+            sample = Instance.new("Frame"),
+            UIListLayout_6 = Instance.new("UIListLayout"),
+            UICorner_16 = Instance.new("UICorner"),
+            Title_5 = Instance.new("TextLabel"),
+            Title_6 = Instance.new("TextLabel"),
+            Title_7 = Instance.new("TextLabel"),
+            ImageLabel = Instance.new("ImageLabel"),
+            homeFrame = Instance.new("Frame"),
+            UICorner_17 = Instance.new("UICorner"),
+            changelogFrame = Instance.new("ScrollingFrame"),
+            ScriptBox_1 = Instance.new("TextBox"),
+            UICorner_18 = Instance.new("UICorner"),
+            UIListLayout_7 = Instance.new("UIListLayout"),
+            scriptsFrame = Instance.new("ScrollingFrame"),
+            UICorner_19 = Instance.new("UICorner"),
+            UIListLayout_8 = Instance.new("UIListLayout"),
+            _GameHeader = Instance.new("Frame"),
+            Title_8 = Instance.new("TextLabel"),
+            UICorner_20 = Instance.new("UICorner"),
+            TextButton = Instance.new("TextButton"),
+            UICorner_21 = Instance.new("UICorner"),
+            LocalScript_1 = Instance.new("LocalScript")
+        }
 
-    tbl.TrigonMain.Enabled = false
     tbl.TrigonMain.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
     tbl.TrigonMain.IgnoreGuiInset = true
     tbl.TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -999,7 +1042,7 @@ function main()
     tbl.Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.Icon.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Icon.Image = "rbxassetid://15879382339"
-    tbl.Icon.Size = UDim2.new(0.834218, 0, 4.67447, 0)
+    tbl.Icon.Size = UDim2.new(0.834218, 0, 12.9208, 0)
     tbl.Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Icon.Name = "Icon"
     tbl.Icon.BackgroundTransparency = 1
@@ -1042,7 +1085,7 @@ function main()
     tbl.Icon_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Icon_1.Image = "rbxassetid://15844306310"
-    tbl.Icon_1.Size = UDim2.new(0.858809, 0, 0.783259, 0)
+    tbl.Icon_1.Size = UDim2.new(0.83136, 0, 0.783259, 0)
     tbl.Icon_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Icon_1.Name = "Icon"
     tbl.Icon_1.BackgroundTransparency = 1
@@ -1068,6 +1111,43 @@ function main()
     tbl.UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     tbl.UIGridLayout.Parent = tbl.MenuList
 
+    tbl.HBtn.BorderSizePixel = 3
+    tbl.HBtn.ScaleType = Enum.ScaleType.Fit
+    tbl.HBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.HBtn.BorderMode = Enum.BorderMode.Inset
+    tbl.HBtn.Selectable = false
+    tbl.HBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.HBtn.Size = UDim2.new(0.12, 0, 0.8, 0)
+    tbl.HBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.HBtn.Name = "HBtn"
+    tbl.HBtn.Position = UDim2.new(0.406853, 0, 0.5, 0)
+    tbl.HBtn.Parent = tbl.MenuList
+
+    tbl.UIGradient_1.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 64, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 82, 107)) }
+    tbl.UIGradient_1.Rotation = -90
+    tbl.UIGradient_1.Parent = tbl.HBtn
+
+    tbl.Icon_2.ImageColor3 = Color3.fromRGB(201, 205, 210)
+    tbl.Icon_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+    tbl.Icon_2.BorderSizePixel = 0
+    tbl.Icon_2.ScaleType = Enum.ScaleType.Fit
+    tbl.Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Icon_2.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Icon_2.Image = "rbxassetid://15982534656"
+    tbl.Icon_2.Size = UDim2.new(0.858703, 0, 0.887424, 0)
+    tbl.Icon_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Icon_2.Name = "Icon"
+    tbl.Icon_2.BackgroundTransparency = 1
+    tbl.Icon_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+    tbl.Icon_2.Parent = tbl.HBtn
+
+    tbl.UIStroke.Thickness = 2
+    tbl.UIStroke.Color = Color3.fromRGB(121, 133, 167)
+    tbl.UIStroke.Parent = tbl.HBtn
+
+    tbl.UICorner_2.CornerRadius = UDim.new(0.14, 0)
+    tbl.UICorner_2.Parent = tbl.HBtn
+
     tbl.ExecBtn.BorderSizePixel = 3
     tbl.ExecBtn.ScaleType = Enum.ScaleType.Fit
     tbl.ExecBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1079,30 +1159,30 @@ function main()
     tbl.ExecBtn.Position = UDim2.new(0.406853, 0, 0.5, 0)
     tbl.ExecBtn.Parent = tbl.MenuList
 
-    tbl.Icon_2.ImageColor3 = Color3.fromRGB(201, 205, 210)
-    tbl.Icon_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
-    tbl.Icon_2.BorderSizePixel = 0
-    tbl.Icon_2.ScaleType = Enum.ScaleType.Fit
-    tbl.Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.Icon_2.AnchorPoint = Vector2.new(0.5, 0.5)
-    tbl.Icon_2.Image = "rbxassetid://15845222401"
-    tbl.Icon_2.Size = UDim2.new(1, 0, 1, 0)
-    tbl.Icon_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.Icon_2.Name = "Icon"
-    tbl.Icon_2.BackgroundTransparency = 1
-    tbl.Icon_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-    tbl.Icon_2.Parent = tbl.ExecBtn
+    tbl.Icon_3.ImageColor3 = Color3.fromRGB(201, 205, 210)
+    tbl.Icon_3.SizeConstraint = Enum.SizeConstraint.RelativeXX
+    tbl.Icon_3.BorderSizePixel = 0
+    tbl.Icon_3.ScaleType = Enum.ScaleType.Fit
+    tbl.Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Icon_3.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Icon_3.Image = "rbxassetid://15845222401"
+    tbl.Icon_3.Size = UDim2.new(0.858703, 0, 0.887424, 0)
+    tbl.Icon_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Icon_3.Name = "Icon"
+    tbl.Icon_3.BackgroundTransparency = 1
+    tbl.Icon_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+    tbl.Icon_3.Parent = tbl.ExecBtn
 
-    tbl.UIStroke.Thickness = 2
-    tbl.UIStroke.Color = Color3.fromRGB(121, 133, 167)
-    tbl.UIStroke.Parent = tbl.ExecBtn
+    tbl.UIStroke_1.Thickness = 2
+    tbl.UIStroke_1.Color = Color3.fromRGB(121, 133, 167)
+    tbl.UIStroke_1.Parent = tbl.ExecBtn
 
-    tbl.UICorner_2.CornerRadius = UDim.new(0.14, 0)
-    tbl.UICorner_2.Parent = tbl.ExecBtn
+    tbl.UICorner_3.CornerRadius = UDim.new(0.14, 0)
+    tbl.UICorner_3.Parent = tbl.ExecBtn
 
-    tbl.UIGradient_1.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 64, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 82, 107)) }
-    tbl.UIGradient_1.Rotation = -90
-    tbl.UIGradient_1.Parent = tbl.ExecBtn
+    tbl.UIGradient_2.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 64, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 82, 107)) }
+    tbl.UIGradient_2.Rotation = -90
+    tbl.UIGradient_2.Parent = tbl.ExecBtn
 
     tbl.CloudBtn.BorderSizePixel = 3
     tbl.CloudBtn.ScaleType = Enum.ScaleType.Fit
@@ -1116,46 +1196,9 @@ function main()
     tbl.CloudBtn.Position = UDim2.new(0.406853, 0, 0.5, 0)
     tbl.CloudBtn.Parent = tbl.MenuList
 
-    tbl.UIGradient_2.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 64, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 82, 107)) }
-    tbl.UIGradient_2.Rotation = -90
-    tbl.UIGradient_2.Parent = tbl.CloudBtn
-
-    tbl.Icon_3.ImageColor3 = Color3.fromRGB(201, 205, 210)
-    tbl.Icon_3.SizeConstraint = Enum.SizeConstraint.RelativeXX
-    tbl.Icon_3.BorderSizePixel = 0
-    tbl.Icon_3.ScaleType = Enum.ScaleType.Fit
-    tbl.Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.Icon_3.AnchorPoint = Vector2.new(0.5, 0.5)
-    tbl.Icon_3.Image = "rbxassetid://15845228987"
-    tbl.Icon_3.Size = UDim2.new(1, 0, 1, 0)
-    tbl.Icon_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.Icon_3.Name = "Icon"
-    tbl.Icon_3.BackgroundTransparency = 1
-    tbl.Icon_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-    tbl.Icon_3.Parent = tbl.CloudBtn
-
-    tbl.UIStroke_1.Thickness = 2
-    tbl.UIStroke_1.Color = Color3.fromRGB(121, 133, 167)
-    tbl.UIStroke_1.Parent = tbl.CloudBtn
-
-    tbl.UICorner_3.CornerRadius = UDim.new(0.14, 0)
-    tbl.UICorner_3.Parent = tbl.CloudBtn
-
-    tbl.LSBtn.BorderSizePixel = 3
-    tbl.LSBtn.ScaleType = Enum.ScaleType.Fit
-    tbl.LSBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.LSBtn.BorderMode = Enum.BorderMode.Inset
-    tbl.LSBtn.Selectable = false
-    tbl.LSBtn.AnchorPoint = Vector2.new(0.5, 0.5)
-    tbl.LSBtn.Size = UDim2.new(0.12, 0, 0.8, 0)
-    tbl.LSBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.LSBtn.Name = "LSBtn"
-    tbl.LSBtn.Position = UDim2.new(0.406853, 0, 0.5, 0)
-    tbl.LSBtn.Parent = tbl.MenuList
-
     tbl.UIGradient_3.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 64, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 82, 107)) }
     tbl.UIGradient_3.Rotation = -90
-    tbl.UIGradient_3.Parent = tbl.LSBtn
+    tbl.UIGradient_3.Parent = tbl.CloudBtn
 
     tbl.Icon_4.ImageColor3 = Color3.fromRGB(201, 205, 210)
     tbl.Icon_4.SizeConstraint = Enum.SizeConstraint.RelativeXX
@@ -1163,20 +1206,20 @@ function main()
     tbl.Icon_4.ScaleType = Enum.ScaleType.Fit
     tbl.Icon_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.Icon_4.AnchorPoint = Vector2.new(0.5, 0.5)
-    tbl.Icon_4.Image = "rbxassetid://15845249767"
-    tbl.Icon_4.Size = UDim2.new(1, 0, 1, 0)
+    tbl.Icon_4.Image = "rbxassetid://15982538173"
+    tbl.Icon_4.Size = UDim2.new(0.858703, 0, 0.887424, 0)
     tbl.Icon_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Icon_4.Name = "Icon"
     tbl.Icon_4.BackgroundTransparency = 1
     tbl.Icon_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-    tbl.Icon_4.Parent = tbl.LSBtn
+    tbl.Icon_4.Parent = tbl.CloudBtn
 
     tbl.UIStroke_2.Thickness = 2
     tbl.UIStroke_2.Color = Color3.fromRGB(121, 133, 167)
-    tbl.UIStroke_2.Parent = tbl.LSBtn
+    tbl.UIStroke_2.Parent = tbl.CloudBtn
 
     tbl.UICorner_4.CornerRadius = UDim.new(0.14, 0)
-    tbl.UICorner_4.Parent = tbl.LSBtn
+    tbl.UICorner_4.Parent = tbl.CloudBtn
 
     tbl.SettingsBtn.BorderSizePixel = 3
     tbl.SettingsBtn.ScaleType = Enum.ScaleType.Fit
@@ -1201,7 +1244,7 @@ function main()
     tbl.Icon_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.Icon_5.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Icon_5.Image = "rbxassetid://15845262087"
-    tbl.Icon_5.Size = UDim2.new(1, 0, 1, 0)
+    tbl.Icon_5.Size = UDim2.new(0.858703, 0, 0.887424, 0)
     tbl.Icon_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Icon_5.Name = "Icon"
     tbl.Icon_5.BackgroundTransparency = 1
@@ -1223,6 +1266,7 @@ function main()
     tbl.ExecFrame.Size = UDim2.new(0.949745, 0, 0.649132, 0)
     tbl.ExecFrame.Position = UDim2.new(0.0244645, 0, 0.0897571, 0)
     tbl.ExecFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.ExecFrame.Visible = false
     tbl.ExecFrame.Name = "ExecFrame"
     tbl.ExecFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
     tbl.ExecFrame.Parent = tbl.MainFrame
@@ -1255,22 +1299,6 @@ function main()
     tbl.Button1.Position = UDim2.new(0.145479, 0, 0.454178, 0)
     tbl.Button1.Parent = tbl.Buttons
 
-    tbl.Title.TextWrapped = true
-    tbl.Title.BorderSizePixel = 0
-    tbl.Title.TextScaled = true
-    tbl.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.Title.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-    tbl.Title.AnchorPoint = Vector2.new(0.5, 0.5)
-    tbl.Title.TextSize = 100
-    tbl.Title.Name = "Title"
-    tbl.Title.Size = UDim2.new(0.369993, 0, 0.965066, 0)
-    tbl.Title.TextColor3 = Color3.fromRGB(250, 250, 250)
-    tbl.Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.Title.Text = "Execute"
-    tbl.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
-    tbl.Title.BackgroundTransparency = 1
-    tbl.Title.Parent = tbl.Button1
-
     tbl.UIStroke_4.LineJoinMode = Enum.LineJoinMode.Miter
     tbl.UIStroke_4.Thickness = 3
     tbl.UIStroke_4.Color = Color3.fromRGB(60, 66, 83)
@@ -1279,6 +1307,22 @@ function main()
 
     tbl.UICorner_7.CornerRadius = UDim.new(0.08, 0)
     tbl.UICorner_7.Parent = tbl.Button1
+
+    tbl.Title.TextWrapped = true
+    tbl.Title.BorderSizePixel = 0
+    tbl.Title.TextScaled = true
+    tbl.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Title.TextSize = 100
+    tbl.Title.Name = "Title"
+    tbl.Title.Size = UDim2.new(0.340682, 0, 0.729158, 0)
+    tbl.Title.TextColor3 = Color3.fromRGB(250, 250, 250)
+    tbl.Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title.Text = "Execute"
+    tbl.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
+    tbl.Title.BackgroundTransparency = 1
+    tbl.Title.Parent = tbl.Button1
 
     tbl.Button4.BorderSizePixel = 3
     tbl.Button4.ScaleType = Enum.ScaleType.Fit
@@ -1301,7 +1345,7 @@ function main()
     tbl.Title_1.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Title_1.TextSize = 14
     tbl.Title_1.Name = "Title"
-    tbl.Title_1.Size = UDim2.new(0.333517, 0, 0.965066, 0)
+    tbl.Title_1.Size = UDim2.new(0.313498, 0, 0.782088, 0)
     tbl.Title_1.TextColor3 = Color3.fromRGB(250, 250, 250)
     tbl.Title_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Title_1.Text = "Clear"
@@ -1339,7 +1383,7 @@ function main()
     tbl.Title_2.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Title_2.TextSize = 14
     tbl.Title_2.Name = "Title"
-    tbl.Title_2.Size = UDim2.new(0.37, 0, 0.965, 0)
+    tbl.Title_2.Size = UDim2.new(0.347791, 0, 0.782034, 0)
     tbl.Title_2.TextColor3 = Color3.fromRGB(250, 250, 250)
     tbl.Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Title_2.Text = "Paste"
@@ -1377,7 +1421,7 @@ function main()
     tbl.Title_3.AnchorPoint = Vector2.new(0.5, 0.5)
     tbl.Title_3.TextSize = 14
     tbl.Title_3.Name = "Title"
-    tbl.Title_3.Size = UDim2.new(0.776808, 0, 0.806287, 0)
+    tbl.Title_3.Size = UDim2.new(0.730181, 0, 0.653414, 0)
     tbl.Title_3.TextColor3 = Color3.fromRGB(250, 250, 250)
     tbl.Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.Title_3.Text = "Execute from Clipboard"
@@ -1426,7 +1470,6 @@ function main()
     tbl.ScriptBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.ScriptBox.Text = "-- We recommend only uisng loadstrings | Trigon Mobile v0.1 {Beta}"
     tbl.ScriptBox.MultiLine = true
-    tbl.ScriptBox.CursorPosition = -1
     tbl.ScriptBox.Name = "ScriptBox"
     tbl.ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
     tbl.ScriptBox.ClearTextOnFocus = false
@@ -1453,18 +1496,48 @@ function main()
     tbl.UICorner_12.CornerRadius = UDim.new(0.02, 0)
     tbl.UICorner_12.Parent = tbl.ExecFrame
 
-    tbl.CloudFrame.Active = true
-    tbl.CloudFrame.BorderSizePixel = 0
-    tbl.CloudFrame.Size = UDim2.new(0.949745, 0, 0.594444, 0)
-    tbl.CloudFrame.Position = UDim2.new(0.0244645, 0, 0.144445, 0)
-    tbl.CloudFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.CloudFrame.Visible = false
-    tbl.CloudFrame.Name = "CloudFrame"
-    tbl.CloudFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
-    tbl.CloudFrame.Parent = tbl.MainFrame
+    tbl.logFrame.Active = true
+    tbl.logFrame.BorderSizePixel = 0
+    tbl.logFrame.Size = UDim2.new(0.95, 0, 0.649, 0)
+    tbl.logFrame.Position = UDim2.new(0.024, 0, 0.09, 0)
+    tbl.logFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logFrame.Visible = false
+    tbl.logFrame.Name = "logFrame"
+    tbl.logFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
+    tbl.logFrame.Parent = tbl.MainFrame
 
     tbl.UICorner_13.CornerRadius = UDim.new(0.02, 0)
-    tbl.UICorner_13.Parent = tbl.CloudFrame
+    tbl.UICorner_13.Parent = tbl.logFrame
+
+    tbl.logButtons.BorderSizePixel = 0
+    tbl.logButtons.Size = UDim2.new(0.9059, 0, 0.120071, 0)
+    tbl.logButtons.Position = UDim2.new(0.0879368, 0, 0.878761, 0)
+    tbl.logButtons.BackgroundTransparency = 1
+    tbl.logButtons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logButtons.Name = "logButtons"
+    tbl.logButtons.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    tbl.logButtons.Parent = tbl.logFrame
+
+    tbl.logOutput.BorderSizePixel = 0
+    tbl.logOutput.Size = UDim2.new(0.110762, 0, 1, 0)
+    tbl.logOutput.BackgroundTransparency = 1
+    tbl.logOutput.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logOutput.ClipsDescendants = true
+    tbl.logOutput.Name = "logOutput"
+    tbl.logOutput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.logOutput.Parent = tbl.logButtons
+
+    tbl.Button_1.ZIndex = 2
+    tbl.Button_1.ScaleType = Enum.ScaleType.Fit
+    tbl.Button_1.Image = "rbxassetid://3926305904"
+    tbl.Button_1.ImageRectSize = Vector2.new(36, 36)
+    tbl.Button_1.Size = UDim2.new(0.23, 0, 1, 0)
+    tbl.Button_1.Name = "Button"
+    tbl.Button_1.LayoutOrder = 7
+    tbl.Button_1.BackgroundTransparency = 1
+    tbl.Button_1.Position = UDim2.new(0, 0, 5.09924e-07, 0)
+    tbl.Button_1.ImageRectOffset = Vector2.new(724, 724)
+    tbl.Button_1.Parent = tbl.logOutput
 
     tbl.TextLabel.TextWrapped = true
     tbl.TextLabel.BorderSizePixel = 0
@@ -1472,26 +1545,48 @@ function main()
     tbl.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.TextLabel.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
     tbl.TextLabel.TextSize = 14
-    tbl.TextLabel.Size = UDim2.new(0.419878, 0, 0.109521, 0)
-    tbl.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextLabel.Size = UDim2.new(0.728848, 0, 0.568112, 0)
+    tbl.TextLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
     tbl.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.TextLabel.Text = "Under Development"
-    tbl.TextLabel.Position = UDim2.new(0.290447, 0, 0.444656, 0)
+    tbl.TextLabel.Text = "Log Output"
+    tbl.TextLabel.Position = UDim2.new(0.26, 0, 0.215944, 0)
     tbl.TextLabel.BackgroundTransparency = 1
-    tbl.TextLabel.Parent = tbl.CloudFrame
+    tbl.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextLabel.Parent = tbl.logOutput
 
-    tbl.LocalScriptFrame.Active = true
-    tbl.LocalScriptFrame.BorderSizePixel = 0
-    tbl.LocalScriptFrame.Size = UDim2.new(0.949745, 0, 0.594444, 0)
-    tbl.LocalScriptFrame.Position = UDim2.new(0.0244645, 0, 0.144445, 0)
-    tbl.LocalScriptFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.LocalScriptFrame.Visible = false
-    tbl.LocalScriptFrame.Name = "LocalScriptFrame"
-    tbl.LocalScriptFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
-    tbl.LocalScriptFrame.Parent = tbl.MainFrame
+    tbl.UIListLayout_1.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_1.VerticalAlignment = Enum.VerticalAlignment.Center
+    tbl.UIListLayout_1.Padding = UDim.new(0.03, 0)
+    tbl.UIListLayout_1.ItemLineAlignment = Enum.ItemLineAlignment.Center
+    tbl.UIListLayout_1.Parent = tbl.logOutput
 
-    tbl.UICorner_14.CornerRadius = UDim.new(0.02, 0)
-    tbl.UICorner_14.Parent = tbl.LocalScriptFrame
+    tbl.UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+    tbl.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+    tbl.UIListLayout_2.Padding = UDim.new(0.015, 0)
+    tbl.UIListLayout_2.Parent = tbl.logButtons
+
+    tbl.logWarning.BorderSizePixel = 0
+    tbl.logWarning.Size = UDim2.new(0.133679, 0, 1, 0)
+    tbl.logWarning.Position = UDim2.new(0.125762, 0, 0, 0)
+    tbl.logWarning.BackgroundTransparency = 1
+    tbl.logWarning.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logWarning.ClipsDescendants = true
+    tbl.logWarning.Name = "logWarning"
+    tbl.logWarning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.logWarning.Parent = tbl.logButtons
+
+    tbl.Button_2.ZIndex = 2
+    tbl.Button_2.ScaleType = Enum.ScaleType.Fit
+    tbl.Button_2.Image = "rbxassetid://3926305904"
+    tbl.Button_2.ImageRectSize = Vector2.new(36, 36)
+    tbl.Button_2.Size = UDim2.new(0.206312, 0, 1, 0)
+    tbl.Button_2.Name = "Button"
+    tbl.Button_2.LayoutOrder = 7
+    tbl.Button_2.BackgroundTransparency = 1
+    tbl.Button_2.Position = UDim2.new(0, 0, 5.09924e-07, 0)
+    tbl.Button_2.ImageRectOffset = Vector2.new(724, 724)
+    tbl.Button_2.Parent = tbl.logWarning
 
     tbl.TextLabel_1.TextWrapped = true
     tbl.TextLabel_1.BorderSizePixel = 0
@@ -1499,18 +1594,196 @@ function main()
     tbl.TextLabel_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     tbl.TextLabel_1.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
     tbl.TextLabel_1.TextSize = 14
-    tbl.TextLabel_1.Size = UDim2.new(0.419878, 0, 0.109521, 0)
-    tbl.TextLabel_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextLabel_1.Size = UDim2.new(0.74, 0, 0.568112, 0)
+    tbl.TextLabel_1.TextColor3 = Color3.fromRGB(225, 225, 225)
     tbl.TextLabel_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.TextLabel_1.Text = "Under Development"
-    tbl.TextLabel_1.Position = UDim2.new(0.290447, 0, 0.444656, 0)
+    tbl.TextLabel_1.Text = "Log Warning	"
+    tbl.TextLabel_1.Position = UDim2.new(0.26, 0, 0.215944, 0)
     tbl.TextLabel_1.BackgroundTransparency = 1
-    tbl.TextLabel_1.Parent = tbl.LocalScriptFrame
+    tbl.TextLabel_1.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextLabel_1.Parent = tbl.logWarning
+
+    tbl.UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_3.VerticalAlignment = Enum.VerticalAlignment.Center
+    tbl.UIListLayout_3.Padding = UDim.new(0.03, 0)
+    tbl.UIListLayout_3.ItemLineAlignment = Enum.ItemLineAlignment.Center
+    tbl.UIListLayout_3.Parent = tbl.logWarning
+
+    tbl.logError.BorderSizePixel = 0
+    tbl.logError.Size = UDim2.new(0.110762, 0, 1, 0)
+    tbl.logError.BackgroundTransparency = 1
+    tbl.logError.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logError.ClipsDescendants = true
+    tbl.logError.Name = "logError"
+    tbl.logError.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.logError.Parent = tbl.logButtons
+
+    tbl.Button_3.ZIndex = 2
+    tbl.Button_3.ScaleType = Enum.ScaleType.Fit
+    tbl.Button_3.Image = "rbxassetid://3926305904"
+    tbl.Button_3.ImageRectSize = Vector2.new(36, 36)
+    tbl.Button_3.Size = UDim2.new(0.23, 0, 1, 0)
+    tbl.Button_3.Name = "Button"
+    tbl.Button_3.LayoutOrder = 7
+    tbl.Button_3.BackgroundTransparency = 1
+    tbl.Button_3.Position = UDim2.new(0, 0, 5.09924e-07, 0)
+    tbl.Button_3.ImageRectOffset = Vector2.new(724, 724)
+    tbl.Button_3.Parent = tbl.logError
+
+    tbl.TextLabel_2.TextWrapped = true
+    tbl.TextLabel_2.BorderSizePixel = 0
+    tbl.TextLabel_2.TextScaled = true
+    tbl.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextLabel_2.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.TextLabel_2.TextSize = 14
+    tbl.TextLabel_2.Size = UDim2.new(0.728848, 0, 0.41773, 0)
+    tbl.TextLabel_2.TextColor3 = Color3.fromRGB(225, 225, 225)
+    tbl.TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.TextLabel_2.Text = "Log Error"
+    tbl.TextLabel_2.Position = UDim2.new(0.26, 0, 0.366327, 0)
+    tbl.TextLabel_2.BackgroundTransparency = 1
+    tbl.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextLabel_2.Parent = tbl.logError
+
+    tbl.UIListLayout_4.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_4.VerticalAlignment = Enum.VerticalAlignment.Center
+    tbl.UIListLayout_4.Padding = UDim.new(0.03, 0)
+    tbl.UIListLayout_4.ItemLineAlignment = Enum.ItemLineAlignment.Center
+    tbl.UIListLayout_4.Parent = tbl.logError
+
+    tbl.logInfo.BorderSizePixel = 0
+    tbl.logInfo.Size = UDim2.new(0.110762, 0, 1, 0)
+    tbl.logInfo.BackgroundTransparency = 1
+    tbl.logInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.logInfo.ClipsDescendants = true
+    tbl.logInfo.Name = "logInfo"
+    tbl.logInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.logInfo.Parent = tbl.logButtons
+
+    tbl.Button_4.ZIndex = 2
+    tbl.Button_4.ScaleType = Enum.ScaleType.Fit
+    tbl.Button_4.Image = "rbxassetid://3926305904"
+    tbl.Button_4.ImageRectSize = Vector2.new(36, 36)
+    tbl.Button_4.Size = UDim2.new(0.23, 0, 1, 0)
+    tbl.Button_4.Name = "Button"
+    tbl.Button_4.LayoutOrder = 7
+    tbl.Button_4.BackgroundTransparency = 1
+    tbl.Button_4.Position = UDim2.new(0, 0, 5.09924e-07, 0)
+    tbl.Button_4.ImageRectOffset = Vector2.new(724, 724)
+    tbl.Button_4.Parent = tbl.logInfo
+
+    tbl.TextLabel_3.TextWrapped = true
+    tbl.TextLabel_3.BorderSizePixel = 0
+    tbl.TextLabel_3.TextScaled = true
+    tbl.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextLabel_3.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.TextLabel_3.TextSize = 14
+    tbl.TextLabel_3.Size = UDim2.new(0.728848, 0, 0.384311, 0)
+    tbl.TextLabel_3.TextColor3 = Color3.fromRGB(225, 225, 225)
+    tbl.TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.TextLabel_3.Text = "Log Info"
+    tbl.TextLabel_3.Position = UDim2.new(0.26, 0, 0.399745, 0)
+    tbl.TextLabel_3.BackgroundTransparency = 1
+    tbl.TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextLabel_3.Parent = tbl.logInfo
+
+    tbl.UIListLayout_5.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_5.VerticalAlignment = Enum.VerticalAlignment.Center
+    tbl.UIListLayout_5.Padding = UDim.new(0.03, 0)
+    tbl.UIListLayout_5.ItemLineAlignment = Enum.ItemLineAlignment.Center
+    tbl.UIListLayout_5.Parent = tbl.logInfo
+
+    tbl.cclrbtn.BorderSizePixel = 3
+    tbl.cclrbtn.ScaleType = Enum.ScaleType.Fit
+    tbl.cclrbtn.AutoButtonColor = false
+    tbl.cclrbtn.BackgroundColor3 = Color3.fromRGB(44, 48, 61)
+    tbl.cclrbtn.BorderMode = Enum.BorderMode.Inset
+    tbl.cclrbtn.Selectable = false
+    tbl.cclrbtn.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.cclrbtn.Size = UDim2.new(0.153167, 0, 0.784056, 0)
+    tbl.cclrbtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.cclrbtn.Name = "cclrbtn"
+    tbl.cclrbtn.Position = UDim2.new(0.60255, 0, 0.392027, 0)
+    tbl.cclrbtn.Parent = tbl.logButtons
+
+    tbl.Title_4.TextWrapped = true
+    tbl.Title_4.BorderSizePixel = 0
+    tbl.Title_4.TextScaled = true
+    tbl.Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title_4.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title_4.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Title_4.TextSize = 14
+    tbl.Title_4.Name = "Title"
+    tbl.Title_4.Size = UDim2.new(0.602599, 0, 0.475464, 0)
+    tbl.Title_4.TextColor3 = Color3.fromRGB(250, 250, 250)
+    tbl.Title_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title_4.Text = "Clear Logs"
+    tbl.Title_4.Position = UDim2.new(0.494504, 0, 0.5, 0)
+    tbl.Title_4.BackgroundTransparency = 1
+    tbl.Title_4.Parent = tbl.cclrbtn
+
+    tbl.UICorner_14.CornerRadius = UDim.new(0.08, 0)
+    tbl.UICorner_14.Parent = tbl.cclrbtn
+
+    tbl.UIStroke_8.LineJoinMode = Enum.LineJoinMode.Miter
+    tbl.UIStroke_8.Thickness = 3
+    tbl.UIStroke_8.Color = Color3.fromRGB(60, 66, 83)
+    tbl.UIStroke_8.Enabled = false
+    tbl.UIStroke_8.Parent = tbl.cclrbtn
+
+    tbl.TextLabel_4.TextWrapped = true
+    tbl.TextLabel_4.BorderSizePixel = 0
+    tbl.TextLabel_4.TextScaled = true
+    tbl.TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextLabel_4.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.TextLabel_4.TextSize = 14
+    tbl.TextLabel_4.Size = UDim2.new(0.300339, 0, 0.492921, 0)
+    tbl.TextLabel_4.TextColor3 = Color3.fromRGB(225, 225, 225)
+    tbl.TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.TextLabel_4.Text = "Note: There is like 220 line limit on roblox :/"
+    tbl.TextLabel_4.Position = UDim2.new(0.694134, 0, 0.291135, 0)
+    tbl.TextLabel_4.BackgroundTransparency = 1
+    tbl.TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextLabel_4.Parent = tbl.logButtons
+
+    tbl.consoleFrame.BorderSizePixel = 0
+    tbl.consoleFrame.CanvasSize = UDim2.new(0, 0, 0.86, 0)
+    tbl.consoleFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.consoleFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    tbl.consoleFrame.Size = UDim2.new(0.975214, 0, 0.853, 0)
+    tbl.consoleFrame.BackgroundTransparency = 1
+    tbl.consoleFrame.Active = true
+    tbl.consoleFrame.ScrollBarImageTransparency = 0.8
+    tbl.consoleFrame.ScrollBarThickness = 10
+    tbl.consoleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.consoleFrame.Name = "consoleFrame"
+    tbl.consoleFrame.Position = UDim2.new(0.0167858, 0, 0.0257617, 0)
+    tbl.consoleFrame.Parent = tbl.logFrame
+
+    tbl.GlobalLog.Name = "GlobalLog"
+    tbl.GlobalLog.Parent = tbl.consoleFrame
+
+    tbl.TextBox.BorderSizePixel = 0
+    tbl.TextBox.RichText = true
+    tbl.TextBox.TextYAlignment = Enum.TextYAlignment.Top
+    tbl.TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.TextBox.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.TextBox.TextStrokeColor3 = Color3.fromRGB(211, 211, 211)
+    tbl.TextBox.TextSize = 26
+    tbl.TextBox.Name = "TextBox"
+    tbl.TextBox.Size = UDim2.new(1, 0, 1, 0)
+    tbl.TextBox.TextColor3 = Color3.fromRGB(211, 211, 211)
+    tbl.TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.TextBox.Text = ""
+    tbl.TextBox.LineHeight = 1.3
+    tbl.TextBox.BackgroundTransparency = 1
+    tbl.TextBox.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.TextBox.Parent = tbl.consoleFrame
 
     tbl.SettingsFrame.Active = true
     tbl.SettingsFrame.BorderSizePixel = 0
-    tbl.SettingsFrame.Size = UDim2.new(0.949745, 0, 0.594444, 0)
-    tbl.SettingsFrame.Position = UDim2.new(0.0244645, 0, 0.144445, 0)
+    tbl.SettingsFrame.Size = UDim2.new(0.95, 0, 0.649, 0)
+    tbl.SettingsFrame.Position = UDim2.new(0.024, 0, 0.09, 0)
     tbl.SettingsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
     tbl.SettingsFrame.Visible = false
     tbl.SettingsFrame.Name = "SettingsFrame"
@@ -1520,34 +1793,218 @@ function main()
     tbl.UICorner_15.CornerRadius = UDim.new(0.02, 0)
     tbl.UICorner_15.Parent = tbl.SettingsFrame
 
-    tbl.TextLabel_2.TextWrapped = true
-    tbl.TextLabel_2.BorderSizePixel = 0
-    tbl.TextLabel_2.TextScaled = true
-    tbl.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.TextLabel_2.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-    tbl.TextLabel_2.TextSize = 14
-    tbl.TextLabel_2.Size = UDim2.new(0.419878, 0, 0.109521, 0)
-    tbl.TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-    tbl.TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.TextLabel_2.Text = "Under Development"
-    tbl.TextLabel_2.Position = UDim2.new(0.290447, 0, 0.444656, 0)
-    tbl.TextLabel_2.BackgroundTransparency = 1
-    tbl.TextLabel_2.Parent = tbl.SettingsFrame
+    tbl.sample.BorderSizePixel = 0
+    tbl.sample.Size = UDim2.new(0.939366, 0, 0.171716, 0)
+    tbl.sample.Position = UDim2.new(0.0299999, 0, 0.0520692, 0)
+    tbl.sample.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.sample.Name = "sample"
+    tbl.sample.BackgroundColor3 = Color3.fromRGB(30, 34, 42)
+    tbl.sample.Parent = tbl.SettingsFrame
+
+    tbl.UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Right
+    tbl.UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+    tbl.UIListLayout_6.Padding = UDim.new(0.1, 0)
+    tbl.UIListLayout_6.Parent = tbl.sample
+
+    tbl.UICorner_16.CornerRadius = UDim.new(0.1, 0)
+    tbl.UICorner_16.Parent = tbl.sample
+
+    tbl.Title_5.TextWrapped = true
+    tbl.Title_5.BorderSizePixel = 0
+    tbl.Title_5.TextScaled = true
+    tbl.Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title_5.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title_5.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Title_5.TextSize = 100
+    tbl.Title_5.Name = "Title"
+    tbl.Title_5.Size = UDim2.new(0.895877, 0, 0, 0)
+    tbl.Title_5.TextColor3 = Color3.fromRGB(250, 250, 250)
+    tbl.Title_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title_5.Text = ""
+    tbl.Title_5.Position = UDim2.new(0.552062, 0, 0, 0)
+    tbl.Title_5.BackgroundTransparency = 1
+    tbl.Title_5.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.Title_5.Parent = tbl.sample
+
+    tbl.Title_6.TextWrapped = true
+    tbl.Title_6.BorderSizePixel = 0
+    tbl.Title_6.TextScaled = true
+    tbl.Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title_6.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title_6.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Title_6.TextSize = 100
+    tbl.Title_6.Name = "Title"
+    tbl.Title_6.Size = UDim2.new(0.909815, 0, 0.349235, 0)
+    tbl.Title_6.TextColor3 = Color3.fromRGB(250, 250, 250)
+    tbl.Title_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title_6.Text = "Enable Trigon Desktop Connection"
+    tbl.Title_6.Position = UDim2.new(0.545092, 0, 0.274617, 0)
+    tbl.Title_6.BackgroundTransparency = 1
+    tbl.Title_6.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.Title_6.Parent = tbl.sample
+
+    tbl.Title_7.TextWrapped = true
+    tbl.Title_7.BorderSizePixel = 0
+    tbl.Title_7.TextScaled = true
+    tbl.Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title_7.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title_7.AnchorPoint = Vector2.new(0.5, 0.5)
+    tbl.Title_7.TextSize = 100
+    tbl.Title_7.Name = "Title"
+    tbl.Title_7.Size = UDim2.new(0.909815, 0, 0.273333, 0)
+    tbl.Title_7.TextColor3 = Color3.fromRGB(250, 250, 250)
+    tbl.Title_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title_7.Text = "{comming soon}"
+    tbl.Title_7.Position = UDim2.new(0.545092, 0, 0.685901, 0)
+    tbl.Title_7.BackgroundTransparency = 1
+    tbl.Title_7.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.Title_7.Parent = tbl.sample
+
+    tbl.ImageLabel.BorderSizePixel = 0
+    tbl.ImageLabel.ScaleType = Enum.ScaleType.Fit
+    tbl.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.ImageLabel.Image = "rbxassetid://15865858307"
+    tbl.ImageLabel.Size = UDim2.new(0.0631573, 0, 0.173628, 0)
+    tbl.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.ImageLabel.BackgroundTransparency = 1
+    tbl.ImageLabel.Position = UDim2.new(0.0408212, 0, 0.0501573, 0)
+    tbl.ImageLabel.Parent = tbl.SettingsFrame
+
+    tbl.homeFrame.Active = true
+    tbl.homeFrame.BorderSizePixel = 0
+    tbl.homeFrame.Size = UDim2.new(0.949745, 0, 0.646527, 0)
+    tbl.homeFrame.Position = UDim2.new(0.0244645, 0, 0.0897571, 0)
+    tbl.homeFrame.BackgroundTransparency = 0.45
+    tbl.homeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.homeFrame.ClipsDescendants = true
+    tbl.homeFrame.Name = "homeFrame"
+    tbl.homeFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
+    tbl.homeFrame.Parent = tbl.MainFrame
+
+    tbl.UICorner_17.CornerRadius = UDim.new(0.02, 0)
+    tbl.UICorner_17.Parent = tbl.homeFrame
+
+    tbl.changelogFrame.BorderSizePixel = 0
+    tbl.changelogFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+    tbl.changelogFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
+    tbl.changelogFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    tbl.changelogFrame.Size = UDim2.new(0.209419, 0, 1.00031, 0)
+    tbl.changelogFrame.BackgroundTransparency = 0.35
+    tbl.changelogFrame.Active = true
+    tbl.changelogFrame.ScrollBarImageTransparency = 0.64
+    tbl.changelogFrame.ScrollBarThickness = 5
+    tbl.changelogFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.changelogFrame.Name = "changelogFrame"
+    tbl.changelogFrame.Position = UDim2.new(0.00924501, 0, 0, 0)
+    tbl.changelogFrame.Parent = tbl.homeFrame
+
+    tbl.ScriptBox_1.TextWrapped = true
+    tbl.ScriptBox_1.LineHeight = 1.41
+    tbl.ScriptBox_1.BorderSizePixel = 0
+    tbl.ScriptBox_1.RichText = true
+    tbl.ScriptBox_1.TextYAlignment = Enum.TextYAlignment.Top
+    tbl.ScriptBox_1.BackgroundColor3 = Color3.fromRGB(75, 0, 0)
+    tbl.ScriptBox_1.FontFace = Font.new("rbxasset://fonts/families/Nunito.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.ScriptBox_1.Position = UDim2.new(0.0470594, 0, 0.0200526, 0)
+    tbl.ScriptBox_1.BackgroundTransparency = 1
+    tbl.ScriptBox_1.AutomaticSize = Enum.AutomaticSize.Y
+    tbl.ScriptBox_1.TextSize = 22
+    tbl.ScriptBox_1.ClipsDescendants = true
+    tbl.ScriptBox_1.Size = UDim2.new(0.952941, 0, 0.982121, 0)
+    tbl.ScriptBox_1.TextColor3 = Color3.fromRGB(150, 150, 150)
+    tbl.ScriptBox_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.ScriptBox_1.Text = "~~ Changelog v0.02 ~~\n    + Added changelog\n    + Added game script section (will be adding different game scripts soon)\n    + Added Console Logging\n\n~~ Changelog v0.01 ~~\n- Tridog release :o"
+
+    tbl.ScriptBox_1.MultiLine = true
+    tbl.ScriptBox_1.Name = "ScriptBox"
+    tbl.ScriptBox_1.TextXAlignment = Enum.TextXAlignment.Left
+    tbl.ScriptBox_1.ClearTextOnFocus = false
+    tbl.ScriptBox_1.Parent = tbl.changelogFrame
+
+    tbl.UICorner_18.CornerRadius = UDim.new(1, 0)
+    tbl.UICorner_18.Parent = tbl.changelogFrame
+
+    tbl.UIListLayout_7.FillDirection = Enum.FillDirection.Horizontal
+    tbl.UIListLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
+    tbl.UIListLayout_7.Padding = UDim.new(0.018, 0)
+    tbl.UIListLayout_7.Parent = tbl.homeFrame
+
+    tbl.scriptsFrame.BorderSizePixel = 0
+    tbl.scriptsFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+    tbl.scriptsFrame.BackgroundColor3 = Color3.fromRGB(38, 42, 53)
+    tbl.scriptsFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    tbl.scriptsFrame.Size = UDim2.new(0.467, 0, 1, 0)
+    tbl.scriptsFrame.BackgroundTransparency = 0.35
+    tbl.scriptsFrame.Active = true
+    tbl.scriptsFrame.ScrollBarImageTransparency = 0.64
+    tbl.scriptsFrame.ScrollBarThickness = 5
+    tbl.scriptsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.scriptsFrame.Name = "scriptsFrame"
+    tbl.scriptsFrame.Position = UDim2.new(-0.0123267, 0, -0.0421236, 0)
+    tbl.scriptsFrame.Parent = tbl.homeFrame
+
+    tbl.UICorner_19.CornerRadius = UDim.new(1, 0)
+    tbl.UICorner_19.Parent = tbl.scriptsFrame
+
+    tbl.UIListLayout_8.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    tbl.UIListLayout_8.Padding = UDim.new(0.01, 0)
+    tbl.UIListLayout_8.Parent = tbl.scriptsFrame
+
+    tbl._GameHeader.BorderSizePixel = 0
+    tbl._GameHeader.Size = UDim2.new(1, 0, 0.157089, 0)
+    tbl._GameHeader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl._GameHeader.Name = "#GameHeader"
+    tbl._GameHeader.BackgroundColor3 = Color3.fromRGB(35, 39, 49)
+    tbl._GameHeader.Parent = tbl.scriptsFrame
+
+    tbl.Title_8.TextWrapped = true
+    tbl.Title_8.BorderSizePixel = 0
+    tbl.Title_8.TextScaled = true
+    tbl.Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tbl.Title_8.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.Title_8.TextSize = 14
+    tbl.Title_8.Name = "Title"
+    tbl.Title_8.Size = UDim2.new(0.998909, 0, 0.572671, 0)
+    tbl.Title_8.TextColor3 = Color3.fromRGB(180, 193, 216)
+    tbl.Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.Title_8.Text = "{game_name}"
+    tbl.Title_8.Position = UDim2.new(0, 0, 0.2, 0)
+    tbl.Title_8.BackgroundTransparency = 1
+    tbl.Title_8.Parent = tbl._GameHeader
+
+    tbl.UICorner_20.CornerRadius = UDim.new(0.1, 0)
+    tbl.UICorner_20.Parent = tbl._GameHeader
+
+    tbl.TextButton.Active = false
+    tbl.TextButton.BorderSizePixel = 0
+    tbl.TextButton.BackgroundColor3 = Color3.fromRGB(55, 60, 76)
+    tbl.TextButton.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    tbl.TextButton.Position = UDim2.new(0.0264026, 0, 0.157089, 0)
+    tbl.TextButton.TextSize = 14
+    tbl.TextButton.Size = UDim2.new(0.950495, 0, 0.1, 0)
+    tbl.TextButton.TextColor3 = Color3.fromRGB(180, 193, 216)
+    tbl.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    tbl.TextButton.Text = "No scripts found for this game..."
+    tbl.TextButton.Visible = false
+    tbl.TextButton.Parent = tbl.scriptsFrame
+
+    tbl.UICorner_21.CornerRadius = UDim.new(0.1, 0)
+    tbl.UICorner_21.Parent = tbl.TextButton
 
     tbl.LocalScript_1.Parent = tbl.TrigonMain
-    
+
     local modules, cache = {}, {}
-            
+
     local o_require = require;
     local function require(module)
         local real, cached = modules[module], cache[module]
-        
+
         if cached then return cached end
-        
+
         if not real then return o_require(module) end
-        
+
         cache[module] = real()
-        
+
         return cache[module]
     end
 
@@ -1557,32 +2014,32 @@ function main()
         local types = require(script.types)
         local utility = require(script.utility)
         local theme = require(script.theme)
-        
+
         local Highlighter = {
             defaultLexer = require(script.lexer) :: types.Lexer,
-        
+
             _textObjectData = {} :: { [types.TextObject]: types.ObjectData },
             _cleanups = {} :: { [types.TextObject]: () -> () },
         }
-        
-        --[[
-            Gathers the info that is needed in order to set up a line label.
-        ]]
+
+    	--[[
+    		Gathers the info that is needed in order to set up a line label.
+    	]]
         function Highlighter._getLabelingInfo(textObject: types.TextObject)
             local data = Highlighter._textObjectData[textObject]
             if not data then
                 return
             end
-        
+
             local src = utility.convertTabsToSpaces(utility.removeControlChars(textObject.Text))
             local numLines = #string.split(src, "\n")
             if numLines == 0 then
                 return
             end
-        
+
             local textBounds = utility.getTextBounds(textObject)
             local textHeight = textBounds.Y / numLines
-        
+
             return {
                 data = data,
                 numLines = numLines,
@@ -1595,16 +2052,16 @@ function main()
                 labelSize = UDim2.new(1, 0, 0, math.ceil(textHeight)),
             }
         end
-        
-        --[[
-            Aligns and matches the line labels to the textObject.
-        ]]
+
+    	--[[
+    		Aligns and matches the line labels to the textObject.
+    	]]
         function Highlighter._alignLabels(textObject: types.TextObject)
             local labelingInfo = Highlighter._getLabelingInfo(textObject)
             if not labelingInfo then
                 return
             end
-        
+
             for lineNumber, lineLabel in labelingInfo.data.Labels do
                 -- Align line label
                 lineLabel.TextColor3 = labelingInfo.textColor
@@ -1615,10 +2072,10 @@ function main()
                     UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
             end
         end
-        
-        --[[
-            Creates and populates the line labels with the appropriate rich text.
-        ]]
+
+    	--[[
+    		Creates and populates the line labels with the appropriate rich text.
+    	]]
         function Highlighter._populateLabels(props: types.HighlightProps)
             -- Gather props
             local textObject = props.textObject
@@ -1626,7 +2083,7 @@ function main()
             local lexer = props.lexer or Highlighter.defaultLexer
             local customLang = props.customLang
             local forceUpdate = props.forceUpdate
-        
+
             -- Avoid updating when unnecessary
             local data = Highlighter._textObjectData[textObject]
             if (data == nil) or (data.Text == src) then
@@ -1634,20 +2091,20 @@ function main()
                     return
                 end
             end
-        
+
             -- Ensure textObject matches sanitized src
             textObject.Text = src
-        
+
             local lineLabels = data.Labels
             local previousLines = data.Lines
-        
+
             local lines = string.split(src, "\n")
-        
+
             data.Lines = lines
             data.Text = src
             data.Lexer = lexer
             data.CustomLang = customLang
-        
+
             -- Shortcut empty textObjects
             if src == "" then
                 for l = 1, #lineLabels do
@@ -1658,18 +2115,18 @@ function main()
                 end
                 return
             end
-        
+
             local idenColor = theme.getColor("iden")
             local labelingInfo = Highlighter._getLabelingInfo(textObject)
-        
+
             local richTextBuffer, bufferIndex, lineNumber = table.create(5), 0, 1
             for token: types.TokenName, content: string in lexer.scan(src) do
                 local Color = if customLang and customLang[content]
                     then theme.getColor("custom")
                     else theme.getColor(token) or idenColor
-        
+
                 local tokenLines = string.split(utility.sanitizeRichText(content), "\n")
-        
+
                 for l, tokenLine in tokenLines do
                     -- Find line label
                     local lineLabel = lineLabels[lineNumber]
@@ -1688,12 +2145,12 @@ function main()
                         newLabel.Size = labelingInfo.labelSize
                         newLabel.Position =
                             UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
-        
+
                         newLabel.Parent = textObject.SyntaxHighlights
                         lineLabels[lineNumber] = newLabel
                         lineLabel = newLabel
                     end
-        
+
                     -- If multiline token, then set line & move to next
                     if l > 1 then
                         if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
@@ -1705,7 +2162,7 @@ function main()
                         bufferIndex = 0
                         table.clear(richTextBuffer)
                     end
-        
+
                     -- If changed, add token to line
                     if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
                         bufferIndex += 1
@@ -1718,12 +2175,12 @@ function main()
                     end
                 end
             end
-        
+
             -- Set final line
             if richTextBuffer[1] and lineLabels[lineNumber] then
                 lineLabels[lineNumber].Text = table.concat(richTextBuffer)
             end
-        
+
             -- Clear unused line labels
             for l = lineNumber + 1, #lineLabels do
                 if lineLabels[l].Text == "" then
@@ -1732,19 +2189,19 @@ function main()
                 lineLabels[l].Text = ""
             end
         end
-        
-        --[[
-            Highlights the given textObject with the given props and returns a cleanup function.
-            Highlighting will automatically update when needed, so the cleanup function will disconnect
-            those connections and remove all labels.
-        ]]
+
+    	--[[
+    		Highlights the given textObject with the given props and returns a cleanup function.
+    		Highlighting will automatically update when needed, so the cleanup function will disconnect
+    		those connections and remove all labels.
+    	]]
         function Highlighter.highlight(props: types.HighlightProps): () -> ()
             -- Gather props
             local textObject = props.textObject
             local src = utility.convertTabsToSpaces(utility.removeControlChars(props.src or textObject.Text))
             local lexer = props.lexer or Highlighter.defaultLexer
             local customLang = props.customLang
-        
+
             -- Avoid updating when unnecessary
             if Highlighter._cleanups[textObject] then
                 -- Already been initialized, so just update
@@ -1752,7 +2209,7 @@ function main()
                 Highlighter._alignLabels(textObject)
                 return Highlighter._cleanups[textObject]
             end
-        
+
             -- Ensure valid object properties
             textObject.RichText = false
             textObject.Text = src
@@ -1761,17 +2218,17 @@ function main()
             textObject.BackgroundColor3 = theme.getColor("background")
             textObject.TextColor3 = theme.getColor("iden")
             textObject.TextTransparency = 0.5
-        
+
             -- Build the highlight labels
             local lineFolder = textObject:FindFirstChild("SyntaxHighlights")
             if lineFolder == nil then
                 local newLineFolder = Instance.new("Folder")
                 newLineFolder.Name = "SyntaxHighlights"
                 newLineFolder.Parent = textObject
-        
+
                 lineFolder = newLineFolder
             end
-        
+
             local data = {
                 Text = "",
                 Labels = {},
@@ -1780,27 +2237,27 @@ function main()
                 CustomLang = customLang,
             }
             Highlighter._textObjectData[textObject] = data
-        
+
             -- Add a cleanup handler for this textObject
             local connections: { [string]: RBXScriptConnection } = {}
             local function cleanup()
                 lineFolder:Destroy()
-        
+
                 Highlighter._textObjectData[textObject] = nil
                 Highlighter._cleanups[textObject] = nil
-        
+
                 for _key, connection in connections do
                     connection:Disconnect()
                 end
                 table.clear(connections)
             end
             Highlighter._cleanups[textObject] = cleanup
-        
+
             connections["AncestryChanged"] = textObject.AncestryChanged:Connect(function()
                 if textObject.Parent then
                     return
                 end
-        
+
                 cleanup()
             end)
             connections["TextChanged"] = textObject:GetPropertyChangedSignal("Text"):Connect(function()
@@ -1815,24 +2272,24 @@ function main()
             connections["FontFaceChanged"] = textObject:GetPropertyChangedSignal("FontFace"):Connect(function()
                 Highlighter._alignLabels(textObject)
             end)
-        
+
             -- Populate the labels
             Highlighter._populateLabels(props)
             Highlighter._alignLabels(textObject)
-        
+
             return cleanup
         end
-        
-        --[[
-            Refreshes all highlighted textObjects. Used when the theme changes.
-        ]]
+
+    	--[[
+    		Refreshes all highlighted textObjects. Used when the theme changes.
+    	]]
         function Highlighter.refresh(): ()
             -- Rehighlight existing labels using latest colors
             for textObject, data in Highlighter._textObjectData do
                 for _, lineLabel in data.Labels do
                     lineLabel.TextColor3 = theme.getColor("iden")
                 end
-        
+
                 Highlighter.highlight({
                     textObject = textObject,
                     forceUpdate = true,
@@ -1842,71 +2299,71 @@ function main()
                 })
             end
         end
-        
-        --[[
-            Sets the token colors to the given colors and refreshes all highlighted textObjects.
-        ]]
+
+    	--[[
+    		Sets the token colors to the given colors and refreshes all highlighted textObjects.
+    	]]
         function Highlighter.setTokenColors(colors: types.TokenColors): ()
             theme.setColors(colors)
-        
+
             Highlighter.refresh()
         end
-        
-        --[[
-            Gets a token color by name.
-            Mainly useful for setting "background" token color on other UI objects behind your text.
-        ]]
+
+    	--[[
+    		Gets a token color by name.
+    		Mainly useful for setting "background" token color on other UI objects behind your text.
+    	]]
         function Highlighter.getTokenColor(tokenName: types.TokenName): Color3
             return theme.getColor(tokenName)
         end
-        
-        --[[
-            Matches the token colors to the Studio theme settings and refreshes all highlighted textObjects.
-            Does nothing when not run in a Studio plugin.
-        ]]
+
+    	--[[
+    		Matches the token colors to the Studio theme settings and refreshes all highlighted textObjects.
+    		Does nothing when not run in a Studio plugin.
+    	]]
         function Highlighter.matchStudioSettings(): ()
             local applied = theme.matchStudioSettings(Highlighter.refresh)
             if applied then
                 Highlighter.refresh()
             end
         end
-        
+
         return Highlighter
-        
+
     end
 
     modules[tbl.lexer] = function()
         local script = tbl.lexer
 
-        --[=[
-            Lexical scanner for creating a sequence of tokens from Lua source code.
-            This is a heavily modified and Roblox-optimized version of
-            the original Penlight Lexer module:
-                https://github.com/stevedonovan/Penlight
-            Authors:
-                stevedonovan <https://github.com/stevedonovan> ----------- Original Penlight lexer author
-                ryanjmulder <https://github.com/ryanjmulder> ------------- Penlight lexer contributer
-                mpeterv <https://github.com/mpeterv> --------------------- Penlight lexer contributer
-                Tieske <https://github.com/Tieske> ----------------------- Penlight lexer contributer
-                boatbomber <https://github.com/boatbomber> --------------- Roblox port, added builtin token,
-                                                                        added patterns for incomplete syntax, bug fixes,
-                                                                        behavior changes, token optimization, thread optimization
-                                                                        Added lexer.navigator() for non-sequential reads
-                Sleitnick <https://github.com/Sleitnick> ----------------- Roblox optimizations
-                howmanysmall <https://github.com/howmanysmall> ----------- Lua + Roblox optimizations
-        
-            List of possible tokens:
-                - iden
-                - keyword
-                - builtin
-                - string
-                - number
-                - comment
-                - operator
-        --]=]
-        
+    	--[=[
+    		Lexical scanner for creating a sequence of tokens from Lua source code.
+    		This is a heavily modified and Roblox-optimized version of
+    		the original Penlight Lexer module:
+    			https://github.com/stevedonovan/Penlight
+    		Authors:
+    			stevedonovan <https://github.com/stevedonovan> ----------- Original Penlight lexer author
+    			ryanjmulder <https://github.com/ryanjmulder> ------------- Penlight lexer contributer
+    			mpeterv <https://github.com/mpeterv> --------------------- Penlight lexer contributer
+    			Tieske <https://github.com/Tieske> ----------------------- Penlight lexer contributer
+    			boatbomber <https://github.com/boatbomber> --------------- Roblox port, added builtin token,
+    			                                                           added patterns for incomplete syntax, bug fixes,
+    			                                                           behavior changes, token optimization, thread optimization
+    			                                                           Added lexer.navigator() for non-sequential reads
+    			Sleitnick <https://github.com/Sleitnick> ----------------- Roblox optimizations
+    			howmanysmall <https://github.com/howmanysmall> ----------- Lua + Roblox optimizations
+    	
+    		List of possible tokens:
+    			- iden
+    			- keyword
+    			- builtin
+    			- string
+    			- number
+    			- comment
+    			- operator
+    	--]=]
+
         local lexer = {}
-        
+
         local Prefix, Suffix, Cleaner = "^[%c%s]*", "[%c%s]*", "[%c%s]+"
         local UNICODE = "[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]+"
         local NUMBER_A = "0[xX][%da-fA-F_]+"
@@ -1928,24 +2385,24 @@ function main()
         local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
         local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
         -- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
-        
+
         local lang = require(script.language)
         local lua_keyword = lang.keyword
         local lua_builtin = lang.builtin
         local lua_libraries = lang.libraries
-        
+
         lexer.language = lang
-        
+
         local lua_matches = {
             -- Indentifiers
             { Prefix .. IDEN .. Suffix, "var" },
-        
+
             -- Numbers
             { Prefix .. NUMBER_A .. Suffix, "number" },
             { Prefix .. NUMBER_B .. Suffix, "number" },
             { Prefix .. NUMBER_C .. Suffix, "number" },
             { Prefix .. NUMBER_D .. Suffix, "number" },
-        
+
             -- Strings
             { Prefix .. STRING_EMPTY .. Suffix, "string" },
             { Prefix .. STRING_PLAIN .. Suffix, "string" },
@@ -1954,39 +2411,39 @@ function main()
             { Prefix .. STRING_MULTI .. Suffix, "string" },
             { Prefix .. STRING_MULTI_INCOMP .. Suffix, "string" },
             { Prefix .. STRING_INTER .. Suffix, "string_inter" },
-        
+
             -- Comments
             { Prefix .. COMMENT_MULTI .. Suffix, "comment" },
             { Prefix .. COMMENT_MULTI_INCOMP .. Suffix, "comment" },
             { Prefix .. COMMENT_PLAIN .. Suffix, "comment" },
             { Prefix .. COMMENT_INCOMP .. Suffix, "comment" },
-        
+
             -- Operators
             { Prefix .. OPERATORS .. Suffix, "operator" },
             { Prefix .. BRACKETS .. Suffix, "operator" },
-        
+
             -- Unicode
             { Prefix .. UNICODE .. Suffix, "iden" },
-        
+
             -- Unknown
             { "^.", "iden" },
         }
-        
+
         -- To reduce the amount of table indexing during lexing, we separate the matches now
         local PATTERNS, TOKENS = {}, {}
         for i, m in lua_matches do
             PATTERNS[i] = m[1]
             TOKENS[i] = m[2]
         end
-        
+
         --- Create a plain token iterator from a string.
         -- @tparam string s a string.
-        
+
         function lexer.scan(s: string)
             local index = 1
             local size = #s
             local previousContent1, previousContent2, previousContent3, previousToken = "", "", "", ""
-        
+
             local thread = coroutine.create(function()
                 while index <= size do
                     local matched = false
@@ -1996,22 +2453,22 @@ function main()
                         if start == nil then
                             continue
                         end
-        
+
                         -- Move head
                         index = finish + 1
                         matched = true
-        
+
                         -- Gather results
                         local content = string.sub(s, start, finish)
                         local rawToken = TOKENS[tokenType]
                         local processedToken = rawToken
-        
+
                         -- Process token
                         if rawToken == "var" then
                             -- Since we merge spaces into the tok, we need to remove them
                             -- in order to check the actual word it contains
                             local cleanContent = string.gsub(content, Cleaner, "")
-        
+
                             if lua_keyword[cleanContent] then
                                 processedToken = "keyword"
                             elseif lua_builtin[cleanContent] then
@@ -2039,7 +2496,7 @@ function main()
                                 -- We're gonna do our own yields, so the main loop won't need to
                                 -- Our yields will be a mix of string and whatever is inside the inters
                                 processedToken = nil
-        
+
                                 local isString = true
                                 local subIndex = 1
                                 local subSize = #content
@@ -2051,12 +2508,12 @@ function main()
                                         coroutine.yield("string", string.sub(content, subIndex))
                                         break
                                     end
-        
+
                                     if isString then
                                         -- We are currently a string
                                         subIndex = subFinish + 1
                                         coroutine.yield("string", string.sub(content, subStart, subFinish))
-        
+
                                         -- This brace opens code
                                         isString = false
                                     else
@@ -2066,14 +2523,14 @@ function main()
                                         for innerToken, innerContent in lexer.scan(subContent) do
                                             coroutine.yield(innerToken, innerContent)
                                         end
-        
+
                                         -- This brace opens string/closes code
                                         isString = true
                                     end
                                 end
                             end
                         end
-        
+
                         -- Record last 3 tokens for the indexing context check
                         previousContent3 = previousContent2
                         previousContent2 = previousContent1
@@ -2084,41 +2541,41 @@ function main()
                         end
                         break
                     end
-        
+
                     -- No matches found
                     if not matched then
                         return
                     end
                 end
-        
+
                 -- Completed the scan
                 return
             end)
-        
+
             return function()
                 if coroutine.status(thread) == "dead" then
                     return
                 end
-        
+
                 local success, token, content = coroutine.resume(thread)
                 if success and token then
                     return token, content
                 end
-        
+
                 return
             end
         end
-        
+
         function lexer.navigator()
             local nav = {
                 Source = "",
                 TokenCache = table.create(50),
-        
+
                 _RealIndex = 0,
                 _UserIndex = 0,
                 _ScanThread = nil,
             }
-        
+
             function nav:Destroy()
                 self.Source = nil
                 self._RealIndex = nil
@@ -2126,14 +2583,14 @@ function main()
                 self.TokenCache = nil
                 self._ScanThread = nil
             end
-        
+
             function nav:SetSource(SourceString)
                 self.Source = SourceString
-        
+
                 self._RealIndex = 0
                 self._UserIndex = 0
                 table.clear(self.TokenCache)
-        
+
                 self._ScanThread = coroutine.create(function()
                     for Token, Src in lexer.scan(self.Source) do
                         self._RealIndex += 1
@@ -2142,10 +2599,10 @@ function main()
                     end
                 end)
             end
-        
+
             function nav.Next()
                 nav._UserIndex += 1
-        
+
                 if nav._RealIndex >= nav._UserIndex then
                     -- Already scanned, return cached
                     return table.unpack(nav.TokenCache[nav._UserIndex])
@@ -2165,10 +2622,10 @@ function main()
                     end
                 end
             end
-        
+
             function nav.Peek(PeekAmount)
                 local GoalIndex = nav._UserIndex + PeekAmount
-        
+
                 if nav._RealIndex >= GoalIndex then
                     -- Already scanned, return cached
                     if GoalIndex > 0 then
@@ -2183,9 +2640,9 @@ function main()
                         return
                     else
                         local IterationsAway = GoalIndex - nav._RealIndex
-        
+
                         local success, token, src = nil, nil, nil
-        
+
                         for _ = 1, IterationsAway do
                             success, token, src = coroutine.resume(nav._ScanThread)
                             if not (success or token) then
@@ -2193,17 +2650,17 @@ function main()
                                 break
                             end
                         end
-        
+
                         return token, src
                     end
                 end
             end
-        
+
             return nav
         end
-        
+
         return lexer
-        
+
     end
 
     modules[tbl.language] = function()
@@ -2238,7 +2695,7 @@ function main()
                 ["until"] = "keyword",
                 ["while"] = "keyword",
             },
-        
+
             builtin = {
                 -- Luau Functions
                 ["assert"] = "function",
@@ -2263,14 +2720,14 @@ function main()
                 ["tostring"] = "function",
                 ["unpack"] = "function",
                 ["xpcall"] = "function",
-        
+
                 -- Luau Functions (Deprecated)
                 ["collectgarbage"] = "function",
-        
+
                 -- Luau Variables
                 ["_G"] = "table",
                 ["_VERSION"] = "string",
-        
+
                 -- Luau Tables
                 ["bit32"] = "table",
                 ["coroutine"] = "table",
@@ -2280,7 +2737,7 @@ function main()
                 ["string"] = "table",
                 ["table"] = "table",
                 ["utf8"] = "table",
-        
+
                 -- Roblox Functions
                 ["DebuggerManager"] = "function",
                 ["delay"] = "function",
@@ -2294,7 +2751,7 @@ function main()
                 ["UserSettings"] = "function",
                 ["wait"] = "function",
                 ["warn"] = "function",
-        
+
                 -- Roblox Functions (Deprecated)
                 ["Delay"] = "function",
                 ["ElapsedTime"] = "function",
@@ -2307,18 +2764,18 @@ function main()
                 ["version"] = "function",
                 ["Wait"] = "function",
                 ["ypcall"] = "function",
-        
+
                 -- Roblox Variables
                 ["game"] = "Instance",
                 ["plugin"] = "Instance",
                 ["script"] = "Instance",
                 ["shared"] = "Instance",
                 ["workspace"] = "Instance",
-        
+
                 -- Roblox Variables (Deprecated)
                 ["Game"] = "Instance",
                 ["Workspace"] = "Instance",
-        
+
                 -- Roblox Tables
                 ["Axes"] = "table",
                 ["BrickColor"] = "table",
@@ -2357,9 +2814,9 @@ function main()
                 ["Vector3"] = "table",
                 ["Vector3int16"] = "table",
             },
-        
+
             libraries = {
-        
+
                 -- Luau Libraries
                 bit32 = {
                     arshift = "function",
@@ -2377,7 +2834,7 @@ function main()
                     rrotate = "function",
                     rshift = "function",
                 },
-        
+
                 coroutine = {
                     close = "function",
                     create = "function",
@@ -2388,7 +2845,7 @@ function main()
                     wrap = "function",
                     yield = "function",
                 },
-        
+
                 debug = {
                     dumpheap = "function",
                     getmemorycategory = "function",
@@ -2400,7 +2857,7 @@ function main()
                     setmemorycategory = "function",
                     traceback = "function",
                 },
-        
+
                 math = {
                     abs = "function",
                     acos = "function",
@@ -2434,18 +2891,18 @@ function main()
                     sqrt = "function",
                     tan = "function",
                     tanh = "function",
-        
+
                     huge = "number",
                     pi = "number",
                 },
-        
+
                 os = {
                     clock = "function",
                     date = "function",
                     difftime = "function",
                     time = "function",
                 },
-        
+
                 string = {
                     byte = "function",
                     char = "function",
@@ -2465,7 +2922,7 @@ function main()
                     unpack = "function",
                     upper = "function",
                 },
-        
+
                 table = {
                     clear = "function",
                     clone = "function",
@@ -2485,7 +2942,7 @@ function main()
                     sort = "function",
                     unpack = "function",
                 },
-        
+
                 utf8 = {
                     char = "function",
                     codepoint = "function",
@@ -2495,15 +2952,15 @@ function main()
                     nfcnormalize = "function",
                     nfdnormalize = "function",
                     offset = "function",
-        
+
                     charpattern = "string",
                 },
-        
+
                 -- Roblox Libraries
                 Axes = {
                     new = "function",
                 },
-        
+
                 BrickColor = {
                     Black = "function",
                     Blue = "function",
@@ -2519,11 +2976,11 @@ function main()
                     White = "function",
                     Yellow = "function",
                 },
-        
+
                 CatalogSearchParams = {
                     new = "function",
                 },
-        
+
                 CFrame = {
                     Angles = "function",
                     fromAxisAngle = "function",
@@ -2534,10 +2991,10 @@ function main()
                     fromOrientation = "function",
                     lookAt = "function",
                     new = "function",
-        
+
                     identity = "CFrame",
                 },
-        
+
                 Color3 = {
                     fromHex = "function",
                     fromHSV = "function",
@@ -2545,15 +3002,15 @@ function main()
                     new = "function",
                     toHSV = "function",
                 },
-        
+
                 ColorSequence = {
                     new = "function",
                 },
-        
+
                 ColorSequenceKeypoint = {
                     new = "function",
                 },
-        
+
                 DateTime = {
                     fromIsoDate = "function",
                     fromLocalTime = "function",
@@ -2562,84 +3019,84 @@ function main()
                     fromUnixTimestampMillis = "function",
                     now = "function",
                 },
-        
+
                 DockWidgetPluginGuiInfo = {
                     new = "function",
                 },
-        
+
                 Enum = {},
-        
+
                 Faces = {
                     new = "function",
                 },
-        
+
                 FloatCurveKey = {
                     new = "function",
                 },
-        
+
                 Font = {
                     fromEnum = "function",
                     fromId = "function",
                     fromName = "function",
                     new = "function",
                 },
-        
+
                 Instance = {
                     new = "function",
                 },
-        
+
                 NumberRange = {
                     new = "function",
                 },
-        
+
                 NumberSequence = {
                     new = "function",
                 },
-        
+
                 NumberSequenceKeypoint = {
                     new = "function",
                 },
-        
+
                 OverlapParams = {
                     new = "function",
                 },
-        
+
                 PathWaypoint = {
                     new = "function",
                 },
-        
+
                 PhysicalProperties = {
                     new = "function",
                 },
-        
+
                 Random = {
                     new = "function",
                 },
-        
+
                 Ray = {
                     new = "function",
                 },
-        
+
                 RaycastParams = {
                     new = "function",
                 },
-        
+
                 Rect = {
                     new = "function",
                 },
-        
+
                 Region3 = {
                     new = "function",
                 },
-        
+
                 Region3int16 = {
                     new = "function",
                 },
-        
+
                 RotationCurveKey = {
                     new = "function",
                 },
-        
+
                 SharedTable = {
                     clear = "function",
                     clone = "function",
@@ -2650,7 +3107,7 @@ function main()
                     size = "function",
                     update = "function",
                 },
-        
+
                 task = {
                     cancel = "function",
                     defer = "function",
@@ -2660,64 +3117,64 @@ function main()
                     synchronize = "function",
                     wait = "function",
                 },
-        
+
                 TweenInfo = {
                     new = "function",
                 },
-        
+
                 UDim = {
                     new = "function",
                 },
-        
+
                 UDim2 = {
                     fromOffset = "function",
                     fromScale = "function",
                     new = "function",
                 },
-        
+
                 Vector2 = {
                     new = "function",
-        
+
                     one = "Vector2",
                     xAxis = "Vector2",
                     yAxis = "Vector2",
                     zero = "Vector2",
                 },
-        
+
                 Vector2int16 = {
                     new = "function",
                 },
-        
+
                 Vector3 = {
                     fromAxis = "function",
                     FromAxis = "function",
                     fromNormalId = "function",
                     FromNormalId = "function",
                     new = "function",
-        
+
                     one = "Vector3",
                     xAxis = "Vector3",
                     yAxis = "Vector3",
                     zAxis = "Vector3",
                     zero = "Vector3",
                 },
-        
+
                 Vector3int16 = {
                     new = "function",
                 },
             },
         }
-        
+
         -- Filling up language.libraries.Enum table
         local enumLibraryTable = language.libraries.Enum
-        
+
         for _, enum in ipairs(Enum:GetEnums()) do
             --TODO: Remove tostring from here once there is a better way to get the name of an Enum
             enumLibraryTable[tostring(enum)] = "Enum"
         end
-        
+
         return language
-        
+
     end
 
     modules[tbl.theme] = function()
@@ -2734,37 +3191,37 @@ function main()
             ["operator"] = Color3.fromRGB(255, 239, 148),
             ["custom"] = Color3.fromRGB(119, 122, 255),
         }
-        
+
         local types = require(script.Parent.types)
-        
+
         local Theme = {
             tokenColors = {},
             tokenRichTextFormatter = {},
         }
-        
+
         function Theme.setColors(tokenColors: types.TokenColors)
             assert(type(tokenColors) == "table", "Theme.updateColors expects a table")
-        
+
             for tokenName, color in tokenColors do
                 Theme.tokenColors[tokenName] = color
             end
         end
-        
+
         function Theme.getColoredRichText(color: Color3, text: string): string
             return '<font color="#' .. color:ToHex() .. '">' .. text .. "</font>"
         end
-        
+
         function Theme.getColor(tokenName: types.TokenName): Color3
             return Theme.tokenColors[tokenName]
         end
-        
+
         function Theme.matchStudioSettings(refreshCallback: () -> ()): boolean
             local success = pcall(function()
                 -- When not used in a Studio plugin, this will error
                 -- and the pcall will just silently return
                 local studio = settings().Studio
                 local studioTheme = studio.Theme
-        
+
                 local function getTokens()
                     return {
                         ["background"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBackground),
@@ -2778,7 +3235,7 @@ function main()
                         ["custom"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBool),
                     }
                 end
-        
+
                 Theme.setColors(getTokens())
                 studio.ThemeChanged:Connect(function()
                     studioTheme = studio.Theme
@@ -2788,30 +3245,30 @@ function main()
             end)
             return success
         end
-        
+
         -- Initialize
         Theme.setColors(DEFAULT_TOKEN_COLORS)
-        
+
         return Theme
-        
+
     end
 
     modules[tbl.types] = function()
         local script = tbl.types
 
         export type TextObject = TextLabel | TextBox
-        
+
         export type TokenName =
             "background"
-            | "iden"
-            | "keyword"
-            | "builtin"
-            | "string"
-            | "number"
-            | "comment"
-            | "operator"
-            | "custom"
-        
+        | "iden"
+        | "keyword"
+        | "builtin"
+        | "string"
+        | "number"
+        | "comment"
+        | "operator"
+        | "custom"
+
         export type TokenColors = {
             ["background"]: Color3?,
             ["iden"]: Color3?,
@@ -2823,7 +3280,7 @@ function main()
             ["operator"]: Color3?,
             ["custom"]: Color3?,
         }
-        
+
         export type HighlightProps = {
             textObject: TextObject,
             src: string?,
@@ -2831,13 +3288,13 @@ function main()
             lexer: Lexer?,
             customLang: { [string]: string }?,
         }
-        
+
         export type Lexer = {
             scan: (src: string) -> () -> (string, string),
             navigator: () -> any,
             finished: boolean?,
         }
-        
+
         export type ObjectData = {
             Text: string,
             Labels: { TextLabel },
@@ -2845,18 +3302,18 @@ function main()
             Lexer: Lexer?,
             CustomLang: { [string]: string }?,
         }
-        
+
         return nil
-        
+
     end
 
     modules[tbl.utility] = function()
         local script = tbl.utility
 
         local types = require(script.Parent.types)
-        
+
         local Utility = {}
-        
+
         function Utility.sanitizeRichText(s: string): string
             return string.gsub(
                 string.gsub(string.gsub(string.gsub(string.gsub(s, "&", "&amp;"), "<", "&lt;"), ">", "&gt;"), '"', "&quot;"),
@@ -2864,18 +3321,18 @@ function main()
                 "&apos;"
             )
         end
-        
+
         function Utility.convertTabsToSpaces(s: string): string
             return string.gsub(s, "\t", "    ")
         end
-        
+
         function Utility.removeControlChars(s: string): string
             return string.gsub(s, "[\0\1\2\3\4\5\6\7\8\11\12\13\14\15\16\17\18\19\20\21\22\23\24\25\26\27\28\29\30\31]+", "")
         end
-        
+
         function Utility.getInnerAbsoluteSize(textObject: types.TextObject): Vector2
             local fullSize = textObject.AbsoluteSize
-        
+
             local padding: UIPadding? = textObject:FindFirstChildWhichIsA("UIPadding")
             if padding then
                 local offsetX = padding.PaddingLeft.Offset + padding.PaddingRight.Offset
@@ -2887,14 +3344,14 @@ function main()
                 return fullSize
             end
         end
-        
+
         function Utility.getTextBounds(textObject: types.TextObject): Vector2
             if textObject.ContentText == "" then
                 return Vector2.zero
             end
-        
+
             local textBounds = textObject.TextBounds
-        
+
             -- Wait for TextBounds to be non-NaN and non-zero because Roblox
             while (textBounds.Y ~= textBounds.Y) or (textBounds.Y < 1) do
                 task.wait()
@@ -2902,9 +3359,9 @@ function main()
             end
             return textBounds
         end
-        
+
         return Utility
-        
+
     end
 
     task.spawn(function()
@@ -2912,133 +3369,332 @@ function main()
 
         local Highlighter = require(script.Parent.ScriptBox.Highlighter)
         local myTextLabel = script.Parent.ScriptBox
-        
+
         Highlighter.highlight({
             textObject = myTextLabel,
         })
-        
+
+    end)
+
+    task.spawn(function()
+        local script = tbl.GlobalLog
+
+        _G.logPrint = false  
+        _G.logWarn = false  
+        _G.logError = false  
+        _G.logInfo = false  
+
+        local TextService = game:GetService("TextService")
+        local LogService = game:GetService("LogService")
+        local frame = script.Parent
+        local messageBox = frame:WaitForChild("TextBox")
+
+        messageBox.RichText = true
+        messageBox.Selectable = false
+        messageBox.Active = false
+
+        local function formatMessage(message, messageType)
+            local color = ""
+            local formattedType = ""
+
+            if messageType == Enum.MessageType.MessageOutput then
+                color = "#cffeff" 
+                formattedType = "Print"
+            elseif messageType == Enum.MessageType.MessageWarning then
+                color = "#ffa73b" 
+                formattedType = "Warn"
+            elseif messageType == Enum.MessageType.MessageError then
+                color = "#FF005D" 
+                formattedType = "Error"
+            elseif messageType == Enum.MessageType.MessageInfo then
+                color = "#5cb0ff" 
+                formattedType = "Info"
+            else
+                color = "#FFFFFF" 
+                formattedType = "Other"
+            end
+
+            return string.format('<font color="%s"><b>[%s]</b></font> %s', color, formattedType, message)
+        end
+
+        local function updateMessageBoxSize()
+            local textSize = TextService:GetTextSize(
+                messageBox.Text, 
+                messageBox.TextSize, 
+                messageBox.Font, 
+                Vector2.new(messageBox.AbsoluteSize.X, 20000)
+            )
+
+            messageBox.Size = UDim2.new(messageBox.Size.X.Scale, messageBox.Size.X.Offset, 0, textSize.Y)
+        end
+
+
+        local function onMessageOut(message, messageType)
+            if (messageType == Enum.MessageType.MessageOutput and not _G.logPrint) or
+                (messageType == Enum.MessageType.MessageWarning and not _G.logWarn) or
+                (messageType == Enum.MessageType.MessageError and not _G.logError) or
+                (messageType == Enum.MessageType.MessageInfo and not _G.logInfo) then
+                return 
+            end
+
+            local timeStamp = os.date("%X")
+            local formattedMessage = formatMessage(message, messageType)
+            messageBox.Text = messageBox.Text .. timeStamp .. " - " .. formattedMessage .. "\n"
+
+            updateMessageBoxSize()
+
+            frame.CanvasPosition = Vector2.new(0, messageBox.TextBounds.Y)
+        end
+
+
+        LogService.MessageOut:Connect(onMessageOut)
+
     end)
 
     task.spawn(function()
         local script = tbl.LocalScript_1
 
-        
+
         local plr = game.Players.LocalPlayer
         local MainFrame = script.Parent.MainFrame
         local buttons = MainFrame.BottomMenuFrame.MenuList
-        
+
         local execBtn = buttons:WaitForChild("ExecBtn")
         local cloudBtn = buttons:WaitForChild("CloudBtn")
-        local lsBtn = buttons:WaitForChild("LSBtn")
+        local HBtn = buttons:WaitForChild("HBtn")
         local settingsBtn = buttons:WaitForChild("SettingsBtn")
-        
+
         local execFrame = MainFrame:WaitForChild("ExecFrame")
-        local cloudFrame = MainFrame:WaitForChild("CloudFrame")
-        local localScriptFrame = MainFrame:WaitForChild("LocalScriptFrame")
+        local logFrame = MainFrame:WaitForChild("logFrame")
+        local homeFrame = MainFrame:WaitForChild("homeFrame")
         local settingsFrame = MainFrame:WaitForChild("SettingsFrame")
-        
+
         local excbtn = execFrame.Buttons.Button1
         local execlipbtn = execFrame.Buttons.Button2
         local pastebtn = execFrame.Buttons.Button3
         local clearbtn = execFrame.Buttons.Button4
-        
+
         local ScriptBox = execFrame.ScrollingFrame.ScriptBox
-        
+
         local ExitBtn = MainFrame.BottomMenuFrame.LeftFrame.ExitBtn
-        
+
         ----//////////////////----
         ----/// Menu Buttons
         ----//////////////////----
-        
+
         local function hideAllFrames()
             execFrame.Visible = false
-            cloudFrame.Visible = false
-            localScriptFrame.Visible = false
+            logFrame.Visible = false
+            homeFrame.Visible = false
             settingsFrame.Visible = false
             execBtn.UIStroke.Enabled = false    
-            lsBtn.UIStroke.Enabled = false    
+            HBtn.UIStroke.Enabled = false    
             cloudBtn.UIStroke.Enabled = false    
             settingsBtn.UIStroke.Enabled = false    
         end
-        
+
         local function showFrame(frame, btn)
             hideAllFrames()
             frame.Visible = true
             btn.UIStroke.Enabled = true
         end
-        
+
         execBtn.Activated:Connect(function()
             showFrame(execFrame, execBtn)
         end)
-        
+
         cloudBtn.Activated:Connect(function()
-            showFrame(cloudFrame, cloudBtn)
+            showFrame(logFrame, cloudBtn)
         end)
-        
-        lsBtn.Activated:Connect(function()
-            showFrame(localScriptFrame, lsBtn)
+
+        HBtn.Activated:Connect(function()
+            showFrame(homeFrame, HBtn)
         end)
-        
+
         settingsBtn.Activated:Connect(function()
             showFrame(settingsFrame, settingsBtn)
         end)
-        
+
         hideAllFrames()
-        
+
+        homeFrame.Visible = true
+
         ----//////////////////----
         ----/// Exec Buttons
         ----//////////////////----
-        
+
         excbtn.Activated:Connect(function()
             excbtn.UIStroke.Enabled = true
             executecode(ScriptBox.Text)
-            print("Trigon - Executed script")
             wait(0.1)
             excbtn.UIStroke.Enabled = false
         end) 
-        
+
         execlipbtn.Activated:Connect(function()
             execlipbtn.UIStroke.Enabled = true
             executecode(getclipboard())
-            print("Trigon - Executed from clipboard")
             wait(0.1)
             execlipbtn.UIStroke.Enabled = false
         end)  
-        
+
         pastebtn.Activated:Connect(function()
             pastebtn.UIStroke.Enabled = true
             ScriptBox.Text = getclipboard()
-            print("Trigon - Pasted from clipboard")
             wait(0.1)
             pastebtn.UIStroke.Enabled = false
         end) 
-        
+
         clearbtn.Activated:Connect(function()
             clearbtn.UIStroke.Enabled = true
             ScriptBox.Text = ""
             wait(0.1)
             clearbtn.UIStroke.Enabled = false
         end)  
-        
-        
+
+
         ----//////////////////----
         ----/// Other
         ----//////////////////----
-        
+
         ExitBtn.Activated:Connect(function()
             script.Parent.Enabled = not script.Parent.Enabled
         end)
-        
+
         ScriptBox.Focused:Connect(function()
             for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
-            item.Visible = false
+                item.Visible = false
             end
         end)
-        
+
         ScriptBox.FocusLost:Connect(function()
             for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
                 item.Visible = true
             end
+        end)
+
+
+
+
+        ----//////////////////----
+        ----/// Default Page
+        ----//////////////////----
+
+        local HttpService = game:GetService("HttpService")
+
+        local jsonString = [[
+    	{
+    	  "15842384180x": {
+    	    "_scripts": [
+    	      {"scriptName": "Script 1", "text": "script executed"},
+    	      {"scriptName": "script 2", "text": "script executed"}
+    	    ]
+    	  },
+    	  "987654321": {
+    	    "_scripts": [
+    	      {"scriptName": "scriptName 3", "text": "Quote 1 from scriptName 3 in Game 987654321"}
+    	    ]
+    	  },
+    	  "global": {
+    	    "_scripts": [
+    	      {"scriptName": "Infinite Yield", "text": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\",true))()"},
+    	      {"scriptName": "Dark Dex v4", "text": "getgenv().Key = \"Bash\" loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AIY%20Dex\",true))()"},
+    	      {"scriptName": "Bypassed Dark Dex v3", "text": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua', true))()"}
+    	    ]
+    	  }
+    	}
+    	]]
+
+
+
+        local scriptList = HttpService:JSONDecode(jsonString)
+        local scriptsFrame = MainFrame.homeFrame.scriptsFrame
+        local scriptButton = scriptsFrame.TextButton
+        local currentPlaceId = tostring(game.PlaceId) 
+
+
+        scriptsFrame["#GameHeader"].Title.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+
+        local function createscriptButtons(_scripts)
+            local yPos = 0
+            for i, scriptData in ipairs(_scripts) do
+                local newButton = scriptButton:Clone()
+                newButton.Parent = scriptsFrame
+                newButton.Text = scriptData.scriptName
+                newButton.Position = UDim2.new(newButton.Position.X.Scale, newButton.Position.X.Offset, newButton.Position.Y.Scale, yPos)
+                yPos = yPos + newButton.Size.Y.Offset + 5
+                newButton.Visible = true
+
+                newButton.MouseButton1Click:Connect(function()
+                    --print(scriptData.text)
+                    executecode(scriptData.text)
+                end)
+            end
+        end
+
+        local scriptToUse
+        if scriptList[currentPlaceId] and scriptList[currentPlaceId]._scripts then
+            scriptToUse = scriptList[currentPlaceId]._scripts
+        elseif scriptList["global"] and scriptList["global"]._scripts then
+            scriptToUse = scriptList["global"]._scripts
+        end
+
+        if scriptToUse then
+            createscriptButtons(scriptToUse)
+        else
+            print("No _scripts available.")
+        end
+
+        scriptButton.Visible = false
+
+
+        ----//////////////////----
+        ----/// Console Log Page
+        ----//////////////////----
+
+        logButtons = logFrame.logButtons
+        consoleFrame = logFrame.consoleFrame
+
+        outputCBX = logButtons.logOutput.Button
+        warningCBX = logButtons.logWarning.Button
+        errorCBX = logButtons.logError.Button
+        infoCBX = logButtons.logInfo.Button
+        consoleclrbtn = logButtons.cclrbtn
+
+        local function ccupdt(value, button)
+            if _G[value] then
+                button.Image = "rbxassetid://3926305904"
+                button.ImageRectSize = Vector2.new(36, 36) 
+                button.ImageRectOffset = Vector2.new(724, 724) 
+            else
+                button.Image = "rbxassetid://3926311105"        
+                button.ImageRectSize = Vector2.new(48, 48) 
+                button.ImageRectOffset = Vector2.new(4, 836) 
+            end
+        end
+
+        outputCBX.Activated:Connect(function()
+            ccupdt("logPrint",outputCBX)
+            _G.logPrint = not _G.logPrint
+            print(_G.logPrint)
+        end)
+
+        warningCBX.Activated:Connect(function()
+            ccupdt("logWarn",warningCBX)
+            _G.logWarn = not _G.logWarn
+        end)
+
+        errorCBX.Activated:Connect(function()
+            ccupdt("logError",errorCBX)
+            _G.logError = not _G.logError
+        end)
+
+        infoCBX.Activated:Connect(function()
+            ccupdt("logInfo",infoCBX)
+            _G.logInfo = not _G.logInfo
+        end)
+
+        consoleclrbtn.Activated:Connect(function()
+            consoleFrame.TextBox.Text = ""
         end)
     end)
 
