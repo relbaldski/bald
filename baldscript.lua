@@ -1,4 +1,4 @@
---v0.02
+
 function topbar(ButtonName,Image,Left)
     task.wait(2)
     local RunService = game:GetService("RunService")
@@ -996,7 +996,8 @@ function main()
     tbl.TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     tbl.TrigonMain.Name = "TrigonMain"
     tbl.TrigonMain.Parent = gethui()
-
+    tbl.TrigonMain.Enabled = false
+    
     tbl.MainFrame.BorderSizePixel = 0
     tbl.MainFrame.Size = UDim2.new(1.0005, 0, 1, 0)
     tbl.MainFrame.BackgroundTransparency = 0.35
