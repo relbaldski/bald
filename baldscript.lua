@@ -1,4 +1,4 @@
---v0.02
+--v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
     local RunService = game:GetService("RunService")
@@ -871,168 +871,168 @@ end
 function main() 
 
     local tbl =
-    {
-    	TrigonMain = Instance.new("ScreenGui"),
-    	MainFrame = Instance.new("Frame"),
-    	BottomMenuFrame = Instance.new("Frame"),
-    	LeftFrame = Instance.new("Frame"),
-    	ExitBtn = Instance.new("ImageButton"),
-    	Icon = Instance.new("ImageLabel"),
-    	UICorner = Instance.new("UICorner"),
-    	RightFrame = Instance.new("Frame"),
-    	Button = Instance.new("ImageButton"),
-    	UIGradient = Instance.new("UIGradient"),
-    	Icon_1 = Instance.new("ImageLabel"),
-    	MenuList = Instance.new("Frame"),
-    	UICorner_1 = Instance.new("UICorner"),
-    	UIGridLayout = Instance.new("UIGridLayout"),
-    	HBtn = Instance.new("ImageButton"),
-    	UIGradient_1 = Instance.new("UIGradient"),
-    	Icon_2 = Instance.new("ImageLabel"),
-    	UIStroke = Instance.new("UIStroke"),
-    	UICorner_2 = Instance.new("UICorner"),
-    	ExecBtn = Instance.new("ImageButton"),
-    	Icon_3 = Instance.new("ImageLabel"),
-    	UIStroke_1 = Instance.new("UIStroke"),
-    	UICorner_3 = Instance.new("UICorner"),
-    	UIGradient_2 = Instance.new("UIGradient"),
-    	CloudBtn = Instance.new("ImageButton"),
-    	UIGradient_3 = Instance.new("UIGradient"),
-    	Icon_4 = Instance.new("ImageLabel"),
-    	UIStroke_2 = Instance.new("UIStroke"),
-    	UICorner_4 = Instance.new("UICorner"),
-    	SettingsBtn = Instance.new("ImageButton"),
-    	UIGradient_4 = Instance.new("UIGradient"),
-    	Icon_5 = Instance.new("ImageLabel"),
-    	UIStroke_3 = Instance.new("UIStroke"),
-    	UICorner_5 = Instance.new("UICorner"),
-    	UICorner_6 = Instance.new("UICorner"),
-    	logFrame = Instance.new("Frame"),
-    	UICorner_7 = Instance.new("UICorner"),
-    	logButtons = Instance.new("Frame"),
-    	logOutput = Instance.new("Frame"),
-    	Button_1 = Instance.new("ImageButton"),
-    	TextLabel = Instance.new("TextLabel"),
-    	UIListLayout = Instance.new("UIListLayout"),
-    	UIListLayout_1 = Instance.new("UIListLayout"),
-    	logWarning = Instance.new("Frame"),
-    	Button_2 = Instance.new("ImageButton"),
-    	TextLabel_1 = Instance.new("TextLabel"),
-    	UIListLayout_2 = Instance.new("UIListLayout"),
-    	logError = Instance.new("Frame"),
-    	Button_3 = Instance.new("ImageButton"),
-    	TextLabel_2 = Instance.new("TextLabel"),
-    	UIListLayout_3 = Instance.new("UIListLayout"),
-    	logInfo = Instance.new("Frame"),
-    	Button_4 = Instance.new("ImageButton"),
-    	TextLabel_3 = Instance.new("TextLabel"),
-    	UIListLayout_4 = Instance.new("UIListLayout"),
-    	cclrbtn = Instance.new("ImageButton"),
-    	Title = Instance.new("TextLabel"),
-    	UICorner_8 = Instance.new("UICorner"),
-    	UIStroke_4 = Instance.new("UIStroke"),
-    	TextLabel_4 = Instance.new("TextLabel"),
-    	consoleFrame = Instance.new("ScrollingFrame"),
-    	GlobalLog = Instance.new("LocalScript"),
-    	TextBox = Instance.new("TextLabel"),
-    	SettingsFrame = Instance.new("Frame"),
-    	UICorner_9 = Instance.new("UICorner"),
-    	sample = Instance.new("Frame"),
-    	UIListLayout_5 = Instance.new("UIListLayout"),
-    	UICorner_10 = Instance.new("UICorner"),
-    	Title_1 = Instance.new("TextLabel"),
-    	Title_2 = Instance.new("TextLabel"),
-    	Title_3 = Instance.new("TextLabel"),
-    	ImageLabel = Instance.new("ImageLabel"),
-    	homeFrame = Instance.new("Frame"),
-    	UICorner_11 = Instance.new("UICorner"),
-    	changelogFrame = Instance.new("ScrollingFrame"),
-    	ScriptBox = Instance.new("TextBox"),
-    	UICorner_12 = Instance.new("UICorner"),
-    	UIListLayout_6 = Instance.new("UIListLayout"),
-    	scriptsFrame = Instance.new("ScrollingFrame"),
-    	UICorner_13 = Instance.new("UICorner"),
-    	UIListLayout_7 = Instance.new("UIListLayout"),
-    	_GameHeader = Instance.new("Frame"),
-    	Title_4 = Instance.new("TextLabel"),
-    	UICorner_14 = Instance.new("UICorner"),
-    	TextButton = Instance.new("TextButton"),
-    	UICorner_15 = Instance.new("UICorner"),
-    	localplrFrame = Instance.new("Frame"),
-    	UIListLayout_8 = Instance.new("UIListLayout"),
-    	Header = Instance.new("Frame"),
-    	Title_5 = Instance.new("TextLabel"),
-    	UICorner_16 = Instance.new("UICorner"),
-    	walkspeed = Instance.new("Frame"),
-    	Slider = Instance.new("Frame"),
-    	Image = Instance.new("Frame"),
-    	Bar_Background = Instance.new("Frame"),
-    	UICorner_17 = Instance.new("UICorner"),
-    	Bar_Foreground = Instance.new("Frame"),
-    	UICorner_18 = Instance.new("UICorner"),
-    	Thumb = Instance.new("ImageLabel"),
-    	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
-    	Thumb_Pressed = Instance.new("ImageLabel"),
-    	Configuration = Instance.new("Configuration"),
-    	ObjectBarBackground = Instance.new("ObjectValue"),
-    	ObjectBarForeground = Instance.new("ObjectValue"),
-    	ObjectThumbNormal = Instance.new("ObjectValue"),
-    	ObjectThumbPressed = Instance.new("ObjectValue"),
-    	Title_6 = Instance.new("TextLabel"),
-    	jumspeed = Instance.new("Frame"),
-    	Slider_1 = Instance.new("Frame"),
-    	Image_1 = Instance.new("Frame"),
-    	Bar_Background_1 = Instance.new("Frame"),
-    	UICorner_19 = Instance.new("UICorner"),
-    	Bar_Foreground_1 = Instance.new("Frame"),
-    	UICorner_20 = Instance.new("UICorner"),
-    	Thumb_1 = Instance.new("ImageLabel"),
-    	UIAspectRatioConstraint_1 = Instance.new("UIAspectRatioConstraint"),
-    	Thumb_Pressed_1 = Instance.new("ImageLabel"),
-    	Configuration_1 = Instance.new("Configuration"),
-    	ObjectBarBackground_1 = Instance.new("ObjectValue"),
-    	ObjectBarForeground_1 = Instance.new("ObjectValue"),
-    	ObjectThumbNormal_1 = Instance.new("ObjectValue"),
-    	ObjectThumbPressed_1 = Instance.new("ObjectValue"),
-    	Scripts = Instance.new("Folder"),
-    	FormSliderHorizontalLocalScript = Instance.new("LocalScript"),
-    	Title_7 = Instance.new("TextLabel"),
-    	LocalPlayerHandle = Instance.new("LocalScript"),
-    	FormSliderClass = Instance.new("ModuleScript"),
-    	ExtendDraggableClass = Instance.new("ModuleScript"),
-    	CurPos = Instance.new("TextLabel"),
-    	ExecFrame = Instance.new("Frame"),
-    	Buttons = Instance.new("Frame"),
-    	UIListLayout_9 = Instance.new("UIListLayout"),
-    	Button1 = Instance.new("ImageButton"),
-    	UIStroke_5 = Instance.new("UIStroke"),
-    	UICorner_21 = Instance.new("UICorner"),
-    	Title_8 = Instance.new("TextLabel"),
-    	Button4 = Instance.new("ImageButton"),
-    	Title_9 = Instance.new("TextLabel"),
-    	UICorner_22 = Instance.new("UICorner"),
-    	UIStroke_6 = Instance.new("UIStroke"),
-    	Button3 = Instance.new("ImageButton"),
-    	Title_10 = Instance.new("TextLabel"),
-    	UICorner_23 = Instance.new("UICorner"),
-    	UIStroke_7 = Instance.new("UIStroke"),
-    	Button2 = Instance.new("ImageButton"),
-    	Title_11 = Instance.new("TextLabel"),
-    	UICorner_24 = Instance.new("UICorner"),
-    	UIStroke_8 = Instance.new("UIStroke"),
-    	UICorner_25 = Instance.new("UICorner"),
-    	ScrollingFrame = Instance.new("ScrollingFrame"),
-    	LocalScript = Instance.new("LocalScript"),
-    	ScriptBox_1 = Instance.new("TextBox"),
-    	Highlighter = Instance.new("ModuleScript"),
-    	lexer = Instance.new("ModuleScript"),
-    	language = Instance.new("ModuleScript"),
-    	theme = Instance.new("ModuleScript"),
-    	types = Instance.new("ModuleScript"),
-    	utility = Instance.new("ModuleScript"),
-    	UICorner_26 = Instance.new("UICorner"),
-    	LocalScript_1 = Instance.new("LocalScript")
-    }
+        {
+            TrigonMain = Instance.new("ScreenGui"),
+            MainFrame = Instance.new("Frame"),
+            BottomMenuFrame = Instance.new("Frame"),
+            LeftFrame = Instance.new("Frame"),
+            ExitBtn = Instance.new("ImageButton"),
+            Icon = Instance.new("ImageLabel"),
+            UICorner = Instance.new("UICorner"),
+            RightFrame = Instance.new("Frame"),
+            Button = Instance.new("ImageButton"),
+            UIGradient = Instance.new("UIGradient"),
+            Icon_1 = Instance.new("ImageLabel"),
+            MenuList = Instance.new("Frame"),
+            UICorner_1 = Instance.new("UICorner"),
+            UIGridLayout = Instance.new("UIGridLayout"),
+            HBtn = Instance.new("ImageButton"),
+            UIGradient_1 = Instance.new("UIGradient"),
+            Icon_2 = Instance.new("ImageLabel"),
+            UIStroke = Instance.new("UIStroke"),
+            UICorner_2 = Instance.new("UICorner"),
+            ExecBtn = Instance.new("ImageButton"),
+            Icon_3 = Instance.new("ImageLabel"),
+            UIStroke_1 = Instance.new("UIStroke"),
+            UICorner_3 = Instance.new("UICorner"),
+            UIGradient_2 = Instance.new("UIGradient"),
+            CloudBtn = Instance.new("ImageButton"),
+            UIGradient_3 = Instance.new("UIGradient"),
+            Icon_4 = Instance.new("ImageLabel"),
+            UIStroke_2 = Instance.new("UIStroke"),
+            UICorner_4 = Instance.new("UICorner"),
+            SettingsBtn = Instance.new("ImageButton"),
+            UIGradient_4 = Instance.new("UIGradient"),
+            Icon_5 = Instance.new("ImageLabel"),
+            UIStroke_3 = Instance.new("UIStroke"),
+            UICorner_5 = Instance.new("UICorner"),
+            UICorner_6 = Instance.new("UICorner"),
+            logFrame = Instance.new("Frame"),
+            UICorner_7 = Instance.new("UICorner"),
+            logButtons = Instance.new("Frame"),
+            logOutput = Instance.new("Frame"),
+            Button_1 = Instance.new("ImageButton"),
+            TextLabel = Instance.new("TextLabel"),
+            UIListLayout = Instance.new("UIListLayout"),
+            UIListLayout_1 = Instance.new("UIListLayout"),
+            logWarning = Instance.new("Frame"),
+            Button_2 = Instance.new("ImageButton"),
+            TextLabel_1 = Instance.new("TextLabel"),
+            UIListLayout_2 = Instance.new("UIListLayout"),
+            logError = Instance.new("Frame"),
+            Button_3 = Instance.new("ImageButton"),
+            TextLabel_2 = Instance.new("TextLabel"),
+            UIListLayout_3 = Instance.new("UIListLayout"),
+            logInfo = Instance.new("Frame"),
+            Button_4 = Instance.new("ImageButton"),
+            TextLabel_3 = Instance.new("TextLabel"),
+            UIListLayout_4 = Instance.new("UIListLayout"),
+            cclrbtn = Instance.new("ImageButton"),
+            Title = Instance.new("TextLabel"),
+            UICorner_8 = Instance.new("UICorner"),
+            UIStroke_4 = Instance.new("UIStroke"),
+            TextLabel_4 = Instance.new("TextLabel"),
+            consoleFrame = Instance.new("ScrollingFrame"),
+            GlobalLog = Instance.new("LocalScript"),
+            TextBox = Instance.new("TextLabel"),
+            SettingsFrame = Instance.new("Frame"),
+            UICorner_9 = Instance.new("UICorner"),
+            sample = Instance.new("Frame"),
+            UIListLayout_5 = Instance.new("UIListLayout"),
+            UICorner_10 = Instance.new("UICorner"),
+            Title_1 = Instance.new("TextLabel"),
+            Title_2 = Instance.new("TextLabel"),
+            Title_3 = Instance.new("TextLabel"),
+            ImageLabel = Instance.new("ImageLabel"),
+            homeFrame = Instance.new("Frame"),
+            UICorner_11 = Instance.new("UICorner"),
+            changelogFrame = Instance.new("ScrollingFrame"),
+            ScriptBox = Instance.new("TextBox"),
+            UICorner_12 = Instance.new("UICorner"),
+            UIListLayout_6 = Instance.new("UIListLayout"),
+            scriptsFrame = Instance.new("ScrollingFrame"),
+            UICorner_13 = Instance.new("UICorner"),
+            UIListLayout_7 = Instance.new("UIListLayout"),
+            _GameHeader = Instance.new("Frame"),
+            Title_4 = Instance.new("TextLabel"),
+            UICorner_14 = Instance.new("UICorner"),
+            TextButton = Instance.new("TextButton"),
+            UICorner_15 = Instance.new("UICorner"),
+            localplrFrame = Instance.new("Frame"),
+            UIListLayout_8 = Instance.new("UIListLayout"),
+            Header = Instance.new("Frame"),
+            Title_5 = Instance.new("TextLabel"),
+            UICorner_16 = Instance.new("UICorner"),
+            walkspeed = Instance.new("Frame"),
+            Slider = Instance.new("Frame"),
+            Image = Instance.new("Frame"),
+            Bar_Background = Instance.new("Frame"),
+            UICorner_17 = Instance.new("UICorner"),
+            Bar_Foreground = Instance.new("Frame"),
+            UICorner_18 = Instance.new("UICorner"),
+            Thumb = Instance.new("ImageLabel"),
+            UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
+            Thumb_Pressed = Instance.new("ImageLabel"),
+            Configuration = Instance.new("Configuration"),
+            ObjectBarBackground = Instance.new("ObjectValue"),
+            ObjectBarForeground = Instance.new("ObjectValue"),
+            ObjectThumbNormal = Instance.new("ObjectValue"),
+            ObjectThumbPressed = Instance.new("ObjectValue"),
+            Title_6 = Instance.new("TextLabel"),
+            jumspeed = Instance.new("Frame"),
+            Slider_1 = Instance.new("Frame"),
+            Image_1 = Instance.new("Frame"),
+            Bar_Background_1 = Instance.new("Frame"),
+            UICorner_19 = Instance.new("UICorner"),
+            Bar_Foreground_1 = Instance.new("Frame"),
+            UICorner_20 = Instance.new("UICorner"),
+            Thumb_1 = Instance.new("ImageLabel"),
+            UIAspectRatioConstraint_1 = Instance.new("UIAspectRatioConstraint"),
+            Thumb_Pressed_1 = Instance.new("ImageLabel"),
+            Configuration_1 = Instance.new("Configuration"),
+            ObjectBarBackground_1 = Instance.new("ObjectValue"),
+            ObjectBarForeground_1 = Instance.new("ObjectValue"),
+            ObjectThumbNormal_1 = Instance.new("ObjectValue"),
+            ObjectThumbPressed_1 = Instance.new("ObjectValue"),
+            Scripts = Instance.new("Folder"),
+            FormSliderHorizontalLocalScript = Instance.new("LocalScript"),
+            Title_7 = Instance.new("TextLabel"),
+            LocalPlayerHandle = Instance.new("LocalScript"),
+            FormSliderClass = Instance.new("ModuleScript"),
+            ExtendDraggableClass = Instance.new("ModuleScript"),
+            CurPos = Instance.new("TextLabel"),
+            ExecFrame = Instance.new("Frame"),
+            Buttons = Instance.new("Frame"),
+            UIListLayout_9 = Instance.new("UIListLayout"),
+            Button1 = Instance.new("ImageButton"),
+            UIStroke_5 = Instance.new("UIStroke"),
+            UICorner_21 = Instance.new("UICorner"),
+            Title_8 = Instance.new("TextLabel"),
+            Button4 = Instance.new("ImageButton"),
+            Title_9 = Instance.new("TextLabel"),
+            UICorner_22 = Instance.new("UICorner"),
+            UIStroke_6 = Instance.new("UIStroke"),
+            Button3 = Instance.new("ImageButton"),
+            Title_10 = Instance.new("TextLabel"),
+            UICorner_23 = Instance.new("UICorner"),
+            UIStroke_7 = Instance.new("UIStroke"),
+            Button2 = Instance.new("ImageButton"),
+            Title_11 = Instance.new("TextLabel"),
+            UICorner_24 = Instance.new("UICorner"),
+            UIStroke_8 = Instance.new("UIStroke"),
+            UICorner_25 = Instance.new("UICorner"),
+            ScrollingFrame = Instance.new("ScrollingFrame"),
+            LocalScript = Instance.new("LocalScript"),
+            ScriptBox_1 = Instance.new("TextBox"),
+            Highlighter = Instance.new("ModuleScript"),
+            lexer = Instance.new("ModuleScript"),
+            language = Instance.new("ModuleScript"),
+            theme = Instance.new("ModuleScript"),
+            types = Instance.new("ModuleScript"),
+            utility = Instance.new("ModuleScript"),
+            UICorner_26 = Instance.new("UICorner"),
+            LocalScript_1 = Instance.new("LocalScript")
+        }
 
     tbl.TrigonMain.Enabled = false
     tbl.TrigonMain.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
@@ -1723,14 +1723,7 @@ function main()
     tbl.ScriptBox.Size = UDim2.new(0.952941, 0, 0.982121, 0)
     tbl.ScriptBox.TextColor3 = Color3.fromRGB(150, 150, 150)
     tbl.ScriptBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.ScriptBox.Text = "
-    ~~ Changelog v0.02 ~~
-    + Added changelog
-    + Added game script section (will be adding different game scripts soon)
-    + Added Console Logging
-
-    ~~ Changelog v0.01 ~~
-    - Tridog release :o"
+    tbl.ScriptBox_1.Text = "~~ Changelog v0.02 ~~\n    + Added changelog\n    + Added game script section (will be adding different game scripts soon)\n    + Added Console Logging\n\n~~ Changelog v0.01 ~~\n- Tridog release :o"
     tbl.ScriptBox.MultiLine = true
     tbl.ScriptBox.CursorPosition = -1
     tbl.ScriptBox.Name = "ScriptBox"
@@ -2323,8 +2316,7 @@ function main()
     tbl.ScriptBox_1.Size = UDim2.new(1, 0, 1, 0)
     tbl.ScriptBox_1.TextColor3 = Color3.fromRGB(255, 255, 255)
     tbl.ScriptBox_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    tbl.ScriptBox_1.Text = "-- We recommend only uisng loadstrings | Trigon Mobile v0.1 {Beta}
-    "
+    tbl.ScriptBox_1.Text = "-- We recommend only uisng loadstrings | Trigon Mobile v0.1 {Beta}"
     tbl.ScriptBox_1.MultiLine = true
     tbl.ScriptBox_1.Name = "ScriptBox"
     tbl.ScriptBox_1.TextXAlignment = Enum.TextXAlignment.Left
@@ -2353,24 +2345,24 @@ function main()
     tbl.UICorner_26.Parent = tbl.ExecFrame
 
     tbl.LocalScript_1.Parent = tbl.TrigonMain
-     
+
     local modules, cache = {}, {}
-    		
+
     local o_require = require;
     local function require(module)
-    	local real, cached = modules[module], cache[module]
-    	
-    	if cached then return cached end
-    	
-    	if not real then return o_require(module) end
-    	
-    	cache[module] = real()
-    	
-    	return cache[module]
+        local real, cached = modules[module], cache[module]
+
+        if cached then return cached end
+
+        if not real then return o_require(module) end
+
+        cache[module] = real()
+
+        return cache[module]
     end
 
     modules[tbl.FormSliderClass] = function()
-    	local script = tbl.FormSliderClass
+        local script = tbl.FormSliderClass
 
     	--[[
     	
@@ -2381,202 +2373,202 @@ function main()
     		Class that sets slider functionality.
     			
     	--]]
-    	
-    	
-    	-- Class
-    	local FormSliderClass = {}
-    	FormSliderClass.__index = FormSliderClass
-    	
-    	
-    	-- Constructor
-    	function FormSliderClass.new(paramGuiObject, paramDirection, minvalue, maxvalue)
-    		local self = setmetatable({}, FormSliderClass)
-    		
-    		
-    		-- Validate
-    		if paramGuiObject == nil then
-    			error("Required parameters missing for constructor FormSliderClass.new.")
-    		end
-    		
-    		-- Instance Properties
-    		self.GuiObject = paramGuiObject  -- The GuiObject extended by this class
-    		self.Direction = paramDirection or Enum.Axis.X  -- Slider direction
-    		self.Connections = {}  -- Event connections
-    		
-    		
-    		-- Initialize
-    		
-    		-- Configuration Variables
-    		local configuration = self.GuiObject:WaitForChild("Configuration")
-    		local guiObjectBarBackgroundVar = configuration:WaitForChild("ObjectBarBackground")
-    		local guiObjectBarForegroundVar = configuration:WaitForChild("ObjectBarForeground")
-    		local guiObjectThumbNormalVar = configuration:WaitForChild(("ObjectThumbNormal"))
-    		local guiObjectThumbPressedVar = configuration:WaitForChild(("ObjectThumbPressed"))
-    		local guiObjectBarBackground
-    		local guiObjectBarForeground
-    		local guiObjectThumbNormal
-    		local guiObjectThumbPressed
-    		
-    		-- Validate
-    		if guiObjectBarBackgroundVar and guiObjectBarForegroundVar and guiObjectThumbNormalVar and guiObjectThumbPressedVar then
-    	
-    			-- Wait for the objects to load
-    			while not guiObjectBarBackgroundVar.Value do task.wait() end
-    			while not guiObjectBarForegroundVar.Value do task.wait() end
-    			while not guiObjectThumbNormalVar.Value do task.wait() end
-    			while not guiObjectThumbPressedVar.Value do task.wait() end
-    			
-    			-- Get values
-    			guiObjectBarBackground = guiObjectBarBackgroundVar.Value
-    			guiObjectBarForeground = guiObjectBarForegroundVar.Value
-    			guiObjectThumbNormal = guiObjectThumbNormalVar.Value
-    			guiObjectThumbPressed = guiObjectThumbPressedVar.Value
-    			
-    		end
-    		
-    		-- Make thumb draggable
-    		local ExtendDraggableClass = require(script.Parent:WaitForChild("ExtendDraggableClass"))
-    		local draggableThumbNormal = ExtendDraggableClass.new(guiObjectThumbNormal, false, self.Direction)
-    		
-    		
-    		-- Local function
-    		local function RefreshGui()
-    	
-    			-- Get current attribute values
-    			local attributesParent = self.GuiObject
-    			
-    			local attributeIsEnabled = attributesParent:GetAttribute("IsEnabled")
-    			local attributeColorDisabled1 = attributesParent:GetAttribute("ColorDisabled1")
-    			local attributeColorDisabled2 = attributesParent:GetAttribute("ColorDisabled2")
-    			local attributeColorEnabled1 = attributesParent:GetAttribute("ColorEnabled1")
-    			local attributeColorEnabled2 = attributesParent:GetAttribute("ColorEnabled2")
-    			local attributeValueIncrement = attributesParent:GetAttribute(("ValueIncrement"))
-    			local attributeValuePercent = attributesParent:GetAttribute(("ValuePercent"))
-    			
-    			warn(minvalue, maxvalue)
-    			-- Validate
-    			local newValuePercent = math.clamp(attributeValuePercent, minvalue, maxvalue)
-    			if newValuePercent ~= attributeValuePercent then
-    				attributesParent:SetAttribute("ValuePercent", newValuePercent)
-    			end
-    			
-    			-- Update slider elements
-    			if self.Direction == Enum.Axis.X then
-    				-- Horizontal
-    				
-    				-- Thumb position
-    				guiObjectThumbNormal.Position = UDim2.new(newValuePercent / maxvalue, guiObjectThumbNormal.Position.X.Offset, guiObjectThumbNormal.Position.Y.Scale, guiObjectThumbNormal.Position.Y.Offset)
-    	
-    				-- Foreground bar length
-    				guiObjectBarForeground.Size = UDim2.new(newValuePercent / maxvalue, guiObjectBarForeground.Size.X.Offset, guiObjectBarForeground.Size.Y.Scale, guiObjectBarForeground.Size.Y.Offset)
-    				
-    			else
-    				-- Vertical
-    				
-    				-- Thumb position
-    				guiObjectThumbNormal.Position = UDim2.new(guiObjectThumbNormal.Position.X.Scale, guiObjectThumbNormal.Position.X.Offset, 1 - (newValuePercent / maxvalue), guiObjectThumbNormal.Position.Y.Offset)
-    	
-    				-- Foreground bar length
-    				guiObjectBarForeground.Size = UDim2.new(guiObjectBarForeground.Size.X.Scale, guiObjectBarForeground.Size.X.Offset, newValuePercent / maxvalue, guiObjectBarForeground.Size.Y.Offset)
-    				
-    			end
-    			
-    			-- Dragging settings
-    			draggableThumbNormal:SetDraggingEnabled(attributeIsEnabled)
-    			draggableThumbNormal:SetDraggingIncrement(attributeValueIncrement)
-    			
-    			-- If enabled
-    			if attributeIsEnabled == true then
-    				
-    				-- Enabled colors
-    				guiObjectBarBackground.BackgroundColor3 = attributeColorEnabled1
-    				guiObjectBarForeground.BackgroundColor3 = attributeColorEnabled2
-    				guiObjectThumbNormal.ImageColor3 = attributeColorEnabled2
-    				guiObjectThumbPressed.ImageColor3 = attributeColorEnabled2
-    							
-    			else
-    				
-    				-- Disabled colors
-    				guiObjectBarBackground.BackgroundColor3 = attributeColorDisabled1
-    				guiObjectBarForeground.BackgroundColor3 = attributeColorDisabled2
-    				guiObjectThumbNormal.ImageColor3 = attributeColorDisabled2
-    				guiObjectThumbPressed.ImageColor3 = attributeColorDisabled2
-    				
-    			end
-    	
-    		end
-    	
-    		-- Refresh Gui
-    		RefreshGui()
-    	
-    	
-    		-- Disconnect existing connections
-    		local keyConnection1 = "AttributeChanged"
-    		local keyConnection2 = "ThumbPosition"
-    		local keyConnection3 = "AttributeChangedSignal" .. "IsDragging"
-    		if self.Connections[keyConnection1] then self.Connections[keyConnection1]:Disconnect() end
-    		if self.Connections[keyConnection2] then self.Connections[keyConnection2]:Disconnect() end
-    		if self.Connections[keyConnection3] then self.Connections[keyConnection3]:Disconnect() end
-    		
-    		-- Events
-    	
-    		-- Attribute Event - AttributeChanged
-    		-- Triggered when any attribute changes
-    		self.Connections[keyConnection1] = self.GuiObject.AttributeChanged:Connect(function(attributeName)
-    	
-    			RefreshGui()
-    	
-    		end)
-    	
-    		
-    		-- Instance Event - GetPropertyChangedSignal
-    		-- Triggered when thumb is dragged
-    		self.Connections[keyConnection2] = guiObjectThumbNormal:GetPropertyChangedSignal("Position"):Connect(function()
-    			
-    			-- Get current attribute values
-    			local attributesParent = self.GuiObject
-    			local attributeValuePercent = attributesParent:GetAttribute(("ValuePercent"))
-    			
-    			-- Get new thumb position
-    			local thumbPositionPercent = 0
-    			if self.Direction == Enum.Axis.X then
-    				thumbPositionPercent = guiObjectThumbNormal.Position.X.Scale * maxvalue
-    			else
-    				thumbPositionPercent = (1 - guiObjectThumbNormal.Position.Y.Scale) * maxvalue  -- Zero is at the bottom
-    			end
-    			
-    			-- Update slider value based on thumb position
-    			local newValuePercent = math.clamp(thumbPositionPercent, minvalue, maxvalue)
-    			if newValuePercent ~= attributeValuePercent then
-    				attributesParent:SetAttribute("ValuePercent", newValuePercent)
-    			end
-    			
-    		end)
-    		
-    	
-    		-- Attribute Event - GetAttributeChangedSignal
-    		-- Triggered when specific attribute changes
-    		self.Connections[keyConnection3] = guiObjectThumbNormal:GetAttributeChangedSignal("IsDragging"):Connect(function()
-    			
-    			-- Show pressed thumb when dragging
-    			local attributeIsDragging = guiObjectThumbNormal:GetAttribute("IsDragging") or false
-    			guiObjectThumbPressed.Visible = attributeIsDragging
-    	
-    		end)
-    		
-    		
-    		return self
-    		
-    	end
-    	
-    	
-    	
-    	return FormSliderClass
-    	
+
+
+        -- Class
+        local FormSliderClass = {}
+        FormSliderClass.__index = FormSliderClass
+
+
+        -- Constructor
+        function FormSliderClass.new(paramGuiObject, paramDirection, minvalue, maxvalue)
+            local self = setmetatable({}, FormSliderClass)
+
+
+            -- Validate
+            if paramGuiObject == nil then
+                error("Required parameters missing for constructor FormSliderClass.new.")
+            end
+
+            -- Instance Properties
+            self.GuiObject = paramGuiObject  -- The GuiObject extended by this class
+            self.Direction = paramDirection or Enum.Axis.X  -- Slider direction
+            self.Connections = {}  -- Event connections
+
+
+            -- Initialize
+
+            -- Configuration Variables
+            local configuration = self.GuiObject:WaitForChild("Configuration")
+            local guiObjectBarBackgroundVar = configuration:WaitForChild("ObjectBarBackground")
+            local guiObjectBarForegroundVar = configuration:WaitForChild("ObjectBarForeground")
+            local guiObjectThumbNormalVar = configuration:WaitForChild(("ObjectThumbNormal"))
+            local guiObjectThumbPressedVar = configuration:WaitForChild(("ObjectThumbPressed"))
+            local guiObjectBarBackground
+            local guiObjectBarForeground
+            local guiObjectThumbNormal
+            local guiObjectThumbPressed
+
+            -- Validate
+            if guiObjectBarBackgroundVar and guiObjectBarForegroundVar and guiObjectThumbNormalVar and guiObjectThumbPressedVar then
+
+                -- Wait for the objects to load
+                while not guiObjectBarBackgroundVar.Value do task.wait() end
+                while not guiObjectBarForegroundVar.Value do task.wait() end
+                while not guiObjectThumbNormalVar.Value do task.wait() end
+                while not guiObjectThumbPressedVar.Value do task.wait() end
+
+                -- Get values
+                guiObjectBarBackground = guiObjectBarBackgroundVar.Value
+                guiObjectBarForeground = guiObjectBarForegroundVar.Value
+                guiObjectThumbNormal = guiObjectThumbNormalVar.Value
+                guiObjectThumbPressed = guiObjectThumbPressedVar.Value
+
+            end
+
+            -- Make thumb draggable
+            local ExtendDraggableClass = require(script.Parent:WaitForChild("ExtendDraggableClass"))
+            local draggableThumbNormal = ExtendDraggableClass.new(guiObjectThumbNormal, false, self.Direction)
+
+
+            -- Local function
+            local function RefreshGui()
+
+                -- Get current attribute values
+                local attributesParent = self.GuiObject
+
+                local attributeIsEnabled = attributesParent:GetAttribute("IsEnabled")
+                local attributeColorDisabled1 = attributesParent:GetAttribute("ColorDisabled1")
+                local attributeColorDisabled2 = attributesParent:GetAttribute("ColorDisabled2")
+                local attributeColorEnabled1 = attributesParent:GetAttribute("ColorEnabled1")
+                local attributeColorEnabled2 = attributesParent:GetAttribute("ColorEnabled2")
+                local attributeValueIncrement = attributesParent:GetAttribute(("ValueIncrement"))
+                local attributeValuePercent = attributesParent:GetAttribute(("ValuePercent"))
+
+                warn(minvalue, maxvalue)
+                -- Validate
+                local newValuePercent = math.clamp(attributeValuePercent, minvalue, maxvalue)
+                if newValuePercent ~= attributeValuePercent then
+                    attributesParent:SetAttribute("ValuePercent", newValuePercent)
+                end
+
+                -- Update slider elements
+                if self.Direction == Enum.Axis.X then
+                    -- Horizontal
+
+                    -- Thumb position
+                    guiObjectThumbNormal.Position = UDim2.new(newValuePercent / maxvalue, guiObjectThumbNormal.Position.X.Offset, guiObjectThumbNormal.Position.Y.Scale, guiObjectThumbNormal.Position.Y.Offset)
+
+                    -- Foreground bar length
+                    guiObjectBarForeground.Size = UDim2.new(newValuePercent / maxvalue, guiObjectBarForeground.Size.X.Offset, guiObjectBarForeground.Size.Y.Scale, guiObjectBarForeground.Size.Y.Offset)
+
+                else
+                    -- Vertical
+
+                    -- Thumb position
+                    guiObjectThumbNormal.Position = UDim2.new(guiObjectThumbNormal.Position.X.Scale, guiObjectThumbNormal.Position.X.Offset, 1 - (newValuePercent / maxvalue), guiObjectThumbNormal.Position.Y.Offset)
+
+                    -- Foreground bar length
+                    guiObjectBarForeground.Size = UDim2.new(guiObjectBarForeground.Size.X.Scale, guiObjectBarForeground.Size.X.Offset, newValuePercent / maxvalue, guiObjectBarForeground.Size.Y.Offset)
+
+                end
+
+                -- Dragging settings
+                draggableThumbNormal:SetDraggingEnabled(attributeIsEnabled)
+                draggableThumbNormal:SetDraggingIncrement(attributeValueIncrement)
+
+                -- If enabled
+                if attributeIsEnabled == true then
+
+                    -- Enabled colors
+                    guiObjectBarBackground.BackgroundColor3 = attributeColorEnabled1
+                    guiObjectBarForeground.BackgroundColor3 = attributeColorEnabled2
+                    guiObjectThumbNormal.ImageColor3 = attributeColorEnabled2
+                    guiObjectThumbPressed.ImageColor3 = attributeColorEnabled2
+
+                else
+
+                    -- Disabled colors
+                    guiObjectBarBackground.BackgroundColor3 = attributeColorDisabled1
+                    guiObjectBarForeground.BackgroundColor3 = attributeColorDisabled2
+                    guiObjectThumbNormal.ImageColor3 = attributeColorDisabled2
+                    guiObjectThumbPressed.ImageColor3 = attributeColorDisabled2
+
+                end
+
+            end
+
+            -- Refresh Gui
+            RefreshGui()
+
+
+            -- Disconnect existing connections
+            local keyConnection1 = "AttributeChanged"
+            local keyConnection2 = "ThumbPosition"
+            local keyConnection3 = "AttributeChangedSignal" .. "IsDragging"
+            if self.Connections[keyConnection1] then self.Connections[keyConnection1]:Disconnect() end
+            if self.Connections[keyConnection2] then self.Connections[keyConnection2]:Disconnect() end
+            if self.Connections[keyConnection3] then self.Connections[keyConnection3]:Disconnect() end
+
+            -- Events
+
+            -- Attribute Event - AttributeChanged
+            -- Triggered when any attribute changes
+            self.Connections[keyConnection1] = self.GuiObject.AttributeChanged:Connect(function(attributeName)
+
+                RefreshGui()
+
+            end)
+
+
+            -- Instance Event - GetPropertyChangedSignal
+            -- Triggered when thumb is dragged
+            self.Connections[keyConnection2] = guiObjectThumbNormal:GetPropertyChangedSignal("Position"):Connect(function()
+
+                -- Get current attribute values
+                local attributesParent = self.GuiObject
+                local attributeValuePercent = attributesParent:GetAttribute(("ValuePercent"))
+
+                -- Get new thumb position
+                local thumbPositionPercent = 0
+                if self.Direction == Enum.Axis.X then
+                    thumbPositionPercent = guiObjectThumbNormal.Position.X.Scale * maxvalue
+                else
+                    thumbPositionPercent = (1 - guiObjectThumbNormal.Position.Y.Scale) * maxvalue  -- Zero is at the bottom
+                end
+
+                -- Update slider value based on thumb position
+                local newValuePercent = math.clamp(thumbPositionPercent, minvalue, maxvalue)
+                if newValuePercent ~= attributeValuePercent then
+                    attributesParent:SetAttribute("ValuePercent", newValuePercent)
+                end
+
+            end)
+
+
+            -- Attribute Event - GetAttributeChangedSignal
+            -- Triggered when specific attribute changes
+            self.Connections[keyConnection3] = guiObjectThumbNormal:GetAttributeChangedSignal("IsDragging"):Connect(function()
+
+                -- Show pressed thumb when dragging
+                local attributeIsDragging = guiObjectThumbNormal:GetAttribute("IsDragging") or false
+                guiObjectThumbPressed.Visible = attributeIsDragging
+
+            end)
+
+
+            return self
+
+        end
+
+
+
+        return FormSliderClass
+
     end
 
     modules[tbl.ExtendDraggableClass] = function()
-    	local script = tbl.ExtendDraggableClass
+        local script = tbl.ExtendDraggableClass
 
     	--[[
     	
@@ -2587,550 +2579,550 @@ function main()
     		Class that extends the object so that it can be dragged.
     			
     	--]]
-    	
-    	
-    	-- Class
-    	local ExtendDraggableClass = {}
-    	ExtendDraggableClass.__index = ExtendDraggableClass
-    	
-    	
-    	-- Constructor
-    	function ExtendDraggableClass.new(paramGuiObject, paramDraggingEnabled, paramDraggingDirection)
-    		local self = setmetatable({}, ExtendDraggableClass)
-    		
-    		
-    		-- Validate
-    		if paramGuiObject == nil then
-    			error("Required parameters missing for constructor ExtendDraggableClass.new.")
-    		end
-    		
-    		-- Instance Properties
-    		self.GuiObject = paramGuiObject  -- The GuiObject extended by this class
-    		self.IsDragging = false  -- True when the user is dragging
-    		self.DraggingEnabled = paramDraggingEnabled or true  -- Enable or disable dragging
-    		self.DraggingDirection = paramDraggingDirection or Enum.Axis.X  -- Direction of dragging
-    		self.DraggingIncrement = 1  -- Dragging increment for descrete intervals
-    		self.Connections = {}  -- Event connections
-    	
-    		
-    		-- Initialize
-    		
-    		-- Local variables
-    		local dragInput
-    		local dragStartScreenPosition
-    		local startGuiObjectPosition
-    		local parentAbsoluteSize
-    		local cameraType
-    		
-    		-- Set attribute
-    		self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
-    		
-    		-- Local function
-    		local function RoundToIncrement(paramNumber, paramMultiple)
-    			
-    			local roundedNumber = paramNumber
-    			
-    			-- Validate
-    			if paramMultiple ~= 0 then
-    				
-    				-- Rounds to nearest multiple
-    				if paramNumber > 0 then
-    					roundedNumber = math.ceil(paramNumber / paramMultiple) * paramMultiple
-    				elseif paramNumber < 0 then
-    					roundedNumber = math.floor(paramNumber / paramMultiple) * paramMultiple
-    				else
-    					roundedNumber = paramMultiple
-    				end
-    				
-    			end
-    			
-    			return roundedNumber
-    		end
-    		
-    		-- Local function
-    		local function RefreshGui(paramInput)
-    			
-    			-- Get the new position
-    			local deltaScreenPosition = paramInput.Position - dragStartScreenPosition
-    			local deltaXScale = deltaScreenPosition.X / parentAbsoluteSize.X
-    			local deltaYScale = deltaScreenPosition.Y / parentAbsoluteSize.Y
-    			local newXScale = startGuiObjectPosition.X.Scale + deltaXScale
-    			local newYScale = startGuiObjectPosition.Y.Scale + deltaYScale
-    			
-    			newXScale = RoundToIncrement(newXScale, self.DraggingIncrement / 100)
-    			newYScale = RoundToIncrement(newYScale, self.DraggingIncrement / 100)
-    			
-    			newXScale = math.round(newXScale * 10000) / 10000  -- Round to avoid roundoff errors
-    			newYScale = math.round(newYScale * 10000) / 10000
-    			
-    			newXScale = math.clamp(newXScale, 0, 1)
-    			newYScale = math.clamp(newYScale, 0, 1)
-    							
-    			-- Horizontal or vertical direction
-    			if self.DraggingDirection == Enum.Axis.X then
-    				newYScale = startGuiObjectPosition.Y.Scale  -- Ignore vertical movement
-    			else
-    				newXScale = startGuiObjectPosition.X.Scale  -- Ignore horizontal movement
-    			end
-    	
-    			-- Prevent camera moving on mobile during drag
-    			if paramInput.UserInputType == Enum.UserInputType.Touch then
-    				workspace.Camera.CameraType = Enum.CameraType.Scriptable
-    			end
-    	
-    			-- Move the gui object
-    			self.GuiObject.Position = UDim2.new(newXScale, startGuiObjectPosition.X.Offset, newYScale, startGuiObjectPosition.Y.Offset)
-    	
-    			-- Reset camera on mobile
-    			if paramInput.UserInputType == Enum.UserInputType.Touch then
-    				workspace.Camera.CameraType = cameraType
-    			end
-    			
-    		end
-    		
-    		
-    		-- Disconnect existing connections
-    		local keyConnection1 = "GuiObjectInputBegan"
-    		local keyConnection2 = "GuiObjectInputChanged"
-    		local keyConnection3 = "UserInputServiceInputChanged"
-    		if self.Connections[keyConnection1] then self.Connections[keyConnection1]:Disconnect() end
-    		if self.Connections[keyConnection2] then self.Connections[keyConnection2]:Disconnect() end
-    		if self.Connections[keyConnection3] then self.Connections[keyConnection3]:Disconnect() end
-    		
-    		
-    		-- Events
-    		
-    		-- GuiObject Event - InputBegan
-    		-- Triggered when input begins on the GuiObject
-    		self.Connections[keyConnection1] = self.GuiObject.InputBegan:Connect(function(input)
-    			
-    			-- If dragging enabled
-    			if self.DraggingEnabled == true then
-    				
-    				-- Initialize dragging variables
-    				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-    					
-    					self.IsDragging  = true
-    					self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
-    					
-    					dragStartScreenPosition = input.Position
-    					startGuiObjectPosition = self.GuiObject.Position
-    					parentAbsoluteSize = self.GuiObject.Parent.AbsoluteSize
-    					cameraType = workspace.Camera.CameraType
-    					
-    					-- Handle when dragging ends
-    					input.Changed:Connect(function()
-    						if input.UserInputState == Enum.UserInputState.End then
-    							self.IsDragging  = false
-    							self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
-    						end
-    					end)
-    					
-    				end
-    				
-    			end
-    			
-    		end)
-    		
-    		-- GuiObject Event - InputChanged
-    		-- Triggered when input changes on the GuiObject
-    		self.Connections[keyConnection2] = self.GuiObject.InputChanged:Connect(function(paramInput)
-    			
-    			-- If dragging enabled
-    			if self.DraggingEnabled == true then
-    				
-    				-- Update drag position
-    				if paramInput.UserInputType == Enum.UserInputType.MouseMovement or paramInput.UserInputType == Enum.UserInputType.Touch then
-    					dragInput = paramInput
-    				end
-    				
-    			end
-    			
-    		end)
-    		
-    		-- UserInputService Event - InputChanged
-    		-- Triggered when input changes by the user
-    		self.Connections[keyConnection3] = game:GetService("UserInputService").InputChanged:Connect(function(paramInput)
-    			
-    			-- If the user is dragging the GuiObject
-    			if paramInput == dragInput and self.IsDragging then
-    				RefreshGui(paramInput)
-    			end
-    			
-    		end)
-    		
-    		
-    		return self
-    		
-    	end
-    	
-    	
-    	-- Instance Methods
-    	
-    	-- SetDraggingEnabled
-    	function ExtendDraggableClass:SetDraggingEnabled(paramIsEnabled)
-    		
-    		-- Validate
-    		if paramIsEnabled ~= nil then
-    			
-    			-- Update property
-    			self.DraggingEnabled = paramIsEnabled
-    			
-    			-- Update property
-    			if not paramIsEnabled then
-    				self.IsDragging = false
-    				self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
-    			end
-    			
-    		end
-    		
-    	end
-    	
-    	
-    	-- SetDraggingIncrement
-    	function ExtendDraggableClass:SetDraggingIncrement(paramIncrement)
-    		
-    		-- Validate
-    		if paramIncrement ~= nil then
-    			
-    			-- Update property
-    			self.DraggingIncrement = paramIncrement
-    			
-    		end
-    		
-    	end
-    	
-    	
-    	return ExtendDraggableClass
-    	
+
+
+        -- Class
+        local ExtendDraggableClass = {}
+        ExtendDraggableClass.__index = ExtendDraggableClass
+
+
+        -- Constructor
+        function ExtendDraggableClass.new(paramGuiObject, paramDraggingEnabled, paramDraggingDirection)
+            local self = setmetatable({}, ExtendDraggableClass)
+
+
+            -- Validate
+            if paramGuiObject == nil then
+                error("Required parameters missing for constructor ExtendDraggableClass.new.")
+            end
+
+            -- Instance Properties
+            self.GuiObject = paramGuiObject  -- The GuiObject extended by this class
+            self.IsDragging = false  -- True when the user is dragging
+            self.DraggingEnabled = paramDraggingEnabled or true  -- Enable or disable dragging
+            self.DraggingDirection = paramDraggingDirection or Enum.Axis.X  -- Direction of dragging
+            self.DraggingIncrement = 1  -- Dragging increment for descrete intervals
+            self.Connections = {}  -- Event connections
+
+
+            -- Initialize
+
+            -- Local variables
+            local dragInput
+            local dragStartScreenPosition
+            local startGuiObjectPosition
+            local parentAbsoluteSize
+            local cameraType
+
+            -- Set attribute
+            self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
+
+            -- Local function
+            local function RoundToIncrement(paramNumber, paramMultiple)
+
+                local roundedNumber = paramNumber
+
+                -- Validate
+                if paramMultiple ~= 0 then
+
+                    -- Rounds to nearest multiple
+                    if paramNumber > 0 then
+                        roundedNumber = math.ceil(paramNumber / paramMultiple) * paramMultiple
+                    elseif paramNumber < 0 then
+                        roundedNumber = math.floor(paramNumber / paramMultiple) * paramMultiple
+                    else
+                        roundedNumber = paramMultiple
+                    end
+
+                end
+
+                return roundedNumber
+            end
+
+            -- Local function
+            local function RefreshGui(paramInput)
+
+                -- Get the new position
+                local deltaScreenPosition = paramInput.Position - dragStartScreenPosition
+                local deltaXScale = deltaScreenPosition.X / parentAbsoluteSize.X
+                local deltaYScale = deltaScreenPosition.Y / parentAbsoluteSize.Y
+                local newXScale = startGuiObjectPosition.X.Scale + deltaXScale
+                local newYScale = startGuiObjectPosition.Y.Scale + deltaYScale
+
+                newXScale = RoundToIncrement(newXScale, self.DraggingIncrement / 100)
+                newYScale = RoundToIncrement(newYScale, self.DraggingIncrement / 100)
+
+                newXScale = math.round(newXScale * 10000) / 10000  -- Round to avoid roundoff errors
+                newYScale = math.round(newYScale * 10000) / 10000
+
+                newXScale = math.clamp(newXScale, 0, 1)
+                newYScale = math.clamp(newYScale, 0, 1)
+
+                -- Horizontal or vertical direction
+                if self.DraggingDirection == Enum.Axis.X then
+                    newYScale = startGuiObjectPosition.Y.Scale  -- Ignore vertical movement
+                else
+                    newXScale = startGuiObjectPosition.X.Scale  -- Ignore horizontal movement
+                end
+
+                -- Prevent camera moving on mobile during drag
+                if paramInput.UserInputType == Enum.UserInputType.Touch then
+                    workspace.Camera.CameraType = Enum.CameraType.Scriptable
+                end
+
+                -- Move the gui object
+                self.GuiObject.Position = UDim2.new(newXScale, startGuiObjectPosition.X.Offset, newYScale, startGuiObjectPosition.Y.Offset)
+
+                -- Reset camera on mobile
+                if paramInput.UserInputType == Enum.UserInputType.Touch then
+                    workspace.Camera.CameraType = cameraType
+                end
+
+            end
+
+
+            -- Disconnect existing connections
+            local keyConnection1 = "GuiObjectInputBegan"
+            local keyConnection2 = "GuiObjectInputChanged"
+            local keyConnection3 = "UserInputServiceInputChanged"
+            if self.Connections[keyConnection1] then self.Connections[keyConnection1]:Disconnect() end
+            if self.Connections[keyConnection2] then self.Connections[keyConnection2]:Disconnect() end
+            if self.Connections[keyConnection3] then self.Connections[keyConnection3]:Disconnect() end
+
+
+            -- Events
+
+            -- GuiObject Event - InputBegan
+            -- Triggered when input begins on the GuiObject
+            self.Connections[keyConnection1] = self.GuiObject.InputBegan:Connect(function(input)
+
+                -- If dragging enabled
+                if self.DraggingEnabled == true then
+
+                    -- Initialize dragging variables
+                    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+
+                        self.IsDragging  = true
+                        self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
+
+                        dragStartScreenPosition = input.Position
+                        startGuiObjectPosition = self.GuiObject.Position
+                        parentAbsoluteSize = self.GuiObject.Parent.AbsoluteSize
+                        cameraType = workspace.Camera.CameraType
+
+                        -- Handle when dragging ends
+                        input.Changed:Connect(function()
+                            if input.UserInputState == Enum.UserInputState.End then
+                                self.IsDragging  = false
+                                self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
+                            end
+                        end)
+
+                    end
+
+                end
+
+            end)
+
+            -- GuiObject Event - InputChanged
+            -- Triggered when input changes on the GuiObject
+            self.Connections[keyConnection2] = self.GuiObject.InputChanged:Connect(function(paramInput)
+
+                -- If dragging enabled
+                if self.DraggingEnabled == true then
+
+                    -- Update drag position
+                    if paramInput.UserInputType == Enum.UserInputType.MouseMovement or paramInput.UserInputType == Enum.UserInputType.Touch then
+                        dragInput = paramInput
+                    end
+
+                end
+
+            end)
+
+            -- UserInputService Event - InputChanged
+            -- Triggered when input changes by the user
+            self.Connections[keyConnection3] = game:GetService("UserInputService").InputChanged:Connect(function(paramInput)
+
+                -- If the user is dragging the GuiObject
+                if paramInput == dragInput and self.IsDragging then
+                    RefreshGui(paramInput)
+                end
+
+            end)
+
+
+            return self
+
+        end
+
+
+        -- Instance Methods
+
+        -- SetDraggingEnabled
+        function ExtendDraggableClass:SetDraggingEnabled(paramIsEnabled)
+
+            -- Validate
+            if paramIsEnabled ~= nil then
+
+                -- Update property
+                self.DraggingEnabled = paramIsEnabled
+
+                -- Update property
+                if not paramIsEnabled then
+                    self.IsDragging = false
+                    self.GuiObject:SetAttribute("IsDragging", self.IsDragging)
+                end
+
+            end
+
+        end
+
+
+        -- SetDraggingIncrement
+        function ExtendDraggableClass:SetDraggingIncrement(paramIncrement)
+
+            -- Validate
+            if paramIncrement ~= nil then
+
+                -- Update property
+                self.DraggingIncrement = paramIncrement
+
+            end
+
+        end
+
+
+        return ExtendDraggableClass
+
     end
 
     modules[tbl.Highlighter] = function()
-    	local script = tbl.Highlighter
+        local script = tbl.Highlighter
 
-    	local types = require(script.types)
-    	local utility = require(script.utility)
-    	local theme = require(script.theme)
-    	
-    	local Highlighter = {
-    		defaultLexer = require(script.lexer) :: types.Lexer,
-    	
-    		_textObjectData = {} :: { [types.TextObject]: types.ObjectData },
-    		_cleanups = {} :: { [types.TextObject]: () -> () },
-    	}
-    	
+        local types = require(script.types)
+        local utility = require(script.utility)
+        local theme = require(script.theme)
+
+        local Highlighter = {
+            defaultLexer = require(script.lexer) :: types.Lexer,
+
+            _textObjectData = {} :: { [types.TextObject]: types.ObjectData },
+            _cleanups = {} :: { [types.TextObject]: () -> () },
+        }
+
     	--[[
     		Gathers the info that is needed in order to set up a line label.
     	]]
-    	function Highlighter._getLabelingInfo(textObject: types.TextObject)
-    		local data = Highlighter._textObjectData[textObject]
-    		if not data then
-    			return
-    		end
-    	
-    		local src = utility.convertTabsToSpaces(utility.removeControlChars(textObject.Text))
-    		local numLines = #string.split(src, "\n")
-    		if numLines == 0 then
-    			return
-    		end
-    	
-    		local textBounds = utility.getTextBounds(textObject)
-    		local textHeight = textBounds.Y / numLines
-    	
-    		return {
-    			data = data,
-    			numLines = numLines,
-    			textBounds = textBounds,
-    			textHeight = textHeight,
-    			innerAbsoluteSize = utility.getInnerAbsoluteSize(textObject),
-    			textColor = theme.getColor("iden"),
-    			textFont = textObject.FontFace,
-    			textSize = textObject.TextSize,
-    			labelSize = UDim2.new(1, 0, 0, math.ceil(textHeight)),
-    		}
-    	end
-    	
+        function Highlighter._getLabelingInfo(textObject: types.TextObject)
+            local data = Highlighter._textObjectData[textObject]
+            if not data then
+                return
+            end
+
+            local src = utility.convertTabsToSpaces(utility.removeControlChars(textObject.Text))
+            local numLines = #string.split(src, "\n")
+            if numLines == 0 then
+                return
+            end
+
+            local textBounds = utility.getTextBounds(textObject)
+            local textHeight = textBounds.Y / numLines
+
+            return {
+                data = data,
+                numLines = numLines,
+                textBounds = textBounds,
+                textHeight = textHeight,
+                innerAbsoluteSize = utility.getInnerAbsoluteSize(textObject),
+                textColor = theme.getColor("iden"),
+                textFont = textObject.FontFace,
+                textSize = textObject.TextSize,
+                labelSize = UDim2.new(1, 0, 0, math.ceil(textHeight)),
+            }
+        end
+
     	--[[
     		Aligns and matches the line labels to the textObject.
     	]]
-    	function Highlighter._alignLabels(textObject: types.TextObject)
-    		local labelingInfo = Highlighter._getLabelingInfo(textObject)
-    		if not labelingInfo then
-    			return
-    		end
-    	
-    		for lineNumber, lineLabel in labelingInfo.data.Labels do
-    			-- Align line label
-    			lineLabel.TextColor3 = labelingInfo.textColor
-    			lineLabel.FontFace = labelingInfo.textFont
-    			lineLabel.TextSize = labelingInfo.textSize
-    			lineLabel.Size = labelingInfo.labelSize
-    			lineLabel.Position =
-    				UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
-    		end
-    	end
-    	
+        function Highlighter._alignLabels(textObject: types.TextObject)
+            local labelingInfo = Highlighter._getLabelingInfo(textObject)
+            if not labelingInfo then
+                return
+            end
+
+            for lineNumber, lineLabel in labelingInfo.data.Labels do
+                -- Align line label
+                lineLabel.TextColor3 = labelingInfo.textColor
+                lineLabel.FontFace = labelingInfo.textFont
+                lineLabel.TextSize = labelingInfo.textSize
+                lineLabel.Size = labelingInfo.labelSize
+                lineLabel.Position =
+                    UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
+            end
+        end
+
     	--[[
     		Creates and populates the line labels with the appropriate rich text.
     	]]
-    	function Highlighter._populateLabels(props: types.HighlightProps)
-    		-- Gather props
-    		local textObject = props.textObject
-    		local src = utility.convertTabsToSpaces(utility.removeControlChars(props.src or textObject.Text))
-    		local lexer = props.lexer or Highlighter.defaultLexer
-    		local customLang = props.customLang
-    		local forceUpdate = props.forceUpdate
-    	
-    		-- Avoid updating when unnecessary
-    		local data = Highlighter._textObjectData[textObject]
-    		if (data == nil) or (data.Text == src) then
-    			if forceUpdate ~= true then
-    				return
-    			end
-    		end
-    	
-    		-- Ensure textObject matches sanitized src
-    		textObject.Text = src
-    	
-    		local lineLabels = data.Labels
-    		local previousLines = data.Lines
-    	
-    		local lines = string.split(src, "\n")
-    	
-    		data.Lines = lines
-    		data.Text = src
-    		data.Lexer = lexer
-    		data.CustomLang = customLang
-    	
-    		-- Shortcut empty textObjects
-    		if src == "" then
-    			for l = 1, #lineLabels do
-    				if lineLabels[l].Text == "" then
-    					continue
-    				end
-    				lineLabels[l].Text = ""
-    			end
-    			return
-    		end
-    	
-    		local idenColor = theme.getColor("iden")
-    		local labelingInfo = Highlighter._getLabelingInfo(textObject)
-    	
-    		local richTextBuffer, bufferIndex, lineNumber = table.create(5), 0, 1
-    		for token: types.TokenName, content: string in lexer.scan(src) do
-    			local Color = if customLang and customLang[content]
-    				then theme.getColor("custom")
-    				else theme.getColor(token) or idenColor
-    	
-    			local tokenLines = string.split(utility.sanitizeRichText(content), "\n")
-    	
-    			for l, tokenLine in tokenLines do
-    				-- Find line label
-    				local lineLabel = lineLabels[lineNumber]
-    				if not lineLabel then
-    					local newLabel = Instance.new("TextLabel")
-    					newLabel.Name = "Line_" .. lineNumber
-    					newLabel.AutoLocalize = false
-    					newLabel.RichText = true
-    					newLabel.BackgroundTransparency = 1
-    					newLabel.Text = ""
-    					newLabel.TextXAlignment = Enum.TextXAlignment.Left
-    					newLabel.TextYAlignment = Enum.TextYAlignment.Top
-    					newLabel.TextColor3 = labelingInfo.textColor
-    					newLabel.FontFace = labelingInfo.textFont
-    					newLabel.TextSize = labelingInfo.textSize
-    					newLabel.Size = labelingInfo.labelSize
-    					newLabel.Position =
-    						UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
-    	
-    					newLabel.Parent = textObject.SyntaxHighlights
-    					lineLabels[lineNumber] = newLabel
-    					lineLabel = newLabel
-    				end
-    	
-    				-- If multiline token, then set line & move to next
-    				if l > 1 then
-    					if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
-    						-- Set line
-    						lineLabels[lineNumber].Text = table.concat(richTextBuffer)
-    					end
-    					-- Move to next line
-    					lineNumber += 1
-    					bufferIndex = 0
-    					table.clear(richTextBuffer)
-    				end
-    	
-    				-- If changed, add token to line
-    				if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
-    					bufferIndex += 1
-    					-- Only add RichText tags when the color is non-default and the characters are non-whitespace
-    					if Color ~= idenColor and string.find(tokenLine, "[%S%C]") then
-    						richTextBuffer[bufferIndex] = theme.getColoredRichText(Color, tokenLine)
-    					else
-    						richTextBuffer[bufferIndex] = tokenLine
-    					end
-    				end
-    			end
-    		end
-    	
-    		-- Set final line
-    		if richTextBuffer[1] and lineLabels[lineNumber] then
-    			lineLabels[lineNumber].Text = table.concat(richTextBuffer)
-    		end
-    	
-    		-- Clear unused line labels
-    		for l = lineNumber + 1, #lineLabels do
-    			if lineLabels[l].Text == "" then
-    				continue
-    			end
-    			lineLabels[l].Text = ""
-    		end
-    	end
-    	
+        function Highlighter._populateLabels(props: types.HighlightProps)
+            -- Gather props
+            local textObject = props.textObject
+            local src = utility.convertTabsToSpaces(utility.removeControlChars(props.src or textObject.Text))
+            local lexer = props.lexer or Highlighter.defaultLexer
+            local customLang = props.customLang
+            local forceUpdate = props.forceUpdate
+
+            -- Avoid updating when unnecessary
+            local data = Highlighter._textObjectData[textObject]
+            if (data == nil) or (data.Text == src) then
+                if forceUpdate ~= true then
+                    return
+                end
+            end
+
+            -- Ensure textObject matches sanitized src
+            textObject.Text = src
+
+            local lineLabels = data.Labels
+            local previousLines = data.Lines
+
+            local lines = string.split(src, "\n")
+
+            data.Lines = lines
+            data.Text = src
+            data.Lexer = lexer
+            data.CustomLang = customLang
+
+            -- Shortcut empty textObjects
+            if src == "" then
+                for l = 1, #lineLabels do
+                    if lineLabels[l].Text == "" then
+                        continue
+                    end
+                    lineLabels[l].Text = ""
+                end
+                return
+            end
+
+            local idenColor = theme.getColor("iden")
+            local labelingInfo = Highlighter._getLabelingInfo(textObject)
+
+            local richTextBuffer, bufferIndex, lineNumber = table.create(5), 0, 1
+            for token: types.TokenName, content: string in lexer.scan(src) do
+                local Color = if customLang and customLang[content]
+                    then theme.getColor("custom")
+                    else theme.getColor(token) or idenColor
+
+                local tokenLines = string.split(utility.sanitizeRichText(content), "\n")
+
+                for l, tokenLine in tokenLines do
+                    -- Find line label
+                    local lineLabel = lineLabels[lineNumber]
+                    if not lineLabel then
+                        local newLabel = Instance.new("TextLabel")
+                        newLabel.Name = "Line_" .. lineNumber
+                        newLabel.AutoLocalize = false
+                        newLabel.RichText = true
+                        newLabel.BackgroundTransparency = 1
+                        newLabel.Text = ""
+                        newLabel.TextXAlignment = Enum.TextXAlignment.Left
+                        newLabel.TextYAlignment = Enum.TextYAlignment.Top
+                        newLabel.TextColor3 = labelingInfo.textColor
+                        newLabel.FontFace = labelingInfo.textFont
+                        newLabel.TextSize = labelingInfo.textSize
+                        newLabel.Size = labelingInfo.labelSize
+                        newLabel.Position =
+                            UDim2.fromScale(0, labelingInfo.textHeight * (lineNumber - 1) / labelingInfo.innerAbsoluteSize.Y)
+
+                        newLabel.Parent = textObject.SyntaxHighlights
+                        lineLabels[lineNumber] = newLabel
+                        lineLabel = newLabel
+                    end
+
+                    -- If multiline token, then set line & move to next
+                    if l > 1 then
+                        if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+                            -- Set line
+                            lineLabels[lineNumber].Text = table.concat(richTextBuffer)
+                        end
+                        -- Move to next line
+                        lineNumber += 1
+                        bufferIndex = 0
+                        table.clear(richTextBuffer)
+                    end
+
+                    -- If changed, add token to line
+                    if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+                        bufferIndex += 1
+                        -- Only add RichText tags when the color is non-default and the characters are non-whitespace
+                        if Color ~= idenColor and string.find(tokenLine, "[%S%C]") then
+                            richTextBuffer[bufferIndex] = theme.getColoredRichText(Color, tokenLine)
+                        else
+                            richTextBuffer[bufferIndex] = tokenLine
+                        end
+                    end
+                end
+            end
+
+            -- Set final line
+            if richTextBuffer[1] and lineLabels[lineNumber] then
+                lineLabels[lineNumber].Text = table.concat(richTextBuffer)
+            end
+
+            -- Clear unused line labels
+            for l = lineNumber + 1, #lineLabels do
+                if lineLabels[l].Text == "" then
+                    continue
+                end
+                lineLabels[l].Text = ""
+            end
+        end
+
     	--[[
     		Highlights the given textObject with the given props and returns a cleanup function.
     		Highlighting will automatically update when needed, so the cleanup function will disconnect
     		those connections and remove all labels.
     	]]
-    	function Highlighter.highlight(props: types.HighlightProps): () -> ()
-    		-- Gather props
-    		local textObject = props.textObject
-    		local src = utility.convertTabsToSpaces(utility.removeControlChars(props.src or textObject.Text))
-    		local lexer = props.lexer or Highlighter.defaultLexer
-    		local customLang = props.customLang
-    	
-    		-- Avoid updating when unnecessary
-    		if Highlighter._cleanups[textObject] then
-    			-- Already been initialized, so just update
-    			Highlighter._populateLabels(props)
-    			Highlighter._alignLabels(textObject)
-    			return Highlighter._cleanups[textObject]
-    		end
-    	
-    		-- Ensure valid object properties
-    		textObject.RichText = false
-    		textObject.Text = src
-    		textObject.TextXAlignment = Enum.TextXAlignment.Left
-    		textObject.TextYAlignment = Enum.TextYAlignment.Top
-    		textObject.BackgroundColor3 = theme.getColor("background")
-    		textObject.TextColor3 = theme.getColor("iden")
-    		textObject.TextTransparency = 0.5
-    	
-    		-- Build the highlight labels
-    		local lineFolder = textObject:FindFirstChild("SyntaxHighlights")
-    		if lineFolder == nil then
-    			local newLineFolder = Instance.new("Folder")
-    			newLineFolder.Name = "SyntaxHighlights"
-    			newLineFolder.Parent = textObject
-    	
-    			lineFolder = newLineFolder
-    		end
-    	
-    		local data = {
-    			Text = "",
-    			Labels = {},
-    			Lines = {},
-    			Lexer = lexer,
-    			CustomLang = customLang,
-    		}
-    		Highlighter._textObjectData[textObject] = data
-    	
-    		-- Add a cleanup handler for this textObject
-    		local connections: { [string]: RBXScriptConnection } = {}
-    		local function cleanup()
-    			lineFolder:Destroy()
-    	
-    			Highlighter._textObjectData[textObject] = nil
-    			Highlighter._cleanups[textObject] = nil
-    	
-    			for _key, connection in connections do
-    				connection:Disconnect()
-    			end
-    			table.clear(connections)
-    		end
-    		Highlighter._cleanups[textObject] = cleanup
-    	
-    		connections["AncestryChanged"] = textObject.AncestryChanged:Connect(function()
-    			if textObject.Parent then
-    				return
-    			end
-    	
-    			cleanup()
-    		end)
-    		connections["TextChanged"] = textObject:GetPropertyChangedSignal("Text"):Connect(function()
-    			Highlighter._populateLabels(props)
-    		end)
-    		connections["TextBoundsChanged"] = textObject:GetPropertyChangedSignal("TextBounds"):Connect(function()
-    			Highlighter._alignLabels(textObject)
-    		end)
-    		connections["AbsoluteSizeChanged"] = textObject:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
-    			Highlighter._alignLabels(textObject)
-    		end)
-    		connections["FontFaceChanged"] = textObject:GetPropertyChangedSignal("FontFace"):Connect(function()
-    			Highlighter._alignLabels(textObject)
-    		end)
-    	
-    		-- Populate the labels
-    		Highlighter._populateLabels(props)
-    		Highlighter._alignLabels(textObject)
-    	
-    		return cleanup
-    	end
-    	
+        function Highlighter.highlight(props: types.HighlightProps): () -> ()
+            -- Gather props
+            local textObject = props.textObject
+            local src = utility.convertTabsToSpaces(utility.removeControlChars(props.src or textObject.Text))
+            local lexer = props.lexer or Highlighter.defaultLexer
+            local customLang = props.customLang
+
+            -- Avoid updating when unnecessary
+            if Highlighter._cleanups[textObject] then
+                -- Already been initialized, so just update
+                Highlighter._populateLabels(props)
+                Highlighter._alignLabels(textObject)
+                return Highlighter._cleanups[textObject]
+            end
+
+            -- Ensure valid object properties
+            textObject.RichText = false
+            textObject.Text = src
+            textObject.TextXAlignment = Enum.TextXAlignment.Left
+            textObject.TextYAlignment = Enum.TextYAlignment.Top
+            textObject.BackgroundColor3 = theme.getColor("background")
+            textObject.TextColor3 = theme.getColor("iden")
+            textObject.TextTransparency = 0.5
+
+            -- Build the highlight labels
+            local lineFolder = textObject:FindFirstChild("SyntaxHighlights")
+            if lineFolder == nil then
+                local newLineFolder = Instance.new("Folder")
+                newLineFolder.Name = "SyntaxHighlights"
+                newLineFolder.Parent = textObject
+
+                lineFolder = newLineFolder
+            end
+
+            local data = {
+                Text = "",
+                Labels = {},
+                Lines = {},
+                Lexer = lexer,
+                CustomLang = customLang,
+            }
+            Highlighter._textObjectData[textObject] = data
+
+            -- Add a cleanup handler for this textObject
+            local connections: { [string]: RBXScriptConnection } = {}
+            local function cleanup()
+                lineFolder:Destroy()
+
+                Highlighter._textObjectData[textObject] = nil
+                Highlighter._cleanups[textObject] = nil
+
+                for _key, connection in connections do
+                    connection:Disconnect()
+                end
+                table.clear(connections)
+            end
+            Highlighter._cleanups[textObject] = cleanup
+
+            connections["AncestryChanged"] = textObject.AncestryChanged:Connect(function()
+                if textObject.Parent then
+                    return
+                end
+
+                cleanup()
+            end)
+            connections["TextChanged"] = textObject:GetPropertyChangedSignal("Text"):Connect(function()
+                Highlighter._populateLabels(props)
+            end)
+            connections["TextBoundsChanged"] = textObject:GetPropertyChangedSignal("TextBounds"):Connect(function()
+                Highlighter._alignLabels(textObject)
+            end)
+            connections["AbsoluteSizeChanged"] = textObject:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+                Highlighter._alignLabels(textObject)
+            end)
+            connections["FontFaceChanged"] = textObject:GetPropertyChangedSignal("FontFace"):Connect(function()
+                Highlighter._alignLabels(textObject)
+            end)
+
+            -- Populate the labels
+            Highlighter._populateLabels(props)
+            Highlighter._alignLabels(textObject)
+
+            return cleanup
+        end
+
     	--[[
     		Refreshes all highlighted textObjects. Used when the theme changes.
     	]]
-    	function Highlighter.refresh(): ()
-    		-- Rehighlight existing labels using latest colors
-    		for textObject, data in Highlighter._textObjectData do
-    			for _, lineLabel in data.Labels do
-    				lineLabel.TextColor3 = theme.getColor("iden")
-    			end
-    	
-    			Highlighter.highlight({
-    				textObject = textObject,
-    				forceUpdate = true,
-    				src = data.Text,
-    				lexer = data.Lexer,
-    				customLang = data.CustomLang,
-    			})
-    		end
-    	end
-    	
+        function Highlighter.refresh(): ()
+            -- Rehighlight existing labels using latest colors
+            for textObject, data in Highlighter._textObjectData do
+                for _, lineLabel in data.Labels do
+                    lineLabel.TextColor3 = theme.getColor("iden")
+                end
+
+                Highlighter.highlight({
+                    textObject = textObject,
+                    forceUpdate = true,
+                    src = data.Text,
+                    lexer = data.Lexer,
+                    customLang = data.CustomLang,
+                })
+            end
+        end
+
     	--[[
     		Sets the token colors to the given colors and refreshes all highlighted textObjects.
     	]]
-    	function Highlighter.setTokenColors(colors: types.TokenColors): ()
-    		theme.setColors(colors)
-    	
-    		Highlighter.refresh()
-    	end
-    	
+        function Highlighter.setTokenColors(colors: types.TokenColors): ()
+            theme.setColors(colors)
+
+            Highlighter.refresh()
+        end
+
     	--[[
     		Gets a token color by name.
     		Mainly useful for setting "background" token color on other UI objects behind your text.
     	]]
-    	function Highlighter.getTokenColor(tokenName: types.TokenName): Color3
-    		return theme.getColor(tokenName)
-    	end
-    	
+        function Highlighter.getTokenColor(tokenName: types.TokenName): Color3
+            return theme.getColor(tokenName)
+        end
+
     	--[[
     		Matches the token colors to the Studio theme settings and refreshes all highlighted textObjects.
     		Does nothing when not run in a Studio plugin.
     	]]
-    	function Highlighter.matchStudioSettings(): ()
-    		local applied = theme.matchStudioSettings(Highlighter.refresh)
-    		if applied then
-    			Highlighter.refresh()
-    		end
-    	end
-    	
-    	return Highlighter
-    	
+        function Highlighter.matchStudioSettings(): ()
+            local applied = theme.matchStudioSettings(Highlighter.refresh)
+            if applied then
+                Highlighter.refresh()
+            end
+        end
+
+        return Highlighter
+
     end
 
     modules[tbl.lexer] = function()
-    	local script = tbl.lexer
+        local script = tbl.lexer
 
     	--[=[
     		Lexical scanner for creating a sequence of tokens from Lua source code.
@@ -3158,1273 +3150,1273 @@ function main()
     			- comment
     			- operator
     	--]=]
-    	
-    	local lexer = {}
-    	
-    	local Prefix, Suffix, Cleaner = "^[%c%s]*", "[%c%s]*", "[%c%s]+"
-    	local UNICODE = "[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]+"
-    	local NUMBER_A = "0[xX][%da-fA-F_]+"
-    	local NUMBER_B = "0[bB][01_]+"
-    	local NUMBER_C = "%d+%.?%d*[eE][%+%-]?%d+"
-    	local NUMBER_D = "%d+[%._]?[%d_eE]*"
-    	local OPERATORS = "[:;<>/~%*%(%)%-={},%.#%^%+%%]+"
-    	local BRACKETS = "[%[%]]+" -- needs to be separate pattern from other operators or it'll mess up multiline strings
-    	local IDEN = "[%a_][%w_]*"
-    	local STRING_EMPTY = "(['\"])%1" --Empty String
-    	local STRING_PLAIN = "(['\"])[^\n]-([^\\]%1)" --TODO: Handle escaping escapes
-    	local STRING_INTER = "`[^\n]-`"
-    	local STRING_INCOMP_A = "(['\"]).-\n" --Incompleted String with next line
-    	local STRING_INCOMP_B = "(['\"])[^\n]*" --Incompleted String without next line
-    	local STRING_MULTI = "%[(=*)%[.-%]%1%]" --Multiline-String
-    	local STRING_MULTI_INCOMP = "%[=*%[.-.*" --Incompleted Multiline-String
-    	local COMMENT_MULTI = "%-%-%[(=*)%[.-%]%1%]" --Completed Multiline-Comment
-    	local COMMENT_MULTI_INCOMP = "%-%-%[=*%[.-.*" --Incompleted Multiline-Comment
-    	local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
-    	local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
-    	-- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
-    	
-    	local lang = require(script.language)
-    	local lua_keyword = lang.keyword
-    	local lua_builtin = lang.builtin
-    	local lua_libraries = lang.libraries
-    	
-    	lexer.language = lang
-    	
-    	local lua_matches = {
-    		-- Indentifiers
-    		{ Prefix .. IDEN .. Suffix, "var" },
-    	
-    		-- Numbers
-    		{ Prefix .. NUMBER_A .. Suffix, "number" },
-    		{ Prefix .. NUMBER_B .. Suffix, "number" },
-    		{ Prefix .. NUMBER_C .. Suffix, "number" },
-    		{ Prefix .. NUMBER_D .. Suffix, "number" },
-    	
-    		-- Strings
-    		{ Prefix .. STRING_EMPTY .. Suffix, "string" },
-    		{ Prefix .. STRING_PLAIN .. Suffix, "string" },
-    		{ Prefix .. STRING_INCOMP_A .. Suffix, "string" },
-    		{ Prefix .. STRING_INCOMP_B .. Suffix, "string" },
-    		{ Prefix .. STRING_MULTI .. Suffix, "string" },
-    		{ Prefix .. STRING_MULTI_INCOMP .. Suffix, "string" },
-    		{ Prefix .. STRING_INTER .. Suffix, "string_inter" },
-    	
-    		-- Comments
-    		{ Prefix .. COMMENT_MULTI .. Suffix, "comment" },
-    		{ Prefix .. COMMENT_MULTI_INCOMP .. Suffix, "comment" },
-    		{ Prefix .. COMMENT_PLAIN .. Suffix, "comment" },
-    		{ Prefix .. COMMENT_INCOMP .. Suffix, "comment" },
-    	
-    		-- Operators
-    		{ Prefix .. OPERATORS .. Suffix, "operator" },
-    		{ Prefix .. BRACKETS .. Suffix, "operator" },
-    	
-    		-- Unicode
-    		{ Prefix .. UNICODE .. Suffix, "iden" },
-    	
-    		-- Unknown
-    		{ "^.", "iden" },
-    	}
-    	
-    	-- To reduce the amount of table indexing during lexing, we separate the matches now
-    	local PATTERNS, TOKENS = {}, {}
-    	for i, m in lua_matches do
-    		PATTERNS[i] = m[1]
-    		TOKENS[i] = m[2]
-    	end
-    	
-    	--- Create a plain token iterator from a string.
-    	-- @tparam string s a string.
-    	
-    	function lexer.scan(s: string)
-    		local index = 1
-    		local size = #s
-    		local previousContent1, previousContent2, previousContent3, previousToken = "", "", "", ""
-    	
-    		local thread = coroutine.create(function()
-    			while index <= size do
-    				local matched = false
-    				for tokenType, pattern in ipairs(PATTERNS) do
-    					-- Find match
-    					local start, finish = string.find(s, pattern, index)
-    					if start == nil then
-    						continue
-    					end
-    	
-    					-- Move head
-    					index = finish + 1
-    					matched = true
-    	
-    					-- Gather results
-    					local content = string.sub(s, start, finish)
-    					local rawToken = TOKENS[tokenType]
-    					local processedToken = rawToken
-    	
-    					-- Process token
-    					if rawToken == "var" then
-    						-- Since we merge spaces into the tok, we need to remove them
-    						-- in order to check the actual word it contains
-    						local cleanContent = string.gsub(content, Cleaner, "")
-    	
-    						if lua_keyword[cleanContent] then
-    							processedToken = "keyword"
-    						elseif lua_builtin[cleanContent] then
-    							processedToken = "builtin"
-    						elseif string.find(previousContent1, "%.[%s%c]*$") and previousToken ~= "comment" then
-    							-- The previous was a . so we need to special case indexing things
-    							local parent = string.gsub(previousContent2, Cleaner, "")
-    							local lib = lua_libraries[parent]
-    							if lib and lib[cleanContent] and not string.find(previousContent3, "%.[%s%c]*$") then
-    								-- Indexing a builtin lib with existing item, treat as a builtin
-    								processedToken = "builtin"
-    							else
-    								-- Indexing a non builtin, can't be treated as a keyword/builtin
-    								processedToken = "iden"
-    							end
-    							-- print("indexing",parent,"with",cleanTok,"as",t2)
-    						else
-    							processedToken = "iden"
-    						end
-    					elseif rawToken == "string_inter" then
-    						if not string.find(content, "[^\\]{") then
-    							-- This inter string doesnt actually have any inters
-    							processedToken = "string"
-    						else
-    							-- We're gonna do our own yields, so the main loop won't need to
-    							-- Our yields will be a mix of string and whatever is inside the inters
-    							processedToken = nil
-    	
-    							local isString = true
-    							local subIndex = 1
-    							local subSize = #content
-    							while subIndex <= subSize do
-    								-- Find next brace
-    								local subStart, subFinish = string.find(content, "^.-[^\\][{}]", subIndex)
-    								if subStart == nil then
-    									-- No more braces, all string
-    									coroutine.yield("string", string.sub(content, subIndex))
-    									break
-    								end
-    	
-    								if isString then
-    									-- We are currently a string
-    									subIndex = subFinish + 1
-    									coroutine.yield("string", string.sub(content, subStart, subFinish))
-    	
-    									-- This brace opens code
-    									isString = false
-    								else
-    									-- We are currently in code
-    									subIndex = subFinish
-    									local subContent = string.sub(content, subStart, subFinish - 1)
-    									for innerToken, innerContent in lexer.scan(subContent) do
-    										coroutine.yield(innerToken, innerContent)
-    									end
-    	
-    									-- This brace opens string/closes code
-    									isString = true
-    								end
-    							end
-    						end
-    					end
-    	
-    					-- Record last 3 tokens for the indexing context check
-    					previousContent3 = previousContent2
-    					previousContent2 = previousContent1
-    					previousContent1 = content
-    					previousToken = processedToken or rawToken
-    					if processedToken then
-    						coroutine.yield(processedToken, content)
-    					end
-    					break
-    				end
-    	
-    				-- No matches found
-    				if not matched then
-    					return
-    				end
-    			end
-    	
-    			-- Completed the scan
-    			return
-    		end)
-    	
-    		return function()
-    			if coroutine.status(thread) == "dead" then
-    				return
-    			end
-    	
-    			local success, token, content = coroutine.resume(thread)
-    			if success and token then
-    				return token, content
-    			end
-    	
-    			return
-    		end
-    	end
-    	
-    	function lexer.navigator()
-    		local nav = {
-    			Source = "",
-    			TokenCache = table.create(50),
-    	
-    			_RealIndex = 0,
-    			_UserIndex = 0,
-    			_ScanThread = nil,
-    		}
-    	
-    		function nav:Destroy()
-    			self.Source = nil
-    			self._RealIndex = nil
-    			self._UserIndex = nil
-    			self.TokenCache = nil
-    			self._ScanThread = nil
-    		end
-    	
-    		function nav:SetSource(SourceString)
-    			self.Source = SourceString
-    	
-    			self._RealIndex = 0
-    			self._UserIndex = 0
-    			table.clear(self.TokenCache)
-    	
-    			self._ScanThread = coroutine.create(function()
-    				for Token, Src in lexer.scan(self.Source) do
-    					self._RealIndex += 1
-    					self.TokenCache[self._RealIndex] = { Token, Src }
-    					coroutine.yield(Token, Src)
-    				end
-    			end)
-    		end
-    	
-    		function nav.Next()
-    			nav._UserIndex += 1
-    	
-    			if nav._RealIndex >= nav._UserIndex then
-    				-- Already scanned, return cached
-    				return table.unpack(nav.TokenCache[nav._UserIndex])
-    			else
-    				if coroutine.status(nav._ScanThread) == "dead" then
-    					-- Scan thread dead
-    					return
-    				else
-    					local success, token, src = coroutine.resume(nav._ScanThread)
-    					if success and token then
-    						-- Scanned new data
-    						return token, src
-    					else
-    						-- Lex completed
-    						return
-    					end
-    				end
-    			end
-    		end
-    	
-    		function nav.Peek(PeekAmount)
-    			local GoalIndex = nav._UserIndex + PeekAmount
-    	
-    			if nav._RealIndex >= GoalIndex then
-    				-- Already scanned, return cached
-    				if GoalIndex > 0 then
-    					return table.unpack(nav.TokenCache[GoalIndex])
-    				else
-    					-- Invalid peek
-    					return
-    				end
-    			else
-    				if coroutine.status(nav._ScanThread) == "dead" then
-    					-- Scan thread dead
-    					return
-    				else
-    					local IterationsAway = GoalIndex - nav._RealIndex
-    	
-    					local success, token, src = nil, nil, nil
-    	
-    					for _ = 1, IterationsAway do
-    						success, token, src = coroutine.resume(nav._ScanThread)
-    						if not (success or token) then
-    							-- Lex completed
-    							break
-    						end
-    					end
-    	
-    					return token, src
-    				end
-    			end
-    		end
-    	
-    		return nav
-    	end
-    	
-    	return lexer
-    	
+
+        local lexer = {}
+
+        local Prefix, Suffix, Cleaner = "^[%c%s]*", "[%c%s]*", "[%c%s]+"
+        local UNICODE = "[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]+"
+        local NUMBER_A = "0[xX][%da-fA-F_]+"
+        local NUMBER_B = "0[bB][01_]+"
+        local NUMBER_C = "%d+%.?%d*[eE][%+%-]?%d+"
+        local NUMBER_D = "%d+[%._]?[%d_eE]*"
+        local OPERATORS = "[:;<>/~%*%(%)%-={},%.#%^%+%%]+"
+        local BRACKETS = "[%[%]]+" -- needs to be separate pattern from other operators or it'll mess up multiline strings
+        local IDEN = "[%a_][%w_]*"
+        local STRING_EMPTY = "(['\"])%1" --Empty String
+        local STRING_PLAIN = "(['\"])[^\n]-([^\\]%1)" --TODO: Handle escaping escapes
+        local STRING_INTER = "`[^\n]-`"
+        local STRING_INCOMP_A = "(['\"]).-\n" --Incompleted String with next line
+        local STRING_INCOMP_B = "(['\"])[^\n]*" --Incompleted String without next line
+        local STRING_MULTI = "%[(=*)%[.-%]%1%]" --Multiline-String
+        local STRING_MULTI_INCOMP = "%[=*%[.-.*" --Incompleted Multiline-String
+        local COMMENT_MULTI = "%-%-%[(=*)%[.-%]%1%]" --Completed Multiline-Comment
+        local COMMENT_MULTI_INCOMP = "%-%-%[=*%[.-.*" --Incompleted Multiline-Comment
+        local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
+        local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
+        -- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
+
+        local lang = require(script.language)
+        local lua_keyword = lang.keyword
+        local lua_builtin = lang.builtin
+        local lua_libraries = lang.libraries
+
+        lexer.language = lang
+
+        local lua_matches = {
+            -- Indentifiers
+            { Prefix .. IDEN .. Suffix, "var" },
+
+            -- Numbers
+            { Prefix .. NUMBER_A .. Suffix, "number" },
+            { Prefix .. NUMBER_B .. Suffix, "number" },
+            { Prefix .. NUMBER_C .. Suffix, "number" },
+            { Prefix .. NUMBER_D .. Suffix, "number" },
+
+            -- Strings
+            { Prefix .. STRING_EMPTY .. Suffix, "string" },
+            { Prefix .. STRING_PLAIN .. Suffix, "string" },
+            { Prefix .. STRING_INCOMP_A .. Suffix, "string" },
+            { Prefix .. STRING_INCOMP_B .. Suffix, "string" },
+            { Prefix .. STRING_MULTI .. Suffix, "string" },
+            { Prefix .. STRING_MULTI_INCOMP .. Suffix, "string" },
+            { Prefix .. STRING_INTER .. Suffix, "string_inter" },
+
+            -- Comments
+            { Prefix .. COMMENT_MULTI .. Suffix, "comment" },
+            { Prefix .. COMMENT_MULTI_INCOMP .. Suffix, "comment" },
+            { Prefix .. COMMENT_PLAIN .. Suffix, "comment" },
+            { Prefix .. COMMENT_INCOMP .. Suffix, "comment" },
+
+            -- Operators
+            { Prefix .. OPERATORS .. Suffix, "operator" },
+            { Prefix .. BRACKETS .. Suffix, "operator" },
+
+            -- Unicode
+            { Prefix .. UNICODE .. Suffix, "iden" },
+
+            -- Unknown
+            { "^.", "iden" },
+        }
+
+        -- To reduce the amount of table indexing during lexing, we separate the matches now
+        local PATTERNS, TOKENS = {}, {}
+        for i, m in lua_matches do
+            PATTERNS[i] = m[1]
+            TOKENS[i] = m[2]
+        end
+
+        --- Create a plain token iterator from a string.
+        -- @tparam string s a string.
+
+        function lexer.scan(s: string)
+            local index = 1
+            local size = #s
+            local previousContent1, previousContent2, previousContent3, previousToken = "", "", "", ""
+
+            local thread = coroutine.create(function()
+                while index <= size do
+                    local matched = false
+                    for tokenType, pattern in ipairs(PATTERNS) do
+                        -- Find match
+                        local start, finish = string.find(s, pattern, index)
+                        if start == nil then
+                            continue
+                        end
+
+                        -- Move head
+                        index = finish + 1
+                        matched = true
+
+                        -- Gather results
+                        local content = string.sub(s, start, finish)
+                        local rawToken = TOKENS[tokenType]
+                        local processedToken = rawToken
+
+                        -- Process token
+                        if rawToken == "var" then
+                            -- Since we merge spaces into the tok, we need to remove them
+                            -- in order to check the actual word it contains
+                            local cleanContent = string.gsub(content, Cleaner, "")
+
+                            if lua_keyword[cleanContent] then
+                                processedToken = "keyword"
+                            elseif lua_builtin[cleanContent] then
+                                processedToken = "builtin"
+                            elseif string.find(previousContent1, "%.[%s%c]*$") and previousToken ~= "comment" then
+                                -- The previous was a . so we need to special case indexing things
+                                local parent = string.gsub(previousContent2, Cleaner, "")
+                                local lib = lua_libraries[parent]
+                                if lib and lib[cleanContent] and not string.find(previousContent3, "%.[%s%c]*$") then
+                                    -- Indexing a builtin lib with existing item, treat as a builtin
+                                    processedToken = "builtin"
+                                else
+                                    -- Indexing a non builtin, can't be treated as a keyword/builtin
+                                    processedToken = "iden"
+                                end
+                                -- print("indexing",parent,"with",cleanTok,"as",t2)
+                            else
+                                processedToken = "iden"
+                            end
+                        elseif rawToken == "string_inter" then
+                            if not string.find(content, "[^\\]{") then
+                                -- This inter string doesnt actually have any inters
+                                processedToken = "string"
+                            else
+                                -- We're gonna do our own yields, so the main loop won't need to
+                                -- Our yields will be a mix of string and whatever is inside the inters
+                                processedToken = nil
+
+                                local isString = true
+                                local subIndex = 1
+                                local subSize = #content
+                                while subIndex <= subSize do
+                                    -- Find next brace
+                                    local subStart, subFinish = string.find(content, "^.-[^\\][{}]", subIndex)
+                                    if subStart == nil then
+                                        -- No more braces, all string
+                                        coroutine.yield("string", string.sub(content, subIndex))
+                                        break
+                                    end
+
+                                    if isString then
+                                        -- We are currently a string
+                                        subIndex = subFinish + 1
+                                        coroutine.yield("string", string.sub(content, subStart, subFinish))
+
+                                        -- This brace opens code
+                                        isString = false
+                                    else
+                                        -- We are currently in code
+                                        subIndex = subFinish
+                                        local subContent = string.sub(content, subStart, subFinish - 1)
+                                        for innerToken, innerContent in lexer.scan(subContent) do
+                                            coroutine.yield(innerToken, innerContent)
+                                        end
+
+                                        -- This brace opens string/closes code
+                                        isString = true
+                                    end
+                                end
+                            end
+                        end
+
+                        -- Record last 3 tokens for the indexing context check
+                        previousContent3 = previousContent2
+                        previousContent2 = previousContent1
+                        previousContent1 = content
+                        previousToken = processedToken or rawToken
+                        if processedToken then
+                            coroutine.yield(processedToken, content)
+                        end
+                        break
+                    end
+
+                    -- No matches found
+                    if not matched then
+                        return
+                    end
+                end
+
+                -- Completed the scan
+                return
+            end)
+
+            return function()
+                if coroutine.status(thread) == "dead" then
+                    return
+                end
+
+                local success, token, content = coroutine.resume(thread)
+                if success and token then
+                    return token, content
+                end
+
+                return
+            end
+        end
+
+        function lexer.navigator()
+            local nav = {
+                Source = "",
+                TokenCache = table.create(50),
+
+                _RealIndex = 0,
+                _UserIndex = 0,
+                _ScanThread = nil,
+            }
+
+            function nav:Destroy()
+                self.Source = nil
+                self._RealIndex = nil
+                self._UserIndex = nil
+                self.TokenCache = nil
+                self._ScanThread = nil
+            end
+
+            function nav:SetSource(SourceString)
+                self.Source = SourceString
+
+                self._RealIndex = 0
+                self._UserIndex = 0
+                table.clear(self.TokenCache)
+
+                self._ScanThread = coroutine.create(function()
+                    for Token, Src in lexer.scan(self.Source) do
+                        self._RealIndex += 1
+                        self.TokenCache[self._RealIndex] = { Token, Src }
+                        coroutine.yield(Token, Src)
+                    end
+                end)
+            end
+
+            function nav.Next()
+                nav._UserIndex += 1
+
+                if nav._RealIndex >= nav._UserIndex then
+                    -- Already scanned, return cached
+                    return table.unpack(nav.TokenCache[nav._UserIndex])
+                else
+                    if coroutine.status(nav._ScanThread) == "dead" then
+                        -- Scan thread dead
+                        return
+                    else
+                        local success, token, src = coroutine.resume(nav._ScanThread)
+                        if success and token then
+                            -- Scanned new data
+                            return token, src
+                        else
+                            -- Lex completed
+                            return
+                        end
+                    end
+                end
+            end
+
+            function nav.Peek(PeekAmount)
+                local GoalIndex = nav._UserIndex + PeekAmount
+
+                if nav._RealIndex >= GoalIndex then
+                    -- Already scanned, return cached
+                    if GoalIndex > 0 then
+                        return table.unpack(nav.TokenCache[GoalIndex])
+                    else
+                        -- Invalid peek
+                        return
+                    end
+                else
+                    if coroutine.status(nav._ScanThread) == "dead" then
+                        -- Scan thread dead
+                        return
+                    else
+                        local IterationsAway = GoalIndex - nav._RealIndex
+
+                        local success, token, src = nil, nil, nil
+
+                        for _ = 1, IterationsAway do
+                            success, token, src = coroutine.resume(nav._ScanThread)
+                            if not (success or token) then
+                                -- Lex completed
+                                break
+                            end
+                        end
+
+                        return token, src
+                    end
+                end
+            end
+
+            return nav
+        end
+
+        return lexer
+
     end
 
     modules[tbl.language] = function()
-    	local script = tbl.language
+        local script = tbl.language
 
-    	local language = {
-    		keyword = {
-    			["and"] = "keyword",
-    			["break"] = "keyword",
-    			["continue"] = "keyword",
-    			["do"] = "keyword",
-    			["else"] = "keyword",
-    			["elseif"] = "keyword",
-    			["end"] = "keyword",
-    			["export"] = "keyword",
-    			["false"] = "keyword",
-    			["for"] = "keyword",
-    			["function"] = "keyword",
-    			["if"] = "keyword",
-    			["in"] = "keyword",
-    			["local"] = "keyword",
-    			["nil"] = "keyword",
-    			["not"] = "keyword",
-    			["or"] = "keyword",
-    			["repeat"] = "keyword",
-    			["return"] = "keyword",
-    			["self"] = "keyword",
-    			["then"] = "keyword",
-    			["true"] = "keyword",
-    			["type"] = "keyword",
-    			["typeof"] = "keyword",
-    			["until"] = "keyword",
-    			["while"] = "keyword",
-    		},
-    	
-    		builtin = {
-    			-- Luau Functions
-    			["assert"] = "function",
-    			["error"] = "function",
-    			["getfenv"] = "function",
-    			["getmetatable"] = "function",
-    			["ipairs"] = "function",
-    			["loadstring"] = "function",
-    			["newproxy"] = "function",
-    			["next"] = "function",
-    			["pairs"] = "function",
-    			["pcall"] = "function",
-    			["print"] = "function",
-    			["rawequal"] = "function",
-    			["rawget"] = "function",
-    			["rawlen"] = "function",
-    			["rawset"] = "function",
-    			["select"] = "function",
-    			["setfenv"] = "function",
-    			["setmetatable"] = "function",
-    			["tonumber"] = "function",
-    			["tostring"] = "function",
-    			["unpack"] = "function",
-    			["xpcall"] = "function",
-    	
-    			-- Luau Functions (Deprecated)
-    			["collectgarbage"] = "function",
-    	
-    			-- Luau Variables
-    			["_G"] = "table",
-    			["_VERSION"] = "string",
-    	
-    			-- Luau Tables
-    			["bit32"] = "table",
-    			["coroutine"] = "table",
-    			["debug"] = "table",
-    			["math"] = "table",
-    			["os"] = "table",
-    			["string"] = "table",
-    			["table"] = "table",
-    			["utf8"] = "table",
-    	
-    			-- Roblox Functions
-    			["DebuggerManager"] = "function",
-    			["delay"] = "function",
-    			["gcinfo"] = "function",
-    			["PluginManager"] = "function",
-    			["require"] = "function",
-    			["settings"] = "function",
-    			["spawn"] = "function",
-    			["tick"] = "function",
-    			["time"] = "function",
-    			["UserSettings"] = "function",
-    			["wait"] = "function",
-    			["warn"] = "function",
-    	
-    			-- Roblox Functions (Deprecated)
-    			["Delay"] = "function",
-    			["ElapsedTime"] = "function",
-    			["elapsedTime"] = "function",
-    			["printidentity"] = "function",
-    			["Spawn"] = "function",
-    			["Stats"] = "function",
-    			["stats"] = "function",
-    			["Version"] = "function",
-    			["version"] = "function",
-    			["Wait"] = "function",
-    			["ypcall"] = "function",
-    	
-    			-- Roblox Variables
-    			["game"] = "Instance",
-    			["plugin"] = "Instance",
-    			["script"] = "Instance",
-    			["shared"] = "Instance",
-    			["workspace"] = "Instance",
-    	
-    			-- Roblox Variables (Deprecated)
-    			["Game"] = "Instance",
-    			["Workspace"] = "Instance",
-    	
-    			-- Roblox Tables
-    			["Axes"] = "table",
-    			["BrickColor"] = "table",
-    			["CatalogSearchParams"] = "table",
-    			["CFrame"] = "table",
-    			["Color3"] = "table",
-    			["ColorSequence"] = "table",
-    			["ColorSequenceKeypoint"] = "table",
-    			["DateTime"] = "table",
-    			["DockWidgetPluginGuiInfo"] = "table",
-    			["Enum"] = "table",
-    			["Faces"] = "table",
-    			["FloatCurveKey"] = "table",
-    			["Font"] = "table",
-    			["Instance"] = "table",
-    			["NumberRange"] = "table",
-    			["NumberSequence"] = "table",
-    			["NumberSequenceKeypoint"] = "table",
-    			["OverlapParams"] = "table",
-    			["PathWaypoint"] = "table",
-    			["PhysicalProperties"] = "table",
-    			["Random"] = "table",
-    			["Ray"] = "table",
-    			["RaycastParams"] = "table",
-    			["Rect"] = "table",
-    			["Region3"] = "table",
-    			["Region3int16"] = "table",
-    			["RotationCurveKey"] = "table",
-    			["SharedTable"] = "table",
-    			["task"] = "table",
-    			["TweenInfo"] = "table",
-    			["UDim"] = "table",
-    			["UDim2"] = "table",
-    			["Vector2"] = "table",
-    			["Vector2int16"] = "table",
-    			["Vector3"] = "table",
-    			["Vector3int16"] = "table",
-    		},
-    	
-    		libraries = {
-    	
-    			-- Luau Libraries
-    			bit32 = {
-    				arshift = "function",
-    				band = "function",
-    				bnot = "function",
-    				bor = "function",
-    				btest = "function",
-    				bxor = "function",
-    				countlz = "function",
-    				countrz = "function",
-    				extract = "function",
-    				lrotate = "function",
-    				lshift = "function",
-    				replace = "function",
-    				rrotate = "function",
-    				rshift = "function",
-    			},
-    	
-    			coroutine = {
-    				close = "function",
-    				create = "function",
-    				isyieldable = "function",
-    				resume = "function",
-    				running = "function",
-    				status = "function",
-    				wrap = "function",
-    				yield = "function",
-    			},
-    	
-    			debug = {
-    				dumpheap = "function",
-    				getmemorycategory = "function",
-    				info = "function",
-    				loadmodule = "function",
-    				profilebegin = "function",
-    				profileend = "function",
-    				resetmemorycategory = "function",
-    				setmemorycategory = "function",
-    				traceback = "function",
-    			},
-    	
-    			math = {
-    				abs = "function",
-    				acos = "function",
-    				asin = "function",
-    				atan2 = "function",
-    				atan = "function",
-    				ceil = "function",
-    				clamp = "function",
-    				cos = "function",
-    				cosh = "function",
-    				deg = "function",
-    				exp = "function",
-    				floor = "function",
-    				fmod = "function",
-    				frexp = "function",
-    				ldexp = "function",
-    				log10 = "function",
-    				log = "function",
-    				max = "function",
-    				min = "function",
-    				modf = "function",
-    				noise = "function",
-    				pow = "function",
-    				rad = "function",
-    				random = "function",
-    				randomseed = "function",
-    				round = "function",
-    				sign = "function",
-    				sin = "function",
-    				sinh = "function",
-    				sqrt = "function",
-    				tan = "function",
-    				tanh = "function",
-    	
-    				huge = "number",
-    				pi = "number",
-    			},
-    	
-    			os = {
-    				clock = "function",
-    				date = "function",
-    				difftime = "function",
-    				time = "function",
-    			},
-    	
-    			string = {
-    				byte = "function",
-    				char = "function",
-    				find = "function",
-    				format = "function",
-    				gmatch = "function",
-    				gsub = "function",
-    				len = "function",
-    				lower = "function",
-    				match = "function",
-    				pack = "function",
-    				packsize = "function",
-    				rep = "function",
-    				reverse = "function",
-    				split = "function",
-    				sub = "function",
-    				unpack = "function",
-    				upper = "function",
-    			},
-    	
-    			table = {
-    				clear = "function",
-    				clone = "function",
-    				concat = "function",
-    				create = "function",
-    				find = "function",
-    				foreach = "function",
-    				foreachi = "function",
-    				freeze = "function",
-    				getn = "function",
-    				insert = "function",
-    				isfrozen = "function",
-    				maxn = "function",
-    				move = "function",
-    				pack = "function",
-    				remove = "function",
-    				sort = "function",
-    				unpack = "function",
-    			},
-    	
-    			utf8 = {
-    				char = "function",
-    				codepoint = "function",
-    				codes = "function",
-    				graphemes = "function",
-    				len = "function",
-    				nfcnormalize = "function",
-    				nfdnormalize = "function",
-    				offset = "function",
-    	
-    				charpattern = "string",
-    			},
-    	
-    			-- Roblox Libraries
-    			Axes = {
-    				new = "function",
-    			},
-    	
-    			BrickColor = {
-    				Black = "function",
-    				Blue = "function",
-    				DarkGray = "function",
-    				Gray = "function",
-    				Green = "function",
-    				new = "function",
-    				New = "function",
-    				palette = "function",
-    				Random = "function",
-    				random = "function",
-    				Red = "function",
-    				White = "function",
-    				Yellow = "function",
-    			},
-    	
-    			CatalogSearchParams = {
-    				new = "function",
-    			},
-    	
-    			CFrame = {
-    				Angles = "function",
-    				fromAxisAngle = "function",
-    				fromEulerAngles = "function",
-    				fromEulerAnglesXYZ = "function",
-    				fromEulerAnglesYXZ = "function",
-    				fromMatrix = "function",
-    				fromOrientation = "function",
-    				lookAt = "function",
-    				new = "function",
-    	
-    				identity = "CFrame",
-    			},
-    	
-    			Color3 = {
-    				fromHex = "function",
-    				fromHSV = "function",
-    				fromRGB = "function",
-    				new = "function",
-    				toHSV = "function",
-    			},
-    	
-    			ColorSequence = {
-    				new = "function",
-    			},
-    	
-    			ColorSequenceKeypoint = {
-    				new = "function",
-    			},
-    	
-    			DateTime = {
-    				fromIsoDate = "function",
-    				fromLocalTime = "function",
-    				fromUniversalTime = "function",
-    				fromUnixTimestamp = "function",
-    				fromUnixTimestampMillis = "function",
-    				now = "function",
-    			},
-    	
-    			DockWidgetPluginGuiInfo = {
-    				new = "function",
-    			},
-    	
-    			Enum = {},
-    	
-    			Faces = {
-    				new = "function",
-    			},
-    	
-    			FloatCurveKey = {
-    				new = "function",
-    			},
-    	
-    			Font = {
-    				fromEnum = "function",
-    				fromId = "function",
-    				fromName = "function",
-    				new = "function",
-    			},
-    	
-    			Instance = {
-    				new = "function",
-    			},
-    	
-    			NumberRange = {
-    				new = "function",
-    			},
-    	
-    			NumberSequence = {
-    				new = "function",
-    			},
-    	
-    			NumberSequenceKeypoint = {
-    				new = "function",
-    			},
-    	
-    			OverlapParams = {
-    				new = "function",
-    			},
-    	
-    			PathWaypoint = {
-    				new = "function",
-    			},
-    	
-    			PhysicalProperties = {
-    				new = "function",
-    			},
-    	
-    			Random = {
-    				new = "function",
-    			},
-    	
-    			Ray = {
-    				new = "function",
-    			},
-    	
-    			RaycastParams = {
-    				new = "function",
-    			},
-    	
-    			Rect = {
-    				new = "function",
-    			},
-    	
-    			Region3 = {
-    				new = "function",
-    			},
-    	
-    			Region3int16 = {
-    				new = "function",
-    			},
-    	
-    			RotationCurveKey = {
-    				new = "function",
-    			},
-    	
-    			SharedTable = {
-    				clear = "function",
-    				clone = "function",
-    				cloneAndFreeze = "function",
-    				increment = "function",
-    				isFrozen = "function",
-    				new = "function",
-    				size = "function",
-    				update = "function",
-    			},
-    	
-    			task = {
-    				cancel = "function",
-    				defer = "function",
-    				delay = "function",
-    				desynchronize = "function",
-    				spawn = "function",
-    				synchronize = "function",
-    				wait = "function",
-    			},
-    	
-    			TweenInfo = {
-    				new = "function",
-    			},
-    	
-    			UDim = {
-    				new = "function",
-    			},
-    	
-    			UDim2 = {
-    				fromOffset = "function",
-    				fromScale = "function",
-    				new = "function",
-    			},
-    	
-    			Vector2 = {
-    				new = "function",
-    	
-    				one = "Vector2",
-    				xAxis = "Vector2",
-    				yAxis = "Vector2",
-    				zero = "Vector2",
-    			},
-    	
-    			Vector2int16 = {
-    				new = "function",
-    			},
-    	
-    			Vector3 = {
-    				fromAxis = "function",
-    				FromAxis = "function",
-    				fromNormalId = "function",
-    				FromNormalId = "function",
-    				new = "function",
-    	
-    				one = "Vector3",
-    				xAxis = "Vector3",
-    				yAxis = "Vector3",
-    				zAxis = "Vector3",
-    				zero = "Vector3",
-    			},
-    	
-    			Vector3int16 = {
-    				new = "function",
-    			},
-    		},
-    	}
-    	
-    	-- Filling up language.libraries.Enum table
-    	local enumLibraryTable = language.libraries.Enum
-    	
-    	for _, enum in ipairs(Enum:GetEnums()) do
-    		--TODO: Remove tostring from here once there is a better way to get the name of an Enum
-    		enumLibraryTable[tostring(enum)] = "Enum"
-    	end
-    	
-    	return language
-    	
+        local language = {
+            keyword = {
+                ["and"] = "keyword",
+                ["break"] = "keyword",
+                ["continue"] = "keyword",
+                ["do"] = "keyword",
+                ["else"] = "keyword",
+                ["elseif"] = "keyword",
+                ["end"] = "keyword",
+                ["export"] = "keyword",
+                ["false"] = "keyword",
+                ["for"] = "keyword",
+                ["function"] = "keyword",
+                ["if"] = "keyword",
+                ["in"] = "keyword",
+                ["local"] = "keyword",
+                ["nil"] = "keyword",
+                ["not"] = "keyword",
+                ["or"] = "keyword",
+                ["repeat"] = "keyword",
+                ["return"] = "keyword",
+                ["self"] = "keyword",
+                ["then"] = "keyword",
+                ["true"] = "keyword",
+                ["type"] = "keyword",
+                ["typeof"] = "keyword",
+                ["until"] = "keyword",
+                ["while"] = "keyword",
+            },
+
+            builtin = {
+                -- Luau Functions
+                ["assert"] = "function",
+                ["error"] = "function",
+                ["getfenv"] = "function",
+                ["getmetatable"] = "function",
+                ["ipairs"] = "function",
+                ["loadstring"] = "function",
+                ["newproxy"] = "function",
+                ["next"] = "function",
+                ["pairs"] = "function",
+                ["pcall"] = "function",
+                ["print"] = "function",
+                ["rawequal"] = "function",
+                ["rawget"] = "function",
+                ["rawlen"] = "function",
+                ["rawset"] = "function",
+                ["select"] = "function",
+                ["setfenv"] = "function",
+                ["setmetatable"] = "function",
+                ["tonumber"] = "function",
+                ["tostring"] = "function",
+                ["unpack"] = "function",
+                ["xpcall"] = "function",
+
+                -- Luau Functions (Deprecated)
+                ["collectgarbage"] = "function",
+
+                -- Luau Variables
+                ["_G"] = "table",
+                ["_VERSION"] = "string",
+
+                -- Luau Tables
+                ["bit32"] = "table",
+                ["coroutine"] = "table",
+                ["debug"] = "table",
+                ["math"] = "table",
+                ["os"] = "table",
+                ["string"] = "table",
+                ["table"] = "table",
+                ["utf8"] = "table",
+
+                -- Roblox Functions
+                ["DebuggerManager"] = "function",
+                ["delay"] = "function",
+                ["gcinfo"] = "function",
+                ["PluginManager"] = "function",
+                ["require"] = "function",
+                ["settings"] = "function",
+                ["spawn"] = "function",
+                ["tick"] = "function",
+                ["time"] = "function",
+                ["UserSettings"] = "function",
+                ["wait"] = "function",
+                ["warn"] = "function",
+
+                -- Roblox Functions (Deprecated)
+                ["Delay"] = "function",
+                ["ElapsedTime"] = "function",
+                ["elapsedTime"] = "function",
+                ["printidentity"] = "function",
+                ["Spawn"] = "function",
+                ["Stats"] = "function",
+                ["stats"] = "function",
+                ["Version"] = "function",
+                ["version"] = "function",
+                ["Wait"] = "function",
+                ["ypcall"] = "function",
+
+                -- Roblox Variables
+                ["game"] = "Instance",
+                ["plugin"] = "Instance",
+                ["script"] = "Instance",
+                ["shared"] = "Instance",
+                ["workspace"] = "Instance",
+
+                -- Roblox Variables (Deprecated)
+                ["Game"] = "Instance",
+                ["Workspace"] = "Instance",
+
+                -- Roblox Tables
+                ["Axes"] = "table",
+                ["BrickColor"] = "table",
+                ["CatalogSearchParams"] = "table",
+                ["CFrame"] = "table",
+                ["Color3"] = "table",
+                ["ColorSequence"] = "table",
+                ["ColorSequenceKeypoint"] = "table",
+                ["DateTime"] = "table",
+                ["DockWidgetPluginGuiInfo"] = "table",
+                ["Enum"] = "table",
+                ["Faces"] = "table",
+                ["FloatCurveKey"] = "table",
+                ["Font"] = "table",
+                ["Instance"] = "table",
+                ["NumberRange"] = "table",
+                ["NumberSequence"] = "table",
+                ["NumberSequenceKeypoint"] = "table",
+                ["OverlapParams"] = "table",
+                ["PathWaypoint"] = "table",
+                ["PhysicalProperties"] = "table",
+                ["Random"] = "table",
+                ["Ray"] = "table",
+                ["RaycastParams"] = "table",
+                ["Rect"] = "table",
+                ["Region3"] = "table",
+                ["Region3int16"] = "table",
+                ["RotationCurveKey"] = "table",
+                ["SharedTable"] = "table",
+                ["task"] = "table",
+                ["TweenInfo"] = "table",
+                ["UDim"] = "table",
+                ["UDim2"] = "table",
+                ["Vector2"] = "table",
+                ["Vector2int16"] = "table",
+                ["Vector3"] = "table",
+                ["Vector3int16"] = "table",
+            },
+
+            libraries = {
+
+                -- Luau Libraries
+                bit32 = {
+                    arshift = "function",
+                    band = "function",
+                    bnot = "function",
+                    bor = "function",
+                    btest = "function",
+                    bxor = "function",
+                    countlz = "function",
+                    countrz = "function",
+                    extract = "function",
+                    lrotate = "function",
+                    lshift = "function",
+                    replace = "function",
+                    rrotate = "function",
+                    rshift = "function",
+                },
+
+                coroutine = {
+                    close = "function",
+                    create = "function",
+                    isyieldable = "function",
+                    resume = "function",
+                    running = "function",
+                    status = "function",
+                    wrap = "function",
+                    yield = "function",
+                },
+
+                debug = {
+                    dumpheap = "function",
+                    getmemorycategory = "function",
+                    info = "function",
+                    loadmodule = "function",
+                    profilebegin = "function",
+                    profileend = "function",
+                    resetmemorycategory = "function",
+                    setmemorycategory = "function",
+                    traceback = "function",
+                },
+
+                math = {
+                    abs = "function",
+                    acos = "function",
+                    asin = "function",
+                    atan2 = "function",
+                    atan = "function",
+                    ceil = "function",
+                    clamp = "function",
+                    cos = "function",
+                    cosh = "function",
+                    deg = "function",
+                    exp = "function",
+                    floor = "function",
+                    fmod = "function",
+                    frexp = "function",
+                    ldexp = "function",
+                    log10 = "function",
+                    log = "function",
+                    max = "function",
+                    min = "function",
+                    modf = "function",
+                    noise = "function",
+                    pow = "function",
+                    rad = "function",
+                    random = "function",
+                    randomseed = "function",
+                    round = "function",
+                    sign = "function",
+                    sin = "function",
+                    sinh = "function",
+                    sqrt = "function",
+                    tan = "function",
+                    tanh = "function",
+
+                    huge = "number",
+                    pi = "number",
+                },
+
+                os = {
+                    clock = "function",
+                    date = "function",
+                    difftime = "function",
+                    time = "function",
+                },
+
+                string = {
+                    byte = "function",
+                    char = "function",
+                    find = "function",
+                    format = "function",
+                    gmatch = "function",
+                    gsub = "function",
+                    len = "function",
+                    lower = "function",
+                    match = "function",
+                    pack = "function",
+                    packsize = "function",
+                    rep = "function",
+                    reverse = "function",
+                    split = "function",
+                    sub = "function",
+                    unpack = "function",
+                    upper = "function",
+                },
+
+                table = {
+                    clear = "function",
+                    clone = "function",
+                    concat = "function",
+                    create = "function",
+                    find = "function",
+                    foreach = "function",
+                    foreachi = "function",
+                    freeze = "function",
+                    getn = "function",
+                    insert = "function",
+                    isfrozen = "function",
+                    maxn = "function",
+                    move = "function",
+                    pack = "function",
+                    remove = "function",
+                    sort = "function",
+                    unpack = "function",
+                },
+
+                utf8 = {
+                    char = "function",
+                    codepoint = "function",
+                    codes = "function",
+                    graphemes = "function",
+                    len = "function",
+                    nfcnormalize = "function",
+                    nfdnormalize = "function",
+                    offset = "function",
+
+                    charpattern = "string",
+                },
+
+                -- Roblox Libraries
+                Axes = {
+                    new = "function",
+                },
+
+                BrickColor = {
+                    Black = "function",
+                    Blue = "function",
+                    DarkGray = "function",
+                    Gray = "function",
+                    Green = "function",
+                    new = "function",
+                    New = "function",
+                    palette = "function",
+                    Random = "function",
+                    random = "function",
+                    Red = "function",
+                    White = "function",
+                    Yellow = "function",
+                },
+
+                CatalogSearchParams = {
+                    new = "function",
+                },
+
+                CFrame = {
+                    Angles = "function",
+                    fromAxisAngle = "function",
+                    fromEulerAngles = "function",
+                    fromEulerAnglesXYZ = "function",
+                    fromEulerAnglesYXZ = "function",
+                    fromMatrix = "function",
+                    fromOrientation = "function",
+                    lookAt = "function",
+                    new = "function",
+
+                    identity = "CFrame",
+                },
+
+                Color3 = {
+                    fromHex = "function",
+                    fromHSV = "function",
+                    fromRGB = "function",
+                    new = "function",
+                    toHSV = "function",
+                },
+
+                ColorSequence = {
+                    new = "function",
+                },
+
+                ColorSequenceKeypoint = {
+                    new = "function",
+                },
+
+                DateTime = {
+                    fromIsoDate = "function",
+                    fromLocalTime = "function",
+                    fromUniversalTime = "function",
+                    fromUnixTimestamp = "function",
+                    fromUnixTimestampMillis = "function",
+                    now = "function",
+                },
+
+                DockWidgetPluginGuiInfo = {
+                    new = "function",
+                },
+
+                Enum = {},
+
+                Faces = {
+                    new = "function",
+                },
+
+                FloatCurveKey = {
+                    new = "function",
+                },
+
+                Font = {
+                    fromEnum = "function",
+                    fromId = "function",
+                    fromName = "function",
+                    new = "function",
+                },
+
+                Instance = {
+                    new = "function",
+                },
+
+                NumberRange = {
+                    new = "function",
+                },
+
+                NumberSequence = {
+                    new = "function",
+                },
+
+                NumberSequenceKeypoint = {
+                    new = "function",
+                },
+
+                OverlapParams = {
+                    new = "function",
+                },
+
+                PathWaypoint = {
+                    new = "function",
+                },
+
+                PhysicalProperties = {
+                    new = "function",
+                },
+
+                Random = {
+                    new = "function",
+                },
+
+                Ray = {
+                    new = "function",
+                },
+
+                RaycastParams = {
+                    new = "function",
+                },
+
+                Rect = {
+                    new = "function",
+                },
+
+                Region3 = {
+                    new = "function",
+                },
+
+                Region3int16 = {
+                    new = "function",
+                },
+
+                RotationCurveKey = {
+                    new = "function",
+                },
+
+                SharedTable = {
+                    clear = "function",
+                    clone = "function",
+                    cloneAndFreeze = "function",
+                    increment = "function",
+                    isFrozen = "function",
+                    new = "function",
+                    size = "function",
+                    update = "function",
+                },
+
+                task = {
+                    cancel = "function",
+                    defer = "function",
+                    delay = "function",
+                    desynchronize = "function",
+                    spawn = "function",
+                    synchronize = "function",
+                    wait = "function",
+                },
+
+                TweenInfo = {
+                    new = "function",
+                },
+
+                UDim = {
+                    new = "function",
+                },
+
+                UDim2 = {
+                    fromOffset = "function",
+                    fromScale = "function",
+                    new = "function",
+                },
+
+                Vector2 = {
+                    new = "function",
+
+                    one = "Vector2",
+                    xAxis = "Vector2",
+                    yAxis = "Vector2",
+                    zero = "Vector2",
+                },
+
+                Vector2int16 = {
+                    new = "function",
+                },
+
+                Vector3 = {
+                    fromAxis = "function",
+                    FromAxis = "function",
+                    fromNormalId = "function",
+                    FromNormalId = "function",
+                    new = "function",
+
+                    one = "Vector3",
+                    xAxis = "Vector3",
+                    yAxis = "Vector3",
+                    zAxis = "Vector3",
+                    zero = "Vector3",
+                },
+
+                Vector3int16 = {
+                    new = "function",
+                },
+            },
+        }
+
+        -- Filling up language.libraries.Enum table
+        local enumLibraryTable = language.libraries.Enum
+
+        for _, enum in ipairs(Enum:GetEnums()) do
+            --TODO: Remove tostring from here once there is a better way to get the name of an Enum
+            enumLibraryTable[tostring(enum)] = "Enum"
+        end
+
+        return language
+
     end
 
     modules[tbl.theme] = function()
-    	local script = tbl.theme
+        local script = tbl.theme
 
-    	local DEFAULT_TOKEN_COLORS = {
-    		["background"] = Color3.fromRGB(47, 47, 47),
-    		["iden"] = Color3.fromRGB(234, 234, 234),
-    		["keyword"] = Color3.fromRGB(215, 174, 255),
-    		["builtin"] = Color3.fromRGB(131, 206, 255),
-    		["string"] = Color3.fromRGB(196, 255, 193),
-    		["number"] = Color3.fromRGB(255, 125, 125),
-    		["comment"] = Color3.fromRGB(140, 140, 155),
-    		["operator"] = Color3.fromRGB(255, 239, 148),
-    		["custom"] = Color3.fromRGB(119, 122, 255),
-    	}
-    	
-    	local types = require(script.Parent.types)
-    	
-    	local Theme = {
-    		tokenColors = {},
-    		tokenRichTextFormatter = {},
-    	}
-    	
-    	function Theme.setColors(tokenColors: types.TokenColors)
-    		assert(type(tokenColors) == "table", "Theme.updateColors expects a table")
-    	
-    		for tokenName, color in tokenColors do
-    			Theme.tokenColors[tokenName] = color
-    		end
-    	end
-    	
-    	function Theme.getColoredRichText(color: Color3, text: string): string
-    		return '<font color="#' .. color:ToHex() .. '">' .. text .. "</font>"
-    	end
-    	
-    	function Theme.getColor(tokenName: types.TokenName): Color3
-    		return Theme.tokenColors[tokenName]
-    	end
-    	
-    	function Theme.matchStudioSettings(refreshCallback: () -> ()): boolean
-    		local success = pcall(function()
-    			-- When not used in a Studio plugin, this will error
-    			-- and the pcall will just silently return
-    			local studio = settings().Studio
-    			local studioTheme = studio.Theme
-    	
-    			local function getTokens()
-    				return {
-    					["background"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBackground),
-    					["iden"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptText),
-    					["keyword"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptKeyword),
-    					["builtin"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBuiltInFunction),
-    					["string"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptString),
-    					["number"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptNumber),
-    					["comment"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptComment),
-    					["operator"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptOperator),
-    					["custom"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBool),
-    				}
-    			end
-    	
-    			Theme.setColors(getTokens())
-    			studio.ThemeChanged:Connect(function()
-    				studioTheme = studio.Theme
-    				Theme.setColors(getTokens())
-    	            refreshCallback()
-    			end)
-    		end)
-    		return success
-    	end
-    	
-    	-- Initialize
-    	Theme.setColors(DEFAULT_TOKEN_COLORS)
-    	
-    	return Theme
-    	
+        local DEFAULT_TOKEN_COLORS = {
+            ["background"] = Color3.fromRGB(47, 47, 47),
+            ["iden"] = Color3.fromRGB(234, 234, 234),
+            ["keyword"] = Color3.fromRGB(215, 174, 255),
+            ["builtin"] = Color3.fromRGB(131, 206, 255),
+            ["string"] = Color3.fromRGB(196, 255, 193),
+            ["number"] = Color3.fromRGB(255, 125, 125),
+            ["comment"] = Color3.fromRGB(140, 140, 155),
+            ["operator"] = Color3.fromRGB(255, 239, 148),
+            ["custom"] = Color3.fromRGB(119, 122, 255),
+        }
+
+        local types = require(script.Parent.types)
+
+        local Theme = {
+            tokenColors = {},
+            tokenRichTextFormatter = {},
+        }
+
+        function Theme.setColors(tokenColors: types.TokenColors)
+            assert(type(tokenColors) == "table", "Theme.updateColors expects a table")
+
+            for tokenName, color in tokenColors do
+                Theme.tokenColors[tokenName] = color
+            end
+        end
+
+        function Theme.getColoredRichText(color: Color3, text: string): string
+            return '<font color="#' .. color:ToHex() .. '">' .. text .. "</font>"
+        end
+
+        function Theme.getColor(tokenName: types.TokenName): Color3
+            return Theme.tokenColors[tokenName]
+        end
+
+        function Theme.matchStudioSettings(refreshCallback: () -> ()): boolean
+            local success = pcall(function()
+                -- When not used in a Studio plugin, this will error
+                -- and the pcall will just silently return
+                local studio = settings().Studio
+                local studioTheme = studio.Theme
+
+                local function getTokens()
+                    return {
+                        ["background"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBackground),
+                        ["iden"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptText),
+                        ["keyword"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptKeyword),
+                        ["builtin"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBuiltInFunction),
+                        ["string"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptString),
+                        ["number"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptNumber),
+                        ["comment"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptComment),
+                        ["operator"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptOperator),
+                        ["custom"] = studioTheme:GetColor(Enum.StudioStyleGuideColor.ScriptBool),
+                    }
+                end
+
+                Theme.setColors(getTokens())
+                studio.ThemeChanged:Connect(function()
+                    studioTheme = studio.Theme
+                    Theme.setColors(getTokens())
+                    refreshCallback()
+                end)
+            end)
+            return success
+        end
+
+        -- Initialize
+        Theme.setColors(DEFAULT_TOKEN_COLORS)
+
+        return Theme
+
     end
 
     modules[tbl.types] = function()
-    	local script = tbl.types
+        local script = tbl.types
 
-    	export type TextObject = TextLabel | TextBox
-    	
-    	export type TokenName =
-    		"background"
-    		| "iden"
-    		| "keyword"
-    		| "builtin"
-    		| "string"
-    		| "number"
-    		| "comment"
-    		| "operator"
-    		| "custom"
-    	
-    	export type TokenColors = {
-    		["background"]: Color3?,
-    		["iden"]: Color3?,
-    		["keyword"]: Color3?,
-    		["builtin"]: Color3?,
-    		["string"]: Color3?,
-    		["number"]: Color3?,
-    		["comment"]: Color3?,
-    		["operator"]: Color3?,
-    		["custom"]: Color3?,
-    	}
-    	
-    	export type HighlightProps = {
-    		textObject: TextObject,
-    		src: string?,
-    		forceUpdate: boolean?,
-    		lexer: Lexer?,
-    		customLang: { [string]: string }?,
-    	}
-    	
-    	export type Lexer = {
-    		scan: (src: string) -> () -> (string, string),
-    		navigator: () -> any,
-    		finished: boolean?,
-    	}
-    	
-    	export type ObjectData = {
-    		Text: string,
-    		Labels: { TextLabel },
-    		Lines: { string },
-    		Lexer: Lexer?,
-    		CustomLang: { [string]: string }?,
-    	}
-    	
-    	return nil
-    	
+        export type TextObject = TextLabel | TextBox
+
+        export type TokenName =
+            "background"
+        | "iden"
+        | "keyword"
+        | "builtin"
+        | "string"
+        | "number"
+        | "comment"
+        | "operator"
+        | "custom"
+
+        export type TokenColors = {
+            ["background"]: Color3?,
+            ["iden"]: Color3?,
+            ["keyword"]: Color3?,
+            ["builtin"]: Color3?,
+            ["string"]: Color3?,
+            ["number"]: Color3?,
+            ["comment"]: Color3?,
+            ["operator"]: Color3?,
+            ["custom"]: Color3?,
+        }
+
+        export type HighlightProps = {
+            textObject: TextObject,
+            src: string?,
+            forceUpdate: boolean?,
+            lexer: Lexer?,
+            customLang: { [string]: string }?,
+        }
+
+        export type Lexer = {
+            scan: (src: string) -> () -> (string, string),
+            navigator: () -> any,
+            finished: boolean?,
+        }
+
+        export type ObjectData = {
+            Text: string,
+            Labels: { TextLabel },
+            Lines: { string },
+            Lexer: Lexer?,
+            CustomLang: { [string]: string }?,
+        }
+
+        return nil
+
     end
 
     modules[tbl.utility] = function()
-    	local script = tbl.utility
+        local script = tbl.utility
 
-    	local types = require(script.Parent.types)
-    	
-    	local Utility = {}
-    	
-    	function Utility.sanitizeRichText(s: string): string
-    		return string.gsub(
-    			string.gsub(string.gsub(string.gsub(string.gsub(s, "&", "&amp;"), "<", "&lt;"), ">", "&gt;"), '"', "&quot;"),
-    			"'",
-    			"&apos;"
-    		)
-    	end
-    	
-    	function Utility.convertTabsToSpaces(s: string): string
-    		return string.gsub(s, "\t", "    ")
-    	end
-    	
-    	function Utility.removeControlChars(s: string): string
-    		return string.gsub(s, "[\0\1\2\3\4\5\6\7\8\11\12\13\14\15\16\17\18\19\20\21\22\23\24\25\26\27\28\29\30\31]+", "")
-    	end
-    	
-    	function Utility.getInnerAbsoluteSize(textObject: types.TextObject): Vector2
-    		local fullSize = textObject.AbsoluteSize
-    	
-    		local padding: UIPadding? = textObject:FindFirstChildWhichIsA("UIPadding")
-    		if padding then
-    			local offsetX = padding.PaddingLeft.Offset + padding.PaddingRight.Offset
-    			local scaleX = (fullSize.X * padding.PaddingLeft.Scale) + (fullSize.X * padding.PaddingRight.Scale)
-    			local offsetY = padding.PaddingTop.Offset + padding.PaddingBottom.Offset
-    			local scaleY = (fullSize.Y * padding.PaddingTop.Scale) + (fullSize.Y * padding.PaddingBottom.Scale)
-    			return Vector2.new(fullSize.X - (scaleX + offsetX), fullSize.Y - (scaleY + offsetY))
-    		else
-    			return fullSize
-    		end
-    	end
-    	
-    	function Utility.getTextBounds(textObject: types.TextObject): Vector2
-    		if textObject.ContentText == "" then
-    			return Vector2.zero
-    		end
-    	
-    		local textBounds = textObject.TextBounds
-    	
-    		-- Wait for TextBounds to be non-NaN and non-zero because Roblox
-    		while (textBounds.Y ~= textBounds.Y) or (textBounds.Y < 1) do
-    			task.wait()
-    			textBounds = textObject.TextBounds
-    		end
-    		return textBounds
-    	end
-    	
-    	return Utility
-    	
+        local types = require(script.Parent.types)
+
+        local Utility = {}
+
+        function Utility.sanitizeRichText(s: string): string
+            return string.gsub(
+                string.gsub(string.gsub(string.gsub(string.gsub(s, "&", "&amp;"), "<", "&lt;"), ">", "&gt;"), '"', "&quot;"),
+                "'",
+                "&apos;"
+            )
+        end
+
+        function Utility.convertTabsToSpaces(s: string): string
+            return string.gsub(s, "\t", "    ")
+        end
+
+        function Utility.removeControlChars(s: string): string
+            return string.gsub(s, "[\0\1\2\3\4\5\6\7\8\11\12\13\14\15\16\17\18\19\20\21\22\23\24\25\26\27\28\29\30\31]+", "")
+        end
+
+        function Utility.getInnerAbsoluteSize(textObject: types.TextObject): Vector2
+            local fullSize = textObject.AbsoluteSize
+
+            local padding: UIPadding? = textObject:FindFirstChildWhichIsA("UIPadding")
+            if padding then
+                local offsetX = padding.PaddingLeft.Offset + padding.PaddingRight.Offset
+                local scaleX = (fullSize.X * padding.PaddingLeft.Scale) + (fullSize.X * padding.PaddingRight.Scale)
+                local offsetY = padding.PaddingTop.Offset + padding.PaddingBottom.Offset
+                local scaleY = (fullSize.Y * padding.PaddingTop.Scale) + (fullSize.Y * padding.PaddingBottom.Scale)
+                return Vector2.new(fullSize.X - (scaleX + offsetX), fullSize.Y - (scaleY + offsetY))
+            else
+                return fullSize
+            end
+        end
+
+        function Utility.getTextBounds(textObject: types.TextObject): Vector2
+            if textObject.ContentText == "" then
+                return Vector2.zero
+            end
+
+            local textBounds = textObject.TextBounds
+
+            -- Wait for TextBounds to be non-NaN and non-zero because Roblox
+            while (textBounds.Y ~= textBounds.Y) or (textBounds.Y < 1) do
+                task.wait()
+                textBounds = textObject.TextBounds
+            end
+            return textBounds
+        end
+
+        return Utility
+
     end
 
     task.spawn(function()
-    	local script = tbl.GlobalLog
+        local script = tbl.GlobalLog
 
-    	_G.logPrint = false  
-    	_G.logWarn = false  
-    	_G.logError = false  
-    	_G.logInfo = false  
-    	
-    	local TextService = game:GetService("TextService")
-    	local LogService = game:GetService("LogService")
-    	local frame = script.Parent
-    	local messageBox = frame:WaitForChild("TextBox")
-    	
-    	messageBox.RichText = true
-    	messageBox.Selectable = false
-    	messageBox.Active = false
-    	
-    	local function formatMessage(message, messageType)
-    	    local color = ""
-    	    local formattedType = ""
-    	
-    	    if messageType == Enum.MessageType.MessageOutput then
-    	        color = "#cffeff" 
-    	        formattedType = "Print"
-    	    elseif messageType == Enum.MessageType.MessageWarning then
-    	        color = "#ffa73b" 
-    	        formattedType = "Warn"
-    	    elseif messageType == Enum.MessageType.MessageError then
-    	        color = "#FF005D" 
-    	        formattedType = "Error"
-    	    elseif messageType == Enum.MessageType.MessageInfo then
-    	        color = "#5cb0ff" 
-    	        formattedType = "Info"
-    	    else
-    	        color = "#FFFFFF" 
-    	        formattedType = "Other"
-    	    end
-    	
-    	    return string.format('<font color="%s"><b>[%s]</b></font> %s', color, formattedType, message)
-    	end
-    	
-    	local function updateMessageBoxSize()
-    	    local textSize = TextService:GetTextSize(
-    	        messageBox.Text, 
-    	        messageBox.TextSize, 
-    	        messageBox.Font, 
-    	        Vector2.new(messageBox.AbsoluteSize.X, 20000)
-    	    )
-    	
-    	    messageBox.Size = UDim2.new(messageBox.Size.X.Scale, messageBox.Size.X.Offset, 0, textSize.Y)
-    	end
-    	
-    	
-    	local function onMessageOut(message, messageType)
-    	    if (messageType == Enum.MessageType.MessageOutput and not _G.logPrint) or
-    	        (messageType == Enum.MessageType.MessageWarning and not _G.logWarn) or
-    	        (messageType == Enum.MessageType.MessageError and not _G.logError) or
-    	        (messageType == Enum.MessageType.MessageInfo and not _G.logInfo) then
-    	        return 
-    	    end
-    	
-    	    local timeStamp = os.date("%X")
-    	    local formattedMessage = formatMessage(message, messageType)
-    	    messageBox.Text = messageBox.Text .. timeStamp .. " - " .. formattedMessage .. "\n"
-    	    
-    	    updateMessageBoxSize()
-    	
-    	    frame.CanvasPosition = Vector2.new(0, messageBox.TextBounds.Y)
-    	end
-    	
-    	
-    	LogService.MessageOut:Connect(onMessageOut)
-    	
+        _G.logPrint = false  
+        _G.logWarn = false  
+        _G.logError = false  
+        _G.logInfo = false  
+
+        local TextService = game:GetService("TextService")
+        local LogService = game:GetService("LogService")
+        local frame = script.Parent
+        local messageBox = frame:WaitForChild("TextBox")
+
+        messageBox.RichText = true
+        messageBox.Selectable = false
+        messageBox.Active = false
+
+        local function formatMessage(message, messageType)
+            local color = ""
+            local formattedType = ""
+
+            if messageType == Enum.MessageType.MessageOutput then
+                color = "#cffeff" 
+                formattedType = "Print"
+            elseif messageType == Enum.MessageType.MessageWarning then
+                color = "#ffa73b" 
+                formattedType = "Warn"
+            elseif messageType == Enum.MessageType.MessageError then
+                color = "#FF005D" 
+                formattedType = "Error"
+            elseif messageType == Enum.MessageType.MessageInfo then
+                color = "#5cb0ff" 
+                formattedType = "Info"
+            else
+                color = "#FFFFFF" 
+                formattedType = "Other"
+            end
+
+            return string.format('<font color="%s"><b>[%s]</b></font> %s', color, formattedType, message)
+        end
+
+        local function updateMessageBoxSize()
+            local textSize = TextService:GetTextSize(
+                messageBox.Text, 
+                messageBox.TextSize, 
+                messageBox.Font, 
+                Vector2.new(messageBox.AbsoluteSize.X, 20000)
+            )
+
+            messageBox.Size = UDim2.new(messageBox.Size.X.Scale, messageBox.Size.X.Offset, 0, textSize.Y)
+        end
+
+
+        local function onMessageOut(message, messageType)
+            if (messageType == Enum.MessageType.MessageOutput and not _G.logPrint) or
+                (messageType == Enum.MessageType.MessageWarning and not _G.logWarn) or
+                (messageType == Enum.MessageType.MessageError and not _G.logError) or
+                (messageType == Enum.MessageType.MessageInfo and not _G.logInfo) then
+                return 
+            end
+
+            local timeStamp = os.date("%X")
+            local formattedMessage = formatMessage(message, messageType)
+            messageBox.Text = messageBox.Text .. timeStamp .. " - " .. formattedMessage .. "\n"
+
+            updateMessageBoxSize()
+
+            frame.CanvasPosition = Vector2.new(0, messageBox.TextBounds.Y)
+        end
+
+
+        LogService.MessageOut:Connect(onMessageOut)
+
     end)
 
     task.spawn(function()
-    	local script = tbl.LocalPlayerHandle
+        local script = tbl.LocalPlayerHandle
 
-    	-- Services
-    	local Players = game:GetService("Players")
-    	
-    	--local plr property
-    	local lplayer = Players.LocalPlayer
-    	local character = lplayer.Character or lplayer.CharacterAdded:Wait()
-    	
-    	-- Modules
-    	local FormSliderClass = require(script.Parent:WaitForChild("FormSliderClass"))
-    	
-    	-- GUI Variables
-    	local WalKSpeedSlider = script.Parent:WaitForChild("walkspeed"):WaitForChild("Slider")
-    	local JumpSpeedSlider = script.Parent:WaitForChild("jumspeed"):WaitForChild("Slider")
-    	local curpos = script.Parent:WaitForChild("CurPos")
-    	-- Add slider functionality
-    	local WalKSpeedSliderSet = FormSliderClass.new(WalKSpeedSlider, Enum.Axis.X, 0, 50)  -- Horizontal, -> paramGuiObject, paramDirection, minvalue, maxvalue slider
-    	
-    	-- Meow
-    	WalKSpeedSlider:GetAttributeChangedSignal("ValuePercent"):Connect(function()
-    		--print(WalKSpeedSlider:GetAttribute("ValuePercent"), WalKSpeedSlider:GetAttribute("ValueIncrement"))
-    		WalKSpeedSlider.Parent.Title.Text = "Player Walk Speed: "..math.floor(WalKSpeedSlider:GetAttribute("ValuePercent"))
-    		character.Humanoid.WalkSpeed = math.floor(WalKSpeedSlider:GetAttribute("ValuePercent"))
-    	end)
-    	
-    	
-    	
-    	coroutine.resume(coroutine.create(function()
-    		while wait() do
-    			if character then
-    				local vector = character.HumanoidRootPart.Position
-    				local pos = Vector3.new(math.floor(vector.X), math.floor(vector.Y), math.floor(vector.Z))
-    				curpos.Text = "Current Position: "..tostring(pos)
-    			end
-    		end
-    	end))
-    	
-    	
-    	
+        -- Services
+        local Players = game:GetService("Players")
+
+        --local plr property
+        local lplayer = Players.LocalPlayer
+        local character = lplayer.Character or lplayer.CharacterAdded:Wait()
+
+        -- Modules
+        local FormSliderClass = require(script.Parent:WaitForChild("FormSliderClass"))
+
+        -- GUI Variables
+        local WalKSpeedSlider = script.Parent:WaitForChild("walkspeed"):WaitForChild("Slider")
+        local JumpSpeedSlider = script.Parent:WaitForChild("jumspeed"):WaitForChild("Slider")
+        local curpos = script.Parent:WaitForChild("CurPos")
+        -- Add slider functionality
+        local WalKSpeedSliderSet = FormSliderClass.new(WalKSpeedSlider, Enum.Axis.X, 0, 50)  -- Horizontal, -> paramGuiObject, paramDirection, minvalue, maxvalue slider
+
+        -- Meow
+        WalKSpeedSlider:GetAttributeChangedSignal("ValuePercent"):Connect(function()
+            --print(WalKSpeedSlider:GetAttribute("ValuePercent"), WalKSpeedSlider:GetAttribute("ValueIncrement"))
+            WalKSpeedSlider.Parent.Title.Text = "Player Walk Speed: "..math.floor(WalKSpeedSlider:GetAttribute("ValuePercent"))
+            character.Humanoid.WalkSpeed = math.floor(WalKSpeedSlider:GetAttribute("ValuePercent"))
+        end)
+
+
+
+        coroutine.resume(coroutine.create(function()
+            while wait() do
+                if character then
+                    local vector = character.HumanoidRootPart.Position
+                    local pos = Vector3.new(math.floor(vector.X), math.floor(vector.Y), math.floor(vector.Z))
+                    curpos.Text = "Current Position: "..tostring(pos)
+                end
+            end
+        end))
+
+
+
     end)
 
     task.spawn(function()
-    	local script = tbl.LocalScript
+        local script = tbl.LocalScript
 
-    	local Highlighter = require(script.Parent.ScriptBox.Highlighter)
-    	local myTextLabel = script.Parent.ScriptBox
-    	
-    	Highlighter.highlight({
-    	    textObject = myTextLabel,
-    	})
-    	
+        local Highlighter = require(script.Parent.ScriptBox.Highlighter)
+        local myTextLabel = script.Parent.ScriptBox
+
+        Highlighter.highlight({
+            textObject = myTextLabel,
+        })
+
     end)
 
     task.spawn(function()
-    	local script = tbl.LocalScript_1
+        local script = tbl.LocalScript_1
 
-    	
-    	local plr = game.Players.LocalPlayer
-    	local MainFrame = script.Parent.MainFrame
-    	local buttons = MainFrame.BottomMenuFrame.MenuList
-    	
-    	local execBtn = buttons:WaitForChild("ExecBtn")
-    	local cloudBtn = buttons:WaitForChild("CloudBtn")
-    	local HBtn = buttons:WaitForChild("HBtn")
-    	local settingsBtn = buttons:WaitForChild("SettingsBtn")
-    	
-    	local execFrame = MainFrame:WaitForChild("ExecFrame")
-    	local logFrame = MainFrame:WaitForChild("logFrame")
-    	local homeFrame = MainFrame:WaitForChild("homeFrame")
-    	local settingsFrame = MainFrame:WaitForChild("SettingsFrame")
-    	
-    	local excbtn = execFrame.Buttons.Button1
-    	local execlipbtn = execFrame.Buttons.Button2
-    	local pastebtn = execFrame.Buttons.Button3
-    	local clearbtn = execFrame.Buttons.Button4
-    	
-    	local ScriptBox = execFrame.ScrollingFrame.ScriptBox
-    	
-    	local ExitBtn = MainFrame.BottomMenuFrame.LeftFrame.ExitBtn
-    	
-    	----//////////////////----
-    	----/// Menu Buttons
-    	----//////////////////----
-    	
-    	local function hideAllFrames()
-    	    execFrame.Visible = false
-    	    logFrame.Visible = false
-    	    homeFrame.Visible = false
-    	    settingsFrame.Visible = false
-    	    execBtn.UIStroke.Enabled = false    
-    	    HBtn.UIStroke.Enabled = false    
-    	    cloudBtn.UIStroke.Enabled = false    
-    	    settingsBtn.UIStroke.Enabled = false    
-    	end
-    	
-    	local function showFrame(frame, btn)
-    	    hideAllFrames()
-    	    frame.Visible = true
-    	    btn.UIStroke.Enabled = true
-    	end
-    	
-    	execBtn.Activated:Connect(function()
-    	    showFrame(execFrame, execBtn)
-    	end)
-    	
-    	cloudBtn.Activated:Connect(function()
-    	    showFrame(logFrame, cloudBtn)
-    	end)
-    	
-    	HBtn.Activated:Connect(function()
-    	    showFrame(homeFrame, HBtn)
-    	end)
-    	
-    	settingsBtn.Activated:Connect(function()
-    	    showFrame(settingsFrame, settingsBtn)
-    	end)
-    	
-    	hideAllFrames()
-    	
-    	homeFrame.Visible = true
-    	
-    	----//////////////////----
-    	----/// Exec Buttons
-    	----//////////////////----
-    	
-    	excbtn.Activated:Connect(function()
-    	    excbtn.UIStroke.Enabled = true
-    	    executecode(ScriptBox.Text)
-    	    print("Trigon - Executed script")
-    	    wait(0.1)
-    	    excbtn.UIStroke.Enabled = false
-    	end) 
-    	
-    	execlipbtn.Activated:Connect(function()
-    	    execlipbtn.UIStroke.Enabled = true
-    	    executecode(getclipboard())
-    	    print("Trigon - Executed from clipboard")
-    	    wait(0.1)
-    	    execlipbtn.UIStroke.Enabled = false
-    	end)  
-    	
-    	pastebtn.Activated:Connect(function()
-    	    pastebtn.UIStroke.Enabled = true
-    	    ScriptBox.Text = getclipboard()
-    	    print("Trigon - Pasted from clipboard")
-    	    wait(0.1)
-    	    pastebtn.UIStroke.Enabled = false
-    	end) 
-    	
-    	clearbtn.Activated:Connect(function()
-    	    clearbtn.UIStroke.Enabled = true
-    	    ScriptBox.Text = ""
-    	    wait(0.1)
-    	    clearbtn.UIStroke.Enabled = false
-    	end)  
-    	
-    	
-    	----//////////////////----
-    	----/// Other
-    	----//////////////////----
-    	
-    	ExitBtn.Activated:Connect(function()
-    	    script.Parent.Enabled = not script.Parent.Enabled
-    	end)
-    	
-    	ScriptBox.Focused:Connect(function()
-    	    for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
-    	       item.Visible = false
-    	    end
-    	end)
-    	
-    	ScriptBox.FocusLost:Connect(function()
-    	    for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
-    	        item.Visible = true
-    	    end
-    	end)
-    	
-    	
-    	
-    	
-    	----//////////////////----
-    	----/// Default Page
-    	----//////////////////----
-    	
-    	local HttpService = game:GetService("HttpService")
-    	
-    	local jsonString = [[
+
+        local plr = game.Players.LocalPlayer
+        local MainFrame = script.Parent.MainFrame
+        local buttons = MainFrame.BottomMenuFrame.MenuList
+
+        local execBtn = buttons:WaitForChild("ExecBtn")
+        local cloudBtn = buttons:WaitForChild("CloudBtn")
+        local HBtn = buttons:WaitForChild("HBtn")
+        local settingsBtn = buttons:WaitForChild("SettingsBtn")
+
+        local execFrame = MainFrame:WaitForChild("ExecFrame")
+        local logFrame = MainFrame:WaitForChild("logFrame")
+        local homeFrame = MainFrame:WaitForChild("homeFrame")
+        local settingsFrame = MainFrame:WaitForChild("SettingsFrame")
+
+        local excbtn = execFrame.Buttons.Button1
+        local execlipbtn = execFrame.Buttons.Button2
+        local pastebtn = execFrame.Buttons.Button3
+        local clearbtn = execFrame.Buttons.Button4
+
+        local ScriptBox = execFrame.ScrollingFrame.ScriptBox
+
+        local ExitBtn = MainFrame.BottomMenuFrame.LeftFrame.ExitBtn
+
+        ----//////////////////----
+        ----/// Menu Buttons
+        ----//////////////////----
+
+        local function hideAllFrames()
+            execFrame.Visible = false
+            logFrame.Visible = false
+            homeFrame.Visible = false
+            settingsFrame.Visible = false
+            execBtn.UIStroke.Enabled = false    
+            HBtn.UIStroke.Enabled = false    
+            cloudBtn.UIStroke.Enabled = false    
+            settingsBtn.UIStroke.Enabled = false    
+        end
+
+        local function showFrame(frame, btn)
+            hideAllFrames()
+            frame.Visible = true
+            btn.UIStroke.Enabled = true
+        end
+
+        execBtn.Activated:Connect(function()
+            showFrame(execFrame, execBtn)
+        end)
+
+        cloudBtn.Activated:Connect(function()
+            showFrame(logFrame, cloudBtn)
+        end)
+
+        HBtn.Activated:Connect(function()
+            showFrame(homeFrame, HBtn)
+        end)
+
+        settingsBtn.Activated:Connect(function()
+            showFrame(settingsFrame, settingsBtn)
+        end)
+
+        hideAllFrames()
+
+        homeFrame.Visible = true
+
+        ----//////////////////----
+        ----/// Exec Buttons
+        ----//////////////////----
+
+        excbtn.Activated:Connect(function()
+            excbtn.UIStroke.Enabled = true
+            executecode(ScriptBox.Text)
+            print("Trigon - Executed script")
+            wait(0.1)
+            excbtn.UIStroke.Enabled = false
+        end) 
+
+        execlipbtn.Activated:Connect(function()
+            execlipbtn.UIStroke.Enabled = true
+            executecode(getclipboard())
+            print("Trigon - Executed from clipboard")
+            wait(0.1)
+            execlipbtn.UIStroke.Enabled = false
+        end)  
+
+        pastebtn.Activated:Connect(function()
+            pastebtn.UIStroke.Enabled = true
+            ScriptBox.Text = getclipboard()
+            print("Trigon - Pasted from clipboard")
+            wait(0.1)
+            pastebtn.UIStroke.Enabled = false
+        end) 
+
+        clearbtn.Activated:Connect(function()
+            clearbtn.UIStroke.Enabled = true
+            ScriptBox.Text = ""
+            wait(0.1)
+            clearbtn.UIStroke.Enabled = false
+        end)  
+
+
+        ----//////////////////----
+        ----/// Other
+        ----//////////////////----
+
+        ExitBtn.Activated:Connect(function()
+            script.Parent.Enabled = not script.Parent.Enabled
+        end)
+
+        ScriptBox.Focused:Connect(function()
+            for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
+                item.Visible = false
+            end
+        end)
+
+        ScriptBox.FocusLost:Connect(function()
+            for _, item in pairs(ScriptBox.SyntaxHighlights:GetChildren()) do
+                item.Visible = true
+            end
+        end)
+
+
+
+
+        ----//////////////////----
+        ----/// Default Page
+        ----//////////////////----
+
+        local HttpService = game:GetService("HttpService")
+
+        local jsonString = [[
     	{
     	  "15842384180x": {
     	    "_scripts": [
@@ -4446,99 +4438,99 @@ function main()
     	  }
     	}
     	]]
-    	
-    	
-    	
-    	local scriptList = HttpService:JSONDecode(jsonString)
-    	local scriptsFrame = MainFrame.homeFrame.scriptsFrame
-    	local scriptButton = scriptsFrame.TextButton
-    	local currentPlaceId = tostring(game.PlaceId) 
-    	
-    	
-    	scriptsFrame["#GameHeader"].Title.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-    	
-    	local function createscriptButtons(_scripts)
-    	    local yPos = 0
-    	    for i, scriptData in ipairs(_scripts) do
-    	        local newButton = scriptButton:Clone()
-    	        newButton.Parent = scriptsFrame
-    	        newButton.Text = scriptData.scriptName
-    	        newButton.Position = UDim2.new(newButton.Position.X.Scale, newButton.Position.X.Offset, newButton.Position.Y.Scale, yPos)
-    	        yPos = yPos + newButton.Size.Y.Offset + 5
-    	        newButton.Visible = true
-    	
-    	        newButton.MouseButton1Click:Connect(function()
-    	            --print(scriptData.text)
-    	            executecode(scriptData.text)
-    	        end)
-    	    end
-    	end
-    	
-    	local scriptToUse
-    	if scriptList[currentPlaceId] and scriptList[currentPlaceId]._scripts then
-    	    scriptToUse = scriptList[currentPlaceId]._scripts
-    	elseif scriptList["global"] and scriptList["global"]._scripts then
-    	    scriptToUse = scriptList["global"]._scripts
-    	end
-    	
-    	if scriptToUse then
-    	    createscriptButtons(scriptToUse)
-    	else
-    	    print("No _scripts available.")
-    	end
-    	
-    	scriptButton.Visible = false
-    	
-    	
-    	----//////////////////----
-    	----/// Console Log Page
-    	----//////////////////----
-    	
-    	logButtons = logFrame.logButtons
-    	consoleFrame = logFrame.consoleFrame
-    	
-    	outputCBX = logButtons.logOutput.Button
-    	warningCBX = logButtons.logWarning.Button
-    	errorCBX = logButtons.logError.Button
-    	infoCBX = logButtons.logInfo.Button
-    	consoleclrbtn = logButtons.cclrbtn
-    	
-    	local function ccupdt(value, button)
-    	    if _G[value] then
-    	        button.Image = "rbxassetid://3926305904"
-    	        button.ImageRectSize = Vector2.new(36, 36) 
-    	        button.ImageRectOffset = Vector2.new(724, 724) 
-    	    else
-    	        button.Image = "rbxassetid://3926311105"        
-    	        button.ImageRectSize = Vector2.new(48, 48) 
-    	        button.ImageRectOffset = Vector2.new(4, 836) 
-    	    end
-    	end
-    	
-    	outputCBX.Activated:Connect(function()
-    	    ccupdt("logPrint",outputCBX)
-    	    _G.logPrint = not _G.logPrint
-    	    print(_G.logPrint)
-    	end)
-    	
-    	warningCBX.Activated:Connect(function()
-    	    ccupdt("logWarn",warningCBX)
-    	    _G.logWarn = not _G.logWarn
-    	end)
-    	
-    	errorCBX.Activated:Connect(function()
-    	    ccupdt("logError",errorCBX)
-    	    _G.logError = not _G.logError
-    	end)
-    	
-    	infoCBX.Activated:Connect(function()
-    	    ccupdt("logInfo",infoCBX)
-    	    _G.logInfo = not _G.logInfo
-    	end)
-    	
-    	consoleclrbtn.Activated:Connect(function()
-    	    consoleFrame.TextBox.Text = ""
-    	end)
+
+
+
+        local scriptList = HttpService:JSONDecode(jsonString)
+        local scriptsFrame = MainFrame.homeFrame.scriptsFrame
+        local scriptButton = scriptsFrame.TextButton
+        local currentPlaceId = tostring(game.PlaceId) 
+
+
+        scriptsFrame["#GameHeader"].Title.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+
+        local function createscriptButtons(_scripts)
+            local yPos = 0
+            for i, scriptData in ipairs(_scripts) do
+                local newButton = scriptButton:Clone()
+                newButton.Parent = scriptsFrame
+                newButton.Text = scriptData.scriptName
+                newButton.Position = UDim2.new(newButton.Position.X.Scale, newButton.Position.X.Offset, newButton.Position.Y.Scale, yPos)
+                yPos = yPos + newButton.Size.Y.Offset + 5
+                newButton.Visible = true
+
+                newButton.MouseButton1Click:Connect(function()
+                    --print(scriptData.text)
+                    executecode(scriptData.text)
+                end)
+            end
+        end
+
+        local scriptToUse
+        if scriptList[currentPlaceId] and scriptList[currentPlaceId]._scripts then
+            scriptToUse = scriptList[currentPlaceId]._scripts
+        elseif scriptList["global"] and scriptList["global"]._scripts then
+            scriptToUse = scriptList["global"]._scripts
+        end
+
+        if scriptToUse then
+            createscriptButtons(scriptToUse)
+        else
+            print("No _scripts available.")
+        end
+
+        scriptButton.Visible = false
+
+
+        ----//////////////////----
+        ----/// Console Log Page
+        ----//////////////////----
+
+        logButtons = logFrame.logButtons
+        consoleFrame = logFrame.consoleFrame
+
+        outputCBX = logButtons.logOutput.Button
+        warningCBX = logButtons.logWarning.Button
+        errorCBX = logButtons.logError.Button
+        infoCBX = logButtons.logInfo.Button
+        consoleclrbtn = logButtons.cclrbtn
+
+        local function ccupdt(value, button)
+            if _G[value] then
+                button.Image = "rbxassetid://3926305904"
+                button.ImageRectSize = Vector2.new(36, 36) 
+                button.ImageRectOffset = Vector2.new(724, 724) 
+            else
+                button.Image = "rbxassetid://3926311105"        
+                button.ImageRectSize = Vector2.new(48, 48) 
+                button.ImageRectOffset = Vector2.new(4, 836) 
+            end
+        end
+
+        outputCBX.Activated:Connect(function()
+            ccupdt("logPrint",outputCBX)
+            _G.logPrint = not _G.logPrint
+            print(_G.logPrint)
+        end)
+
+        warningCBX.Activated:Connect(function()
+            ccupdt("logWarn",warningCBX)
+            _G.logWarn = not _G.logWarn
+        end)
+
+        errorCBX.Activated:Connect(function()
+            ccupdt("logError",errorCBX)
+            _G.logError = not _G.logError
+        end)
+
+        infoCBX.Activated:Connect(function()
+            ccupdt("logInfo",infoCBX)
+            _G.logInfo = not _G.logInfo
+        end)
+
+        consoleclrbtn.Activated:Connect(function()
+            consoleFrame.TextBox.Text = ""
+        end)
     end)
 end
 
