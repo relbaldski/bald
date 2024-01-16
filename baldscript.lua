@@ -4353,7 +4353,6 @@ function main()
         excbtn.Activated:Connect(function()
             excbtn.UIStroke.Enabled = true
             executecode(ScriptBox.Text)
-            print("Trigon - Executed script")
             wait(0.1)
             excbtn.UIStroke.Enabled = false
         end) 
@@ -4361,7 +4360,6 @@ function main()
         execlipbtn.Activated:Connect(function()
             execlipbtn.UIStroke.Enabled = true
             executecode(getclipboard())
-            print("Trigon - Executed from clipboard")
             wait(0.1)
             execlipbtn.UIStroke.Enabled = false
         end)  
@@ -4369,7 +4367,6 @@ function main()
         pastebtn.Activated:Connect(function()
             pastebtn.UIStroke.Enabled = true
             ScriptBox.Text = getclipboard()
-            print("Trigon - Pasted from clipboard")
             wait(0.1)
             pastebtn.UIStroke.Enabled = false
         end) 
