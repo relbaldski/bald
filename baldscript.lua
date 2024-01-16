@@ -1,5 +1,5 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.02")
+print("v0.02a")
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
@@ -835,16 +835,10 @@ function loader()
 
         Bar.Size = UDim2.new(0, 0, 0.8, 0)
 
-        ProgressBar(0, "Waiting for LocalPlayer...", 0.5)
-        repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character
-        local playerName = game.Players.LocalPlayer.Name
-        ProgressBar(20, playerName .. " is loaded!", 1)
-        wait(1)
-        ProgressBar(10, "Verifying player...", 1)
-        wait(1)
-        ProgressBar(20, "Checking for game scripts...", 1)
+        ProgressBar(50, "Checking for game scripts...", 1)
         wait(1)
         ProgressBar(20, "Finalizing everything...", 1)
+        local buttonx23 = topbar("Trigon", "rbxassetid://15844306310", true)
         wait(1)
         ProgressBar(30, "Setup Complete!", 1)
         wait(0.5)
@@ -852,7 +846,6 @@ function loader()
         --MainFrame.SelectorFrame.Visible = true
 
         local function  loadtrigon()
-            local buttonx23 = topbar("Trigon", "rbxassetid://15844306310", true)
             Loader.Enabled = false
             MainUI.Enabled = true
             print(MainUI.Enabled)
@@ -4538,7 +4531,6 @@ end
 
 main()
 loader()
-
 
 
 
