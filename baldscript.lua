@@ -1085,6 +1085,7 @@ trii.TrigonMain.IgnoreGuiInset = true
 trii.TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 trii.TrigonMain.Name = "TrigonMain"
 trii.TrigonMain.Parent = gethui()
+trii.TrigonMain.Enabled = false
 
 trii.MainFrame.BorderSizePixel = 0
 trii.MainFrame.Size = UDim2.new(1.0005, 0, 1, 0)
