@@ -1,5 +1,5 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03")
+print("v0.03a")
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
