@@ -1,5 +1,5 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03a")
+print("v0.03b")
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
@@ -5152,7 +5152,7 @@ task.spawn(function()
 	local function updateAutoLoad(scriptName, autoLoadValue, btn)
 	    if _scripts.localscripts and _scripts.localscripts[scriptName] then
 	        _scripts.localscripts[scriptName].auto_load = autoLoadValue
-	        save_scripts()  -- Save after updating the autoload value
+	        save_scripts()
 	        print("Updated auto_load for", _scripts.localscripts[scriptName].name, "to", autoLoadValue)
 	        
 	        if not autoLoadValue then
@@ -5177,35 +5177,37 @@ task.spawn(function()
 	    return convertedName
 	end
 	
-	
-	local function setupScriptUI(scriptName, scriptData)
-	    local scriptUI = script_placeholder:Clone()
-	    scriptUI.Visible = true
-	    scriptUI.scriptTitle.Text = scriptData.name
-	    print(scriptName, "setupScriptUI")
-	    -- Run Button
-	    scriptUI.Buttons.run.button.Activated:Connect(function()
-	        execute_(scriptName)
-	    end)
-	
-	    -- Autoload Button
-	    scriptUI.Buttons.autoload.button.Activated:Connect(function()
-	        local newAutoLoadValue = not scriptData.auto_load
-	        updateAutoLoad(scriptName, newAutoLoadValue, scriptUI.Buttons.autoload.button)
-	        scriptData.auto_load = newAutoLoadValue
-	    end)
-	    
-	
-	    -- Delete Button
-	    scriptUI.Buttons.delete.button.Activated:Connect(function()
-	        deleteScript(scriptName)
-	        scriptUI:Destroy()
-	    end)
-	
-	    scriptUI.Parent = lsf
-	    save_scripts()
-	end
-	
+    local function setupScriptUI(scriptName, scriptData)
+        local scriptUI = script_placeholder:Clone()
+        scriptUI.Visible = true
+        scriptUI.scriptTitle.Text = scriptData.name
+    
+        scriptUI.Buttons.run.button.Activated:Connect(function()
+            execute_(scriptName)
+        end)
+    
+        scriptUI.Buttons.autoload.button.Activated:Connect(function()
+            local newAutoLoadValue = not scriptData.auto_load
+            updateAutoLoad(scriptName, newAutoLoadValue, scriptUI.Buttons.autoload.button)
+            scriptData.auto_load = newAutoLoadValue
+        end)
+    
+        scriptUI.Buttons.delete.button.Activated:Connect(function()
+            deleteScript(scriptName)
+            scriptUI:Destroy()
+        end)
+    
+        scriptUI.Parent = lsf
+    
+        if scriptData.auto_load then
+            scriptUI.Buttons.autoload.button.Image = "rbxassetid://3926311105"        
+            scriptUI.Buttons.autoload.button.ImageRectSize = Vector2.new(48, 48) 
+            scriptUI.Buttons.autoload.button.ImageRectOffset = Vector2.new(4, 836) 
+            execute_(scriptName)        
+        end 
+    end
+    
+
 	local function setupAllScriptsUI()
 	    for scriptName, scriptData in pairs(_scripts.localscripts) do
 	        setupScriptUI(scriptName, scriptData)
