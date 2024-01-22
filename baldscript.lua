@@ -1083,7 +1083,7 @@ function main()
 trii.TrigonMain.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 trii.TrigonMain.IgnoreGuiInset = true
 trii.TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-trii.TrigonMain.Name = "TrigonMainX"
+trii.TrigonMain.Name = "TrigonMain"
 trii.TrigonMain.Parent = gethui()
 trii.TrigonMain.Enabled = false
 
