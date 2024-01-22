@@ -1,5 +1,5 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03b")
+print("v0.03w")
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
@@ -1083,7 +1083,7 @@ function main()
 trii.TrigonMain.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 trii.TrigonMain.IgnoreGuiInset = true
 trii.TrigonMain.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-trii.TrigonMain.Name = "TrigonMain"
+trii.TrigonMain.Name = "TrigonMainX"
 trii.TrigonMain.Parent = gethui()
 trii.TrigonMain.Enabled = false
 
@@ -4693,6 +4693,25 @@ task.spawn(function()
 	    return string.format('<font color="%s"><b>[%s]</b></font> %s', color, formattedType, message)
 	end
 	
+	local function formatMessage2(message, messageType)
+		local formattedType = ""
+	
+		if messageType == Enum.MessageType.MessageOutput then
+			formattedType = "Print"
+		elseif messageType == Enum.MessageType.MessageWarning then
+			formattedType = "Warn"
+		elseif messageType == Enum.MessageType.MessageError then
+			formattedType = "Error"
+		elseif messageType == Enum.MessageType.MessageInfo then
+			formattedType = "Info"
+		else
+			formattedType = "Other"
+		end
+	
+		return string.format('[%s] %s', formattedType, message)
+	end
+	
+
 	local function updateMessageBoxSize()
 	    local textSize = TextService:GetTextSize(
 	        messageBox.Text, 
@@ -4715,13 +4734,24 @@ task.spawn(function()
 	
 	    local timeStamp = os.date("%X")
 	    local formattedMessage = formatMessage(message, messageType)
-	    messageBox.Text = messageBox.Text .. timeStamp .. " - " .. formattedMessage .. "\n"
-	    
+	    local formattedMessage2 = formatMessage2(message, messageType)
+		
+		local logmsg =  messageBox.Text .. timeStamp .. " - " .. formattedMessage .. "\n"
+		local logmsg2 = formattedMessage2
+	    messageBox.Text = logmsg
+		if _G.wsConnection then
+			task.wait()
+			local success, err = pcall(function()
+				_G.ws:Send(tostring(logmsg2))
+			end)
+			if not success then
+				print("Error sending message, ws:Send")
+			end
+		end
 	    updateMessageBoxSize()
 	
 	    frame.CanvasPosition = Vector2.new(0, messageBox.TextBounds.Y)
 	end
-	
 	
 	LogService.MessageOut:Connect(onMessageOut)
 	
@@ -5264,8 +5294,9 @@ task.spawn(function()
 end)
 
 end
-
+wait(2)
 main()
+
 loader()
 
 
