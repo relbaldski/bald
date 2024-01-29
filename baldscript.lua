@@ -1,9 +1,8 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03x")
---v0.02 fixed
+print("v0.03y")
 
 pcall(function()   
-    local x = loadstring(game:HttpGet("https://trigonevo.fun/x.php"))() 
+   local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name)
 end)
 
 function topbar(ButtonName,Image,Left)
