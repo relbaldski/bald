@@ -1,10 +1,11 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03y")
+print("v0.03z")
 
 pcall(function()   
-   local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name)
-end)
-
+	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name)
+ end)
+ 
+--v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
     local RunService = game:GetService("RunService")
@@ -5303,5 +5304,11 @@ main()
 
 loader()
 
+print("-><-")
 
+pcall(function()
+	for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
+		executecode(arceus.readarceusfile(v))
+	end	
+end)
 
