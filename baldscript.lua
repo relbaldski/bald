@@ -1,6 +1,9 @@
 repeat  task.wait() until game:IsLoaded()
-print("v0.03z")
 
+shared = {}
+shared.TrigonVer = "Trigon v0.03z1"
+
+print(shared.TrigonVer)
 pcall(function()   
 	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name)
  end)
@@ -5304,7 +5307,7 @@ main()
 
 loader()
 
-print("-><-")
+print("---><---")
 
 pcall(function()
 	for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
