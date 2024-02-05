@@ -1,9 +1,18 @@
 repeat  task.wait() until game:IsLoaded()
 
-shared = {}
-shared.TrigonVer = "Trigon v0.03z1"
 
-print(shared.TrigonVer)
+TrigonVer = "Trigon v0.03zb"
+print(TrigonVer)
+
+--[[
+NAME: Trigon
+VERSION: Android
+USER_AGENT: Trigon Android
+FINGERPRINT: Trigon_Fingerprint
+]]
+
+--local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+--print("Your HWID is: " .. HWID)
 
 pcall(function()   
 	local MarketplaceService = game:GetService("MarketplaceService")
@@ -296,6 +305,14 @@ function topbar(ButtonName,Image,Left)
             return false
         end
     end
+end
+
+function loadtopbar()
+	if game.PlaceId == 10449761463 then
+		topbar("Trigon", "rbxassetid://15844306310", false) 
+	else
+		topbar("Trigon", "rbxassetid://15844306310", true)
+	end
 end
 
 function loader() 
@@ -850,7 +867,7 @@ function loader()
         ProgressBar(50, "Checking for game scripts...", 1)
         wait(1)
         ProgressBar(20, "Finalizing everything...", 1)
-        local buttonx23 = topbar("Trigon", "rbxassetid://15844306310", true)
+        loadtopbar()
         wait(1)
         ProgressBar(30, "Setup Complete!", 1)
         wait(0.5)
