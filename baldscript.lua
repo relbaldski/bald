@@ -4,10 +4,14 @@ shared = {}
 shared.TrigonVer = "Trigon v0.03z1"
 
 print(shared.TrigonVer)
+
 pcall(function()   
+	local MarketplaceService = game:GetService("MarketplaceService")
+	local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
 	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name)
+	local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
  end)
- 
+
 --v0.02 fixed
 function topbar(ButtonName,Image,Left)
     task.wait(2)
