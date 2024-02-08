@@ -48,7 +48,7 @@ task.wait()
 function ReadSetting()
 	local s, e = pcall(function()
 		if StorageAccess then
-			if not isfolder(a) then makefolder(a) end
+			if not isfolder(a) then makefolder(a) loaddefaultsetttings = true end
 			return H:JSONDecode(readfile(a .. '/' .. b))
 		else
 			return Settings
@@ -63,7 +63,7 @@ function ReadSetting()
 end
 
 function saveSettings()
-	if not isfolder(a) then makefolder(a) end
+	if not isfolder(a) then makefolder(a) loaddefaultsetttings = true end
 	local s, e = pcall(function()
 		if StorageAccess then
 			writefile(a .. '/' .. b, H:JSONEncode(Settings))
