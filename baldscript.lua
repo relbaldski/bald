@@ -1,6 +1,6 @@
 
 repeat  task.wait() until game:IsLoaded()
-TrigonVer = "Trigon v0.04c"
+TrigonVer = "Trigon v0.04d"
 print(TrigonVer)
 
 if game.CoreGui:FindFirstChild("TrigonMain") then
@@ -30,20 +30,23 @@ local H = game:GetService('HttpService')
 
 Settings = {}
 loaddefaultsetttings = false
+autoexec_ = false
 
-StorageAccess = false
+local StorageAccess = false
 local ws, es = pcall(function()
     writefile("Init", " ")
     StorageAccess = true
+	print(StorageAccess)
 end)
 if es then
     warn("Your settings will not save!!")
 end
 
+task.wait()
 function ReadSetting()
 	local s, e = pcall(function()
-		if not isfolder(a) then makefolder(a) end
 		if StorageAccess then
+			if not isfolder(a) then makefolder(a) end
 			return H:JSONDecode(readfile(a .. '/' .. b))
 		else
 			return Settings
