@@ -35,6 +35,7 @@ autoexec_ = false
 local StorageAccess = false
 local ws, es = pcall(function()
     writefile("Init", " ")
+    if not isfolder(a) then makefolder(a) end
     StorageAccess = true
 	print(StorageAccess)
 end)
