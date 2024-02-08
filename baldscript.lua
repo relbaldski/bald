@@ -1,6 +1,6 @@
 
 repeat  task.wait() until game:IsLoaded()
-TrigonVer = "Trigon v0.04d"
+TrigonVer = "Trigon v0.04e"
 print(TrigonVer)
 
 if game.CoreGui:FindFirstChild("TrigonMain") then
