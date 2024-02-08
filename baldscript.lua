@@ -34,7 +34,7 @@ autoexec_ = false
 
 local StorageAccess = false
 local ws, es = pcall(function()
-	if not isfolder(a) then makefolder(a) end
+	if not isfolder(a) then makefolder(a) loaddefaultsetttings = true end
 	writefile(a .. '/' .. b, H:JSONEncode(Settings))
 	readfile(a .. '/' .. b)
     	StorageAccess = true
