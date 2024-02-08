@@ -34,9 +34,10 @@ autoexec_ = false
 
 local StorageAccess = false
 local ws, es = pcall(function()
-    writefile("Init", " ")
-    if not isfolder(a) then makefolder(a) end
-    StorageAccess = true
+	if not isfolder(a) then makefolder(a) end
+	writefile(a .. '/' .. b, H:JSONEncode(Settings))
+	readfile(a .. '/' .. b)
+    	StorageAccess = true
 	print(StorageAccess)
 end)
 if es then
