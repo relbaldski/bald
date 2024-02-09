@@ -33,14 +33,6 @@ FINGERPRINT: Trigon_Fingerprint
 --local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 --print("Your HWID is: " .. HWID)
 
-pcall(function()   
-	local MarketplaceService = game:GetService("MarketplaceService")
-	local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
-	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name) --encrypted
-	local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
-end)
-
-
 local LibVersion = "v2" -- ( v3 & v4 )
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
 local ServiceID = "trigon-evo" -- Replace this with your Service ID
@@ -1303,6 +1295,12 @@ function loader()
 end
 
 function main()
+pcall(function()   
+	local MarketplaceService = game:GetService("MarketplaceService")
+	local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
+	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name) --encrypted
+	local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
+end)
 	
 local trigok =
 {
