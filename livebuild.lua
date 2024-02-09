@@ -1276,7 +1276,6 @@ function loader()
         end)
 
         if ValidateFailed then 
-            autoexec_ = true
             warn(']---------Validate Failed---------[')
             ProgressBar(20, "Finalizing everything...", 1)
             loadtopbar()
@@ -5311,6 +5310,7 @@ print("-----] Trigon Loaded [-----")
 
 pcall(function()
 	if Settings.autoexec and autoexec_ then
+		warn(Settings.autoexec, autoexec_)
 		for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
 			executecode(arceus.readarceusfile(v))
 		end
