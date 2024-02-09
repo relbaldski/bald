@@ -389,6 +389,7 @@ end
 function autoexec()
 	pcall(function()		
 		if Settings.autoexec then
+			autoexec_ = true
 			for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
 				executecode(arceus.readarceusfile(v))
 			end
