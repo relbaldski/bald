@@ -43,7 +43,7 @@ end)
 if es then
     warn("Your settings will not save!!")
 end
-
+warn("Storage Access: ", StorageAccess)
 task.wait()
 function ReadSetting()
 	local s, e = pcall(function()
