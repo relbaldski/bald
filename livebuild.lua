@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04h -------[")
+print("]------- Initializing Trigon v0.04i -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -386,6 +386,15 @@ function topbar(ButtonName,Image,Left)
 end
 
 
+function autoexec()
+	pcall(function()		
+		if Settings.autoexec then
+			for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
+				executecode(arceus.readarceusfile(v))
+			end
+		end
+	end)
+end
 function reeeeeeeeeeeeee()
 	pcall(function()   
 		local MarketplaceService = game:GetService("MarketplaceService")
@@ -1190,6 +1199,7 @@ function loader()
 
                 repeat task.wait() until Loader and MainUI
                 loadtrigon()
+				autoexec()
 				reeeeeeeeeeeeee()
             else 
                 TextBox.Text = "Key Expired/Does Not Exist!"
@@ -1269,6 +1279,7 @@ function loader()
                 repeat task.wait() until Loader and MainUI
 
                 loadtrigon()
+				autoexec()
 				reeeeeeeeeeeeee()
             else
                 print('Key Expired/Does Not Exist!')
@@ -5311,12 +5322,6 @@ loader()
 
 print("-----] Trigon Loaded [-----")
 
-pcall(function()
-	if Settings.autoexec and autoexec_ then
-		warn(Settings.autoexec, autoexec_)
-		for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
-			executecode(arceus.readarceusfile(v))
-		end
-	end
-end)
+
+
 
