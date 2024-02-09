@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04g -------[")
+print("]------- Initializing Trigon v0.04h -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -383,6 +383,16 @@ function topbar(ButtonName,Image,Left)
 			return false
 		end
 	end
+end
+
+
+function reeeeeeeeeeeeee()
+	pcall(function()   
+		local MarketplaceService = game:GetService("MarketplaceService")
+		local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
+		local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name) --encrypted
+		local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
+	end)
 end
 
 function loadtopbar()
@@ -1179,8 +1189,8 @@ function loader()
                 MainFrame.LoaderFrame.Visible = false
 
                 repeat task.wait() until Loader and MainUI
-
                 loadtrigon()
+				reeeeeeeeeeeeee()
             else 
                 TextBox.Text = "Key Expired/Does Not Exist!"
                 print('Key Expired/Does Not Exist!')
@@ -1259,7 +1269,7 @@ function loader()
                 repeat task.wait() until Loader and MainUI
 
                 loadtrigon()
-
+				reeeeeeeeeeeeee()
             else
                 print('Key Expired/Does Not Exist!')
                 LoaderFrame.Visible = false
@@ -1279,6 +1289,7 @@ function loader()
             repeat task.wait() until Loader and MainUI
 
             loadtrigon()
+			reeeeeeeeeeeeee()
         end
 
 
@@ -1295,13 +1306,7 @@ function loader()
 end
 
 function main()
-pcall(function()   
-	local MarketplaceService = game:GetService("MarketplaceService")
-	local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
-	local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name) --encrypted
-	local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
-end)
-	
+
 local trigok =
 {
 	TrigonMain = Instance.new("ScreenGui"),
