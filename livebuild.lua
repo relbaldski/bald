@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04f -------[")
+print("]------- Initializing Trigon v0.04g -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -5227,7 +5227,7 @@ task.spawn(function()
 	
 		scriptUI.Parent = lsf
 	
-		if scriptData.auto_load then
+		if scriptData.auto_load and autoexec_ then
 			scriptUI.Buttons.autoload.button.Image = "rbxassetid://3926311105"        
 			scriptUI.Buttons.autoload.button.ImageRectSize = Vector2.new(48, 48) 
 			scriptUI.Buttons.autoload.button.ImageRectOffset = Vector2.new(4, 836) 
