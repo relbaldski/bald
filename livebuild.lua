@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04f -------[")
+print("]------- Initializing Trigon v0.04j -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
