@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04i -------[")
+print("]------- Initializing Trigon v0.04f -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -30,8 +30,8 @@ USER_AGENT: Trigon Android
 FINGERPRINT: Trigon_Fingerprint
 ]]
 
---local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
---print("Your HWID is: " .. HWID)
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+local key = "https://trigonevo.com/getkey/?hwid="..HWID
 
 local LibVersion = "v2" -- ( v3 & v4 )
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
@@ -389,7 +389,7 @@ end
 function autoexec()
 	pcall(function()		
 		if Settings.autoexec then
-			autoexec_ = true
+			autoexec_ = true	
 			for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
 				executecode(arceus.readarceusfile(v))
 			end
@@ -1174,11 +1174,17 @@ function loader()
         local MainFrame = script.Parent.Parent.Parent
 
         cklbtn.Activated:Connect(function()
-            setclipboard(PandaAuth:GetKey(ServiceID))
+            setclipboard(key)
+			cklbtn.Title.Text = "Link Copied!"
+			task.wait(2)
+			cklbtn.Title.Text = "Copy Key Link"
         end)
 
         pastebtn.Activated:Connect(function()
-            TextBox.Text = getclipboard()    
+            TextBox.Text = getclipboard()  
+			pastebtn.Title.Text = "Pasted!"
+			task.wait(2)
+			pastebtn.Title.Text = "Paste"  
         end)
 		
         local function  loadtrigon()
@@ -1313,6 +1319,9 @@ function loader()
 
         discordbtn.Activated:Connect(function()
             setclipboard("https://discord.gg/rnZXbd2yfW")
+			discordbtn.Title.Text = "Link Copied!"
+			task.wait(2)
+			discordbtn.Title.Text = "Copy Discord Invite Link"
         end)
     end)
 end
