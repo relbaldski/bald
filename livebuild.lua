@@ -1,5 +1,5 @@
-print("]------- Initializing Trigon v0.04j -------[")
-
+print("]------- Initializing Trigon v0.04h -------[")
+keyless = true 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	local strLen = math.random(minL, maxL)
@@ -1273,7 +1273,7 @@ function loader()
 
         -- Validation ( Regular Key )
         local s, ValidateFailed = pcall(function() 
-            if PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey) then
+            if PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey) and not keyless then
                 autoexec_ = true
                 print('Key verified!')
                 ProgressBar(20, "Finalizing everything...", 1)
@@ -1295,7 +1295,7 @@ function loader()
             end
         end)
 
-        if ValidateFailed then 
+        if ValidateFailed or keyless then 
             warn(']---------Validate Failed---------[')
             ProgressBar(20, "Finalizing everything...", 1)
             loadtopbar()
@@ -1307,6 +1307,7 @@ function loader()
             repeat task.wait() until Loader and MainUI
 
             loadtrigon()
+			autoexec()
 			reeeeeeeeeeeeee()
         end
 
@@ -5331,7 +5332,6 @@ main()
 loader()
 
 print("-----] Trigon Loaded [-----")
-
 
 
 
