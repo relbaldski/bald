@@ -1,4 +1,5 @@
-print("]------- Initializing Trigon v0.04h -------[")
+print("]------- Initializing Trigon v0.04i -------[")
+repeat  task.wait(2) until game:IsLoaded()
 keyless = true 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
