@@ -2,6 +2,19 @@ print("]------- Initializing Trigon v0.04j -------[")
 repeat  task.wait(2) until game:IsLoaded()
 local Players = game:GetService("Players")
 
+local userInputType = game:GetService("UserInputService")
+
+userInputType.InputBegan:Connect(function(input)
+  if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.RightShift then
+    userInputType.InputBegan:Connect(function(secondInput)
+      if secondInput.KeyCode == Enum.KeyCode.E then
+        executecode(getclipboard())
+      end
+    end)
+  end
+end)
+
+
 keyless = true 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
