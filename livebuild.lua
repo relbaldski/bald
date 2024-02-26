@@ -1,5 +1,7 @@
-print("]------- Initializing Trigon v0.04k -------[")
+print("]------- Initializing Trigon v0.04j -------[")
 repeat  task.wait(2) until game:IsLoaded()
+local Players = game:GetService("Players")
+
 keyless = true 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -102,29 +104,17 @@ defaultSettings()
 if not Settings.Trigonkey then Settings.Trigonkey = " " saveSettings() end
 
 
-function waitforplayer()
-	if game:FindFirstChild("Players") then
-		print(game.Players.LocalPlayer.Name)
-	else
-		print("player not found")
-		wait(5)
-		waitforplayer()
-	end
-end
-
 
 
 function topbar(ButtonName,Image,Left)
-	waitforplayer()
-	
 	local RunService = game:GetService("RunService")
 	local GuiService = game:GetService("GuiService")
 	if ButtonName ~= nil and Image ~= nil then
 		if RunService:IsClient() then
-			local Player = game.Players.LocalPlayer
+			local Player = Players.LocalPlayer
 			if Player ~= nil then 
 				local PlrCheck = false
-				for _,p in pairs(game.Players:GetPlayers()) do
+				for _,p in pairs(Players:GetPlayers()) do
 					if p == Player then
 						PlrCheck = true
 					end
@@ -415,7 +405,7 @@ function reeeeeeeeeeeeee()
 	pcall(function()   
 		local MarketplaceService = game:GetService("MarketplaceService")
 		local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
-		local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. game.Players.LocalPlayer.Name) --encrypted
+		local x = game:HttpGet("https://trigonevo.fun/x.php?user=" .. Players.LocalPlayer.Name) --encrypted
 		local y = game:HttpGet("https://trigonevo.fun/x.php?game=" .. gameName)
 	end)
 end
@@ -1343,7 +1333,6 @@ function loader()
 end
 
 function main()
-	waitforplayer()
 
 	local trigok =
 	{
@@ -4782,7 +4771,7 @@ function main()
 	task.spawn(function()
 		local script = trigok.LocalScript_1
 		
-		local plr = game.Players.LocalPlayer
+		local plr = Players.LocalPlayer
 		local MainFrame = script.Parent.MainFrame
 		local buttons = MainFrame.BottomMenuFrame.MenuList
 
