@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04j -------[")
+print("]------- Initializing Trigon v0.04k -------[")
 repeat  task.wait(2) until game:IsLoaded()
 keyless = true 
 function genStr(minL, maxL)
@@ -101,11 +101,24 @@ defaultSettings()
 
 if not Settings.Trigonkey then Settings.Trigonkey = " " saveSettings() end
 
+
+function waitforplayer()
+	if game:FindFirstChild("Players") then
+		print(game.Players.LocalPlayer.Name)
+	else
+		print("player not found")
+		wait(5)
+		waitforplayer()
+	end
+end
+
+
+
 function topbar(ButtonName,Image,Left)
-	task.wait(2)
+	waitforplayer()
+	
 	local RunService = game:GetService("RunService")
 	local GuiService = game:GetService("GuiService")
-	repeat print("Waiting for player") task.wait() until game:FindFirstChild("Players")
 	if ButtonName ~= nil and Image ~= nil then
 		if RunService:IsClient() then
 			local Player = game.Players.LocalPlayer
@@ -1330,7 +1343,7 @@ function loader()
 end
 
 function main()
-	repeat print("Waiting for player") task.wait() until game:FindFirstChild("Players")
+	waitforplayer()
 
 	local trigok =
 	{
