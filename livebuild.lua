@@ -15,7 +15,7 @@ userInputType.InputBegan:Connect(function(input)
 end)
 
 
-keyless = true 
+keyless = false 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	local strLen = math.random(minL, maxL)
