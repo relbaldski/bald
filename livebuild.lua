@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04k -------[")
+print("]------- Initializing Trigon v0.04l -------[")
 repeat  task.wait(2) until game:IsLoaded()
 local Players = game:GetService("Players")
 
@@ -53,8 +53,10 @@ local key = "https://trigonevo.com/getkey/?hwid="..HWID
 local LibVersion = "v2" -- ( v3 & v4 )
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
 local ServiceID = "trigon-evo" -- Replace this with your Service ID
-
-local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion))()
+local PandaAuth = "nil"
+pcall(function()
+	PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion))()
+end)
 --setclipboard(PandaAuth:GetKey(ServiceID))
 --print(PandaAuth:GetKey(ServiceID))
 
@@ -4949,6 +4951,8 @@ function main()
 		}
 		}
 		]]
+
+
 
 
 
