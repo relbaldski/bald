@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04j -------[")
+print("]------- Initializing Trigon v0.04k -------[")
 repeat  task.wait(2) until game:IsLoaded()
 local Players = game:GetService("Players")
 
@@ -15,7 +15,8 @@ userInputType.InputBegan:Connect(function(input)
 end)
 
 
-keyless = false 
+keyless = true 
+
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	local strLen = math.random(minL, maxL)
@@ -1291,7 +1292,7 @@ function loader()
 
         -- Validation ( Regular Key )
         local s, ValidateFailed = pcall(function() 
-            if PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey) and not keyless then
+            if PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey) then
                 autoexec_ = true
                 print('Key verified!')
                 ProgressBar(20, "Finalizing everything...", 1)
@@ -1306,6 +1307,21 @@ function loader()
                 loadtrigon()
 				autoexec()
 				reeeeeeeeeeeeee()
+			elseif not keyless then
+				warn(']---------Trigon is Keyless!!---------[')
+				ProgressBar(20, "Finalizing everything...", 1)
+				loadtopbar()
+				wait(1)
+				ProgressBar(30, "Setup Complete!", 1)
+				wait(0.5)
+				MainFrame.LoaderFrame.Visible = false
+	
+				repeat task.wait() until Loader and MainUI
+	
+				loadtrigon()
+				autoexec()
+				reeeeeeeeeeeeee()
+
             else
                 print('Key Expired/Does Not Exist!')
                 LoaderFrame.Visible = false
@@ -5350,6 +5366,5 @@ main()
 loader()
 
 print("-----] Trigon Loaded [-----")
-
 
 
