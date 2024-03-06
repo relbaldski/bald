@@ -55,7 +55,8 @@ local key = "https://trigonevo.com/getkey/?hwid="..HWID
 
 local ServiceID, LibType, LibVersion = "trigon-evo", "roblox", "v2" 
 local PandaAuth, authlink
-local keyless = false
+local keyless = true
+
 local function tryLoadURL(url)
     local success, result = pcall(function()
         return loadstring(game:HttpGet(url))()
