@@ -1,4 +1,5 @@
-print("]------- Initializing Trigon v0.04m -------[")
+
+PandaAuthprint("]------- Initializing Trigon v0.04n -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -57,35 +58,40 @@ local ServiceID, LibType, LibVersion = "trigon-evo", "roblox", "v2"
 local PandaAuth, authlink
 local keyless = true
 
-local function tryLoadURL(url)
-    local success, result = pcall(function()
-        return loadstring(game:HttpGet(url))()
-    end)
-    if success and result then
-        return result
-    else
-        return nil
-    end
-end
-
-PandaAuth = tryLoadURL('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion)
-
-if not PandaAuth then
-    PandaAuth = tryLoadURL('https://pandadevelopment.cloud/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion)
-end
-
-if PandaAuth then
-    local success, result = pcall(function()
-        return PandaAuth:GetKey(ServiceID)
-    end)
-    if not success then
-        keyless = true
-        print("Failed to retrieve AuthLink. PandaAuth Error, Trigon is Keyless!!")
-    end
+if keyless then
+	print("Keyless")
+	PandaAuth = false
 else
-    keyless = true
-    print("PandaAuth Error, Trigon is Keyless!!")
-end
+	local function tryLoadURL(url)
+		local success, result = pcall(function()
+			return loadstring(game:HttpGet(url))()
+		end)
+		if success and result then
+			return result
+		else
+			return nil
+		end
+	end
+	PandaAuth = tryLoadURL('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion)
+
+	if not PandaAuth then
+		PandaAuth = tryLoadURL('https://pandadevelopment.cloud/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion)
+	end
+
+	if PandaAuth then
+		local success, result = pcall(function()
+			return PandaAuth:GetKey(ServiceID)
+		end)
+		print(result)
+		if not success then
+			keyless = true
+			print("Failed to retrieve AuthLink. PandaAuth Error, Trigon is Keyless!!")
+		end
+	else
+		keyless = true
+		print("PandaAuth Error, Trigon is Keyless!!")
+	end
+end 
 
 
 loaddefaultsetttings = false
