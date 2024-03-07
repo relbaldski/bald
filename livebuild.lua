@@ -1,5 +1,4 @@
-
-PandaAuthprint("]------- Initializing Trigon v0.04n -------[")
+print("]------- Initializing Trigon v0.04o -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -60,7 +59,7 @@ local keyless = true
 
 if keyless then
 	print("Keyless")
-	PandaAuth = false
+	PandaAuth = true
 else
 	local function tryLoadURL(url)
 		local success, result = pcall(function()
