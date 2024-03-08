@@ -1,4 +1,4 @@
-print("]------- Initializing Trigon v0.04o -------[")
+print("]------- Initializing Trigon v0.04q -------[")
 
 function genStr(minL, maxL)
 	local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -55,7 +55,7 @@ local key = "https://trigonevo.com/getkey/?hwid="..HWID
 
 local ServiceID, LibType, LibVersion = "trigon-evo", "roblox", "v2" 
 local PandaAuth, authlink
-local keyless = true
+local keyless = false
 
 if keyless then
 	print("Keyless")
@@ -437,13 +437,20 @@ end
 
 function autoexec()
 	pcall(function()		
-		if Settings.autoexec then
-
+		if Settings.autoexec then  
 			autoexec_ = true	
-			for i,v in pairs(arceus.listarceusfiles("Autoexec")) do
-				executecode(arceus.readarceusfile(v))
-			end
 
+			local files = arceus.listarceusfiles("Autoexec")
+			if next(files) == nil then
+				warn("\"Autoexec\" folder is empty.")
+			else
+				for i, v in pairs(files) do
+					warn("executing: " .. v:match("([^/]+)$"))
+					executecode(arceus.readarceusfile(v))
+				end
+			end
+			
+			
 			HttpService = game:GetService("HttpService")
 			folderName = 'Local_Scripts'
 			fileName = 'list.json'
@@ -477,6 +484,7 @@ function autoexec()
 			if scripts and scripts.localscripts then
 				for scriptName, scriptData in pairs(scripts.localscripts) do
 					if scriptData.auto_load then
+						warn("executing: " .. scriptName)
 						execute_(scriptData)
 					end
 				end
@@ -1286,7 +1294,7 @@ function loader()
         end
 		
         verifybtn.Activated:Connect(function()
-            if game.Players.LocalPlayer.Name == "rel_baldski" or PandaAuth:ValidateKey(ServiceID, TextBox.Text) then
+            if game.Players.LocalPlayer.Name == "_rel_baldski" or PandaAuth:ValidateKey(ServiceID, TextBox.Text) then
                 autoexec_ = true
                 Settings.Trigonkey = TextBox.Text
                 saveSettings()
@@ -1362,66 +1370,47 @@ function loader()
 			end
         end
 
-        -- Validation ( Regular Key )
-        local s, ValidateFailed = pcall(function() 
-            if PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey) then
-				print(PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey))
-                autoexec_ = true
-                print('Key verified!')
-                ProgressBar(20, "Finalizing everything...", 1)
-                loadtopbar()
-                wait(1)
-                ProgressBar(30, "Setup Complete!", 1)
-                wait(0.5)
-                MainFrame.LoaderFrame.Visible = false
-
-                repeat task.wait() until Loader and MainUI
-
-                loadtrigon()
-				autoexec()
-				reeeeeeeeeeeeee()
-            elseif keyless then
-				warn(']---------Trigon is Keyless!!---------[')
-				ProgressBar(20, "Finalizing everything...", 1)
-				loadtopbar()
-				wait(1)
-				ProgressBar(30, "Setup Complete!", 1)
-				wait(0.5)
-				MainFrame.LoaderFrame.Visible = false
-	
-				repeat task.wait() until Loader and MainUI
-	
-				loadtrigon()
-				autoexec()
-				reeeeeeeeeeeeee()
-
-            else
-                print('Key Expired/Does Not Exist!')
-                LoaderFrame.Visible = false
-                KeySection.Visible = true    
-            end
-        end)
-
-        if ValidateFailed then 
-            warn(']---------Validate Failed---------[')
-            ProgressBar(20, "Finalizing everything...", 1)
-            loadtopbar()
-            wait(1)
-            ProgressBar(30, "Setup Complete!", 1)
-            wait(0.5)
-            MainFrame.LoaderFrame.Visible = false
-
-            repeat task.wait() until Loader and MainUI
-
-            loadtrigon()
+		local function finalizeSetup()
+			ProgressBar(20, "Finalizing everything...", 1)
+			loadtopbar()
+			wait(1)
+			ProgressBar(30, "Setup Complete!", 1)
+			wait(0.5)
+			MainFrame.LoaderFrame.Visible = false
+		
+			repeat task.wait() until Loader and MainUI
+		
+			loadtrigon()
+			autoexec()
 			reeeeeeeeeeeeee()
-        end
-
-
-
-        MainFrame.CloseBtn.Activated:Connect(function()
-            MainFrame.Parent:Destroy();
-        end)
+		end
+		
+		local s, ValidateFailed = pcall(function()
+			if keyless then
+				warn(']---------Trigon is Keyless!!---------[')
+				finalizeSetup()
+			else
+				local keyValid = PandaAuth:ValidateKey(ServiceID, Settings.Trigonkey)
+				if keyValid then
+					print('Key verified!')
+					finalizeSetup()
+				else
+					print('Key Expired/Does Not Exist!')
+					LoaderFrame.Visible = false
+					KeySection.Visible = true
+				end
+			end
+		end)
+		
+		if ValidateFailed then
+			warn(']---------Validate Failed---------[')
+			finalizeSetup()
+		end
+		
+		MainFrame.CloseBtn.Activated:Connect(function()
+			MainFrame.Parent:Destroy()
+		end)
+		
 
 
         discordbtn.Activated:Connect(function()
@@ -5554,7 +5543,6 @@ main()
 loader()
 
 print("-----] Trigon Loaded [-----")
-
 
 
 
