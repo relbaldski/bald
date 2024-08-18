@@ -4,7 +4,8 @@ warn("Loading Trigon...")
 if plr.Name == "rel_baldski"  then
 	warn("Trigon Test Branch...")
 	--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/livebuild.lua",true))()
-	loadstring(game:HttpGet("https://pastebin.com/raw/AtpMtN4s",true))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/yeJWgwLw",true))()
+	--loadstring(game:HttpGet("https://pastebin.com/raw/AtpMtN4s",true))()
 	return;
 elseif plr.Name == "player355games" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/NnNF85D7",true))()
