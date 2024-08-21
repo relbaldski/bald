@@ -13,8 +13,7 @@ local ss = scripts.github
 warn("Loading Trigon...")
 
 if plr.Name == "rel_baldski"  then
-	warn("Trigon Test Branch... "..ss)
-	loadstring(game:HttpGet(ss,true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/livebuild.lua",true))()
 	return;
 else
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/livebuild.lua",true))()
