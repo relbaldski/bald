@@ -1,5 +1,3 @@
-_G.Trigon = true
-
 local _trigon =
 {
 	Trigon = Instance.new("ScreenGui"),
@@ -4437,7 +4435,6 @@ _trigon.TextBox.Size = UDim2.new(0.822157, 0, 0.842111, 0)
 _trigon.TextBox.TextColor3 = Color3.fromRGB(230, 230, 230)
 _trigon.TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.TextBox.Text = ""
-_trigon.TextBox.CursorPosition = -1
 _trigon.TextBox.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextBox.ClearTextOnFocus = false
 _trigon.TextBox.Parent = _trigon.SearchFrame
@@ -5471,10 +5468,10 @@ _trigon.Icon_22.ImageColor3 = Color3.fromRGB(241, 241, 241)
 _trigon.Icon_22.BorderSizePixel = 0
 _trigon.Icon_22.ScaleType = Enum.ScaleType.Fit
 _trigon.Icon_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_22.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_22.Position = UDim2.new(0.204349, 0, 0.477645, 0)
 _trigon.Icon_22.Name = "Icon"
 _trigon.Icon_22.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_22.Image = "rbxassetid://14906044812"
+_trigon.Icon_22.Image = "rbxassetid://13864075732"
 _trigon.Icon_22.Size = UDim2.new(0.154936, 0, 1.09524, 0)
 _trigon.Icon_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.Icon_22.BackgroundTransparency = 1
@@ -5739,7 +5736,7 @@ _trigon.UICorner_90.Parent = _trigon.treeviewFrame
 
 _trigon.UIPadding_68.PaddingTop = UDim.new(0.02, 0)
 _trigon.UIPadding_68.PaddingRight = UDim.new(0.025, 0)
-_trigon.UIPadding_68.PaddingLeft = UDim.new(0.03, 0)
+_trigon.UIPadding_68.PaddingLeft = UDim.new(0.1, 0)
 _trigon.UIPadding_68.Parent = _trigon.treeviewFrame
 
 _trigon.treeview_Studio.Enabled = false
@@ -5772,7 +5769,6 @@ _trigon.reload.Name = "reload"
 _trigon.reload.AnchorPoint = Vector2.new(0.01, 0.5)
 _trigon.reload.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
 _trigon.reload.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.reload.Active = false
 _trigon.reload.BackgroundTransparency = 0.94
 _trigon.reload.Parent = _trigon.top
 
@@ -5819,7 +5815,6 @@ _trigon.back.Name = "back"
 _trigon.back.AnchorPoint = Vector2.new(0.01, 0.5)
 _trigon.back.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
 _trigon.back.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.back.Active = false
 _trigon.back.BackgroundTransparency = 0.94
 _trigon.back.Parent = _trigon.top
 
@@ -6123,7 +6118,6 @@ _trigon.textInput.TextColor3 = Color3.fromRGB(220, 220, 220)
 _trigon.textInput.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.textInput.Text = ""
 _trigon.textInput.Selectable = false
-_trigon.textInput.CursorPosition = -1
 _trigon.textInput.Name = "textInput"
 _trigon.textInput.ClearTextOnFocus = false
 _trigon.textInput.Parent = _trigon.Container_5
@@ -6651,6 +6645,7 @@ task.spawn(function()
 	previewbtn = FileManager.bottom.preview_btn
 	execFile = FileManager.bottom.execFile
 	
+	local TreeView = {}
 	
 	local function clearContainer()
 		for _, child in ipairs(container:GetChildren()) do
@@ -6664,8 +6659,7 @@ task.spawn(function()
 		local color = isActive and Color3.fromRGB(241, 241, 241) or Color3.fromRGB(150, 150, 150)
 		button.Interactable = isActive
 		button.Main.Icon.ImageColor3 = color
-		button.Main.TextLabel.TextColor3
-		TextColor3 = color
+		button.Main.TextLabel.TextColor3 = color
 	end
 	
 	local function createItem(name, isFolder, path)
@@ -6682,7 +6676,6 @@ task.spawn(function()
 		new_item.Parent = container
 		new_item.MouseButton1Click:Connect(function()
 			if isFolder then
-				clearContainer() -- Clear container before loading new folder
 				current_file = ""
 				current_folder = path
 				loadFolder(path)
@@ -6692,7 +6685,6 @@ task.spawn(function()
 				current_file = path
 				updateFMButton(previewbtn, true)
 				updateFMButton(execFile, true)
-				print("Clicked file:", current_file)
 			end
 		end)
 	end
@@ -6732,10 +6724,12 @@ task.spawn(function()
 		for _, file in ipairs(regular_files) do
 			createItem(file.name, false, file.path)
 		end
+		TreeView:refresh()
 	end
 	
 	local function goBack()
 		if current_folder == "" then
+			loadFolder(current_folder)
 			return
 		end
 		current_folder = string.match(current_folder, "(.*)/") or ""
@@ -6753,13 +6747,14 @@ task.spawn(function()
 		if current_file == "" then 
 			_G.popup("You are about to delete the FOLDER: "..tostring(current_folder), function()
 				deletefileX(tostring(current_file))
+				goBack()
 			end)
 		else
 			_G.popup("You are about to delete a FILE: "..tostring(current_file), function()
 				deletefileX(tostring(current_file))
+				goBack()
 			end)
 		end
-		goBack()
 	end)
 	
 	newFile.Activated:Connect(function()
@@ -6772,21 +6767,24 @@ task.spawn(function()
 	
 	newFolder.Activated:Connect(function()
 		_G.popup("Confirm if you want to proceed with creating a new folder at: "..tostring(current_folder).."/", function(inputText)
-			if current_folder == "" then return end
 			makefolderX(current_folder.."/"..inputText)
 			loadFolder(current_folder)
 		end, true)
 	end)
 	
 	execFile.Activated:Connect(function()
-		readfileX("current_file")
+		_G.popup("You are about to execute FILE: "..tostring(current_file), function()
+			executecode(readfileX(current_file))
+		end)
 	end)
 	
 	previewbtn.Activated:Connect(function()
 		_G.popup("WIP")
 	end)
 	
-	back_btn.Activated:Connect(goBack)
+	reload_btn.Activated:Connect(function()
+		loadFolder(current_folder)
+	end)
 	back_btn.Activated:Connect(goBack)
 	clearContainer() 
 	loadFolder(current_folder)
@@ -6797,6 +6795,8 @@ task.spawn(function()
 	--//Treeview Directory
 	--//////////////////////
 	
+	script.Parent.treeviewFrame.ClipsDescendants
+	
 	local RIGHT_ARROW = "rbxassetid://13846733049"
 	local DOWN_ARROW = "rbxassetid://13846726669"
 	local FOLDER_ICON = "rbxassetid://13864075732"
@@ -6806,7 +6806,6 @@ task.spawn(function()
 	local isfileX = clonefunction(arceus.isarceusfile)
 	local listfilesX = clonefunction(arceus.listarceusfiles)
 	
-	local TreeView = {}
 	TreeView.__index = TreeView
 	
 	function TreeView.new(parent)
@@ -6815,6 +6814,7 @@ task.spawn(function()
 		self.gui.Name = "TreeView"
 		self.gui.Size = UDim2.new(1, 0, 1, 0)
 		self.gui.BackgroundTransparency = 1
+		self.gui.ClipsDescendants = false
 		self.gui.BorderSizePixel = 0
 		self.gui.ScrollBarThickness = 5
 		self.gui.ScrollBarImageTransparency = 0.95
@@ -6827,7 +6827,12 @@ task.spawn(function()
 	end
 	
 	function TreeView:addItem(path, isFolder)
-		table.insert(self.content, {name = path, isFolder = isFolder, children = {}, path = path})
+		local newItem = {name = path, isFolder = isFolder, children = {}, path = path, hasContents = false}
+		if isFolder then
+			local contents = listfilesX(path)
+			newItem.hasContents = #contents > 0
+		end
+		table.insert(self.content, newItem)
 	end
 	
 	function TreeView:loadChildren(item)
@@ -6835,7 +6840,12 @@ task.spawn(function()
 			local files = listfilesX(item.path)
 			for _, path in ipairs(files) do
 				local isFolder = isfolderX(path)
-				table.insert(item.children, {name = path, isFolder = isFolder, children = {}, path = path})
+				local newItem = {name = path, isFolder = isFolder, children = {}, path = path, hasContents = false}
+				if isFolder then
+					local contents = listfilesX(path)
+					newItem.hasContents = #contents > 0
+				end
+				table.insert(item.children, newItem)
 			end
 		end
 	end
@@ -6864,7 +6874,7 @@ task.spawn(function()
 		title.Name = "title"
 		title.Size = UDim2.new(1, -20, 1, 0)
 		title.TextColor3 = Color3.fromRGB(255, 255, 255)
-		title.Text = string.match(item.name, "[^/]+$") -- Extract the last part of the path
+		title.Text = string.match(item.name, "[^/]+$")
 		title.BackgroundTransparency = 1
 		title.TextXAlignment = Enum.TextXAlignment.Left
 		title.Parent = ImageButton
@@ -6875,27 +6885,44 @@ task.spawn(function()
 	
 		if item.isFolder then
 			icon.Image = FOLDER_ICON
-			local arrow = Instance.new("ImageLabel")
-			arrow.Size = UDim2.new(0, 16, 0, 16)
-			arrow.Position = UDim2.new(0, -20, 0.5, 0)
-			arrow.AnchorPoint = Vector2.new(0, 0.5)
-			arrow.BackgroundTransparency = 1
-			arrow.Image = self.expanded[item] and DOWN_ARROW or RIGHT_ARROW
-			arrow.Parent = ImageButton
-	
-			ImageButton.MouseButton1Click:Connect(function()
-				loadFolder(item.path)
-				self.expanded[item] = not self.expanded[item]
+			if item.hasContents then
+				local arrow = Instance.new("ImageLabel")
+				arrow.Size = UDim2.new(0, 16, 0, 16)
+				arrow.Position = UDim2.new(0, -16, 0.5, 0)
+				arrow.AnchorPoint = Vector2.new(0, 0.5)
+				arrow.BackgroundTransparency = 1
 				arrow.Image = self.expanded[item] and DOWN_ARROW or RIGHT_ARROW
-				if self.expanded[item] then
-					self:loadChildren(item)
-				end
-				self:refresh()
-			end)
+				arrow.Parent = ImageButton
+	
+				ImageButton.MouseButton1Click:Connect(function()
+					current_file = ""
+					current_folder = item.path
+					loadFolder(item.path)
+					updateFMButton(previewbtn, false)
+					updateFMButton(execFile, false)
+	
+					self.expanded[item] = not self.expanded[item]
+					arrow.Image = self.expanded[item] and DOWN_ARROW or RIGHT_ARROW
+					if self.expanded[item] then
+						self:loadChildren(item)
+					end
+					self:refresh()
+				end)
+			else
+				ImageButton.MouseButton1Click:Connect(function()
+					current_file = ""
+					current_folder = item.path
+					loadFolder(item.path)
+					updateFMButton(previewbtn, false)
+					updateFMButton(execFile, false)
+				end)
+			end
 		else
 			icon.Image = FILE_ICON
 			ImageButton.MouseButton1Click:Connect(function()
-				print("Clicked file:", item.path)
+				current_file = item.path
+				updateFMButton(previewbtn, true)
+				updateFMButton(execFile, true)
 			end)
 		end
 	
@@ -6938,8 +6965,6 @@ task.spawn(function()
 	
 	local treeView = TreeView.new(script.Parent.treeviewFrame)
 	treeView:loadRoot()
-	
-	
 end)
 
 task.spawn(function()
@@ -7468,7 +7493,7 @@ task.spawn(function()
 	
 	consoleExec.input.FocusLost:Connect(function(enterPressed)
 		if enterPressed then
-			print(consoleExec.input.Text)
+			executecode(consoleExec.input.Text)
 			if AUTO_CLEAR_INPUT then consoleExec.input.Text = "" end
 		end
 	end)
