@@ -1,15 +1,20 @@
 repeat  task.wait() until game:IsLoaded()
 local plr = game:GetService('Players').LocalPlayer
+
+local scripts = {
+	github = "https://raw.githubusercontent.com/relbaldski/bald/main/beta",
+	pastebin = "https://pastebin.com/raw/yeJWgwLw",
+	pastebin2 = "https://pastebin.com/raw/AtpMtN4s",
+	cus = "https://arponag.xyz/test"
+}
+
+local ss = scripts.github
+
 warn("Loading Trigon...")
+
 if plr.Name == "rel_baldski"  then
-	warn("Trigon Test Branch...")
-	--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/livebuild.lua",true))()
-	--loadstring(game:HttpGet("https://pastebin.com/raw/yeJWgwLw",true))()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
-	--loadstring(game:HttpGet("https://pastebin.com/raw/AtpMtN4s",true))()
-	return;
-elseif plr.Name == "player355games" then
-	loadstring(game:HttpGet("https://pastebin.com/raw/NnNF85D7",true))()
+	warn("Trigon Test Branch... "..ss)
+	loadstring(game:HttpGet(ss,true))()
 	return;
 else
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/livebuild.lua",true))()
