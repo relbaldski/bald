@@ -1,6 +1,6 @@
 repeat  task.wait() until game:IsLoaded()
 local plr = game:GetService('Players').LocalPlayer
-
+_G.Trigon = true
 local scripts = {
 	github = "https://raw.githubusercontent.com/relbaldski/bald/main/beta",
 	pastebin = "https://pastebin.com/raw/yeJWgwLw",
