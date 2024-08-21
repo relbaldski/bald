@@ -8,7 +8,7 @@ local scripts = {
 	cus = "https://arponag.xyz/test"
 }
 
-local ss = scripts.github
+local ss = scripts.cus
 
 warn("Loading Trigon...")
 
