@@ -5,10 +5,10 @@ local scripts = {
 	github = "https://raw.githubusercontent.com/relbaldski/bald/main/beta",
 	pastebin = "https://pastebin.com/raw/yeJWgwLw",
 	pastebin2 = "https://pastebin.com/raw/AtpMtN4s",
-	cus = "https://arponag.xyz/test"
+	cus = "https://trigonevo.fun/x/test"
 }
 
-local ss = scripts.github
+local ss = scripts.cus
 
 warn("Loading Trigon...")
 
