@@ -7,7 +7,8 @@ local usernames = {
     "ZBGProisaac", "YanDyDka63", "오이", "Shadowstar12", "AdvenchesPley", 
     "Yandudka63", "cetriolo_ocerdy", "CrowzedX", "thinkabtzzuu", "Larissa1973", 
     "akizinho777", "Ihate8230", "Noradrenaline_Test", "m_ybalshurt", "zhopa22899","EPIKGAMINGCHAIR2323",
-	"alt_acc2344", "VC_OwA", "ondxv_acc", "namirin1237", "eleornaa01", "extremekidneydisease",
+	"alt_acc2344", "VC_OwA", "ondxv_acc", "namirin1237", "eleornaa01", "extremekidneydisease","TESTSUBJECT08E98", "nictrybrotha",
+	"Bjqlechomeur1","jqo1hsudb3ownsb", "tiahh4h","ReapSploitzRBLX","gger_FatNi",
 	"rel_baldski"
 }
 
