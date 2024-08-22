@@ -1,3 +1,6 @@
+--beta 0.1
+
+
 local _trigon =
 {
 	Trigon = Instance.new("ScreenGui"),
@@ -176,7 +179,6 @@ local _trigon =
 	Value_1 = Instance.new("TextLabel"),
 	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
 	UICorner_20 = Instance.new("UICorner"),
-	UIGradient_8 = Instance.new("UIGradient"),
 	Latency = Instance.new("Frame"),
 	Title_3 = Instance.new("TextLabel"),
 	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
@@ -196,55 +198,60 @@ local _trigon =
 	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
 	UICorner_23 = Instance.new("UICorner"),
 	UIStroke_5 = Instance.new("UIStroke"),
-	UIGradient_9 = Instance.new("UIGradient"),
+	UIGradient_8 = Instance.new("UIGradient"),
 	JobId = Instance.new("ImageButton"),
 	Title_6 = Instance.new("TextLabel"),
 	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
 	Value_5 = Instance.new("TextLabel"),
 	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint"),
 	UICorner_24 = Instance.new("UICorner"),
-	Interact = Instance.new("TextButton"),
-	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint"),
-	Friends = Instance.new("Frame"),
+	UIGradient_9 = Instance.new("UIGradient"),
+	rejoin = Instance.new("ImageButton"),
 	Title_7 = Instance.new("TextLabel"),
+	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint"),
+	Value_6 = Instance.new("TextLabel"),
 	UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint"),
 	UICorner_25 = Instance.new("UICorner"),
-	InGame = Instance.new("Frame"),
+	Friends = Instance.new("Frame"),
 	Title_8 = Instance.new("TextLabel"),
 	UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint"),
-	Value_6 = Instance.new("TextLabel"),
-	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint"),
 	UICorner_26 = Instance.new("UICorner"),
-	Subtitle_1 = Instance.new("TextLabel"),
-	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint"),
-	Offline = Instance.new("Frame"),
+	InGame = Instance.new("Frame"),
 	Title_9 = Instance.new("TextLabel"),
-	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint"),
 	Value_7 = Instance.new("TextLabel"),
-	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint"),
 	UICorner_27 = Instance.new("UICorner"),
-	Online = Instance.new("Frame"),
+	Subtitle_1 = Instance.new("TextLabel"),
+	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint"),
+	Offline = Instance.new("Frame"),
 	Title_10 = Instance.new("TextLabel"),
-	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint"),
 	Value_8 = Instance.new("TextLabel"),
-	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint"),
 	UICorner_28 = Instance.new("UICorner"),
-	All = Instance.new("Frame"),
+	Online = Instance.new("Frame"),
 	Title_11 = Instance.new("TextLabel"),
-	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint"),
 	Value_9 = Instance.new("TextLabel"),
-	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint"),
 	UICorner_29 = Instance.new("UICorner"),
+	All = Instance.new("Frame"),
+	Title_12 = Instance.new("TextLabel"),
+	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint"),
+	Value_10 = Instance.new("TextLabel"),
+	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint"),
+	UICorner_30 = Instance.new("UICorner"),
 	UIStroke_6 = Instance.new("UIStroke"),
 	UIGradient_10 = Instance.new("UIGradient"),
 	UIGradient_11 = Instance.new("UIGradient"),
 	UIGradient_12 = Instance.new("UIGradient"),
 	partneredFrame = Instance.new("Frame"),
-	Title_12 = Instance.new("TextLabel"),
-	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint"),
-	UICorner_30 = Instance.new("UICorner"),
-	Subtitle_2 = Instance.new("TextLabel"),
+	Title_13 = Instance.new("TextLabel"),
 	UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint"),
+	UICorner_31 = Instance.new("UICorner"),
+	Subtitle_2 = Instance.new("TextLabel"),
+	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint"),
 	UIStroke_7 = Instance.new("UIStroke"),
 	UIGradient_13 = Instance.new("UIGradient"),
 	UIGradient_14 = Instance.new("UIGradient"),
@@ -252,67 +259,69 @@ local _trigon =
 	UIListLayout_10 = Instance.new("UIListLayout"),
 	UIPadding_20 = Instance.new("UIPadding"),
 	Template = Instance.new("Frame"),
-	UICorner_31 = Instance.new("UICorner"),
+	UICorner_32 = Instance.new("UICorner"),
 	UIStroke_8 = Instance.new("UIStroke"),
 	subtext = Instance.new("TextLabel"),
+	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint"),
 	logo = Instance.new("ImageLabel"),
-	UICorner_32 = Instance.new("UICorner"),
+	UICorner_33 = Instance.new("UICorner"),
 	UIStroke_9 = Instance.new("UIStroke"),
 	execBtn = Instance.new("ImageButton"),
-	UICorner_33 = Instance.new("UICorner"),
+	UICorner_34 = Instance.new("UICorner"),
 	Icon_13 = Instance.new("ImageLabel"),
 	UIStroke_10 = Instance.new("UIStroke"),
-	Title_13 = Instance.new("TextLabel"),
-	LocalScriptsFrame = Instance.new("Frame"),
 	Title_14 = Instance.new("TextLabel"),
-	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint"),
-	UICorner_34 = Instance.new("UICorner"),
+	LocalScriptsFrame = Instance.new("Frame"),
+	Title_15 = Instance.new("TextLabel"),
+	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
+	UICorner_35 = Instance.new("UICorner"),
 	Subtitle_3 = Instance.new("TextLabel"),
-	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint"),
-	UIGradient_15 = Instance.new("UIGradient"),
+	UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint"),
 	UIStroke_11 = Instance.new("UIStroke"),
-	UIGradient_16 = Instance.new("UIGradient"),
+	UIGradient_15 = Instance.new("UIGradient"),
 	ScrollingFrame_1 = Instance.new("ScrollingFrame"),
 	UIListLayout_11 = Instance.new("UIListLayout"),
 	UIPadding_21 = Instance.new("UIPadding"),
 	Template_1 = Instance.new("Frame"),
-	UICorner_35 = Instance.new("UICorner"),
+	UICorner_36 = Instance.new("UICorner"),
 	UIStroke_12 = Instance.new("UIStroke"),
 	subtext_1 = Instance.new("TextLabel"),
+	UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint"),
 	logo_1 = Instance.new("ImageLabel"),
-	UICorner_36 = Instance.new("UICorner"),
+	UICorner_37 = Instance.new("UICorner"),
 	UIStroke_13 = Instance.new("UIStroke"),
 	execBtn_1 = Instance.new("ImageButton"),
-	UICorner_37 = Instance.new("UICorner"),
+	UICorner_38 = Instance.new("UICorner"),
 	Icon_14 = Instance.new("ImageLabel"),
 	UIStroke_14 = Instance.new("UIStroke"),
-	Title_15 = Instance.new("TextLabel"),
-	ChangelogFrame = Instance.new("Frame"),
 	Title_16 = Instance.new("TextLabel"),
-	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
-	UICorner_38 = Instance.new("UICorner"),
+	UIGradient_16 = Instance.new("UIGradient"),
+	ChangelogFrame = Instance.new("Frame"),
+	Title_17 = Instance.new("TextLabel"),
+	UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint"),
+	UICorner_39 = Instance.new("UICorner"),
 	Subtitle_4 = Instance.new("TextLabel"),
-	UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint"),
 	UIGradient_17 = Instance.new("UIGradient"),
 	UIStroke_15 = Instance.new("UIStroke"),
 	UIGradient_18 = Instance.new("UIGradient"),
 	LocalPlayerFrame = Instance.new("Frame"),
-	Title_17 = Instance.new("TextLabel"),
-	UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint"),
-	UICorner_39 = Instance.new("UICorner"),
+	Title_18 = Instance.new("TextLabel"),
+	UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint"),
+	UICorner_40 = Instance.new("UICorner"),
 	Subtitle_5 = Instance.new("TextLabel"),
-	UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint"),
 	UIStroke_16 = Instance.new("UIStroke"),
 	UIGradient_19 = Instance.new("UIGradient"),
 	UIGradient_20 = Instance.new("UIGradient"),
 	Console_1 = Instance.new("Frame"),
-	UICorner_40 = Instance.new("UICorner"),
+	UICorner_41 = Instance.new("UICorner"),
 	UIStroke_17 = Instance.new("UIStroke"),
 	UIGradient_21 = Instance.new("UIGradient"),
 	bottom_1 = Instance.new("Frame"),
 	UIListLayout_12 = Instance.new("UIListLayout"),
 	input = Instance.new("Frame"),
-	UICorner_41 = Instance.new("UICorner"),
+	UICorner_42 = Instance.new("UICorner"),
 	consoleExecBtn = Instance.new("ImageButton"),
 	input_1 = Instance.new("TextBox"),
 	UIPadding_22 = Instance.new("UIPadding"),
@@ -321,13 +330,13 @@ local _trigon =
 	TextLabel_15 = Instance.new("TextLabel"),
 	UIPadding_23 = Instance.new("UIPadding"),
 	Icon_15 = Instance.new("ImageLabel"),
-	UICorner_42 = Instance.new("UICorner"),
+	UICorner_43 = Instance.new("UICorner"),
 	_execClipboard = Instance.new("ImageButton"),
 	Main_14 = Instance.new("Frame"),
 	TextLabel_16 = Instance.new("TextLabel"),
 	UIPadding_24 = Instance.new("UIPadding"),
 	Icon_16 = Instance.new("ImageLabel"),
-	UICorner_43 = Instance.new("UICorner"),
+	UICorner_44 = Instance.new("UICorner"),
 	Top_1 = Instance.new("Frame"),
 	UIListLayout_13 = Instance.new("UIListLayout"),
 	output = Instance.new("ImageButton"),
@@ -340,8 +349,8 @@ local _trigon =
 	Counter = Instance.new("Frame"),
 	Text = Instance.new("TextLabel"),
 	UIPadding_27 = Instance.new("UIPadding"),
-	UICorner_44 = Instance.new("UICorner"),
 	UICorner_45 = Instance.new("UICorner"),
+	UICorner_46 = Instance.new("UICorner"),
 	warning = Instance.new("ImageButton"),
 	Main_16 = Instance.new("Frame"),
 	Icon_18 = Instance.new("ImageLabel"),
@@ -352,8 +361,8 @@ local _trigon =
 	Counter_1 = Instance.new("Frame"),
 	Text_1 = Instance.new("TextLabel"),
 	UIPadding_30 = Instance.new("UIPadding"),
-	UICorner_46 = Instance.new("UICorner"),
 	UICorner_47 = Instance.new("UICorner"),
+	UICorner_48 = Instance.new("UICorner"),
 	error = Instance.new("ImageButton"),
 	Main_17 = Instance.new("Frame"),
 	Icon_19 = Instance.new("ImageLabel"),
@@ -364,10 +373,10 @@ local _trigon =
 	Counter_2 = Instance.new("Frame"),
 	Text_2 = Instance.new("TextLabel"),
 	UIPadding_33 = Instance.new("UIPadding"),
-	UICorner_48 = Instance.new("UICorner"),
 	UICorner_49 = Instance.new("UICorner"),
-	filter = Instance.new("Frame"),
 	UICorner_50 = Instance.new("UICorner"),
+	filter = Instance.new("Frame"),
+	UICorner_51 = Instance.new("UICorner"),
 	btn_1 = Instance.new("ImageButton"),
 	input_2 = Instance.new("TextBox"),
 	UIPadding_34 = Instance.new("UIPadding"),
@@ -375,17 +384,17 @@ local _trigon =
 	Container_2 = Instance.new("Frame"),
 	UIListLayout_17 = Instance.new("UIListLayout"),
 	print = Instance.new("Frame"),
-	UICorner_51 = Instance.new("UICorner"),
+	UICorner_52 = Instance.new("UICorner"),
 	copyText = Instance.new("ImageButton"),
 	Text_3 = Instance.new("TextLabel"),
 	UIPadding_35 = Instance.new("UIPadding"),
 	error_1 = Instance.new("Frame"),
-	UICorner_52 = Instance.new("UICorner"),
+	UICorner_53 = Instance.new("UICorner"),
 	copyText_1 = Instance.new("ImageButton"),
 	Text_4 = Instance.new("TextLabel"),
 	UIPadding_36 = Instance.new("UIPadding"),
 	warn = Instance.new("Frame"),
-	UICorner_53 = Instance.new("UICorner"),
+	UICorner_54 = Instance.new("UICorner"),
 	copyText_2 = Instance.new("ImageButton"),
 	Text_5 = Instance.new("TextLabel"),
 	UIPadding_37 = Instance.new("UIPadding"),
@@ -396,101 +405,108 @@ local _trigon =
 	UIPadding_38 = Instance.new("UIPadding"),
 	item_name = Instance.new("ImageButton"),
 	background = Instance.new("ImageLabel"),
-	UICorner_54 = Instance.new("UICorner"),
 	UICorner_55 = Instance.new("UICorner"),
-	bottom_2 = Instance.new("Frame"),
+	UICorner_56 = Instance.new("UICorner"),
+	bottom2 = Instance.new("Frame"),
 	UIGradient_23 = Instance.new("UIGradient"),
-	UIListLayout_18 = Instance.new("UIListLayout"),
-	title = Instance.new("TextLabel"),
-	UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint"),
-	desc = Instance.new("TextLabel"),
-	UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint"),
 	UIPadding_39 = Instance.new("UIPadding"),
-	user = Instance.new("TextLabel"),
-	UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint"),
+	TextButton = Instance.new("TextButton"),
+	UICorner_57 = Instance.new("UICorner"),
+	UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint"),
+	UIStroke_18 = Instance.new("UIStroke"),
 	top_left = Instance.new("Frame"),
 	views = Instance.new("Frame"),
-	UICorner_56 = Instance.new("UICorner"),
+	UICorner_58 = Instance.new("UICorner"),
 	icon = Instance.new("ImageLabel"),
 	TextLabel_20 = Instance.new("TextLabel"),
-	UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint"),
 	UIPadding_40 = Instance.new("UIPadding"),
+	UIListLayout_18 = Instance.new("UIListLayout"),
 	UIListLayout_19 = Instance.new("UIListLayout"),
-	UIListLayout_20 = Instance.new("UIListLayout"),
 	UIPadding_41 = Instance.new("UIPadding"),
 	date = Instance.new("Frame"),
-	UICorner_57 = Instance.new("UICorner"),
-	UIListLayout_21 = Instance.new("UIListLayout"),
+	UICorner_59 = Instance.new("UICorner"),
+	UIListLayout_20 = Instance.new("UIListLayout"),
 	icon_1 = Instance.new("ImageLabel"),
 	TextLabel_21 = Instance.new("TextLabel"),
-	UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint"),
 	UIPadding_42 = Instance.new("UIPadding"),
 	top_right = Instance.new("Frame"),
 	UIPadding_43 = Instance.new("UIPadding"),
 	rating = Instance.new("Frame"),
-	UICorner_58 = Instance.new("UICorner"),
-	UIListLayout_22 = Instance.new("UIListLayout"),
+	UICorner_60 = Instance.new("UICorner"),
+	UIListLayout_21 = Instance.new("UIListLayout"),
 	icon_2 = Instance.new("ImageLabel"),
 	like_text = Instance.new("TextLabel"),
-	UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint"),
 	UIPadding_44 = Instance.new("UIPadding"),
 	icon_3 = Instance.new("ImageLabel"),
 	dislike_text = Instance.new("TextLabel"),
-	UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint"),
 	info = Instance.new("Frame"),
-	UIListLayout_23 = Instance.new("UIListLayout"),
+	UIListLayout_22 = Instance.new("UIListLayout"),
 	UIPadding_45 = Instance.new("UIPadding"),
 	paid = Instance.new("Frame"),
-	UICorner_59 = Instance.new("UICorner"),
+	UICorner_61 = Instance.new("UICorner"),
 	icon_4 = Instance.new("ImageLabel"),
 	key = Instance.new("Frame"),
-	UICorner_60 = Instance.new("UICorner"),
+	UICorner_62 = Instance.new("UICorner"),
 	icon_5 = Instance.new("ImageLabel"),
 	mobile = Instance.new("Frame"),
-	UICorner_61 = Instance.new("UICorner"),
+	UICorner_63 = Instance.new("UICorner"),
 	icon_6 = Instance.new("ImageLabel"),
-	UIListLayout_24 = Instance.new("UIListLayout"),
+	UIListLayout_23 = Instance.new("UIListLayout"),
 	verified = Instance.new("ImageLabel"),
+	bottom_2 = Instance.new("Frame"),
+	UIGradient_24 = Instance.new("UIGradient"),
+	UIListLayout_24 = Instance.new("UIListLayout"),
+	title = Instance.new("TextLabel"),
+	UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint"),
+	desc = Instance.new("TextLabel"),
+	UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint"),
+	UIPadding_46 = Instance.new("UIPadding"),
+	user = Instance.new("TextLabel"),
+	UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint"),
 	pagination = Instance.new("Frame"),
 	UIListLayout_25 = Instance.new("UIListLayout"),
-	UICorner_62 = Instance.new("UICorner"),
+	UICorner_64 = Instance.new("UICorner"),
 	first = Instance.new("ImageButton"),
-	UICorner_63 = Instance.new("UICorner"),
+	UICorner_65 = Instance.new("UICorner"),
 	icon_7 = Instance.new("ImageLabel"),
 	prev = Instance.new("ImageButton"),
-	UICorner_64 = Instance.new("UICorner"),
+	UICorner_66 = Instance.new("UICorner"),
 	icon_8 = Instance.new("ImageLabel"),
 	page_num = Instance.new("ImageButton"),
-	UIStroke_18 = Instance.new("UIStroke"),
-	UICorner_65 = Instance.new("UICorner"),
+	UIStroke_19 = Instance.new("UIStroke"),
+	UICorner_67 = Instance.new("UICorner"),
 	txt = Instance.new("TextLabel"),
-	UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint"),
 	Top_2 = Instance.new("Frame"),
 	SearchFrame = Instance.new("Frame"),
 	UIListLayout_26 = Instance.new("UIListLayout"),
-	UIPadding_46 = Instance.new("UIPadding"),
+	UIPadding_47 = Instance.new("UIPadding"),
 	sicon = Instance.new("ImageButton"),
 	TextBox = Instance.new("TextBox"),
-	UIPadding_47 = Instance.new("UIPadding"),
-	UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint"),
+	UIPadding_48 = Instance.new("UIPadding"),
+	UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint"),
 	searchBtn = Instance.new("ImageButton"),
 	UIListLayout_27 = Instance.new("UIListLayout"),
 	TextLabel_22 = Instance.new("TextLabel"),
-	UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint"),
-	UICorner_66 = Instance.new("UICorner"),
-	UICorner_67 = Instance.new("UICorner"),
+	UITextSizeConstraint_50 = Instance.new("UITextSizeConstraint"),
+	UICorner_68 = Instance.new("UICorner"),
+	UICorner_69 = Instance.new("UICorner"),
 	FilterBtn = Instance.new("ImageButton"),
 	filterscript = Instance.new("LocalScript"),
 	icon_9 = Instance.new("ImageLabel"),
 	TextLabel_23 = Instance.new("TextLabel"),
-	UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint"),
-	UICorner_68 = Instance.new("UICorner"),
+	UITextSizeConstraint_51 = Instance.new("UITextSizeConstraint"),
+	UICorner_70 = Instance.new("UICorner"),
 	UIListLayout_28 = Instance.new("UIListLayout"),
-	UICorner_69 = Instance.new("UICorner"),
+	UICorner_71 = Instance.new("UICorner"),
 	FilterFrame = Instance.new("Frame"),
-	UIGradient_24 = Instance.new("UIGradient"),
+	UIGradient_25 = Instance.new("UIGradient"),
 	FilterPanel = Instance.new("Frame"),
-	UIStroke_19 = Instance.new("UIStroke"),
+	UIStroke_20 = Instance.new("UIStroke"),
 	Frame = Instance.new("Frame"),
 	TextLabel_24 = Instance.new("TextLabel"),
 	UIListLayout_29 = Instance.new("UIListLayout"),
@@ -500,200 +516,200 @@ local _trigon =
 	icon_10 = Instance.new("ImageLabel"),
 	ZTITLE = Instance.new("TextLabel"),
 	circle = Instance.new("ImageLabel"),
-	UIPadding_48 = Instance.new("UIPadding"),
-	UICorner_70 = Instance.new("UICorner"),
-	UIListLayout_31 = Instance.new("UIListLayout"),
 	UIPadding_49 = Instance.new("UIPadding"),
+	UICorner_72 = Instance.new("UICorner"),
+	UIListLayout_31 = Instance.new("UIListLayout"),
+	UIPadding_50 = Instance.new("UIPadding"),
 	MobileOnly = Instance.new("ImageButton"),
 	UIListLayout_32 = Instance.new("UIListLayout"),
 	icon_11 = Instance.new("ImageLabel"),
 	ZTITLE_1 = Instance.new("TextLabel"),
 	circle_1 = Instance.new("ImageLabel"),
-	UIPadding_50 = Instance.new("UIPadding"),
-	UICorner_71 = Instance.new("UICorner"),
+	UIPadding_51 = Instance.new("UIPadding"),
+	UICorner_73 = Instance.new("UICorner"),
 	NotPaid = Instance.new("ImageButton"),
 	UIListLayout_33 = Instance.new("UIListLayout"),
 	icon_12 = Instance.new("ImageLabel"),
 	ZTITLE_2 = Instance.new("TextLabel"),
 	circle_2 = Instance.new("ImageLabel"),
-	UIPadding_51 = Instance.new("UIPadding"),
-	UICorner_72 = Instance.new("UICorner"),
+	UIPadding_52 = Instance.new("UIPadding"),
+	UICorner_74 = Instance.new("UICorner"),
 	NotPatched = Instance.new("ImageButton"),
 	UIListLayout_34 = Instance.new("UIListLayout"),
 	icon_13 = Instance.new("ImageLabel"),
 	ZTITLE_3 = Instance.new("TextLabel"),
 	circle_3 = Instance.new("ImageLabel"),
-	UIPadding_52 = Instance.new("UIPadding"),
-	UICorner_73 = Instance.new("UICorner"),
+	UIPadding_53 = Instance.new("UIPadding"),
+	UICorner_75 = Instance.new("UICorner"),
 	Veried = Instance.new("ImageButton"),
 	UIListLayout_35 = Instance.new("UIListLayout"),
 	icon_14 = Instance.new("ImageLabel"),
 	ZTITLE_4 = Instance.new("TextLabel"),
 	circle_4 = Instance.new("ImageLabel"),
-	UIPadding_53 = Instance.new("UIPadding"),
-	UICorner_74 = Instance.new("UICorner"),
+	UIPadding_54 = Instance.new("UIPadding"),
+	UICorner_76 = Instance.new("UICorner"),
 	OrderBy = Instance.new("Frame"),
 	UIListLayout_36 = Instance.new("UIListLayout"),
 	title_1 = Instance.new("Frame"),
 	UIListLayout_37 = Instance.new("UIListLayout"),
-	UIPadding_54 = Instance.new("UIPadding"),
+	UIPadding_55 = Instance.new("UIPadding"),
 	icon_15 = Instance.new("ImageLabel"),
 	ZTITLE_5 = Instance.new("TextLabel"),
 	Frame_1 = Instance.new("Frame"),
 	date_1 = Instance.new("ImageButton"),
-	UIStroke_20 = Instance.new("UIStroke"),
-	UICorner_75 = Instance.new("UICorner"),
+	UIStroke_21 = Instance.new("UIStroke"),
+	UICorner_77 = Instance.new("UICorner"),
 	icon_16 = Instance.new("ImageLabel"),
 	UIListLayout_38 = Instance.new("UIListLayout"),
 	views_1 = Instance.new("ImageButton"),
-	UICorner_76 = Instance.new("UICorner"),
-	UIStroke_21 = Instance.new("UIStroke"),
+	UICorner_78 = Instance.new("UICorner"),
+	UIStroke_22 = Instance.new("UIStroke"),
 	icon_17 = Instance.new("ImageLabel"),
 	likes = Instance.new("ImageButton"),
-	UICorner_77 = Instance.new("UICorner"),
-	UIStroke_22 = Instance.new("UIStroke"),
+	UICorner_79 = Instance.new("UICorner"),
+	UIStroke_23 = Instance.new("UIStroke"),
 	icon_18 = Instance.new("ImageLabel"),
 	dislikes = Instance.new("ImageButton"),
-	UICorner_78 = Instance.new("UICorner"),
-	UIStroke_23 = Instance.new("UIStroke"),
+	UICorner_80 = Instance.new("UICorner"),
+	UIStroke_24 = Instance.new("UIStroke"),
 	icon_19 = Instance.new("ImageLabel"),
-	UIPadding_55 = Instance.new("UIPadding"),
+	UIPadding_56 = Instance.new("UIPadding"),
 	Frame2 = Instance.new("Frame"),
 	ASC = Instance.new("ImageButton"),
-	UIStroke_24 = Instance.new("UIStroke"),
-	UICorner_79 = Instance.new("UICorner"),
+	UIStroke_25 = Instance.new("UIStroke"),
+	UICorner_81 = Instance.new("UICorner"),
 	text = Instance.new("TextLabel"),
 	UIListLayout_39 = Instance.new("UIListLayout"),
 	DESC = Instance.new("ImageButton"),
-	UICorner_80 = Instance.new("UICorner"),
-	UIStroke_25 = Instance.new("UIStroke"),
+	UICorner_82 = Instance.new("UICorner"),
+	UIStroke_26 = Instance.new("UIStroke"),
 	text_1 = Instance.new("TextLabel"),
-	UIPadding_56 = Instance.new("UIPadding"),
+	UIPadding_57 = Instance.new("UIPadding"),
 	empty = Instance.new("ImageButton"),
 	Save = Instance.new("ImageButton"),
 	TextLabel_26 = Instance.new("TextLabel"),
-	UICorner_81 = Instance.new("UICorner"),
+	UICorner_83 = Instance.new("UICorner"),
 	LFrame = Instance.new("Frame"),
 	TextLabel_27 = Instance.new("TextLabel"),
-	UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_52 = Instance.new("UITextSizeConstraint"),
 	FileManager_1 = Instance.new("Frame"),
-	UICorner_82 = Instance.new("UICorner"),
-	UIStroke_26 = Instance.new("UIStroke"),
-	UIGradient_25 = Instance.new("UIGradient"),
+	UICorner_84 = Instance.new("UICorner"),
+	UIStroke_27 = Instance.new("UIStroke"),
+	UIGradient_26 = Instance.new("UIGradient"),
 	bottom_3 = Instance.new("Frame"),
 	UIListLayout_40 = Instance.new("UIListLayout"),
 	execFile = Instance.new("ImageButton"),
-	UICorner_83 = Instance.new("UICorner"),
+	UICorner_85 = Instance.new("UICorner"),
 	Main_18 = Instance.new("Frame"),
-	UIPadding_57 = Instance.new("UIPadding"),
+	UIPadding_58 = Instance.new("UIPadding"),
 	UIListLayout_41 = Instance.new("UIListLayout"),
 	Icon_20 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_28 = Instance.new("TextLabel"),
-	UIPadding_58 = Instance.new("UIPadding"),
-	newFile = Instance.new("ImageButton"),
-	UICorner_84 = Instance.new("UICorner"),
-	Main_19 = Instance.new("Frame"),
 	UIPadding_59 = Instance.new("UIPadding"),
+	newFile = Instance.new("ImageButton"),
+	UICorner_86 = Instance.new("UICorner"),
+	Main_19 = Instance.new("Frame"),
+	UIPadding_60 = Instance.new("UIPadding"),
 	UIListLayout_42 = Instance.new("UIListLayout"),
 	Icon_21 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_29 = Instance.new("TextLabel"),
-	UIPadding_60 = Instance.new("UIPadding"),
-	newFolder = Instance.new("ImageButton"),
-	UICorner_85 = Instance.new("UICorner"),
-	Main_20 = Instance.new("Frame"),
 	UIPadding_61 = Instance.new("UIPadding"),
+	newFolder = Instance.new("ImageButton"),
+	UICorner_87 = Instance.new("UICorner"),
+	Main_20 = Instance.new("Frame"),
+	UIPadding_62 = Instance.new("UIPadding"),
 	UIListLayout_43 = Instance.new("UIListLayout"),
 	Icon_22 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_30 = Instance.new("TextLabel"),
-	UIPadding_62 = Instance.new("UIPadding"),
-	DeleteFF = Instance.new("ImageButton"),
-	UICorner_86 = Instance.new("UICorner"),
-	Main_21 = Instance.new("Frame"),
 	UIPadding_63 = Instance.new("UIPadding"),
+	DeleteFF = Instance.new("ImageButton"),
+	UICorner_88 = Instance.new("UICorner"),
+	Main_21 = Instance.new("Frame"),
+	UIPadding_64 = Instance.new("UIPadding"),
 	UIListLayout_44 = Instance.new("UIListLayout"),
 	Icon_23 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_31 = Instance.new("TextLabel"),
-	UIPadding_64 = Instance.new("UIPadding"),
-	preview_btn = Instance.new("ImageButton"),
-	UICorner_87 = Instance.new("UICorner"),
-	Main_22 = Instance.new("Frame"),
 	UIPadding_65 = Instance.new("UIPadding"),
+	preview_btn = Instance.new("ImageButton"),
+	UICorner_89 = Instance.new("UICorner"),
+	Main_22 = Instance.new("Frame"),
+	UIPadding_66 = Instance.new("UIPadding"),
 	UIListLayout_45 = Instance.new("UIListLayout"),
 	Icon_24 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_32 = Instance.new("TextLabel"),
-	UIPadding_66 = Instance.new("UIPadding"),
+	UIPadding_67 = Instance.new("UIPadding"),
 	Section = Instance.new("Folder"),
 	Container_4 = Instance.new("ScrollingFrame"),
-	UICorner_88 = Instance.new("UICorner"),
+	UICorner_90 = Instance.new("UICorner"),
 	UIGridLayout_1 = Instance.new("UIGridLayout"),
-	UIPadding_67 = Instance.new("UIPadding"),
+	UIPadding_68 = Instance.new("UIPadding"),
 	template = Instance.new("ImageButton"),
-	UICorner_89 = Instance.new("UICorner"),
+	UICorner_91 = Instance.new("UICorner"),
 	Icon_25 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_33 = Instance.new("TextLabel"),
 	treeviewFrame = Instance.new("Frame"),
-	UICorner_90 = Instance.new("UICorner"),
-	UIPadding_68 = Instance.new("UIPadding"),
+	UICorner_92 = Instance.new("UICorner"),
+	UIPadding_69 = Instance.new("UIPadding"),
 	treeview_Studio = Instance.new("LocalScript"),
 	top = Instance.new("Frame"),
-	UICorner_91 = Instance.new("UICorner"),
+	UICorner_93 = Instance.new("UICorner"),
 	reload = Instance.new("ImageButton"),
-	UICorner_92 = Instance.new("UICorner"),
+	UICorner_94 = Instance.new("UICorner"),
 	Icon_26 = Instance.new("ImageLabel"),
 	TextLabel_34 = Instance.new("TextLabel"),
-	UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_53 = Instance.new("UITextSizeConstraint"),
 	back = Instance.new("ImageButton"),
-	UICorner_93 = Instance.new("UICorner"),
+	UICorner_95 = Instance.new("UICorner"),
 	Icon_27 = Instance.new("ImageLabel"),
 	FMController = Instance.new("LocalScript"),
 	top_dir = Instance.new("Frame"),
-	UICorner_94 = Instance.new("UICorner"),
+	UICorner_96 = Instance.new("UICorner"),
 	TextLabel_35 = Instance.new("TextLabel"),
-	UITextSizeConstraint_50 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_54 = Instance.new("UITextSizeConstraint"),
 	FMPopupFrame = Instance.new("Frame"),
 	Container_5 = Instance.new("Frame"),
 	Frame_2 = Instance.new("Frame"),
 	UIListLayout_46 = Instance.new("UIListLayout"),
 	icon_20 = Instance.new("ImageLabel"),
 	content = Instance.new("TextLabel"),
-	UITextSizeConstraint_51 = Instance.new("UITextSizeConstraint"),
-	UICorner_95 = Instance.new("UICorner"),
+	UITextSizeConstraint_55 = Instance.new("UITextSizeConstraint"),
+	UICorner_97 = Instance.new("UICorner"),
 	text_2 = Instance.new("TextLabel"),
-	UITextSizeConstraint_52 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_56 = Instance.new("UITextSizeConstraint"),
 	cancel = Instance.new("ImageButton"),
-	UICorner_96 = Instance.new("UICorner"),
+	UICorner_98 = Instance.new("UICorner"),
 	Main_23 = Instance.new("Frame"),
-	UIPadding_69 = Instance.new("UIPadding"),
+	UIPadding_70 = Instance.new("UIPadding"),
 	UIListLayout_47 = Instance.new("UIListLayout"),
 	Icon_28 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_36 = Instance.new("TextLabel"),
-	UIPadding_70 = Instance.new("UIPadding"),
-	surebtn = Instance.new("ImageButton"),
-	UICorner_97 = Instance.new("UICorner"),
-	Main_24 = Instance.new("Frame"),
 	UIPadding_71 = Instance.new("UIPadding"),
+	surebtn = Instance.new("ImageButton"),
+	UICorner_99 = Instance.new("UICorner"),
+	Main_24 = Instance.new("Frame"),
+	UIPadding_72 = Instance.new("UIPadding"),
 	UIListLayout_48 = Instance.new("UIListLayout"),
 	Icon_29 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_37 = Instance.new("TextLabel"),
-	UIPadding_72 = Instance.new("UIPadding"),
+	UIPadding_73 = Instance.new("UIPadding"),
 	textInput = Instance.new("TextBox"),
-	UITextSizeConstraint_53 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_57 = Instance.new("UITextSizeConstraint"),
 	FMPopup = Instance.new("LocalScript"),
 	swipeController = Instance.new("LocalScript"),
 	SwipeLeft = Instance.new("ImageButton"),
 	bar = Instance.new("Frame"),
-	UICorner_98 = Instance.new("UICorner"),
+	UICorner_100 = Instance.new("UICorner"),
 	SwipeRight = Instance.new("ImageButton"),
 	bar_1 = Instance.new("Frame"),
-	UICorner_99 = Instance.new("UICorner"),
+	UICorner_101 = Instance.new("UICorner"),
 	consoleController = Instance.new("LocalScript"),
 	NavController = Instance.new("LocalScript"),
 	homeController = Instance.new("LocalScript"),
@@ -728,7 +744,7 @@ _trigon.Trigon.DisplayOrder = 1
 _trigon.Trigon.Name = "Trigon"
 _trigon.Trigon.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 _trigon.Trigon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-_trigon.Trigon.Parent = game.Players.LocalPlayer.PlayerGui
+_trigon.Trigon.Parent = gethui()
 
 _trigon.Canvas.BorderSizePixel = 0
 _trigon.Canvas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1746,11 +1762,11 @@ _trigon.UICorner_10.CornerRadius = UDim.new(0.013, 0)
 _trigon.UICorner_10.Parent = _trigon.TextLabel_14
 
 _trigon.add.BorderSizePixel = 0
-_trigon.add.Position = UDim2.new(0.0421426, 0, 0.0287929, 0)
+_trigon.add.Position = UDim2.new(0.0440662, 0, 0.0287929, 0)
 _trigon.add.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
 _trigon.add.Name = "add"
 _trigon.add.AnchorPoint = Vector2.new(1, 0)
-_trigon.add.Size = UDim2.new(0.0329262, 0, 0.0562969, 0)
+_trigon.add.Size = UDim2.new(0.0348498, 0, 0.0562969, 0)
 _trigon.add.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.add.Text = ""
 _trigon.add.BackgroundTransparency = 0.95
@@ -1769,7 +1785,7 @@ _trigon.btn.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.btn.Name = "btn"
 _trigon.btn.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.btn.Image = "rbxassetid://13857725039"
-_trigon.btn.Size = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.btn.Size = UDim2.new(0.568996, 0, 1, 0)
 _trigon.btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.btn.BackgroundTransparency = 1
 _trigon.btn.Parent = _trigon.add
@@ -1797,6 +1813,7 @@ _trigon.userinfo.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 _trigon.userinfo.Size = UDim2.new(0.441687, 0, 0.0964149, 0)
 _trigon.userinfo.LayoutOrder = 1
 _trigon.userinfo.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.userinfo.BackgroundTransparency = 0.35
 _trigon.userinfo.Name = "userinfo"
 _trigon.userinfo.Position = UDim2.new(0.278384, 0, 0.0331117, 0)
 _trigon.userinfo.ZIndex = 150
@@ -1823,7 +1840,7 @@ _trigon.Role.Size = UDim2.new(0.217069, 0, 0.173333, 0)
 _trigon.Role.ZIndex = 151
 _trigon.Role.TextColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Role.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Role.Text = "Premium User"
+_trigon.Role.Text = "user_status"
 _trigon.Role.BackgroundTransparency = 1
 _trigon.Role.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Role.Parent = _trigon.userinfo
@@ -1914,7 +1931,6 @@ _trigon.Avatar_1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 _trigon.Avatar_1.Position = UDim2.new(0.0222635, 0, 0.5, 0)
 _trigon.Avatar_1.Name = "Avatar"
 _trigon.Avatar_1.AnchorPoint = Vector2.new(0, 0.5)
-_trigon.Avatar_1.Image = "rbxassetid://9333366626"
 _trigon.Avatar_1.Size = UDim2.new(0.0897321, 0, 0.666556, 0)
 _trigon.Avatar_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.Avatar_1.ZIndex = 151
@@ -1931,6 +1947,7 @@ _trigon.Progress.BorderSizePixel = 0
 _trigon.Progress.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
 _trigon.Progress.Size = UDim2.new(0.585231, 0, 0.138828, 0)
 _trigon.Progress.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Progress.BackgroundTransparency = 0.5
 _trigon.Progress.Name = "Progress"
 _trigon.Progress.Position = UDim2.new(0.368984, 0, 0.346667, 0)
 _trigon.Progress.Parent = _trigon.userinfo
@@ -2002,10 +2019,10 @@ _trigon.UITextSizeConstraint_4.Parent = _trigon.Title
 _trigon.UICorner_18.CornerRadius = UDim.new(0, 10)
 _trigon.UICorner_18.Parent = _trigon.Server
 
-_trigon.Players.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.Players.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Players.Size = UDim2.new(0.340476, 0, 0.212014, 0)
 _trigon.Players.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Players.BackgroundTransparency = 0.7
+_trigon.Players.BackgroundTransparency = 0.95
 _trigon.Players.Name = "Players"
 _trigon.Players.Position = UDim2.new(0.0419048, 0, 0.26723, 0)
 _trigon.Players.Parent = _trigon.Server
@@ -2017,7 +2034,7 @@ _trigon.Title_1.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.
 _trigon.Title_1.Position = UDim2.new(0.127831, 0, 0.247437, 0)
 _trigon.Title_1.Name = "Title"
 _trigon.Title_1.TextSize = 14
-_trigon.Title_1.Size = UDim2.new(1.07692, 0, 0.266667, 0)
+_trigon.Title_1.Size = UDim2.new(0.852011, 0, 0.266667, 0)
 _trigon.Title_1.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Title_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.Title_1.Text = "Players"
@@ -2025,7 +2042,7 @@ _trigon.Title_1.BackgroundTransparency = 1
 _trigon.Title_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_1.Parent = _trigon.Players
 
-_trigon.UITextSizeConstraint_5.MaxTextSize = 16
+_trigon.UITextSizeConstraint_5.MaxTextSize = 18
 _trigon.UITextSizeConstraint_5.Parent = _trigon.Title_1
 
 _trigon.Value.TextWrapped = true
@@ -2033,7 +2050,7 @@ _trigon.Value.TextScaled = true
 _trigon.Value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value.TextTransparency = 0.3
-_trigon.Value.Position = UDim2.new(0.127831, 0, 0.517667, 0)
+_trigon.Value.Position = UDim2.new(0.127831, 0, 0.55, 0)
 _trigon.Value.Name = "Value"
 _trigon.Value.TextSize = 14
 _trigon.Value.Size = UDim2.new(0.608392, 0, 0.216667, 0)
@@ -2044,7 +2061,7 @@ _trigon.Value.BackgroundTransparency = 1
 _trigon.Value.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value.Parent = _trigon.Players
 
-_trigon.UITextSizeConstraint_6.MaxTextSize = 13
+_trigon.UITextSizeConstraint_6.MaxTextSize = 16
 _trigon.UITextSizeConstraint_6.Parent = _trigon.Value
 
 _trigon.UICorner_19.CornerRadius = UDim.new(0, 6)
@@ -2069,10 +2086,10 @@ _trigon.Subtitle.Parent = _trigon.Server
 _trigon.UITextSizeConstraint_7.MaxTextSize = 17
 _trigon.UITextSizeConstraint_7.Parent = _trigon.Subtitle
 
-_trigon.MaxPlayers.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.MaxPlayers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.MaxPlayers.Size = UDim2.new(0.557143, 0, 0.212014, 0)
 _trigon.MaxPlayers.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.MaxPlayers.BackgroundTransparency = 0.7
+_trigon.MaxPlayers.BackgroundTransparency = 0.95
 _trigon.MaxPlayers.Name = "MaxPlayers"
 _trigon.MaxPlayers.Position = UDim2.new(0.396667, 0, 0.26723, 0)
 _trigon.MaxPlayers.Parent = _trigon.Server
@@ -2092,7 +2109,7 @@ _trigon.Title_2.BackgroundTransparency = 1
 _trigon.Title_2.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_2.Parent = _trigon.MaxPlayers
 
-_trigon.UITextSizeConstraint_8.MaxTextSize = 16
+_trigon.UITextSizeConstraint_8.MaxTextSize = 18
 _trigon.UITextSizeConstraint_8.Parent = _trigon.Title_2
 
 _trigon.Value_1.TextWrapped = true
@@ -2100,7 +2117,7 @@ _trigon.Value_1.TextScaled = true
 _trigon.Value_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_1.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_1.TextTransparency = 0.3
-_trigon.Value_1.Position = UDim2.new(0.077, 0, 0.517667, 0)
+_trigon.Value_1.Position = UDim2.new(0.077, 0, 0.55, 0)
 _trigon.Value_1.Name = "Value"
 _trigon.Value_1.TextSize = 14
 _trigon.Value_1.Size = UDim2.new(0.880342, 0, 0.216667, 0)
@@ -2111,21 +2128,16 @@ _trigon.Value_1.BackgroundTransparency = 1
 _trigon.Value_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value_1.Parent = _trigon.MaxPlayers
 
-_trigon.UITextSizeConstraint_9.MaxTextSize = 13
+_trigon.UITextSizeConstraint_9.MaxTextSize = 16
 _trigon.UITextSizeConstraint_9.Parent = _trigon.Value_1
 
 _trigon.UICorner_20.CornerRadius = UDim.new(0, 6)
 _trigon.UICorner_20.Parent = _trigon.MaxPlayers
 
-_trigon.UIGradient_8.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_8.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(58, 59, 67)) }
-_trigon.UIGradient_8.Rotation = -80
-_trigon.UIGradient_8.Parent = _trigon.Server
-
-_trigon.Latency.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.Latency.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Latency.Size = UDim2.new(0.25, 0, 0.212014, 0)
 _trigon.Latency.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Latency.BackgroundTransparency = 0.7
+_trigon.Latency.BackgroundTransparency = 0.95
 _trigon.Latency.Name = "Latency"
 _trigon.Latency.Position = UDim2.new(0.0442857, 0, 0.497802, 0)
 _trigon.Latency.Parent = _trigon.Server
@@ -2145,7 +2157,7 @@ _trigon.Title_3.BackgroundTransparency = 1
 _trigon.Title_3.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_3.Parent = _trigon.Latency
 
-_trigon.UITextSizeConstraint_10.MaxTextSize = 16
+_trigon.UITextSizeConstraint_10.MaxTextSize = 18
 _trigon.UITextSizeConstraint_10.Parent = _trigon.Title_3
 
 _trigon.Value_2.TextWrapped = true
@@ -2153,7 +2165,7 @@ _trigon.Value_2.TextScaled = true
 _trigon.Value_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_2.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_2.TextTransparency = 0.3
-_trigon.Value_2.Position = UDim2.new(0.163353, 0, 0.517667, 0)
+_trigon.Value_2.Position = UDim2.new(0.163353, 0, 0.55, 0)
 _trigon.Value_2.Name = "Value"
 _trigon.Value_2.TextSize = 14
 _trigon.Value_2.Size = UDim2.new(0.723809, 0, 0.216667, 0)
@@ -2164,28 +2176,28 @@ _trigon.Value_2.BackgroundTransparency = 1
 _trigon.Value_2.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value_2.Parent = _trigon.Latency
 
-_trigon.UITextSizeConstraint_11.MaxTextSize = 13
+_trigon.UITextSizeConstraint_11.MaxTextSize = 16
 _trigon.UITextSizeConstraint_11.Parent = _trigon.Value_2
 
 _trigon.UICorner_21.CornerRadius = UDim.new(0, 6)
 _trigon.UICorner_21.Parent = _trigon.Latency
 
-_trigon.Region.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-_trigon.Region.Size = UDim2.new(0.642857, 0, 0.212014, 0)
+_trigon.Region.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Region.Size = UDim2.new(0.319443, 0, 0.212014, 0)
 _trigon.Region.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Region.BackgroundTransparency = 0.7
+_trigon.Region.BackgroundTransparency = 0.95
 _trigon.Region.Name = "Region"
-_trigon.Region.Position = UDim2.new(0.310952, 0, 0.497802, 0)
+_trigon.Region.Position = UDim2.new(0.310952, 0, 0.497801, 0)
 _trigon.Region.Parent = _trigon.Server
 
 _trigon.Title_4.TextWrapped = true
 _trigon.Title_4.TextScaled = true
 _trigon.Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Title_4.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_4.Position = UDim2.new(0.0654691, 0, 0.247437, 0)
+_trigon.Title_4.Position = UDim2.new(0.111143, 0, 0.247437, 0)
 _trigon.Title_4.Name = "Title"
 _trigon.Title_4.TextSize = 14
-_trigon.Title_4.Size = UDim2.new(0.385185, 0, 0.266667, 0)
+_trigon.Title_4.Size = UDim2.new(0.832091, 0, 0.266667, 0)
 _trigon.Title_4.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Title_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.Title_4.Text = "Server Region"
@@ -2193,7 +2205,7 @@ _trigon.Title_4.BackgroundTransparency = 1
 _trigon.Title_4.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_4.Parent = _trigon.Region
 
-_trigon.UITextSizeConstraint_12.MaxTextSize = 16
+_trigon.UITextSizeConstraint_12.MaxTextSize = 18
 _trigon.UITextSizeConstraint_12.Parent = _trigon.Title_4
 
 _trigon.Value_3.TextWrapped = true
@@ -2201,27 +2213,27 @@ _trigon.Value_3.TextScaled = true
 _trigon.Value_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_3.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_3.TextTransparency = 0.3
-_trigon.Value_3.Position = UDim2.new(0.0654691, 0, 0.517667, 0)
+_trigon.Value_3.Position = UDim2.new(0.111143, 0, 0.55, 0)
 _trigon.Value_3.Name = "Value"
 _trigon.Value_3.TextSize = 14
-_trigon.Value_3.Size = UDim2.new(0.725926, 0, 0.216667, 0)
+_trigon.Value_3.Size = UDim2.new(0.688153, 0, 0.216667, 0)
 _trigon.Value_3.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Value_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Value_3.Text = "Couldn't catch region in time"
+_trigon.Value_3.Text = "Couldn't catch"
 _trigon.Value_3.BackgroundTransparency = 1
 _trigon.Value_3.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value_3.Parent = _trigon.Region
 
-_trigon.UITextSizeConstraint_13.MaxTextSize = 13
+_trigon.UITextSizeConstraint_13.MaxTextSize = 16
 _trigon.UITextSizeConstraint_13.Parent = _trigon.Value_3
 
 _trigon.UICorner_22.CornerRadius = UDim.new(0, 6)
 _trigon.UICorner_22.Parent = _trigon.Region
 
-_trigon.Time.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Time.Size = UDim2.new(0.354762, 0, 0.212014, 0)
 _trigon.Time.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Time.BackgroundTransparency = 0.7
+_trigon.Time.BackgroundTransparency = 0.95
 _trigon.Time.Name = "Time"
 _trigon.Time.Position = UDim2.new(0.0419048, 0, 0.731598, 0)
 _trigon.Time.Parent = _trigon.Server
@@ -2233,7 +2245,7 @@ _trigon.Title_5.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.
 _trigon.Title_5.Position = UDim2.new(0.121826, 0, 0.247437, 0)
 _trigon.Title_5.Name = "Title"
 _trigon.Title_5.TextSize = 14
-_trigon.Title_5.Size = UDim2.new(0.973154, 0, 0.266667, 0)
+_trigon.Title_5.Size = UDim2.new(0.692123, 0, 0.266667, 0)
 _trigon.Title_5.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Title_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.Title_5.Text = "In server for"
@@ -2241,7 +2253,7 @@ _trigon.Title_5.BackgroundTransparency = 1
 _trigon.Title_5.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_5.Parent = _trigon.Time
 
-_trigon.UITextSizeConstraint_14.MaxTextSize = 16
+_trigon.UITextSizeConstraint_14.MaxTextSize = 18
 _trigon.UITextSizeConstraint_14.Parent = _trigon.Title_5
 
 _trigon.Value_4.TextWrapped = true
@@ -2249,7 +2261,7 @@ _trigon.Value_4.TextScaled = true
 _trigon.Value_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_4.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_4.TextTransparency = 0.3
-_trigon.Value_4.Position = UDim2.new(0.115114, 0, 0.517667, 0)
+_trigon.Value_4.Position = UDim2.new(0.115114, 0, 0.55, 0)
 _trigon.Value_4.Name = "Value"
 _trigon.Value_4.TextSize = 14
 _trigon.Value_4.Size = UDim2.new(0.644295, 0, 0.216667, 0)
@@ -2260,7 +2272,7 @@ _trigon.Value_4.BackgroundTransparency = 1
 _trigon.Value_4.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value_4.Parent = _trigon.Time
 
-_trigon.UITextSizeConstraint_15.MaxTextSize = 13
+_trigon.UITextSizeConstraint_15.MaxTextSize = 16
 _trigon.UITextSizeConstraint_15.Parent = _trigon.Value_4
 
 _trigon.UICorner_23.CornerRadius = UDim.new(0, 6)
@@ -2269,19 +2281,18 @@ _trigon.UICorner_23.Parent = _trigon.Time
 _trigon.UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_5.Parent = _trigon.Server
 
-_trigon.UIGradient_9.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_9.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 59, 66)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
-_trigon.UIGradient_9.Rotation = -80
-_trigon.UIGradient_9.Parent = _trigon.UIStroke_5
+_trigon.UIGradient_8.Offset = Vector2.new(0, -0.45)
+_trigon.UIGradient_8.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(53, 54, 61)) }
+_trigon.UIGradient_8.Rotation = -80
+_trigon.UIGradient_8.Parent = _trigon.UIStroke_5
 
 _trigon.JobId.Position = UDim2.new(0.410952, 0, 0.731598, 0)
-_trigon.JobId.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.JobId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.JobId.Selectable = false
 _trigon.JobId.Name = "JobId"
 _trigon.JobId.Size = UDim2.new(0.542857, 0, 0.212014, 0)
 _trigon.JobId.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.JobId.Active = false
-_trigon.JobId.BackgroundTransparency = 0.7
+_trigon.JobId.BackgroundTransparency = 0.95
 _trigon.JobId.Parent = _trigon.Server
 
 _trigon.Title_6.TextWrapped = true
@@ -2299,7 +2310,7 @@ _trigon.Title_6.BackgroundTransparency = 1
 _trigon.Title_6.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Title_6.Parent = _trigon.JobId
 
-_trigon.UITextSizeConstraint_16.MaxTextSize = 16
+_trigon.UITextSizeConstraint_16.MaxTextSize = 18
 _trigon.UITextSizeConstraint_16.Parent = _trigon.Title_6
 
 _trigon.Value_5.TextWrapped = true
@@ -2307,7 +2318,7 @@ _trigon.Value_5.TextScaled = true
 _trigon.Value_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_5.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_5.TextTransparency = 0.3
-_trigon.Value_5.Position = UDim2.new(0.0757888, 0, 0.517667, 0)
+_trigon.Value_5.Position = UDim2.new(0.0757888, 0, 0.55, 0)
 _trigon.Value_5.Name = "Value"
 _trigon.Value_5.TextSize = 14
 _trigon.Value_5.Size = UDim2.new(0.846491, 0, 0.216667, 0)
@@ -2318,28 +2329,65 @@ _trigon.Value_5.BackgroundTransparency = 1
 _trigon.Value_5.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Value_5.Parent = _trigon.JobId
 
-_trigon.UITextSizeConstraint_17.MaxTextSize = 13
+_trigon.UITextSizeConstraint_17.MaxTextSize = 16
 _trigon.UITextSizeConstraint_17.Parent = _trigon.Value_5
 
 _trigon.UICorner_24.CornerRadius = UDim.new(0, 6)
 _trigon.UICorner_24.Parent = _trigon.JobId
 
-_trigon.Interact.TextWrapped = true
-_trigon.Interact.ZIndex = 2
-_trigon.Interact.TextScaled = true
-_trigon.Interact.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Interact.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-_trigon.Interact.Name = "Interact"
-_trigon.Interact.TextSize = 14
-_trigon.Interact.Size = UDim2.new(1, 0, 1, 0)
-_trigon.Interact.TextColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Interact.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Interact.Text = ""
-_trigon.Interact.BackgroundTransparency = 1
-_trigon.Interact.Parent = _trigon.JobId
+_trigon.UIGradient_9.Offset = Vector2.new(0, -0.45)
+_trigon.UIGradient_9.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(53, 54, 61)) }
+_trigon.UIGradient_9.Rotation = -80
+_trigon.UIGradient_9.Parent = _trigon.Server
 
-_trigon.UITextSizeConstraint_18.MaxTextSize = 14
-_trigon.UITextSizeConstraint_18.Parent = _trigon.Interact
+_trigon.rejoin.Position = UDim2.new(0.647417, 0, 0.501343, 0)
+_trigon.rejoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.rejoin.Selectable = false
+_trigon.rejoin.Name = "rejoin"
+_trigon.rejoin.Size = UDim2.new(0.303961, 0, 0.203946, 0)
+_trigon.rejoin.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.rejoin.BackgroundTransparency = 0.95
+_trigon.rejoin.Parent = _trigon.Server
+
+_trigon.Title_7.TextWrapped = true
+_trigon.Title_7.TextScaled = true
+_trigon.Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_7.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.Title_7.Position = UDim2.new(0.123789, 0, 0.247437, 0)
+_trigon.Title_7.Name = "Title"
+_trigon.Title_7.TextSize = 14
+_trigon.Title_7.Size = UDim2.new(0.841822, 0, 0.266667, 0)
+_trigon.Title_7.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_7.Text = "Rejoin"
+_trigon.Title_7.BackgroundTransparency = 1
+_trigon.Title_7.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_7.Parent = _trigon.rejoin
+
+_trigon.UITextSizeConstraint_18.MaxTextSize = 18
+_trigon.UITextSizeConstraint_18.Parent = _trigon.Title_7
+
+_trigon.Value_6.TextWrapped = true
+_trigon.Value_6.TextScaled = true
+_trigon.Value_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Value_6.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+_trigon.Value_6.TextTransparency = 0.3
+_trigon.Value_6.Position = UDim2.new(0.123788, 0, 0.55, 0)
+_trigon.Value_6.Name = "Value"
+_trigon.Value_6.TextSize = 14
+_trigon.Value_6.Size = UDim2.new(0.841824, 0, 0.216667, 0)
+_trigon.Value_6.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Value_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Value_6.Text = "Tap to rejoin!"
+_trigon.Value_6.BackgroundTransparency = 1
+_trigon.Value_6.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Value_6.Parent = _trigon.rejoin
+
+_trigon.UITextSizeConstraint_19.MaxTextSize = 16
+_trigon.UITextSizeConstraint_19.Parent = _trigon.Value_6
+
+_trigon.UICorner_25.CornerRadius = UDim.new(0, 6)
+_trigon.UICorner_25.Parent = _trigon.rejoin
 
 _trigon.Friends.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Friends.Size = UDim2.new(0.273698, 0, 0.275104, 0)
@@ -2348,74 +2396,74 @@ _trigon.Friends.Name = "Friends"
 _trigon.Friends.Position = UDim2.new(0.0139308, 0, 0.174832, 0)
 _trigon.Friends.Parent = _trigon.Home_1
 
-_trigon.Title_7.TextWrapped = true
-_trigon.Title_7.TextScaled = true
-_trigon.Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_7.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-_trigon.Title_7.Position = UDim2.new(0.05, 0, 0.074, 0)
-_trigon.Title_7.Name = "Title"
-_trigon.Title_7.TextSize = 14
-_trigon.Title_7.Size = UDim2.new(0.482036, 0, 0.102804, 0)
-_trigon.Title_7.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_7.Text = "Friends"
-_trigon.Title_7.BackgroundTransparency = 1
-_trigon.Title_7.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_7.Parent = _trigon.Friends
+_trigon.Title_8.TextWrapped = true
+_trigon.Title_8.TextScaled = true
+_trigon.Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_8.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
+_trigon.Title_8.Position = UDim2.new(0.05, 0, 0.074, 0)
+_trigon.Title_8.Name = "Title"
+_trigon.Title_8.TextSize = 14
+_trigon.Title_8.Size = UDim2.new(0.482036, 0, 0.102804, 0)
+_trigon.Title_8.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_8.Text = "Friends"
+_trigon.Title_8.BackgroundTransparency = 1
+_trigon.Title_8.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_8.Parent = _trigon.Friends
 
-_trigon.UITextSizeConstraint_19.MaxTextSize = 22
-_trigon.UITextSizeConstraint_19.Parent = _trigon.Title_7
+_trigon.UITextSizeConstraint_20.MaxTextSize = 22
+_trigon.UITextSizeConstraint_20.Parent = _trigon.Title_8
 
-_trigon.UICorner_25.CornerRadius = UDim.new(0, 10)
-_trigon.UICorner_25.Parent = _trigon.Friends
+_trigon.UICorner_26.CornerRadius = UDim.new(0, 10)
+_trigon.UICorner_26.Parent = _trigon.Friends
 
-_trigon.InGame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.InGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.InGame.Size = UDim2.new(0.449102, 0, 0.280374, 0)
-_trigon.InGame.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.InGame.BackgroundTransparency = 0.7
+_trigon.InGame.BorderColor3 = Color3.fromRGB(47, 48, 53)
+_trigon.InGame.BackgroundTransparency = 0.95
 _trigon.InGame.Name = "InGame"
 _trigon.InGame.Position = UDim2.new(0.048248, 0, 0.349619, 0)
 _trigon.InGame.Parent = _trigon.Friends
 
-_trigon.Title_8.TextWrapped = true
-_trigon.Title_8.TextScaled = true
-_trigon.Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_8.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_8.Position = UDim2.new(0.121866, 0, 0.247437, 0)
-_trigon.Title_8.Name = "Title"
-_trigon.Title_8.TextSize = 14
-_trigon.Title_8.Size = UDim2.new(0.726667, 0, 0.266667, 0)
-_trigon.Title_8.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_8.Text = "In Server"
-_trigon.Title_8.BackgroundTransparency = 1
-_trigon.Title_8.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_8.Parent = _trigon.InGame
+_trigon.Title_9.TextWrapped = true
+_trigon.Title_9.TextScaled = true
+_trigon.Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_9.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.Title_9.Position = UDim2.new(0.121866, 0, 0.247437, 0)
+_trigon.Title_9.Name = "Title"
+_trigon.Title_9.TextSize = 14
+_trigon.Title_9.Size = UDim2.new(0.726667, 0, 0.266667, 0)
+_trigon.Title_9.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_9.Text = "In Server"
+_trigon.Title_9.BackgroundTransparency = 1
+_trigon.Title_9.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_9.Parent = _trigon.InGame
 
-_trigon.UITextSizeConstraint_20.MaxTextSize = 16
-_trigon.UITextSizeConstraint_20.Parent = _trigon.Title_8
+_trigon.UITextSizeConstraint_21.MaxTextSize = 18
+_trigon.UITextSizeConstraint_21.Parent = _trigon.Title_9
 
-_trigon.Value_6.TextWrapped = true
-_trigon.Value_6.TextScaled = true
-_trigon.Value_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Value_6.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-_trigon.Value_6.TextTransparency = 0.3
-_trigon.Value_6.Position = UDim2.new(0.121866, 0, 0.517667, 0)
-_trigon.Value_6.Name = "Value"
-_trigon.Value_6.TextSize = 14
-_trigon.Value_6.Size = UDim2.new(0.58, 0, 0.216667, 0)
-_trigon.Value_6.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Value_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Value_6.Text = "no friends"
-_trigon.Value_6.BackgroundTransparency = 1
-_trigon.Value_6.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Value_6.Parent = _trigon.InGame
+_trigon.Value_7.TextWrapped = true
+_trigon.Value_7.TextScaled = true
+_trigon.Value_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Value_7.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+_trigon.Value_7.TextTransparency = 0.3
+_trigon.Value_7.Position = UDim2.new(0.121866, 0, 0.55, 0)
+_trigon.Value_7.Name = "Value"
+_trigon.Value_7.TextSize = 14
+_trigon.Value_7.Size = UDim2.new(0.58, 0, 0.216667, 0)
+_trigon.Value_7.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Value_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Value_7.Text = "no friends"
+_trigon.Value_7.BackgroundTransparency = 1
+_trigon.Value_7.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Value_7.Parent = _trigon.InGame
 
-_trigon.UITextSizeConstraint_21.MaxTextSize = 13
-_trigon.UITextSizeConstraint_21.Parent = _trigon.Value_6
+_trigon.UITextSizeConstraint_22.MaxTextSize = 16
+_trigon.UITextSizeConstraint_22.Parent = _trigon.Value_7
 
-_trigon.UICorner_26.CornerRadius = UDim.new(0, 6)
-_trigon.UICorner_26.Parent = _trigon.InGame
+_trigon.UICorner_27.CornerRadius = UDim.new(0, 6)
+_trigon.UICorner_27.Parent = _trigon.InGame
 
 _trigon.Subtitle_1.TextWrapped = true
 _trigon.Subtitle_1.TextScaled = true
@@ -2433,158 +2481,158 @@ _trigon.Subtitle_1.BackgroundTransparency = 1
 _trigon.Subtitle_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Subtitle_1.Parent = _trigon.Friends
 
-_trigon.UITextSizeConstraint_22.MaxTextSize = 15
-_trigon.UITextSizeConstraint_22.Parent = _trigon.Subtitle_1
+_trigon.UITextSizeConstraint_23.MaxTextSize = 15
+_trigon.UITextSizeConstraint_23.Parent = _trigon.Subtitle_1
 
-_trigon.Offline.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+_trigon.Offline.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Offline.Size = UDim2.new(0.449102, 0, 0.280374, 0)
 _trigon.Offline.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Offline.BackgroundTransparency = 0.7
+_trigon.Offline.BackgroundTransparency = 0.95
 _trigon.Offline.Name = "Offline"
 _trigon.Offline.Position = UDim2.new(0.51, 0, 0.35, 0)
 _trigon.Offline.Parent = _trigon.Friends
-
-_trigon.Title_9.TextWrapped = true
-_trigon.Title_9.TextScaled = true
-_trigon.Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_9.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_9.Position = UDim2.new(0.125677, 0, 0.247438, 0)
-_trigon.Title_9.Name = "Title"
-_trigon.Title_9.TextSize = 14
-_trigon.Title_9.Size = UDim2.new(0.626667, 0, 0.266667, 0)
-_trigon.Title_9.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_9.Text = "Offline"
-_trigon.Title_9.BackgroundTransparency = 1
-_trigon.Title_9.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_9.Parent = _trigon.Offline
-
-_trigon.UITextSizeConstraint_23.MaxTextSize = 16
-_trigon.UITextSizeConstraint_23.Parent = _trigon.Title_9
-
-_trigon.Value_7.TextWrapped = true
-_trigon.Value_7.TextScaled = true
-_trigon.Value_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Value_7.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-_trigon.Value_7.TextTransparency = 0.3
-_trigon.Value_7.Position = UDim2.new(0.125677, 0, 0.517667, 0)
-_trigon.Value_7.Name = "Value"
-_trigon.Value_7.TextSize = 14
-_trigon.Value_7.Size = UDim2.new(0.793333, 0, 0.216667, 0)
-_trigon.Value_7.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Value_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Value_7.Text = "28 friends"
-_trigon.Value_7.BackgroundTransparency = 1
-_trigon.Value_7.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Value_7.Parent = _trigon.Offline
-
-_trigon.UITextSizeConstraint_24.MaxTextSize = 13
-_trigon.UITextSizeConstraint_24.Parent = _trigon.Value_7
-
-_trigon.UICorner_27.CornerRadius = UDim.new(0, 6)
-_trigon.UICorner_27.Parent = _trigon.Offline
-
-_trigon.Online.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-_trigon.Online.Size = UDim2.new(0.449102, 0, 0.280374, 0)
-_trigon.Online.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Online.BackgroundTransparency = 0.7
-_trigon.Online.Name = "Online"
-_trigon.Online.Position = UDim2.new(0.048248, 0, 0.647638, 0)
-_trigon.Online.Parent = _trigon.Friends
 
 _trigon.Title_10.TextWrapped = true
 _trigon.Title_10.TextScaled = true
 _trigon.Title_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Title_10.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_10.Position = UDim2.new(0.120754, 0, 0.247437, 0)
+_trigon.Title_10.Position = UDim2.new(0.125677, 0, 0.247438, 0)
 _trigon.Title_10.Name = "Title"
 _trigon.Title_10.TextSize = 14
-_trigon.Title_10.Size = UDim2.new(0.546667, 0, 0.266667, 0)
+_trigon.Title_10.Size = UDim2.new(0.626667, 0, 0.266667, 0)
 _trigon.Title_10.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Title_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_10.Text = "Online"
+_trigon.Title_10.Text = "Offline"
 _trigon.Title_10.BackgroundTransparency = 1
 _trigon.Title_10.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_10.Parent = _trigon.Online
+_trigon.Title_10.Parent = _trigon.Offline
 
-_trigon.UITextSizeConstraint_25.MaxTextSize = 16
-_trigon.UITextSizeConstraint_25.Parent = _trigon.Title_10
+_trigon.UITextSizeConstraint_24.MaxTextSize = 18
+_trigon.UITextSizeConstraint_24.Parent = _trigon.Title_10
 
 _trigon.Value_8.TextWrapped = true
 _trigon.Value_8.TextScaled = true
 _trigon.Value_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_8.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_8.TextTransparency = 0.3
-_trigon.Value_8.Position = UDim2.new(0.120754, 0, 0.517667, 0)
+_trigon.Value_8.Position = UDim2.new(0.125677, 0, 0.55, 0)
 _trigon.Value_8.Name = "Value"
 _trigon.Value_8.TextSize = 14
-_trigon.Value_8.Size = UDim2.new(0.546667, 0, 0.216667, 0)
+_trigon.Value_8.Size = UDim2.new(0.793333, 0, 0.216667, 0)
 _trigon.Value_8.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Value_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Value_8.Text = "2 friends"
+_trigon.Value_8.Text = "28 friends"
 _trigon.Value_8.BackgroundTransparency = 1
 _trigon.Value_8.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Value_8.Parent = _trigon.Online
+_trigon.Value_8.Parent = _trigon.Offline
 
-_trigon.UITextSizeConstraint_26.MaxTextSize = 13
-_trigon.UITextSizeConstraint_26.Parent = _trigon.Value_8
+_trigon.UITextSizeConstraint_25.MaxTextSize = 16
+_trigon.UITextSizeConstraint_25.Parent = _trigon.Value_8
 
 _trigon.UICorner_28.CornerRadius = UDim.new(0, 6)
-_trigon.UICorner_28.Parent = _trigon.Online
+_trigon.UICorner_28.Parent = _trigon.Offline
 
-_trigon.All.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-_trigon.All.Size = UDim2.new(0.449102, 0, 0.280374, 0)
-_trigon.All.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.All.BackgroundTransparency = 0.7
-_trigon.All.Name = "All"
-_trigon.All.Position = UDim2.new(0.51, 0, 0.648, 0)
-_trigon.All.Parent = _trigon.Friends
+_trigon.Online.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Online.Size = UDim2.new(0.449102, 0, 0.280374, 0)
+_trigon.Online.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Online.BackgroundTransparency = 0.95
+_trigon.Online.Name = "Online"
+_trigon.Online.Position = UDim2.new(0.048248, 0, 0.647638, 0)
+_trigon.Online.Parent = _trigon.Friends
 
 _trigon.Title_11.TextWrapped = true
 _trigon.Title_11.TextScaled = true
 _trigon.Title_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Title_11.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_11.Position = UDim2.new(0.125117, 0, 0.247437, 0)
+_trigon.Title_11.Position = UDim2.new(0.120754, 0, 0.247437, 0)
 _trigon.Title_11.Name = "Title"
 _trigon.Title_11.TextSize = 14
-_trigon.Title_11.Size = UDim2.new(0.633333, 0, 0.266667, 0)
+_trigon.Title_11.Size = UDim2.new(0.546667, 0, 0.266667, 0)
 _trigon.Title_11.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Title_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_11.Text = "All"
+_trigon.Title_11.Text = "Online"
 _trigon.Title_11.BackgroundTransparency = 1
 _trigon.Title_11.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_11.Parent = _trigon.All
+_trigon.Title_11.Parent = _trigon.Online
 
-_trigon.UITextSizeConstraint_27.MaxTextSize = 16
-_trigon.UITextSizeConstraint_27.Parent = _trigon.Title_11
+_trigon.UITextSizeConstraint_26.MaxTextSize = 18
+_trigon.UITextSizeConstraint_26.Parent = _trigon.Title_11
 
 _trigon.Value_9.TextWrapped = true
 _trigon.Value_9.TextScaled = true
 _trigon.Value_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Value_9.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 _trigon.Value_9.TextTransparency = 0.3
-_trigon.Value_9.Position = UDim2.new(0.125117, 0, 0.517667, 0)
+_trigon.Value_9.Position = UDim2.new(0.120754, 0, 0.55, 0)
 _trigon.Value_9.Name = "Value"
 _trigon.Value_9.TextSize = 14
-_trigon.Value_9.Size = UDim2.new(0.786667, 0, 0.216667, 0)
+_trigon.Value_9.Size = UDim2.new(0.546667, 0, 0.216667, 0)
 _trigon.Value_9.TextColor3 = Color3.fromRGB(240, 240, 240)
 _trigon.Value_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Value_9.Text = "30 friends"
+_trigon.Value_9.Text = "2 friends"
 _trigon.Value_9.BackgroundTransparency = 1
 _trigon.Value_9.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Value_9.Parent = _trigon.All
+_trigon.Value_9.Parent = _trigon.Online
 
-_trigon.UITextSizeConstraint_28.MaxTextSize = 13
-_trigon.UITextSizeConstraint_28.Parent = _trigon.Value_9
+_trigon.UITextSizeConstraint_27.MaxTextSize = 16
+_trigon.UITextSizeConstraint_27.Parent = _trigon.Value_9
 
 _trigon.UICorner_29.CornerRadius = UDim.new(0, 6)
-_trigon.UICorner_29.Parent = _trigon.All
+_trigon.UICorner_29.Parent = _trigon.Online
+
+_trigon.All.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.All.Size = UDim2.new(0.449102, 0, 0.280374, 0)
+_trigon.All.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.All.BackgroundTransparency = 0.95
+_trigon.All.Name = "All"
+_trigon.All.Position = UDim2.new(0.51, 0, 0.648, 0)
+_trigon.All.Parent = _trigon.Friends
+
+_trigon.Title_12.TextWrapped = true
+_trigon.Title_12.TextScaled = true
+_trigon.Title_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_12.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.Title_12.Position = UDim2.new(0.125117, 0, 0.247437, 0)
+_trigon.Title_12.Name = "Title"
+_trigon.Title_12.TextSize = 14
+_trigon.Title_12.Size = UDim2.new(0.633333, 0, 0.266667, 0)
+_trigon.Title_12.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_12.Text = "All"
+_trigon.Title_12.BackgroundTransparency = 1
+_trigon.Title_12.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_12.Parent = _trigon.All
+
+_trigon.UITextSizeConstraint_28.MaxTextSize = 18
+_trigon.UITextSizeConstraint_28.Parent = _trigon.Title_12
+
+_trigon.Value_10.TextWrapped = true
+_trigon.Value_10.TextScaled = true
+_trigon.Value_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Value_10.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+_trigon.Value_10.TextTransparency = 0.3
+_trigon.Value_10.Position = UDim2.new(0.125117, 0, 0.55, 0)
+_trigon.Value_10.Name = "Value"
+_trigon.Value_10.TextSize = 14
+_trigon.Value_10.Size = UDim2.new(0.786667, 0, 0.216667, 0)
+_trigon.Value_10.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Value_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Value_10.Text = "30 friends"
+_trigon.Value_10.BackgroundTransparency = 1
+_trigon.Value_10.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Value_10.Parent = _trigon.All
+
+_trigon.UITextSizeConstraint_29.MaxTextSize = 16
+_trigon.UITextSizeConstraint_29.Parent = _trigon.Value_10
+
+_trigon.UICorner_30.CornerRadius = UDim.new(0, 6)
+_trigon.UICorner_30.Parent = _trigon.All
 
 _trigon.UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_6.Parent = _trigon.Friends
 
 _trigon.UIGradient_10.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_10.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(49, 50, 57)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
+_trigon.UIGradient_10.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 26, 29)), ColorSequenceKeypoint.new(1, Color3.fromRGB(69, 70, 79)) }
 _trigon.UIGradient_10.Rotation = -80
 _trigon.UIGradient_10.Parent = _trigon.UIStroke_6
 
@@ -2605,26 +2653,26 @@ _trigon.partneredFrame.Name = "partneredFrame"
 _trigon.partneredFrame.Position = UDim2.new(0.0139308, 0, 0.469219, 0)
 _trigon.partneredFrame.Parent = _trigon.Home_1
 
-_trigon.Title_12.TextWrapped = true
-_trigon.Title_12.TextScaled = true
-_trigon.Title_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_12.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-_trigon.Title_12.Position = UDim2.new(0.047006, 0, 0.0365935, 0)
-_trigon.Title_12.Name = "Title"
-_trigon.Title_12.TextSize = 14
-_trigon.Title_12.Size = UDim2.new(0.482036, 0, 0.0548628, 0)
-_trigon.Title_12.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_12.Text = "Partnered Scripts"
-_trigon.Title_12.BackgroundTransparency = 1
-_trigon.Title_12.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_12.Parent = _trigon.partneredFrame
+_trigon.Title_13.TextWrapped = true
+_trigon.Title_13.TextScaled = true
+_trigon.Title_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_13.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
+_trigon.Title_13.Position = UDim2.new(0.047006, 0, 0.0365935, 0)
+_trigon.Title_13.Name = "Title"
+_trigon.Title_13.TextSize = 14
+_trigon.Title_13.Size = UDim2.new(0.482036, 0, 0.0548628, 0)
+_trigon.Title_13.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_13.Text = "Partnered Scripts"
+_trigon.Title_13.BackgroundTransparency = 1
+_trigon.Title_13.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_13.Parent = _trigon.partneredFrame
 
-_trigon.UITextSizeConstraint_29.MaxTextSize = 21
-_trigon.UITextSizeConstraint_29.Parent = _trigon.Title_12
+_trigon.UITextSizeConstraint_30.MaxTextSize = 21
+_trigon.UITextSizeConstraint_30.Parent = _trigon.Title_13
 
-_trigon.UICorner_30.CornerRadius = UDim.new(0, 10)
-_trigon.UICorner_30.Parent = _trigon.partneredFrame
+_trigon.UICorner_31.CornerRadius = UDim.new(0, 10)
+_trigon.UICorner_31.Parent = _trigon.partneredFrame
 
 _trigon.Subtitle_2.TextWrapped = true
 _trigon.Subtitle_2.TextScaled = true
@@ -2642,14 +2690,14 @@ _trigon.Subtitle_2.BackgroundTransparency = 1
 _trigon.Subtitle_2.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Subtitle_2.Parent = _trigon.partneredFrame
 
-_trigon.UITextSizeConstraint_30.MaxTextSize = 14
-_trigon.UITextSizeConstraint_30.Parent = _trigon.Subtitle_2
+_trigon.UITextSizeConstraint_31.MaxTextSize = 14
+_trigon.UITextSizeConstraint_31.Parent = _trigon.Subtitle_2
 
 _trigon.UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_7.Parent = _trigon.partneredFrame
 
 _trigon.UIGradient_13.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_13.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(49, 50, 57)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
+_trigon.UIGradient_13.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(22, 23, 26)), ColorSequenceKeypoint.new(1, Color3.fromRGB(77, 78, 88)) }
 _trigon.UIGradient_13.Rotation = -80
 _trigon.UIGradient_13.Parent = _trigon.UIStroke_7
 
@@ -2690,8 +2738,8 @@ _trigon.Template.Position = UDim2.new(3.03265e-09, 0, 0.00760861, 0)
 _trigon.Template.ZIndex = 150
 _trigon.Template.Parent = _trigon.ScrollingFrame
 
-_trigon.UICorner_31.CornerRadius = UDim.new(0.12, 0)
-_trigon.UICorner_31.Parent = _trigon.Template
+_trigon.UICorner_32.CornerRadius = UDim.new(0.12, 0)
+_trigon.UICorner_32.Parent = _trigon.Template
 
 _trigon.UIStroke_8.Color = Color3.fromRGB(211, 211, 211)
 _trigon.UIStroke_8.Thickness = 1.2
@@ -2708,7 +2756,7 @@ _trigon.subtext.Position = UDim2.new(0.249104, 0, 0.682143, 0)
 _trigon.subtext.Name = "subtext"
 _trigon.subtext.AnchorPoint = Vector2.new(0, 0.5)
 _trigon.subtext.TextSize = 14
-_trigon.subtext.Size = UDim2.new(0.522095, 0, 0.316485, 0)
+_trigon.subtext.Size = UDim2.new(0.549321, 0, 0.316485, 0)
 _trigon.subtext.ZIndex = 151
 _trigon.subtext.TextColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.subtext.BorderColor3 = Color3.fromRGB(27, 42, 53)
@@ -2716,6 +2764,9 @@ _trigon.subtext.Text = "Redefining Versatility!"
 _trigon.subtext.BackgroundTransparency = 1
 _trigon.subtext.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.subtext.Parent = _trigon.Template
+
+_trigon.UITextSizeConstraint_32.MaxTextSize = 16
+_trigon.UITextSizeConstraint_32.Parent = _trigon.subtext
 
 _trigon.logo.BorderSizePixel = 0
 _trigon.logo.ScaleType = Enum.ScaleType.Fit
@@ -2729,8 +2780,8 @@ _trigon.logo.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.logo.ZIndex = 151
 _trigon.logo.Parent = _trigon.Template
 
-_trigon.UICorner_32.CornerRadius = UDim.new(1, 0)
-_trigon.UICorner_32.Parent = _trigon.logo
+_trigon.UICorner_33.CornerRadius = UDim.new(1, 0)
+_trigon.UICorner_33.Parent = _trigon.logo
 
 _trigon.UIStroke_9.Color = Color3.fromRGB(45, 45, 45)
 _trigon.UIStroke_9.Thickness = 1.2
@@ -2747,7 +2798,7 @@ _trigon.execBtn.Size = UDim2.new(0.130467, 0, 0.533666, 0)
 _trigon.execBtn.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.execBtn.Parent = _trigon.Template
 
-_trigon.UICorner_33.Parent = _trigon.execBtn
+_trigon.UICorner_34.Parent = _trigon.execBtn
 
 _trigon.Icon_13.ImageColor3 = Color3.fromRGB(163, 163, 163)
 _trigon.Icon_13.BorderSizePixel = 0
@@ -2768,25 +2819,25 @@ _trigon.UIStroke_10.Thickness = 1.2
 _trigon.UIStroke_10.Transparency = 0.86
 _trigon.UIStroke_10.Parent = _trigon.execBtn
 
-_trigon.Title_13.TextWrapped = true
-_trigon.Title_13.Active = true
-_trigon.Title_13.BorderSizePixel = 0
-_trigon.Title_13.TextScaled = true
-_trigon.Title_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_13.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_13.Position = UDim2.new(0.249104, 0, 0.39, 0)
-_trigon.Title_13.Name = "Title"
-_trigon.Title_13.AnchorPoint = Vector2.new(0, 0.5)
-_trigon.Title_13.TextSize = 16
-_trigon.Title_13.Size = UDim2.new(0.522095, 0, 0.21099, 0)
-_trigon.Title_13.ZIndex = 151
-_trigon.Title_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_13.Text = "Reaper Hub"
-_trigon.Title_13.BackgroundTransparency = 1
-_trigon.Title_13.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_13.Selectable = true
-_trigon.Title_13.Parent = _trigon.Template
+_trigon.Title_14.TextWrapped = true
+_trigon.Title_14.Active = true
+_trigon.Title_14.BorderSizePixel = 0
+_trigon.Title_14.TextScaled = true
+_trigon.Title_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_14.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.Title_14.Position = UDim2.new(0.249104, 0, 0.39, 0)
+_trigon.Title_14.Name = "Title"
+_trigon.Title_14.AnchorPoint = Vector2.new(0, 0.5)
+_trigon.Title_14.TextSize = 16
+_trigon.Title_14.Size = UDim2.new(0.522095, 0, 0.21099, 0)
+_trigon.Title_14.ZIndex = 151
+_trigon.Title_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_14.Text = "Reaper Hub"
+_trigon.Title_14.BackgroundTransparency = 1
+_trigon.Title_14.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_14.Selectable = true
+_trigon.Title_14.Parent = _trigon.Template
 
 _trigon.LocalScriptsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.LocalScriptsFrame.Size = UDim2.new(0.344172, 0, 0.42294, 0)
@@ -2795,26 +2846,26 @@ _trigon.LocalScriptsFrame.Name = "LocalScriptsFrame"
 _trigon.LocalScriptsFrame.Position = UDim2.new(0.304838, 0, 0.560492, 0)
 _trigon.LocalScriptsFrame.Parent = _trigon.Home_1
 
-_trigon.Title_14.TextWrapped = true
-_trigon.Title_14.TextScaled = true
-_trigon.Title_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_14.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-_trigon.Title_14.Position = UDim2.new(0.047, 0, 0.037, 0)
-_trigon.Title_14.Name = "Title"
-_trigon.Title_14.TextSize = 14
-_trigon.Title_14.Size = UDim2.new(0.383333, 0, 0.0668693, 0)
-_trigon.Title_14.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_14.Text = "Local Scripts"
-_trigon.Title_14.BackgroundTransparency = 1
-_trigon.Title_14.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_14.Parent = _trigon.LocalScriptsFrame
+_trigon.Title_15.TextWrapped = true
+_trigon.Title_15.TextScaled = true
+_trigon.Title_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_15.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
+_trigon.Title_15.Position = UDim2.new(0.047, 0, 0.037, 0)
+_trigon.Title_15.Name = "Title"
+_trigon.Title_15.TextSize = 14
+_trigon.Title_15.Size = UDim2.new(0.383333, 0, 0.0668693, 0)
+_trigon.Title_15.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_15.Text = "Local Scripts"
+_trigon.Title_15.BackgroundTransparency = 1
+_trigon.Title_15.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_15.Parent = _trigon.LocalScriptsFrame
 
-_trigon.UITextSizeConstraint_31.MaxTextSize = 22
-_trigon.UITextSizeConstraint_31.Parent = _trigon.Title_14
+_trigon.UITextSizeConstraint_33.MaxTextSize = 22
+_trigon.UITextSizeConstraint_33.Parent = _trigon.Title_15
 
-_trigon.UICorner_34.CornerRadius = UDim.new(0, 10)
-_trigon.UICorner_34.Parent = _trigon.LocalScriptsFrame
+_trigon.UICorner_35.CornerRadius = UDim.new(0, 10)
+_trigon.UICorner_35.Parent = _trigon.LocalScriptsFrame
 
 _trigon.Subtitle_3.TextWrapped = true
 _trigon.Subtitle_3.TextScaled = true
@@ -2832,21 +2883,16 @@ _trigon.Subtitle_3.BackgroundTransparency = 1
 _trigon.Subtitle_3.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Subtitle_3.Parent = _trigon.LocalScriptsFrame
 
-_trigon.UITextSizeConstraint_32.MaxTextSize = 15
-_trigon.UITextSizeConstraint_32.Parent = _trigon.Subtitle_3
-
-_trigon.UIGradient_15.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_15.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(58, 59, 67)) }
-_trigon.UIGradient_15.Rotation = -80
-_trigon.UIGradient_15.Parent = _trigon.LocalScriptsFrame
+_trigon.UITextSizeConstraint_34.MaxTextSize = 15
+_trigon.UITextSizeConstraint_34.Parent = _trigon.Subtitle_3
 
 _trigon.UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_11.Parent = _trigon.LocalScriptsFrame
 
-_trigon.UIGradient_16.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_16.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 59, 66)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
-_trigon.UIGradient_16.Rotation = -80
-_trigon.UIGradient_16.Parent = _trigon.UIStroke_11
+_trigon.UIGradient_15.Offset = Vector2.new(0, -0.45)
+_trigon.UIGradient_15.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(53, 54, 61)) }
+_trigon.UIGradient_15.Rotation = -80
+_trigon.UIGradient_15.Parent = _trigon.UIStroke_11
 
 _trigon.ScrollingFrame_1.ScrollingDirection = Enum.ScrollingDirection.Y
 _trigon.ScrollingFrame_1.BorderSizePixel = 0
@@ -2880,8 +2926,8 @@ _trigon.Template_1.Position = UDim2.new(-1.96552e-07, 0, 0.00760826, 0)
 _trigon.Template_1.ZIndex = 150
 _trigon.Template_1.Parent = _trigon.ScrollingFrame_1
 
-_trigon.UICorner_35.CornerRadius = UDim.new(0.12, 0)
-_trigon.UICorner_35.Parent = _trigon.Template_1
+_trigon.UICorner_36.CornerRadius = UDim.new(0.12, 0)
+_trigon.UICorner_36.Parent = _trigon.Template_1
 
 _trigon.UIStroke_12.Color = Color3.fromRGB(211, 211, 211)
 _trigon.UIStroke_12.Thickness = 1.2
@@ -2898,7 +2944,7 @@ _trigon.subtext_1.Position = UDim2.new(0.201503, 0, 0.672085, 0)
 _trigon.subtext_1.Name = "subtext"
 _trigon.subtext_1.AnchorPoint = Vector2.new(0, 0.5)
 _trigon.subtext_1.TextSize = 14
-_trigon.subtext_1.Size = UDim2.new(0.569697, 0, 0.336599, 0)
+_trigon.subtext_1.Size = UDim2.new(0.623825, 0, 0.336599, 0)
 _trigon.subtext_1.ZIndex = 151
 _trigon.subtext_1.TextColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.subtext_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
@@ -2906,6 +2952,9 @@ _trigon.subtext_1.Text = "The best command line script for roblox."
 _trigon.subtext_1.BackgroundTransparency = 1
 _trigon.subtext_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.subtext_1.Parent = _trigon.Template_1
+
+_trigon.UITextSizeConstraint_35.MaxTextSize = 16
+_trigon.UITextSizeConstraint_35.Parent = _trigon.subtext_1
 
 _trigon.logo_1.BorderSizePixel = 0
 _trigon.logo_1.ScaleType = Enum.ScaleType.Fit
@@ -2919,8 +2968,8 @@ _trigon.logo_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.logo_1.ZIndex = 151
 _trigon.logo_1.Parent = _trigon.Template_1
 
-_trigon.UICorner_36.CornerRadius = UDim.new(1, 0)
-_trigon.UICorner_36.Parent = _trigon.logo_1
+_trigon.UICorner_37.CornerRadius = UDim.new(1, 0)
+_trigon.UICorner_37.Parent = _trigon.logo_1
 
 _trigon.UIStroke_13.Color = Color3.fromRGB(45, 45, 45)
 _trigon.UIStroke_13.Thickness = 1.2
@@ -2929,15 +2978,16 @@ _trigon.UIStroke_13.Parent = _trigon.logo_1
 _trigon.execBtn_1.ZIndex = 150
 _trigon.execBtn_1.BorderSizePixel = 0
 _trigon.execBtn_1.AutoButtonColor = false
-_trigon.execBtn_1.Position = UDim2.new(0.847599, 0, 0.169623, 0)
+_trigon.execBtn_1.Position = UDim2.new(0.97, 0, 0.5, 0)
 _trigon.execBtn_1.BackgroundColor3 = Color3.fromRGB(43, 44, 50)
 _trigon.execBtn_1.Selectable = false
 _trigon.execBtn_1.Name = "execBtn"
-_trigon.execBtn_1.Size = UDim2.new(0.117993, 0, 0.655336, 0)
+_trigon.execBtn_1.AnchorPoint = Vector2.new(0.97, 0.5)
+_trigon.execBtn_1.Size = UDim2.new(0.102843, 0, 0.542347, 0)
 _trigon.execBtn_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
 _trigon.execBtn_1.Parent = _trigon.Template_1
 
-_trigon.UICorner_37.Parent = _trigon.execBtn_1
+_trigon.UICorner_38.Parent = _trigon.execBtn_1
 
 _trigon.Icon_14.ImageColor3 = Color3.fromRGB(163, 163, 163)
 _trigon.Icon_14.BorderSizePixel = 0
@@ -2958,25 +3008,30 @@ _trigon.UIStroke_14.Thickness = 1.2
 _trigon.UIStroke_14.Transparency = 0.86
 _trigon.UIStroke_14.Parent = _trigon.execBtn_1
 
-_trigon.Title_15.TextWrapped = true
-_trigon.Title_15.Active = true
-_trigon.Title_15.BorderSizePixel = 0
-_trigon.Title_15.TextScaled = true
-_trigon.Title_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_15.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.Title_15.Position = UDim2.new(0.201503, 0, 0.361377, 0)
-_trigon.Title_15.Name = "Title"
-_trigon.Title_15.AnchorPoint = Vector2.new(0, 0.5)
-_trigon.Title_15.TextSize = 16
-_trigon.Title_15.Size = UDim2.new(0.569697, 0, 0.224399, 0)
-_trigon.Title_15.ZIndex = 151
-_trigon.Title_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_15.Text = "Infinite Yield"
-_trigon.Title_15.BackgroundTransparency = 1
-_trigon.Title_15.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_15.Selectable = true
-_trigon.Title_15.Parent = _trigon.Template_1
+_trigon.Title_16.TextWrapped = true
+_trigon.Title_16.Active = true
+_trigon.Title_16.BorderSizePixel = 0
+_trigon.Title_16.TextScaled = true
+_trigon.Title_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_16.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.Title_16.Position = UDim2.new(0.201503, 0, 0.361377, 0)
+_trigon.Title_16.Name = "Title"
+_trigon.Title_16.AnchorPoint = Vector2.new(0, 0.5)
+_trigon.Title_16.TextSize = 16
+_trigon.Title_16.Size = UDim2.new(0.569697, 0, 0.224399, 0)
+_trigon.Title_16.ZIndex = 151
+_trigon.Title_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_16.Text = "Infinite Yield"
+_trigon.Title_16.BackgroundTransparency = 1
+_trigon.Title_16.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_16.Selectable = true
+_trigon.Title_16.Parent = _trigon.Template_1
+
+_trigon.UIGradient_16.Offset = Vector2.new(0, -0.45)
+_trigon.UIGradient_16.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(53, 54, 61)) }
+_trigon.UIGradient_16.Rotation = -80
+_trigon.UIGradient_16.Parent = _trigon.LocalScriptsFrame
 
 _trigon.ChangelogFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.ChangelogFrame.Size = UDim2.new(0.322046, 0, 0.514213, 0)
@@ -2985,26 +3040,26 @@ _trigon.ChangelogFrame.Name = "ChangelogFrame"
 _trigon.ChangelogFrame.Position = UDim2.new(0.665399, 0, 0.467934, 0)
 _trigon.ChangelogFrame.Parent = _trigon.Home_1
 
-_trigon.Title_16.TextWrapped = true
-_trigon.Title_16.TextScaled = true
-_trigon.Title_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_16.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-_trigon.Title_16.Position = UDim2.new(0.047, 0, 0.037, 0)
-_trigon.Title_16.Name = "Title"
-_trigon.Title_16.TextSize = 14
-_trigon.Title_16.Size = UDim2.new(0.4025, 0, 0.055, 0)
-_trigon.Title_16.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_16.Text = "Changelog"
-_trigon.Title_16.BackgroundTransparency = 1
-_trigon.Title_16.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_16.Parent = _trigon.ChangelogFrame
+_trigon.Title_17.TextWrapped = true
+_trigon.Title_17.TextScaled = true
+_trigon.Title_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_17.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
+_trigon.Title_17.Position = UDim2.new(0.047, 0, 0.037, 0)
+_trigon.Title_17.Name = "Title"
+_trigon.Title_17.TextSize = 14
+_trigon.Title_17.Size = UDim2.new(0.4025, 0, 0.055, 0)
+_trigon.Title_17.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_17.Text = "Changelog"
+_trigon.Title_17.BackgroundTransparency = 1
+_trigon.Title_17.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_17.Parent = _trigon.ChangelogFrame
 
-_trigon.UITextSizeConstraint_33.MaxTextSize = 22
-_trigon.UITextSizeConstraint_33.Parent = _trigon.Title_16
+_trigon.UITextSizeConstraint_36.MaxTextSize = 22
+_trigon.UITextSizeConstraint_36.Parent = _trigon.Title_17
 
-_trigon.UICorner_38.CornerRadius = UDim.new(0, 10)
-_trigon.UICorner_38.Parent = _trigon.ChangelogFrame
+_trigon.UICorner_39.CornerRadius = UDim.new(0, 10)
+_trigon.UICorner_39.Parent = _trigon.ChangelogFrame
 
 _trigon.Subtitle_4.TextWrapped = true
 _trigon.Subtitle_4.TextScaled = true
@@ -3022,8 +3077,8 @@ _trigon.Subtitle_4.BackgroundTransparency = 1
 _trigon.Subtitle_4.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Subtitle_4.Parent = _trigon.ChangelogFrame
 
-_trigon.UITextSizeConstraint_34.MaxTextSize = 15
-_trigon.UITextSizeConstraint_34.Parent = _trigon.Subtitle_4
+_trigon.UITextSizeConstraint_37.MaxTextSize = 15
+_trigon.UITextSizeConstraint_37.Parent = _trigon.Subtitle_4
 
 _trigon.UIGradient_17.Offset = Vector2.new(0, -0.45)
 _trigon.UIGradient_17.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 31, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(58, 59, 67)) }
@@ -3034,7 +3089,7 @@ _trigon.UIStroke_15.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_15.Parent = _trigon.ChangelogFrame
 
 _trigon.UIGradient_18.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_18.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(57, 59, 66)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
+_trigon.UIGradient_18.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 26, 29)), ColorSequenceKeypoint.new(1, Color3.fromRGB(81, 83, 94)) }
 _trigon.UIGradient_18.Rotation = -80
 _trigon.UIGradient_18.Parent = _trigon.UIStroke_15
 
@@ -3045,26 +3100,26 @@ _trigon.LocalPlayerFrame.Name = "LocalPlayerFrame"
 _trigon.LocalPlayerFrame.Position = UDim2.new(0.665399, 0, 0.172261, 0)
 _trigon.LocalPlayerFrame.Parent = _trigon.Home_1
 
-_trigon.Title_17.TextWrapped = true
-_trigon.Title_17.TextScaled = true
-_trigon.Title_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Title_17.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-_trigon.Title_17.Position = UDim2.new(0.05, 0, 0.074, 0)
-_trigon.Title_17.Name = "Title"
-_trigon.Title_17.TextSize = 14
-_trigon.Title_17.Size = UDim2.new(0.4025, 0, 0.102804, 0)
-_trigon.Title_17.TextColor3 = Color3.fromRGB(240, 240, 240)
-_trigon.Title_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Title_17.Text = "Local Player"
-_trigon.Title_17.BackgroundTransparency = 1
-_trigon.Title_17.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.Title_17.Parent = _trigon.LocalPlayerFrame
+_trigon.Title_18.TextWrapped = true
+_trigon.Title_18.TextScaled = true
+_trigon.Title_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Title_18.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
+_trigon.Title_18.Position = UDim2.new(0.05, 0, 0.074, 0)
+_trigon.Title_18.Name = "Title"
+_trigon.Title_18.TextSize = 14
+_trigon.Title_18.Size = UDim2.new(0.4025, 0, 0.102804, 0)
+_trigon.Title_18.TextColor3 = Color3.fromRGB(240, 240, 240)
+_trigon.Title_18.BorderColor3 = Color3.fromRGB(27, 42, 53)
+_trigon.Title_18.Text = "Local Player"
+_trigon.Title_18.BackgroundTransparency = 1
+_trigon.Title_18.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.Title_18.Parent = _trigon.LocalPlayerFrame
 
-_trigon.UITextSizeConstraint_35.MaxTextSize = 22
-_trigon.UITextSizeConstraint_35.Parent = _trigon.Title_17
+_trigon.UITextSizeConstraint_38.MaxTextSize = 22
+_trigon.UITextSizeConstraint_38.Parent = _trigon.Title_18
 
-_trigon.UICorner_39.CornerRadius = UDim.new(0, 10)
-_trigon.UICorner_39.Parent = _trigon.LocalPlayerFrame
+_trigon.UICorner_40.CornerRadius = UDim.new(0, 10)
+_trigon.UICorner_40.Parent = _trigon.LocalPlayerFrame
 
 _trigon.Subtitle_5.TextWrapped = true
 _trigon.Subtitle_5.TextScaled = true
@@ -3082,14 +3137,14 @@ _trigon.Subtitle_5.BackgroundTransparency = 1
 _trigon.Subtitle_5.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.Subtitle_5.Parent = _trigon.LocalPlayerFrame
 
-_trigon.UITextSizeConstraint_36.MaxTextSize = 15
-_trigon.UITextSizeConstraint_36.Parent = _trigon.Subtitle_5
+_trigon.UITextSizeConstraint_39.MaxTextSize = 15
+_trigon.UITextSizeConstraint_39.Parent = _trigon.Subtitle_5
 
 _trigon.UIStroke_16.Color = Color3.fromRGB(255, 255, 255)
 _trigon.UIStroke_16.Parent = _trigon.LocalPlayerFrame
 
 _trigon.UIGradient_19.Offset = Vector2.new(0, -0.45)
-_trigon.UIGradient_19.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(49, 50, 57)), ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 33)) }
+_trigon.UIGradient_19.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 26, 29)), ColorSequenceKeypoint.new(1, Color3.fromRGB(69, 70, 79)) }
 _trigon.UIGradient_19.Rotation = -80
 _trigon.UIGradient_19.Parent = _trigon.UIStroke_16
 
@@ -3109,8 +3164,8 @@ _trigon.Console_1.Name = "Console"
 _trigon.Console_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.Console_1.Parent = _trigon.Tabs
 
-_trigon.UICorner_40.CornerRadius = UDim.new(0.01, 0)
-_trigon.UICorner_40.Parent = _trigon.Console_1
+_trigon.UICorner_41.CornerRadius = UDim.new(0.01, 0)
+_trigon.UICorner_41.Parent = _trigon.Console_1
 
 _trigon.UIStroke_17.Color = Color3.fromRGB(30, 31, 35)
 _trigon.UIStroke_17.Thickness = 2
@@ -3146,8 +3201,8 @@ _trigon.input.Name = "input"
 _trigon.input.Position = UDim2.new(0.999922, 0, 0, 0)
 _trigon.input.Parent = _trigon.bottom_1
 
-_trigon.UICorner_41.CornerRadius = UDim.new(0, 5)
-_trigon.UICorner_41.Parent = _trigon.input
+_trigon.UICorner_42.CornerRadius = UDim.new(0, 5)
+_trigon.UICorner_42.Parent = _trigon.input
 
 _trigon.consoleExecBtn.BorderSizePixel = 0
 _trigon.consoleExecBtn.ScaleType = Enum.ScaleType.Fit
@@ -3235,8 +3290,8 @@ _trigon.Icon_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.Icon_15.BackgroundTransparency = 1
 _trigon.Icon_15.Parent = _trigon.Main_13
 
-_trigon.UICorner_42.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_42.Parent = _trigon.clearConsole
+_trigon.UICorner_43.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_43.Parent = _trigon.clearConsole
 
 _trigon._execClipboard.BorderSizePixel = 0
 _trigon._execClipboard.Position = UDim2.new(0.0896169, 0, 0.5, 0)
@@ -3289,8 +3344,8 @@ _trigon.Icon_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.Icon_16.BackgroundTransparency = 1
 _trigon.Icon_16.Parent = _trigon.Main_14
 
-_trigon.UICorner_43.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_43.Parent = _trigon._execClipboard
+_trigon.UICorner_44.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_44.Parent = _trigon._execClipboard
 
 _trigon.Top_1.BorderSizePixel = 0
 _trigon.Top_1.BackgroundColor3 = Color3.fromRGB(0, 0, 245)
@@ -3402,10 +3457,10 @@ _trigon.UIPadding_27.PaddingRight = UDim.new(0.15, 0)
 _trigon.UIPadding_27.PaddingLeft = UDim.new(0.15, 0)
 _trigon.UIPadding_27.Parent = _trigon.Text
 
-_trigon.UICorner_44.Parent = _trigon.Counter
+_trigon.UICorner_45.Parent = _trigon.Counter
 
-_trigon.UICorner_45.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_45.Parent = _trigon.output
+_trigon.UICorner_46.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_46.Parent = _trigon.output
 
 _trigon.warning.BorderSizePixel = 0
 _trigon.warning.Position = UDim2.new(0.164093, 0, 0.5, 0)
@@ -3501,10 +3556,10 @@ _trigon.UIPadding_30.PaddingRight = UDim.new(0.15, 0)
 _trigon.UIPadding_30.PaddingLeft = UDim.new(0.15, 0)
 _trigon.UIPadding_30.Parent = _trigon.Text_1
 
-_trigon.UICorner_46.Parent = _trigon.Counter_1
+_trigon.UICorner_47.Parent = _trigon.Counter_1
 
-_trigon.UICorner_47.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_47.Parent = _trigon.warning
+_trigon.UICorner_48.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_48.Parent = _trigon.warning
 
 _trigon.error.BorderSizePixel = 0
 _trigon.error.Position = UDim2.new(0.252344, 0, 0.5, 0)
@@ -3600,10 +3655,10 @@ _trigon.UIPadding_33.PaddingRight = UDim.new(0.15, 0)
 _trigon.UIPadding_33.PaddingLeft = UDim.new(0.15, 0)
 _trigon.UIPadding_33.Parent = _trigon.Text_2
 
-_trigon.UICorner_48.Parent = _trigon.Counter_2
+_trigon.UICorner_49.Parent = _trigon.Counter_2
 
-_trigon.UICorner_49.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_49.Parent = _trigon.error
+_trigon.UICorner_50.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_50.Parent = _trigon.error
 
 _trigon.filter.BorderSizePixel = 0
 _trigon.filter.BackgroundColor3 = Color3.fromRGB(154, 154, 171)
@@ -3615,8 +3670,8 @@ _trigon.filter.Name = "filter"
 _trigon.filter.Position = UDim2.new(0.427292, 0, 0.098, 0)
 _trigon.filter.Parent = _trigon.Top_1
 
-_trigon.UICorner_50.CornerRadius = UDim.new(0, 5)
-_trigon.UICorner_50.Parent = _trigon.filter
+_trigon.UICorner_51.CornerRadius = UDim.new(0, 5)
+_trigon.UICorner_51.Parent = _trigon.filter
 
 _trigon.btn_1.ImageColor3 = Color3.fromRGB(154, 154, 154)
 _trigon.btn_1.Interactable = false
@@ -3701,8 +3756,8 @@ _trigon.print.Name = "print"
 _trigon.print.Position = UDim2.new(1, 0, 0, 0)
 _trigon.print.Parent = _trigon.Container_2
 
-_trigon.UICorner_51.CornerRadius = UDim.new(0, 5)
-_trigon.UICorner_51.Parent = _trigon.print
+_trigon.UICorner_52.CornerRadius = UDim.new(0, 5)
+_trigon.UICorner_52.Parent = _trigon.print
 
 _trigon.copyText.BorderSizePixel = 0
 _trigon.copyText.ScaleType = Enum.ScaleType.Fit
@@ -3748,8 +3803,8 @@ _trigon.error_1.Name = "error"
 _trigon.error_1.Position = UDim2.new(4.69996e-08, 0, 0.108947, 0)
 _trigon.error_1.Parent = _trigon.Container_2
 
-_trigon.UICorner_52.CornerRadius = UDim.new(0, 5)
-_trigon.UICorner_52.Parent = _trigon.error_1
+_trigon.UICorner_53.CornerRadius = UDim.new(0, 5)
+_trigon.UICorner_53.Parent = _trigon.error_1
 
 _trigon.copyText_1.BorderSizePixel = 0
 _trigon.copyText_1.ScaleType = Enum.ScaleType.Fit
@@ -3795,8 +3850,8 @@ _trigon.warn.Name = "warn"
 _trigon.warn.Position = UDim2.new(4.69996e-08, 0, 0.217947, 0)
 _trigon.warn.Parent = _trigon.Container_2
 
-_trigon.UICorner_53.CornerRadius = UDim.new(0, 5)
-_trigon.UICorner_53.Parent = _trigon.warn
+_trigon.UICorner_54.CornerRadius = UDim.new(0, 5)
+_trigon.UICorner_54.Parent = _trigon.warn
 
 _trigon.copyText_2.BorderSizePixel = 0
 _trigon.copyText_2.ScaleType = Enum.ScaleType.Fit
@@ -3839,7 +3894,6 @@ _trigon.Scripts_1.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.Scripts_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
 _trigon.Scripts_1.ClipsDescendants = true
 _trigon.Scripts_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
-_trigon.Scripts_1.Visible = false
 _trigon.Scripts_1.Name = "Scripts"
 _trigon.Scripts_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.Scripts_1.Parent = _trigon.Tabs
@@ -3897,89 +3951,58 @@ _trigon.background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.background.BackgroundTransparency = 1
 _trigon.background.Parent = _trigon.item_name
 
-_trigon.UICorner_54.CornerRadius = UDim.new(0.05, 0)
-_trigon.UICorner_54.Parent = _trigon.background
+_trigon.UICorner_55.CornerRadius = UDim.new(0.05, 0)
+_trigon.UICorner_55.Parent = _trigon.background
 
-_trigon.UICorner_55.Parent = _trigon.item_name
+_trigon.UICorner_56.Parent = _trigon.item_name
 
-_trigon.bottom_2.BorderSizePixel = 0
-_trigon.bottom_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.bottom_2.AnchorPoint = Vector2.new(0.5, 1)
-_trigon.bottom_2.Size = UDim2.new(1, 0, 0.561886, 0)
-_trigon.bottom_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.bottom_2.Name = "bottom"
-_trigon.bottom_2.Position = UDim2.new(0.5, 0, 1, 0)
-_trigon.bottom_2.Parent = _trigon.item_name
+_trigon.bottom2.BorderSizePixel = 0
+_trigon.bottom2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.bottom2.AnchorPoint = Vector2.new(0.5, 1)
+_trigon.bottom2.Size = UDim2.new(1, 0, 0.561886, 0)
+_trigon.bottom2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.bottom2.Visible = false
+_trigon.bottom2.Name = "bottom2"
+_trigon.bottom2.Position = UDim2.new(0.5, 0, 1, 0)
+_trigon.bottom2.Parent = _trigon.item_name
 
-_trigon.UIGradient_23.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.346633, 0), NumberSequenceKeypoint.new(0.502494, 0.0875), NumberSequenceKeypoint.new(0.72818, 0.24375), NumberSequenceKeypoint.new(0.845387, 0.5), NumberSequenceKeypoint.new(1, 1) }
-_trigon.UIGradient_23.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 36, 40)), ColorSequenceKeypoint.new(0.359862, Color3.fromRGB(36.8789, 38.8789, 43.2388)), ColorSequenceKeypoint.new(1, Color3.fromRGB(42, 44, 49)) }
-_trigon.UIGradient_23.Parent = _trigon.bottom_2
-
-_trigon.UIListLayout_18.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_18.Padding = UDim.new(0.03, 0)
-_trigon.UIListLayout_18.Parent = _trigon.bottom_2
-
-_trigon.title.TextWrapped = true
-_trigon.title.BorderSizePixel = 0
-_trigon.title.TextScaled = true
-_trigon.title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.title.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.title.Position = UDim2.new(1.179e-07, 0, 2.4199e-07, 0)
-_trigon.title.Name = "title"
-_trigon.title.TextSize = 14
-_trigon.title.Size = UDim2.new(0.979761, 0, 0.325332, 0)
-_trigon.title.TextColor3 = Color3.fromRGB(209, 209, 209)
-_trigon.title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.title.Text = "Title"
-_trigon.title.BackgroundTransparency = 1
-_trigon.title.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.title.Parent = _trigon.bottom_2
-
-_trigon.UITextSizeConstraint_37.MaxTextSize = 34
-_trigon.UITextSizeConstraint_37.Parent = _trigon.title
-
-_trigon.desc.TextWrapped = true
-_trigon.desc.BorderSizePixel = 0
-_trigon.desc.TextScaled = true
-_trigon.desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.desc.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-_trigon.desc.Position = UDim2.new(1.179e-07, 0, 0.355332, 0)
-_trigon.desc.Name = "desc"
-_trigon.desc.TextSize = 15
-_trigon.desc.Size = UDim2.new(0.979761, 0, 0.296158, 0)
-_trigon.desc.TextColor3 = Color3.fromRGB(179, 179, 179)
-_trigon.desc.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.desc.Text = "Descripotion"
-_trigon.desc.BackgroundTransparency = 1
-_trigon.desc.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.desc.Parent = _trigon.bottom_2
-
-_trigon.UITextSizeConstraint_38.MaxTextSize = 18
-_trigon.UITextSizeConstraint_38.Parent = _trigon.desc
+_trigon.UIGradient_23.Offset = Vector2.new(0, 1)
+_trigon.UIGradient_23.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.26808, 0.1125), NumberSequenceKeypoint.new(0.558604, 0.39375), NumberSequenceKeypoint.new(0.756858, 0.46875), NumberSequenceKeypoint.new(0.948878, 0.95625), NumberSequenceKeypoint.new(1, 1) }
+_trigon.UIGradient_23.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(52, 54, 61)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
+_trigon.UIGradient_23.Rotation = -90
+_trigon.UIGradient_23.Parent = _trigon.bottom2
 
 _trigon.UIPadding_39.PaddingTop = UDim.new(0.045, 0)
 _trigon.UIPadding_39.PaddingRight = UDim.new(0.02, 0)
 _trigon.UIPadding_39.PaddingLeft = UDim.new(0.02, 0)
-_trigon.UIPadding_39.Parent = _trigon.bottom_2
+_trigon.UIPadding_39.Parent = _trigon.bottom2
 
-_trigon.user.TextWrapped = true
-_trigon.user.BorderSizePixel = 0
-_trigon.user.TextScaled = true
-_trigon.user.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.user.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-_trigon.user.Position = UDim2.new(5.05284e-08, 0, 0.68149, 0)
-_trigon.user.Name = "user"
-_trigon.user.TextSize = 15
-_trigon.user.Size = UDim2.new(0.9216, 0, 0.296944, 0)
-_trigon.user.TextColor3 = Color3.fromRGB(140, 140, 140)
-_trigon.user.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.user.Text = "@username"
-_trigon.user.BackgroundTransparency = 1
-_trigon.user.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.user.Parent = _trigon.bottom_2
+_trigon.TextButton.TextWrapped = true
+_trigon.TextButton.BorderSizePixel = 0
+_trigon.TextButton.AutoButtonColor = false
+_trigon.TextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.TextButton.TextScaled = true
+_trigon.TextButton.BackgroundColor3 = Color3.fromRGB(52, 54, 61)
+_trigon.TextButton.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextButton.TextSize = 14
+_trigon.TextButton.Size = UDim2.new(0.553903, 0, 0.397528, 0)
+_trigon.TextButton.TextColor3 = Color3.fromRGB(226, 226, 226)
+_trigon.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextButton.Text = "Execute?"
+_trigon.TextButton.BackgroundTransparency = 0.05
+_trigon.TextButton.Parent = _trigon.bottom2
 
-_trigon.UITextSizeConstraint_39.MaxTextSize = 15
-_trigon.UITextSizeConstraint_39.Parent = _trigon.user
+_trigon.UICorner_57.Parent = _trigon.TextButton
+
+_trigon.UITextSizeConstraint_40.MaxTextSize = 22
+_trigon.UITextSizeConstraint_40.Parent = _trigon.TextButton
+
+_trigon.UIStroke_18.Color = Color3.fromRGB(255, 255, 255)
+_trigon.UIStroke_18.Thickness = 2.5
+_trigon.UIStroke_18.Transparency = 0.69
+_trigon.UIStroke_18.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_trigon.UIStroke_18.Parent = _trigon.TextButton
 
 _trigon.top_left.BorderSizePixel = 0
 _trigon.top_left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -3999,8 +4022,8 @@ _trigon.views.Name = "views"
 _trigon.views.Position = UDim2.new(0.308518, 0, 0.16, 0)
 _trigon.views.Parent = _trigon.top_left
 
-_trigon.UICorner_56.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_56.Parent = _trigon.views
+_trigon.UICorner_58.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_58.Parent = _trigon.views
 
 _trigon.icon.ScaleType = Enum.ScaleType.Fit
 _trigon.icon.Position = UDim2.new(-7.1367e-07, 0, 0.00662612, 0)
@@ -4025,21 +4048,21 @@ _trigon.TextLabel_20.BackgroundTransparency = 1
 _trigon.TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_20.Parent = _trigon.views
 
-_trigon.UITextSizeConstraint_40.MaxTextSize = 20
-_trigon.UITextSizeConstraint_40.Parent = _trigon.TextLabel_20
+_trigon.UITextSizeConstraint_41.MaxTextSize = 20
+_trigon.UITextSizeConstraint_41.Parent = _trigon.TextLabel_20
 
 _trigon.UIPadding_40.PaddingLeft = UDim.new(0.07, 0)
 _trigon.UIPadding_40.Parent = _trigon.views
 
-_trigon.UIListLayout_19.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_19.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_19.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_19.Padding = UDim.new(0.06, 0)
-_trigon.UIListLayout_19.Parent = _trigon.views
+_trigon.UIListLayout_18.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_18.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_18.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_18.Padding = UDim.new(0.06, 0)
+_trigon.UIListLayout_18.Parent = _trigon.views
 
-_trigon.UIListLayout_20.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_20.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_20.Parent = _trigon.top_left
+_trigon.UIListLayout_19.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_19.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_19.Parent = _trigon.top_left
 
 _trigon.UIPadding_41.PaddingTop = UDim.new(0.14, 0)
 _trigon.UIPadding_41.PaddingLeft = UDim.new(0.05, 0)
@@ -4055,14 +4078,14 @@ _trigon.date.Name = "date"
 _trigon.date.Position = UDim2.new(0.349415, 0, 0.428299, 0)
 _trigon.date.Parent = _trigon.top_left
 
-_trigon.UICorner_57.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_57.Parent = _trigon.date
+_trigon.UICorner_59.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_59.Parent = _trigon.date
 
-_trigon.UIListLayout_21.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_21.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_21.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_21.Padding = UDim.new(0.06, 0)
-_trigon.UIListLayout_21.Parent = _trigon.date
+_trigon.UIListLayout_20.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_20.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_20.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_20.Padding = UDim.new(0.06, 0)
+_trigon.UIListLayout_20.Parent = _trigon.date
 
 _trigon.icon_1.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_1.Position = UDim2.new(-1.0064e-07, 0, 0.00662612, 0)
@@ -4087,8 +4110,8 @@ _trigon.TextLabel_21.BackgroundTransparency = 1
 _trigon.TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_21.Parent = _trigon.date
 
-_trigon.UITextSizeConstraint_41.MaxTextSize = 22
-_trigon.UITextSizeConstraint_41.Parent = _trigon.TextLabel_21
+_trigon.UITextSizeConstraint_42.MaxTextSize = 22
+_trigon.UITextSizeConstraint_42.Parent = _trigon.TextLabel_21
 
 _trigon.UIPadding_42.PaddingLeft = UDim.new(0.07, 0)
 _trigon.UIPadding_42.Parent = _trigon.date
@@ -4117,15 +4140,15 @@ _trigon.rating.Name = "rating"
 _trigon.rating.Position = UDim2.new(0.674591, 0, 0.15, 0)
 _trigon.rating.Parent = _trigon.top_right
 
-_trigon.UICorner_58.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_58.Parent = _trigon.rating
+_trigon.UICorner_60.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_60.Parent = _trigon.rating
 
-_trigon.UIListLayout_22.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_22.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_22.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_22.Padding = UDim.new(0.06, 0)
-_trigon.UIListLayout_22.Parent = _trigon.rating
+_trigon.UIListLayout_21.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_21.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_21.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_21.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_21.Padding = UDim.new(0.06, 0)
+_trigon.UIListLayout_21.Parent = _trigon.rating
 
 _trigon.icon_2.ImageColor3 = Color3.fromRGB(171, 255, 132)
 _trigon.icon_2.ScaleType = Enum.ScaleType.Fit
@@ -4152,8 +4175,8 @@ _trigon.like_text.BackgroundTransparency = 1
 _trigon.like_text.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.like_text.Parent = _trigon.rating
 
-_trigon.UITextSizeConstraint_42.MaxTextSize = 19
-_trigon.UITextSizeConstraint_42.Parent = _trigon.like_text
+_trigon.UITextSizeConstraint_43.MaxTextSize = 19
+_trigon.UITextSizeConstraint_43.Parent = _trigon.like_text
 
 _trigon.UIPadding_44.Parent = _trigon.rating
 
@@ -4182,8 +4205,8 @@ _trigon.dislike_text.BackgroundTransparency = 1
 _trigon.dislike_text.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.dislike_text.Parent = _trigon.rating
 
-_trigon.UITextSizeConstraint_43.MaxTextSize = 19
-_trigon.UITextSizeConstraint_43.Parent = _trigon.dislike_text
+_trigon.UITextSizeConstraint_44.MaxTextSize = 19
+_trigon.UITextSizeConstraint_44.Parent = _trigon.dislike_text
 
 _trigon.info.BorderSizePixel = 0
 _trigon.info.BackgroundColor3 = Color3.fromRGB(34, 36, 40)
@@ -4195,12 +4218,12 @@ _trigon.info.Name = "info"
 _trigon.info.Position = UDim2.new(0.647082, 0, 0.5, 0)
 _trigon.info.Parent = _trigon.top_right
 
-_trigon.UIListLayout_23.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_23.HorizontalAlignment = Enum.HorizontalAlignment.Right
-_trigon.UIListLayout_23.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_23.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_23.Padding = UDim.new(0.03, 0)
-_trigon.UIListLayout_23.Parent = _trigon.info
+_trigon.UIListLayout_22.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Right
+_trigon.UIListLayout_22.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_22.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_22.Padding = UDim.new(0.03, 0)
+_trigon.UIListLayout_22.Parent = _trigon.info
 
 _trigon.UIPadding_45.Parent = _trigon.info
 
@@ -4213,8 +4236,8 @@ _trigon.paid.Name = "paid"
 _trigon.paid.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.paid.Parent = _trigon.info
 
-_trigon.UICorner_59.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_59.Parent = _trigon.paid
+_trigon.UICorner_61.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_61.Parent = _trigon.paid
 
 _trigon.icon_4.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_4.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4234,8 +4257,8 @@ _trigon.key.Name = "key"
 _trigon.key.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.key.Parent = _trigon.info
 
-_trigon.UICorner_60.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_60.Parent = _trigon.key
+_trigon.UICorner_62.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_62.Parent = _trigon.key
 
 _trigon.icon_5.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_5.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4255,8 +4278,8 @@ _trigon.mobile.Name = "mobile"
 _trigon.mobile.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.mobile.Parent = _trigon.info
 
-_trigon.UICorner_61.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_61.Parent = _trigon.mobile
+_trigon.UICorner_63.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_63.Parent = _trigon.mobile
 
 _trigon.icon_6.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_6.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4267,10 +4290,10 @@ _trigon.icon_6.Size = UDim2.new(0.512846, 0, 1, 0)
 _trigon.icon_6.BackgroundTransparency = 1
 _trigon.icon_6.Parent = _trigon.mobile
 
-_trigon.UIListLayout_24.HorizontalAlignment = Enum.HorizontalAlignment.Right
-_trigon.UIListLayout_24.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_24.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_24.Parent = _trigon.top_right
+_trigon.UIListLayout_23.HorizontalAlignment = Enum.HorizontalAlignment.Right
+_trigon.UIListLayout_23.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_23.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_23.Parent = _trigon.top_right
 
 _trigon.verified.ImageColor3 = Color3.fromRGB(255, 214, 48)
 _trigon.verified.ScaleType = Enum.ScaleType.Fit
@@ -4281,6 +4304,85 @@ _trigon.verified.Image = "rbxassetid://13858831405"
 _trigon.verified.Size = UDim2.new(0.0589637, 0, 0.084879, 0)
 _trigon.verified.BackgroundTransparency = 1
 _trigon.verified.Parent = _trigon.item_name
+
+_trigon.bottom_2.BorderSizePixel = 0
+_trigon.bottom_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.bottom_2.AnchorPoint = Vector2.new(0.5, 1)
+_trigon.bottom_2.Size = UDim2.new(1, 0, 0.561886, 0)
+_trigon.bottom_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.bottom_2.Name = "bottom"
+_trigon.bottom_2.Position = UDim2.new(0.5, 0, 1, 0)
+_trigon.bottom_2.Parent = _trigon.item_name
+
+_trigon.UIGradient_24.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.346633, 0), NumberSequenceKeypoint.new(0.502494, 0.0875), NumberSequenceKeypoint.new(0.72818, 0.24375), NumberSequenceKeypoint.new(0.845387, 0.5), NumberSequenceKeypoint.new(1, 1) }
+_trigon.UIGradient_24.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 36, 40)), ColorSequenceKeypoint.new(0.359862, Color3.fromRGB(36.8789, 38.8789, 43.2388)), ColorSequenceKeypoint.new(1, Color3.fromRGB(42, 44, 49)) }
+_trigon.UIGradient_24.Parent = _trigon.bottom_2
+
+_trigon.UIListLayout_24.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_24.Padding = UDim.new(0.03, 0)
+_trigon.UIListLayout_24.Parent = _trigon.bottom_2
+
+_trigon.title.TextWrapped = true
+_trigon.title.BorderSizePixel = 0
+_trigon.title.TextScaled = true
+_trigon.title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.title.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.title.Position = UDim2.new(1.179e-07, 0, 2.4199e-07, 0)
+_trigon.title.Name = "title"
+_trigon.title.TextSize = 14
+_trigon.title.Size = UDim2.new(0.979761, 0, 0.325332, 0)
+_trigon.title.TextColor3 = Color3.fromRGB(209, 209, 209)
+_trigon.title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.title.Text = "Title"
+_trigon.title.BackgroundTransparency = 1
+_trigon.title.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.title.Parent = _trigon.bottom_2
+
+_trigon.UITextSizeConstraint_45.MaxTextSize = 34
+_trigon.UITextSizeConstraint_45.Parent = _trigon.title
+
+_trigon.desc.TextWrapped = true
+_trigon.desc.BorderSizePixel = 0
+_trigon.desc.TextScaled = true
+_trigon.desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.desc.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+_trigon.desc.Position = UDim2.new(1.179e-07, 0, 0.355332, 0)
+_trigon.desc.Name = "desc"
+_trigon.desc.TextSize = 15
+_trigon.desc.Size = UDim2.new(0.979761, 0, 0.296158, 0)
+_trigon.desc.TextColor3 = Color3.fromRGB(179, 179, 179)
+_trigon.desc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.desc.Text = "Descripotion"
+_trigon.desc.BackgroundTransparency = 1
+_trigon.desc.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.desc.Parent = _trigon.bottom_2
+
+_trigon.UITextSizeConstraint_46.MaxTextSize = 18
+_trigon.UITextSizeConstraint_46.Parent = _trigon.desc
+
+_trigon.UIPadding_46.PaddingTop = UDim.new(0.045, 0)
+_trigon.UIPadding_46.PaddingRight = UDim.new(0.02, 0)
+_trigon.UIPadding_46.PaddingLeft = UDim.new(0.02, 0)
+_trigon.UIPadding_46.Parent = _trigon.bottom_2
+
+_trigon.user.TextWrapped = true
+_trigon.user.BorderSizePixel = 0
+_trigon.user.TextScaled = true
+_trigon.user.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.user.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+_trigon.user.Position = UDim2.new(5.05284e-08, 0, 0.68149, 0)
+_trigon.user.Name = "user"
+_trigon.user.TextSize = 15
+_trigon.user.Size = UDim2.new(0.9216, 0, 0.296944, 0)
+_trigon.user.TextColor3 = Color3.fromRGB(140, 140, 140)
+_trigon.user.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.user.Text = "@username"
+_trigon.user.BackgroundTransparency = 1
+_trigon.user.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.user.Parent = _trigon.bottom_2
+
+_trigon.UITextSizeConstraint_47.MaxTextSize = 15
+_trigon.UITextSizeConstraint_47.Parent = _trigon.user
 
 _trigon.pagination.BorderSizePixel = 0
 _trigon.pagination.BackgroundColor3 = Color3.fromRGB(30, 32, 36)
@@ -4299,8 +4401,8 @@ _trigon.UIListLayout_25.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_25.Padding = UDim.new(0.023, 0)
 _trigon.UIListLayout_25.Parent = _trigon.pagination
 
-_trigon.UICorner_62.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_62.Parent = _trigon.pagination
+_trigon.UICorner_64.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_64.Parent = _trigon.pagination
 
 _trigon.first.BorderSizePixel = 0
 _trigon.first.AutoButtonColor = false
@@ -4312,8 +4414,8 @@ _trigon.first.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.first.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.first.Parent = _trigon.pagination
 
-_trigon.UICorner_63.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_63.Parent = _trigon.first
+_trigon.UICorner_65.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_65.Parent = _trigon.first
 
 _trigon.icon_7.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_7.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4334,8 +4436,8 @@ _trigon.prev.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.prev.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.prev.Parent = _trigon.pagination
 
-_trigon.UICorner_64.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_64.Parent = _trigon.prev
+_trigon.UICorner_66.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_66.Parent = _trigon.prev
 
 _trigon.icon_8.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_8.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4356,13 +4458,13 @@ _trigon.page_num.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.page_num.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.page_num.Parent = _trigon.pagination
 
-_trigon.UIStroke_18.Enabled = false
-_trigon.UIStroke_18.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_18.Thickness = 3
-_trigon.UIStroke_18.Parent = _trigon.page_num
+_trigon.UIStroke_19.Enabled = false
+_trigon.UIStroke_19.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_19.Thickness = 3
+_trigon.UIStroke_19.Parent = _trigon.page_num
 
-_trigon.UICorner_65.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_65.Parent = _trigon.page_num
+_trigon.UICorner_67.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_67.Parent = _trigon.page_num
 
 _trigon.txt.TextWrapped = true
 _trigon.txt.BorderSizePixel = 0
@@ -4378,8 +4480,8 @@ _trigon.txt.Text = "1"
 _trigon.txt.BackgroundTransparency = 1
 _trigon.txt.Parent = _trigon.page_num
 
-_trigon.UITextSizeConstraint_44.MaxTextSize = 41
-_trigon.UITextSizeConstraint_44.Parent = _trigon.txt
+_trigon.UITextSizeConstraint_48.MaxTextSize = 41
+_trigon.UITextSizeConstraint_48.Parent = _trigon.txt
 
 _trigon.Top_2.BorderSizePixel = 0
 _trigon.Top_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -4407,8 +4509,8 @@ _trigon.UIListLayout_26.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_26.Padding = UDim.new(0.013, 0)
 _trigon.UIListLayout_26.Parent = _trigon.SearchFrame
 
-_trigon.UIPadding_46.PaddingLeft = UDim.new(0.014, 0)
-_trigon.UIPadding_46.Parent = _trigon.SearchFrame
+_trigon.UIPadding_47.PaddingLeft = UDim.new(0.014, 0)
+_trigon.UIPadding_47.Parent = _trigon.SearchFrame
 
 _trigon.sicon.ScaleType = Enum.ScaleType.Fit
 _trigon.sicon.ImageTransparency = 0.39
@@ -4439,11 +4541,11 @@ _trigon.TextBox.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextBox.ClearTextOnFocus = false
 _trigon.TextBox.Parent = _trigon.SearchFrame
 
-_trigon.UIPadding_47.PaddingLeft = UDim.new(0.001, 0)
-_trigon.UIPadding_47.Parent = _trigon.TextBox
+_trigon.UIPadding_48.PaddingLeft = UDim.new(0.001, 0)
+_trigon.UIPadding_48.Parent = _trigon.TextBox
 
-_trigon.UITextSizeConstraint_45.MaxTextSize = 17
-_trigon.UITextSizeConstraint_45.Parent = _trigon.TextBox
+_trigon.UITextSizeConstraint_49.MaxTextSize = 17
+_trigon.UITextSizeConstraint_49.Parent = _trigon.TextBox
 
 _trigon.searchBtn.BorderSizePixel = 0
 _trigon.searchBtn.AutoButtonColor = false
@@ -4475,14 +4577,14 @@ _trigon.TextLabel_22.Text = "Search"
 _trigon.TextLabel_22.BackgroundTransparency = 1
 _trigon.TextLabel_22.Parent = _trigon.searchBtn
 
-_trigon.UITextSizeConstraint_46.MaxTextSize = 15
-_trigon.UITextSizeConstraint_46.Parent = _trigon.TextLabel_22
+_trigon.UITextSizeConstraint_50.MaxTextSize = 15
+_trigon.UITextSizeConstraint_50.Parent = _trigon.TextLabel_22
 
-_trigon.UICorner_66.CornerRadius = UDim.new(0.17, 0)
-_trigon.UICorner_66.Parent = _trigon.searchBtn
+_trigon.UICorner_68.CornerRadius = UDim.new(0.17, 0)
+_trigon.UICorner_68.Parent = _trigon.searchBtn
 
-_trigon.UICorner_67.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_67.Parent = _trigon.SearchFrame
+_trigon.UICorner_69.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_69.Parent = _trigon.SearchFrame
 
 _trigon.FilterBtn.BorderSizePixel = 0
 _trigon.FilterBtn.Position = UDim2.new(0.851051, 0, 0.5, 0)
@@ -4521,11 +4623,11 @@ _trigon.TextLabel_23.BackgroundTransparency = 1
 _trigon.TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_23.Parent = _trigon.FilterBtn
 
-_trigon.UITextSizeConstraint_47.MaxTextSize = 22
-_trigon.UITextSizeConstraint_47.Parent = _trigon.TextLabel_23
+_trigon.UITextSizeConstraint_51.MaxTextSize = 22
+_trigon.UITextSizeConstraint_51.Parent = _trigon.TextLabel_23
 
-_trigon.UICorner_68.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_68.Parent = _trigon.FilterBtn
+_trigon.UICorner_70.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_70.Parent = _trigon.FilterBtn
 
 _trigon.UIListLayout_28.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_28.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -4534,8 +4636,8 @@ _trigon.UIListLayout_28.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_28.Padding = UDim.new(0.04, 0)
 _trigon.UIListLayout_28.Parent = _trigon.FilterBtn
 
-_trigon.UICorner_69.CornerRadius = UDim.new(0.01, 0)
-_trigon.UICorner_69.Parent = _trigon.Scripts_1
+_trigon.UICorner_71.CornerRadius = UDim.new(0.01, 0)
+_trigon.UICorner_71.Parent = _trigon.Scripts_1
 
 _trigon.FilterFrame.BorderSizePixel = 0
 _trigon.FilterFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4549,9 +4651,9 @@ _trigon.FilterFrame.Position = UDim2.new(0.50063, 0, 0.5, 0)
 _trigon.FilterFrame.ZIndex = 2
 _trigon.FilterFrame.Parent = _trigon.Scripts_1
 
-_trigon.UIGradient_24.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.100998, 0.7375), NumberSequenceKeypoint.new(0.201995, 0.51875), NumberSequenceKeypoint.new(0.350374, 0.25625), NumberSequenceKeypoint.new(0.498753, 0), NumberSequenceKeypoint.new(1, 0) }
-_trigon.UIGradient_24.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(39, 41, 46)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
-_trigon.UIGradient_24.Parent = _trigon.FilterFrame
+_trigon.UIGradient_25.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.100998, 0.7375), NumberSequenceKeypoint.new(0.201995, 0.51875), NumberSequenceKeypoint.new(0.350374, 0.25625), NumberSequenceKeypoint.new(0.498753, 0), NumberSequenceKeypoint.new(1, 0) }
+_trigon.UIGradient_25.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(39, 41, 46)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
+_trigon.UIGradient_25.Parent = _trigon.FilterFrame
 
 _trigon.FilterPanel.Active = true
 _trigon.FilterPanel.BorderSizePixel = 0
@@ -4564,11 +4666,11 @@ _trigon.FilterPanel.Position = UDim2.new(1, 0, 0.5, 0)
 _trigon.FilterPanel.ZIndex = 3
 _trigon.FilterPanel.Parent = _trigon.FilterFrame
 
-_trigon.UIStroke_19.Color = Color3.fromRGB(30, 32, 36)
-_trigon.UIStroke_19.Thickness = 5
-_trigon.UIStroke_19.Transparency = 0.68
-_trigon.UIStroke_19.LineJoinMode = Enum.LineJoinMode.Miter
-_trigon.UIStroke_19.Parent = _trigon.FilterPanel
+_trigon.UIStroke_20.Color = Color3.fromRGB(30, 32, 36)
+_trigon.UIStroke_20.Thickness = 5
+_trigon.UIStroke_20.Transparency = 0.68
+_trigon.UIStroke_20.LineJoinMode = Enum.LineJoinMode.Miter
+_trigon.UIStroke_20.Parent = _trigon.FilterPanel
 
 _trigon.Frame.BorderSizePixel = 0
 _trigon.Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4664,20 +4766,20 @@ _trigon.circle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle.BackgroundTransparency = 1
 _trigon.circle.Parent = _trigon.NoKey
 
-_trigon.UIPadding_48.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_48.Parent = _trigon.NoKey
+_trigon.UIPadding_49.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_49.Parent = _trigon.NoKey
 
-_trigon.UICorner_70.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_70.Parent = _trigon.NoKey
+_trigon.UICorner_72.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_72.Parent = _trigon.NoKey
 
 _trigon.UIListLayout_31.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_31.Padding = UDim.new(0.008, 0)
 _trigon.UIListLayout_31.Parent = _trigon.FilterPanel
 
-_trigon.UIPadding_49.PaddingTop = UDim.new(0.01, 0)
-_trigon.UIPadding_49.PaddingRight = UDim.new(0.043, 0)
-_trigon.UIPadding_49.PaddingLeft = UDim.new(0.04, 0)
-_trigon.UIPadding_49.Parent = _trigon.FilterPanel
+_trigon.UIPadding_50.PaddingTop = UDim.new(0.01, 0)
+_trigon.UIPadding_50.PaddingRight = UDim.new(0.043, 0)
+_trigon.UIPadding_50.PaddingLeft = UDim.new(0.04, 0)
+_trigon.UIPadding_50.Parent = _trigon.FilterPanel
 
 _trigon.MobileOnly.BorderSizePixel = 0
 _trigon.MobileOnly.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4734,11 +4836,11 @@ _trigon.circle_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_1.BackgroundTransparency = 1
 _trigon.circle_1.Parent = _trigon.MobileOnly
 
-_trigon.UIPadding_50.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_50.Parent = _trigon.MobileOnly
+_trigon.UIPadding_51.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_51.Parent = _trigon.MobileOnly
 
-_trigon.UICorner_71.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_71.Parent = _trigon.MobileOnly
+_trigon.UICorner_73.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_73.Parent = _trigon.MobileOnly
 
 _trigon.NotPaid.BorderSizePixel = 0
 _trigon.NotPaid.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4795,11 +4897,11 @@ _trigon.circle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_2.BackgroundTransparency = 1
 _trigon.circle_2.Parent = _trigon.NotPaid
 
-_trigon.UIPadding_51.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_51.Parent = _trigon.NotPaid
+_trigon.UIPadding_52.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_52.Parent = _trigon.NotPaid
 
-_trigon.UICorner_72.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_72.Parent = _trigon.NotPaid
+_trigon.UICorner_74.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_74.Parent = _trigon.NotPaid
 
 _trigon.NotPatched.BorderSizePixel = 0
 _trigon.NotPatched.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4856,11 +4958,11 @@ _trigon.circle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_3.BackgroundTransparency = 1
 _trigon.circle_3.Parent = _trigon.NotPatched
 
-_trigon.UIPadding_52.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_52.Parent = _trigon.NotPatched
+_trigon.UIPadding_53.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_53.Parent = _trigon.NotPatched
 
-_trigon.UICorner_73.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_73.Parent = _trigon.NotPatched
+_trigon.UICorner_75.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_75.Parent = _trigon.NotPatched
 
 _trigon.Veried.BorderSizePixel = 0
 _trigon.Veried.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4917,11 +5019,11 @@ _trigon.circle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_4.BackgroundTransparency = 1
 _trigon.circle_4.Parent = _trigon.Veried
 
-_trigon.UIPadding_53.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_53.Parent = _trigon.Veried
+_trigon.UIPadding_54.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_54.Parent = _trigon.Veried
 
-_trigon.UICorner_74.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_74.Parent = _trigon.Veried
+_trigon.UICorner_76.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_76.Parent = _trigon.Veried
 
 _trigon.OrderBy.Active = true
 _trigon.OrderBy.BorderSizePixel = 0
@@ -4951,8 +5053,8 @@ _trigon.UIListLayout_37.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_37.Padding = UDim.new(0.05, 0)
 _trigon.UIListLayout_37.Parent = _trigon.title_1
 
-_trigon.UIPadding_54.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_54.Parent = _trigon.title_1
+_trigon.UIPadding_55.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_55.Parent = _trigon.title_1
 
 _trigon.icon_15.BorderSizePixel = 0
 _trigon.icon_15.ScaleType = Enum.ScaleType.Fit
@@ -4998,12 +5100,12 @@ _trigon.date_1.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.date_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.date_1.Parent = _trigon.Frame_1
 
-_trigon.UIStroke_20.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_20.Thickness = 3
-_trigon.UIStroke_20.Parent = _trigon.date_1
+_trigon.UIStroke_21.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_21.Thickness = 3
+_trigon.UIStroke_21.Parent = _trigon.date_1
 
-_trigon.UICorner_75.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_75.Parent = _trigon.date_1
+_trigon.UICorner_77.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_77.Parent = _trigon.date_1
 
 _trigon.icon_16.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_16.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5029,13 +5131,13 @@ _trigon.views_1.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.views_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.views_1.Parent = _trigon.Frame_1
 
-_trigon.UICorner_76.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_76.Parent = _trigon.views_1
+_trigon.UICorner_78.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_78.Parent = _trigon.views_1
 
-_trigon.UIStroke_21.Enabled = false
-_trigon.UIStroke_21.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_21.Thickness = 3
-_trigon.UIStroke_21.Parent = _trigon.views_1
+_trigon.UIStroke_22.Enabled = false
+_trigon.UIStroke_22.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_22.Thickness = 3
+_trigon.UIStroke_22.Parent = _trigon.views_1
 
 _trigon.icon_17.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_17.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5054,13 +5156,13 @@ _trigon.likes.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.likes.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.likes.Parent = _trigon.Frame_1
 
-_trigon.UICorner_77.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_77.Parent = _trigon.likes
+_trigon.UICorner_79.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_79.Parent = _trigon.likes
 
-_trigon.UIStroke_22.Enabled = false
-_trigon.UIStroke_22.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_22.Thickness = 3
-_trigon.UIStroke_22.Parent = _trigon.likes
+_trigon.UIStroke_23.Enabled = false
+_trigon.UIStroke_23.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_23.Thickness = 3
+_trigon.UIStroke_23.Parent = _trigon.likes
 
 _trigon.icon_18.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_18.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5079,13 +5181,13 @@ _trigon.dislikes.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.dislikes.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.dislikes.Parent = _trigon.Frame_1
 
-_trigon.UICorner_78.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_78.Parent = _trigon.dislikes
+_trigon.UICorner_80.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_80.Parent = _trigon.dislikes
 
-_trigon.UIStroke_23.Enabled = false
-_trigon.UIStroke_23.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_23.Thickness = 3
-_trigon.UIStroke_23.Parent = _trigon.dislikes
+_trigon.UIStroke_24.Enabled = false
+_trigon.UIStroke_24.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_24.Thickness = 3
+_trigon.UIStroke_24.Parent = _trigon.dislikes
 
 _trigon.icon_19.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_19.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5096,7 +5198,7 @@ _trigon.icon_19.Size = UDim2.new(0.438497, 0, 0.462458, 0)
 _trigon.icon_19.BackgroundTransparency = 1
 _trigon.icon_19.Parent = _trigon.dislikes
 
-_trigon.UIPadding_55.Parent = _trigon.Frame_1
+_trigon.UIPadding_56.Parent = _trigon.Frame_1
 
 _trigon.Frame2.BorderSizePixel = 0
 _trigon.Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5117,12 +5219,12 @@ _trigon.ASC.Size = UDim2.new(0.41, 0, 0.8, 0)
 _trigon.ASC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.ASC.Parent = _trigon.Frame2
 
-_trigon.UIStroke_24.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_24.Thickness = 3
-_trigon.UIStroke_24.Parent = _trigon.ASC
+_trigon.UIStroke_25.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_25.Thickness = 3
+_trigon.UIStroke_25.Parent = _trigon.ASC
 
-_trigon.UICorner_79.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_79.Parent = _trigon.ASC
+_trigon.UICorner_81.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_81.Parent = _trigon.ASC
 
 _trigon.text.TextWrapped = true
 _trigon.text.BorderSizePixel = 0
@@ -5156,13 +5258,13 @@ _trigon.DESC.Size = UDim2.new(0.407083, 0, 0.8, 0)
 _trigon.DESC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.DESC.Parent = _trigon.Frame2
 
-_trigon.UICorner_80.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_80.Parent = _trigon.DESC
+_trigon.UICorner_82.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_82.Parent = _trigon.DESC
 
-_trigon.UIStroke_25.Enabled = false
-_trigon.UIStroke_25.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_25.Thickness = 3
-_trigon.UIStroke_25.Parent = _trigon.DESC
+_trigon.UIStroke_26.Enabled = false
+_trigon.UIStroke_26.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_26.Thickness = 3
+_trigon.UIStroke_26.Parent = _trigon.DESC
 
 _trigon.text_1.TextWrapped = true
 _trigon.text_1.BorderSizePixel = 0
@@ -5180,7 +5282,7 @@ _trigon.text_1.Text = "Desc"
 _trigon.text_1.BackgroundTransparency = 1
 _trigon.text_1.Parent = _trigon.DESC
 
-_trigon.UIPadding_56.Parent = _trigon.Frame2
+_trigon.UIPadding_57.Parent = _trigon.Frame2
 
 _trigon.empty.BorderSizePixel = 0
 _trigon.empty.Position = UDim2.new(0.5, 0, 0.859441, 0)
@@ -5218,8 +5320,8 @@ _trigon.TextLabel_26.Text = "Apply Settings"
 _trigon.TextLabel_26.BackgroundTransparency = 1
 _trigon.TextLabel_26.Parent = _trigon.Save
 
-_trigon.UICorner_81.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_81.Parent = _trigon.Save
+_trigon.UICorner_83.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_83.Parent = _trigon.Save
 
 _trigon.LFrame.BorderSizePixel = 0
 _trigon.LFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
@@ -5247,29 +5349,30 @@ _trigon.TextLabel_27.Text = "Loading..."
 _trigon.TextLabel_27.BackgroundTransparency = 1
 _trigon.TextLabel_27.Parent = _trigon.LFrame
 
-_trigon.UITextSizeConstraint_48.MaxTextSize = 27
-_trigon.UITextSizeConstraint_48.Parent = _trigon.TextLabel_27
+_trigon.UITextSizeConstraint_52.MaxTextSize = 27
+_trigon.UITextSizeConstraint_52.Parent = _trigon.TextLabel_27
 
 _trigon.FileManager_1.BorderSizePixel = 0
 _trigon.FileManager_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.FileManager_1.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.FileManager_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
 _trigon.FileManager_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
+_trigon.FileManager_1.Visible = false
 _trigon.FileManager_1.Name = "FileManager"
 _trigon.FileManager_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.FileManager_1.Parent = _trigon.Tabs
 
-_trigon.UICorner_82.CornerRadius = UDim.new(0.01, 0)
-_trigon.UICorner_82.Parent = _trigon.FileManager_1
+_trigon.UICorner_84.CornerRadius = UDim.new(0.01, 0)
+_trigon.UICorner_84.Parent = _trigon.FileManager_1
 
-_trigon.UIStroke_26.Color = Color3.fromRGB(30, 31, 35)
-_trigon.UIStroke_26.Thickness = 2
-_trigon.UIStroke_26.Transparency = 0.77
-_trigon.UIStroke_26.Parent = _trigon.FileManager_1
+_trigon.UIStroke_27.Color = Color3.fromRGB(30, 31, 35)
+_trigon.UIStroke_27.Thickness = 2
+_trigon.UIStroke_27.Transparency = 0.77
+_trigon.UIStroke_27.Parent = _trigon.FileManager_1
 
-_trigon.UIGradient_25.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(42, 44, 49)), ColorSequenceKeypoint.new(1, Color3.fromRGB(34, 36, 40)) }
-_trigon.UIGradient_25.Rotation = 53
-_trigon.UIGradient_25.Parent = _trigon.FileManager_1
+_trigon.UIGradient_26.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(42, 44, 49)), ColorSequenceKeypoint.new(1, Color3.fromRGB(34, 36, 40)) }
+_trigon.UIGradient_26.Rotation = 53
+_trigon.UIGradient_26.Parent = _trigon.FileManager_1
 
 _trigon.bottom_3.BorderSizePixel = 0
 _trigon.bottom_3.BackgroundColor3 = Color3.fromRGB(0, 0, 245)
@@ -5298,8 +5401,8 @@ _trigon.execFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.execFile.BackgroundTransparency = 0.95
 _trigon.execFile.Parent = _trigon.bottom_3
 
-_trigon.UICorner_83.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_83.Parent = _trigon.execFile
+_trigon.UICorner_85.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_85.Parent = _trigon.execFile
 
 _trigon.Main_18.BorderSizePixel = 0
 _trigon.Main_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5312,9 +5415,9 @@ _trigon.Main_18.Name = "Main"
 _trigon.Main_18.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_18.Parent = _trigon.execFile
 
-_trigon.UIPadding_57.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_57.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_57.Parent = _trigon.Main_18
+_trigon.UIPadding_58.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_58.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_58.Parent = _trigon.Main_18
 
 _trigon.UIListLayout_41.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_41.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -5356,7 +5459,7 @@ _trigon.TextLabel_28.BackgroundTransparency = 1
 _trigon.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_28.Parent = _trigon.Main_18
 
-_trigon.UIPadding_58.Parent = _trigon.TextLabel_28
+_trigon.UIPadding_59.Parent = _trigon.TextLabel_28
 
 _trigon.newFile.BorderSizePixel = 0
 _trigon.newFile.Position = UDim2.new(0.31446, 0, 0.5, 0)
@@ -5368,8 +5471,8 @@ _trigon.newFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.newFile.BackgroundTransparency = 0.95
 _trigon.newFile.Parent = _trigon.bottom_3
 
-_trigon.UICorner_84.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_84.Parent = _trigon.newFile
+_trigon.UICorner_86.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_86.Parent = _trigon.newFile
 
 _trigon.Main_19.BorderSizePixel = 0
 _trigon.Main_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5382,9 +5485,9 @@ _trigon.Main_19.Name = "Main"
 _trigon.Main_19.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_19.Parent = _trigon.newFile
 
-_trigon.UIPadding_59.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_59.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_59.Parent = _trigon.Main_19
+_trigon.UIPadding_60.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_60.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_60.Parent = _trigon.Main_19
 
 _trigon.UIListLayout_42.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_42.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -5426,7 +5529,7 @@ _trigon.TextLabel_29.BackgroundTransparency = 1
 _trigon.TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_29.Parent = _trigon.Main_19
 
-_trigon.UIPadding_60.Parent = _trigon.TextLabel_29
+_trigon.UIPadding_61.Parent = _trigon.TextLabel_29
 
 _trigon.newFolder.BorderSizePixel = 0
 _trigon.newFolder.Position = UDim2.new(0.509899, 0, 0.5, 0)
@@ -5438,8 +5541,8 @@ _trigon.newFolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.newFolder.BackgroundTransparency = 0.95
 _trigon.newFolder.Parent = _trigon.bottom_3
 
-_trigon.UICorner_85.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_85.Parent = _trigon.newFolder
+_trigon.UICorner_87.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_87.Parent = _trigon.newFolder
 
 _trigon.Main_20.BorderSizePixel = 0
 _trigon.Main_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5452,9 +5555,9 @@ _trigon.Main_20.Name = "Main"
 _trigon.Main_20.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_20.Parent = _trigon.newFolder
 
-_trigon.UIPadding_61.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_61.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_61.Parent = _trigon.Main_20
+_trigon.UIPadding_62.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_62.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_62.Parent = _trigon.Main_20
 
 _trigon.UIListLayout_43.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_43.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -5496,7 +5599,7 @@ _trigon.TextLabel_30.BackgroundTransparency = 1
 _trigon.TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_30.Parent = _trigon.Main_20
 
-_trigon.UIPadding_62.Parent = _trigon.TextLabel_30
+_trigon.UIPadding_63.Parent = _trigon.TextLabel_30
 
 _trigon.DeleteFF.BorderSizePixel = 0
 _trigon.DeleteFF.Position = UDim2.new(0.701825, 0, 0.5, 0)
@@ -5508,8 +5611,8 @@ _trigon.DeleteFF.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.DeleteFF.BackgroundTransparency = 0.95
 _trigon.DeleteFF.Parent = _trigon.bottom_3
 
-_trigon.UICorner_86.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_86.Parent = _trigon.DeleteFF
+_trigon.UICorner_88.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_88.Parent = _trigon.DeleteFF
 
 _trigon.Main_21.BorderSizePixel = 0
 _trigon.Main_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5522,9 +5625,9 @@ _trigon.Main_21.Name = "Main"
 _trigon.Main_21.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_21.Parent = _trigon.DeleteFF
 
-_trigon.UIPadding_63.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_63.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_63.Parent = _trigon.Main_21
+_trigon.UIPadding_64.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_64.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_64.Parent = _trigon.Main_21
 
 _trigon.UIListLayout_44.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_44.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -5566,7 +5669,7 @@ _trigon.TextLabel_31.BackgroundTransparency = 1
 _trigon.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_31.Parent = _trigon.Main_21
 
-_trigon.UIPadding_64.Parent = _trigon.TextLabel_31
+_trigon.UIPadding_65.Parent = _trigon.TextLabel_31
 
 _trigon.preview_btn.Interactable = false
 _trigon.preview_btn.BorderSizePixel = 0
@@ -5579,8 +5682,8 @@ _trigon.preview_btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.preview_btn.BackgroundTransparency = 0.95
 _trigon.preview_btn.Parent = _trigon.bottom_3
 
-_trigon.UICorner_87.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_87.Parent = _trigon.preview_btn
+_trigon.UICorner_89.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_89.Parent = _trigon.preview_btn
 
 _trigon.Main_22.BorderSizePixel = 0
 _trigon.Main_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5593,9 +5696,9 @@ _trigon.Main_22.Name = "Main"
 _trigon.Main_22.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_22.Parent = _trigon.preview_btn
 
-_trigon.UIPadding_65.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_65.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_65.Parent = _trigon.Main_22
+_trigon.UIPadding_66.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_66.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_66.Parent = _trigon.Main_22
 
 _trigon.UIListLayout_45.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_45.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -5637,7 +5740,7 @@ _trigon.TextLabel_32.BackgroundTransparency = 1
 _trigon.TextLabel_32.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_32.Parent = _trigon.Main_22
 
-_trigon.UIPadding_66.Parent = _trigon.TextLabel_32
+_trigon.UIPadding_67.Parent = _trigon.TextLabel_32
 
 _trigon.Section.Name = "Section"
 _trigon.Section.Parent = _trigon.FileManager_1
@@ -5658,18 +5761,18 @@ _trigon.Container_4.Name = "Container"
 _trigon.Container_4.Position = UDim2.new(0.591823, 0, 0.501136, 0)
 _trigon.Container_4.Parent = _trigon.Section
 
-_trigon.UICorner_88.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_88.Parent = _trigon.Container_4
+_trigon.UICorner_90.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_90.Parent = _trigon.Container_4
 
 _trigon.UIGridLayout_1.CellPadding = UDim2.new(0.015, 0, 0.018, 0)
 _trigon.UIGridLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIGridLayout_1.CellSize = UDim2.new(0.3, 0, 0.08, 0)
 _trigon.UIGridLayout_1.Parent = _trigon.Container_4
 
-_trigon.UIPadding_67.PaddingTop = UDim.new(0.01, 0)
-_trigon.UIPadding_67.PaddingRight = UDim.new(0.001, 0)
-_trigon.UIPadding_67.PaddingLeft = UDim.new(0.022, 0)
-_trigon.UIPadding_67.Parent = _trigon.Container_4
+_trigon.UIPadding_68.PaddingTop = UDim.new(0.01, 0)
+_trigon.UIPadding_68.PaddingRight = UDim.new(0.001, 0)
+_trigon.UIPadding_68.PaddingLeft = UDim.new(0.022, 0)
+_trigon.UIPadding_68.Parent = _trigon.Container_4
 
 _trigon.template.BorderSizePixel = 0
 _trigon.template.Position = UDim2.new(7.07989e-08, 0, 0.00271541, 0)
@@ -5682,8 +5785,8 @@ _trigon.template.Active = false
 _trigon.template.BackgroundTransparency = 0.9
 _trigon.template.Parent = _trigon.Container_4
 
-_trigon.UICorner_89.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_89.Parent = _trigon.template
+_trigon.UICorner_91.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_91.Parent = _trigon.template
 
 _trigon.Icon_25.ImageColor3 = Color3.fromRGB(223, 223, 223)
 _trigon.Icon_25.BorderSizePixel = 0
@@ -5731,13 +5834,13 @@ _trigon.treeviewFrame.Position = UDim2.new(0.0967093, 0, 0.53898, 0)
 _trigon.treeviewFrame.SelectionGroup = true
 _trigon.treeviewFrame.Parent = _trigon.Section
 
-_trigon.UICorner_90.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_90.Parent = _trigon.treeviewFrame
+_trigon.UICorner_92.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_92.Parent = _trigon.treeviewFrame
 
-_trigon.UIPadding_68.PaddingTop = UDim.new(0.02, 0)
-_trigon.UIPadding_68.PaddingRight = UDim.new(0.025, 0)
-_trigon.UIPadding_68.PaddingLeft = UDim.new(0.1, 0)
-_trigon.UIPadding_68.Parent = _trigon.treeviewFrame
+_trigon.UIPadding_69.PaddingTop = UDim.new(0.02, 0)
+_trigon.UIPadding_69.PaddingRight = UDim.new(0.025, 0)
+_trigon.UIPadding_69.PaddingLeft = UDim.new(0.1, 0)
+_trigon.UIPadding_69.Parent = _trigon.treeviewFrame
 
 _trigon.treeview_Studio.Enabled = false
 _trigon.treeview_Studio.Disabled = true
@@ -5758,8 +5861,8 @@ _trigon.top.Position = UDim2.new(0.591823, 0, 0.0585036, 0)
 _trigon.top.SelectionGroup = true
 _trigon.top.Parent = _trigon.Section
 
-_trigon.UICorner_91.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_91.Parent = _trigon.top
+_trigon.UICorner_93.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_93.Parent = _trigon.top
 
 _trigon.reload.BorderSizePixel = 0
 _trigon.reload.Position = UDim2.new(0.00986859, 0, 0.5, 0)
@@ -5772,8 +5875,8 @@ _trigon.reload.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.reload.BackgroundTransparency = 0.94
 _trigon.reload.Parent = _trigon.top
 
-_trigon.UICorner_92.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_92.Parent = _trigon.reload
+_trigon.UICorner_94.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_94.Parent = _trigon.reload
 
 _trigon.Icon_26.ImageColor3 = Color3.fromRGB(223, 223, 223)
 _trigon.Icon_26.BorderSizePixel = 0
@@ -5804,8 +5907,8 @@ _trigon.TextLabel_34.BackgroundTransparency = 1
 _trigon.TextLabel_34.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_34.Parent = _trigon.top
 
-_trigon.UITextSizeConstraint_49.MaxTextSize = 20
-_trigon.UITextSizeConstraint_49.Parent = _trigon.TextLabel_34
+_trigon.UITextSizeConstraint_53.MaxTextSize = 20
+_trigon.UITextSizeConstraint_53.Parent = _trigon.TextLabel_34
 
 _trigon.back.BorderSizePixel = 0
 _trigon.back.Position = UDim2.new(0.0595362, 0, 0.5, 0)
@@ -5818,8 +5921,8 @@ _trigon.back.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.back.BackgroundTransparency = 0.94
 _trigon.back.Parent = _trigon.top
 
-_trigon.UICorner_93.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_93.Parent = _trigon.back
+_trigon.UICorner_95.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_95.Parent = _trigon.back
 
 _trigon.Icon_27.ImageColor3 = Color3.fromRGB(223, 223, 223)
 _trigon.Icon_27.BorderSizePixel = 0
@@ -5852,8 +5955,8 @@ _trigon.top_dir.Position = UDim2.new(0.0969462, 0, 0.0650783, 0)
 _trigon.top_dir.SelectionGroup = true
 _trigon.top_dir.Parent = _trigon.Section
 
-_trigon.UICorner_94.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_94.Parent = _trigon.top_dir
+_trigon.UICorner_96.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_96.Parent = _trigon.top_dir
 
 _trigon.TextLabel_35.TextWrapped = true
 _trigon.TextLabel_35.BorderSizePixel = 0
@@ -5871,8 +5974,8 @@ _trigon.TextLabel_35.BackgroundTransparency = 1
 _trigon.TextLabel_35.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_35.Parent = _trigon.top_dir
 
-_trigon.UITextSizeConstraint_50.MaxTextSize = 20
-_trigon.UITextSizeConstraint_50.Parent = _trigon.TextLabel_35
+_trigon.UITextSizeConstraint_54.MaxTextSize = 20
+_trigon.UITextSizeConstraint_54.Parent = _trigon.TextLabel_35
 
 _trigon.FMPopupFrame.BorderSizePixel = 0
 _trigon.FMPopupFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
@@ -5936,11 +6039,11 @@ _trigon.content.BackgroundTransparency = 1
 _trigon.content.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.content.Parent = _trigon.Frame_2
 
-_trigon.UITextSizeConstraint_51.MaxTextSize = 36
-_trigon.UITextSizeConstraint_51.Parent = _trigon.content
+_trigon.UITextSizeConstraint_55.MaxTextSize = 36
+_trigon.UITextSizeConstraint_55.Parent = _trigon.content
 
-_trigon.UICorner_95.CornerRadius = UDim.new(0.04, 0)
-_trigon.UICorner_95.Parent = _trigon.Container_5
+_trigon.UICorner_97.CornerRadius = UDim.new(0.04, 0)
+_trigon.UICorner_97.Parent = _trigon.Container_5
 
 _trigon.text_2.TextWrapped = true
 _trigon.text_2.BorderSizePixel = 0
@@ -5958,8 +6061,8 @@ _trigon.text_2.Text = "You are about to create a new folder in /Workspace/hydrox
 _trigon.text_2.BackgroundTransparency = 1
 _trigon.text_2.Parent = _trigon.Container_5
 
-_trigon.UITextSizeConstraint_52.MaxTextSize = 26
-_trigon.UITextSizeConstraint_52.Parent = _trigon.text_2
+_trigon.UITextSizeConstraint_56.MaxTextSize = 26
+_trigon.UITextSizeConstraint_56.Parent = _trigon.text_2
 
 _trigon.cancel.BorderSizePixel = 0
 _trigon.cancel.Position = UDim2.new(0.8, 0, 0.9, 0)
@@ -5971,8 +6074,8 @@ _trigon.cancel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.cancel.BackgroundTransparency = 0.95
 _trigon.cancel.Parent = _trigon.Container_5
 
-_trigon.UICorner_96.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_96.Parent = _trigon.cancel
+_trigon.UICorner_98.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_98.Parent = _trigon.cancel
 
 _trigon.Main_23.BorderSizePixel = 0
 _trigon.Main_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5985,9 +6088,9 @@ _trigon.Main_23.Name = "Main"
 _trigon.Main_23.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_23.Parent = _trigon.cancel
 
-_trigon.UIPadding_69.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_69.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_69.Parent = _trigon.Main_23
+_trigon.UIPadding_70.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_70.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_70.Parent = _trigon.Main_23
 
 _trigon.UIListLayout_47.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_47.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -6029,7 +6132,7 @@ _trigon.TextLabel_36.BackgroundTransparency = 1
 _trigon.TextLabel_36.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_36.Parent = _trigon.Main_23
 
-_trigon.UIPadding_70.Parent = _trigon.TextLabel_36
+_trigon.UIPadding_71.Parent = _trigon.TextLabel_36
 
 _trigon.surebtn.BorderSizePixel = 0
 _trigon.surebtn.Position = UDim2.new(0.2, 0, 0.9, 0)
@@ -6041,8 +6144,8 @@ _trigon.surebtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.surebtn.BackgroundTransparency = 0.95
 _trigon.surebtn.Parent = _trigon.Container_5
 
-_trigon.UICorner_97.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_97.Parent = _trigon.surebtn
+_trigon.UICorner_99.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_99.Parent = _trigon.surebtn
 
 _trigon.Main_24.BorderSizePixel = 0
 _trigon.Main_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -6055,9 +6158,9 @@ _trigon.Main_24.Name = "Main"
 _trigon.Main_24.Position = UDim2.new(0.502747, 0, 0.5, 0)
 _trigon.Main_24.Parent = _trigon.surebtn
 
-_trigon.UIPadding_71.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_71.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_71.Parent = _trigon.Main_24
+_trigon.UIPadding_72.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_72.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_72.Parent = _trigon.Main_24
 
 _trigon.UIListLayout_48.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_48.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -6099,7 +6202,7 @@ _trigon.TextLabel_37.BackgroundTransparency = 1
 _trigon.TextLabel_37.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_37.Parent = _trigon.Main_24
 
-_trigon.UIPadding_72.Parent = _trigon.TextLabel_37
+_trigon.UIPadding_73.Parent = _trigon.TextLabel_37
 
 _trigon.textInput.TextWrapped = true
 _trigon.textInput.BorderSizePixel = 0
@@ -6122,8 +6225,8 @@ _trigon.textInput.Name = "textInput"
 _trigon.textInput.ClearTextOnFocus = false
 _trigon.textInput.Parent = _trigon.Container_5
 
-_trigon.UITextSizeConstraint_53.MaxTextSize = 26
-_trigon.UITextSizeConstraint_53.Parent = _trigon.textInput
+_trigon.UITextSizeConstraint_57.MaxTextSize = 26
+_trigon.UITextSizeConstraint_57.Parent = _trigon.textInput
 
 _trigon.FMPopup.Name = "FMPopup"
 _trigon.FMPopup.Parent = _trigon.FMPopupFrame
@@ -6143,7 +6246,7 @@ _trigon.SwipeLeft.BackgroundTransparency = 1
 _trigon.SwipeLeft.Parent = _trigon.Container
 
 _trigon.bar.BorderSizePixel = 0
-_trigon.bar.BackgroundColor3 = Color3.fromRGB(28, 29, 33)
+_trigon.bar.BackgroundColor3 = Color3.fromRGB(125, 129, 147)
 _trigon.bar.AnchorPoint = Vector2.new(0.7, 0.5)
 _trigon.bar.Size = UDim2.new(0.23, 0, 0.907687, 0)
 _trigon.bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -6152,8 +6255,8 @@ _trigon.bar.Name = "bar"
 _trigon.bar.Position = UDim2.new(0.644442, 0, 0.5, 0)
 _trigon.bar.Parent = _trigon.SwipeLeft
 
-_trigon.UICorner_98.CornerRadius = UDim.new(10, 0)
-_trigon.UICorner_98.Parent = _trigon.bar
+_trigon.UICorner_100.CornerRadius = UDim.new(10, 0)
+_trigon.UICorner_100.Parent = _trigon.bar
 
 _trigon.SwipeRight.BorderSizePixel = 0
 _trigon.SwipeRight.Position = UDim2.new(0, 0, 0.5, 0)
@@ -6177,8 +6280,8 @@ _trigon.bar_1.Name = "bar"
 _trigon.bar_1.Position = UDim2.new(0.4, 0, 0.5, 0)
 _trigon.bar_1.Parent = _trigon.SwipeRight
 
-_trigon.UICorner_99.CornerRadius = UDim.new(10, 0)
-_trigon.UICorner_99.Parent = _trigon.bar_1
+_trigon.UICorner_101.CornerRadius = UDim.new(10, 0)
+_trigon.UICorner_101.Parent = _trigon.bar_1
 
 _trigon.consoleController.Name = "consoleController"
 _trigon.consoleController.Parent = _trigon.Trigon
@@ -6724,7 +6827,6 @@ task.spawn(function()
 		for _, file in ipairs(regular_files) do
 			createItem(file.name, false, file.path)
 		end
-		TreeView:refresh()
 	end
 	
 	local function goBack()
@@ -6795,7 +6897,6 @@ task.spawn(function()
 	--//Treeview Directory
 	--//////////////////////
 	
-	script.Parent.treeviewFrame.ClipsDescendants
 	
 	local RIGHT_ARROW = "rbxassetid://13846733049"
 	local DOWN_ARROW = "rbxassetid://13846726669"
@@ -7097,7 +7198,7 @@ task.spawn(function()
 	_trigon.TopbarGUI.ResetOnSpawn = false
 	_trigon.TopbarGUI.Name = "TopbarGUI"
 	_trigon.TopbarGUI.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-	_trigon.TopbarGUI.Parent = game.Players.LocalPlayer.PlayerGui
+	_trigon.TopbarGUI.Parent = gethui()
 	
 	_trigon.TopbarFrame.BorderSizePixel = 0
 	_trigon.TopbarFrame.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
@@ -7315,9 +7416,12 @@ task.spawn(function()
 	
 	if Settings.FT then 
 		Settings.FT = false
+		saveSettings()
 	else
 		_G.toggleMain()
+		print("toggleMain called")
 	end
+	
 	
 	TextService = game:GetService("TextService")
 	LogService = game:GetService("LogService")
@@ -7610,7 +7714,7 @@ task.spawn(function()
 	setActive(buttons[1])
 	
 	
-	print(script.Name.." Loaded")
+	
 end)
 
 task.spawn(function()
@@ -7649,17 +7753,24 @@ task.spawn(function()
 	            "script": "print('Partner Script 1')"
 	        },
 	        {
-	            "name": "Partner2",
-	            "title": "Partner Title 2",
-	            "subtext": "Description for Partner 2.",
-	            "background": "rbxassetid://18977471959",
+	            "name": "zen_hub",
+	            "title": "Zen Hub",
+	            "subtext": "Zen Hub – Simplifying Scripts, Amplifying Fun.",
+	            "background": "rbxassetid://80411943564388",
 	            "script": "print('Partner Script 2')"
+	        },
+	        {
+	            "name": "hyper_hub",
+	            "title": "Hyper Hub | V2",
+	            "subtext": "Blox Fruit & Blade Ball script, the best at your disposal!",
+	            "background": "rbxassetid://94629608472312",
+	            "script": "print('Partner Script 1')"
 	        }
 	    ]
 	}
 	]]
 	
-	--[[Note: Trigon home page uses some of the parts from an open source Sirius Client Interface, so all credit goes to them <3]]
+	--[[Note: Trigon home page elements uses some of the parts from an open source Sirius Client Interface, so all credit goes to them <3]]
 	
 	local HttpService = game:GetService("HttpService")
 	local Players = game:GetService("Players")
@@ -7672,6 +7783,9 @@ task.spawn(function()
 	local LocalScriptsFrame = home.LocalScriptsFrame.ScrollingFrame
 	local templateBtnL = LocalScriptsFrame.Template
 	local templateBtnP = partneredFrame.Template
+	
+	local copyServer = home.Server.JobId
+	local rejoin = home.Server.rejoin
 	
 	--userinfo
 	userinfo = home.userinfo
@@ -7811,7 +7925,11 @@ task.spawn(function()
 	end
 	
 	
-	print(script.Name.." Loaded")
+	rejoin.Activated:Connect(function()
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+	end)
+	
+	
 end)
 
 task.spawn(function()
@@ -7905,7 +8023,7 @@ task.spawn(function()
 		newFrame.Name = "ScriptFrame" .. tabCount
 		newFrame.Visible = true
 	
-		setupFrame(newFrame, "print('Hello from Script" .. tabCount .. "')\n\n")
+		setupFrame(newFrame, "print('Hello World! - Script" .. tabCount .. "')\n\n")
 	
 		newTab.Activated:Connect(function()
 			setActiveTab(newTab, newFrame)
@@ -7937,9 +8055,8 @@ task.spawn(function()
 		if selectedFrame then
 			local scriptEditor = scriptEditors[selectedFrame]
 			if scriptEditor then
-				local textCode = "print('PASTED!!')" --getclipboard()
+				local textCode = getclipboard()
 				scriptEditor:LoadStringAsync(textCode)
-				print("Pasted new code into", selectedFrame.Name)
 			else
 				print("No script editor found for the selected frame.")
 			end
@@ -7954,8 +8071,7 @@ task.spawn(function()
 			local scriptEditor = scriptEditors[selectedFrame]
 			if scriptEditor then
 				local rawSource = scriptEditor.RawSource
-				--print(rawSource)
-				--executecode(rawSource)
+				executecode(rawSource)
 			end
 		else
 			print("No tab has been selected.")
@@ -7963,7 +8079,7 @@ task.spawn(function()
 	end)
 	
 	btnExecClipboard.Activated:Connect(function()
-		---executecode(getclipboard())
+		executecode(getclipboard())
 	end)
 	
 	btnAddNewLine.Activated:Connect(function()
@@ -7979,8 +8095,7 @@ task.spawn(function()
 		end
 	end)
 	
-	
-	print(script.Name.." Loaded")
+	createTab()
 end)
 
 task.spawn(function()
@@ -7989,7 +8104,8 @@ task.spawn(function()
 	HttpService = game:GetService("HttpService")
 	MP = game:GetService('MarketplaceService')
 	ReplicatedStorage = game:GetService("ReplicatedStorage")
-	
+	TweenService = game:GetService("TweenService")
+	UserInputService = game:GetService("UserInputService")
 	
 	Trigon = script.Parent.Parent
 	ScriptsBtn = Trigon.Canvas.Container.Main.Nav.Scripts
@@ -8047,7 +8163,7 @@ task.spawn(function()
 	_G.clearScriptContainer = function()
 		task.wait(0.5)
 		for _, child in ipairs(scripts.Container:GetChildren()) do
-			if child ~= item and child:IsA("GuiObject") then
+			if child ~= item and child:IsA("GuiObject") and child.Name ~= "item_name" then
 				child:Destroy()
 			end
 		end
@@ -8066,6 +8182,61 @@ task.spawn(function()
 		end
 		return current
 	end
+	
+	
+	local function animateItem(item)
+		local bottom = item.bottom
+		local bottom2 = item.bottom2
+		local gradient = bottom2.UIGradient
+		local button = bottom2.TextButton
+	
+		local fadeOutInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+		local fadeOutTween = TweenService:Create(bottom, fadeOutInfo, {BackgroundTransparency = 1})
+		fadeOutTween:Play()
+		
+		bottom.Visible = false
+		bottom2.Visible = true
+		local gradientInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+		local gradientTween = TweenService:Create(gradient, gradientInfo, {Offset = Vector2.new(0, 0)})
+		gradientTween:Play()
+	
+		button.BackgroundTransparency = 1
+		button.TextTransparency = 1
+		local fadeInInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+		local fadeInTween = TweenService:Create(button, fadeInInfo, {BackgroundTransparency = 0.05, TextTransparency = 0})
+		fadeInTween:Play()
+	end
+	
+	local function setupItemAnimation(item)
+		item.MouseEnter:Connect(function()
+			animateItem(item)
+		end)
+	
+		item.TouchTap:Connect(function()
+			animateItem(item)
+		end)
+	
+		local function resetAnimation()
+			item.bottom.BackgroundTransparency = 0
+			item.bottom.Visible = true
+			item.bottom2.Visible = false
+			item.bottom2.UIGradient.Offset = Vector2.new(0, 1)
+			item.bottom2.TextButton.BackgroundTransparency = 1
+			item.bottom2.TextButton.TextTransparency = 1
+		end
+	
+		item.MouseLeave:Connect(resetAnimation)
+		UserInputService.TouchEnded:Connect(function(touch, gameProcessed)
+			if not gameProcessed then
+				local touchPosition = touch.Position
+				local guiObjects = game.Players.LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(touchPosition.X, touchPosition.Y)
+				if not table.find(guiObjects, item) then
+					resetAnimation()
+				end
+			end
+		end)
+	end
+	
 	
 	_G.load_rs_scripts = function(params)
 		_G.clearScriptContainer()
@@ -8089,7 +8260,11 @@ task.spawn(function()
 			newItem.top_left.date.TextLabel.Text = formatDate(safeGet(script, "date") or "Unknown date")
 			newItem.top_right.rating.like_text.Text = safeGet(script, "likes") or "0"
 			newItem.top_right.rating.dislike_text.Text = safeGet(script, "dislikes") or "0"
-	
+			newItem.bottom2.TextButton.Activated:Connect(function()
+				local raw = "loadstring(game:HttpGet('https://rscripts.net/raw/"..safeGet(script, "download").."',true))()" or "warn('No script found! - rscript hub')"
+				executecode(raw)
+			end)
+			setupItemAnimation(newItem)
 			pcall(function()
 				local placeId = tonumber(safeGet(script, "placeId"))
 				if placeId then
@@ -8099,19 +8274,28 @@ task.spawn(function()
 					end
 				end
 			end)
-	
-			if not safeGet(script, "user", 1, "verified") then newItem.verified:Destroy() end
-			if not safeGet(script, "mobileReady") then newItem.top_right.info.mobile:Destroy() end
-			if not safeGet(script, "keySystem") then newItem.top_right.info.key:Destroy() end
-			if not safeGet(script, "paid") then newItem.top_right.info.paid:Destroy() end
+			
+			if not safeGet(script, "user", 1, "verified") then newItem.verified.Visible = false end
+			if not safeGet(script, "mobileReady") then newItem.top_right.info.mobile.Visible = false end
+			if not safeGet(script, "keySystem") then newItem.top_right.info.key.Visible = false end
+			if not safeGet(script, "paid") then newItem.top_right.info.paid.Visible = false end
 		end
 		Top.Interactable = true
 		LFrame.Visible = false
 	end
 	
+	firsttimeload= true
 	ScriptsBtn.Activated:Connect(function()
-		_G.load_rs_scripts(_G.current_Url)
+		if firsttimeload then
+			firsttimeload= false
+			_G.load_rs_scripts(_G.current_Url)
+		end
 	end)
+	
+	
+	
+	
+	
 	
 	
 	
