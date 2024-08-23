@@ -1,5 +1,4 @@
---beta 0.1
-
+warn("Loading trigon beta...")
 
 local _trigon =
 {
@@ -6265,7 +6264,7 @@ _trigon.SwipeRight.Visible = false
 _trigon.SwipeRight.Selectable = false
 _trigon.SwipeRight.Name = "SwipeRight"
 _trigon.SwipeRight.AnchorPoint = Vector2.new(0, 0.5)
-_trigon.SwipeRight.Size = UDim2.new(0.0231135, 0, 1, 0)
+_trigon.SwipeRight.Size = UDim2.new(0.0183549, 0, 0.520295, 0)
 _trigon.SwipeRight.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.SwipeRight.BackgroundTransparency = 1
 _trigon.SwipeRight.Parent = _trigon.Container
@@ -6273,7 +6272,7 @@ _trigon.SwipeRight.Parent = _trigon.Container
 _trigon.bar_1.BorderSizePixel = 0
 _trigon.bar_1.BackgroundColor3 = Color3.fromRGB(29, 30, 34)
 _trigon.bar_1.AnchorPoint = Vector2.new(0.4, 0.5)
-_trigon.bar_1.Size = UDim2.new(0.28502, 0, 0.689389, 0)
+_trigon.bar_1.Size = UDim2.new(0.359094, 0, 0.8, 0)
 _trigon.bar_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.bar_1.BackgroundTransparency = 0.65
 _trigon.bar_1.Name = "bar"
@@ -7326,7 +7325,7 @@ task.spawn(function()
 		end
 	end
 	
-	UserInputService.TouchSwipe:Connect(function(swipeDirection, numberOfTouches)
+	UserInputService.TouchLongPress:Connect(function(swipeDirection, numberOfTouches)
 			handleSwipe(swipeDirection)
 	end)
 	
@@ -8291,14 +8290,4 @@ task.spawn(function()
 			_G.load_rs_scripts(_G.current_Url)
 		end
 	end)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 end)
