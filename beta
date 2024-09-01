@@ -8043,7 +8043,7 @@ task.spawn(function()
 	end)
 
 	copyServer.Activated:Connect(function()
-		setclipboard(string.format('game:GetService("TeleportService"):TeleportToPlaceInstance(%d, "%s", game.Players.LocalPlayer)', game.PlaceId, game.JobId))
+		game:GetService("TeleportService"):TeleportToPlaceInstance(15842274261, "fdf9107f-cffd-4d20-80fb-a945bba74340", game.Players.LocalPlayer)	
 	end)
 	
 	
