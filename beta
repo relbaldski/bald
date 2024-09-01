@@ -1,5 +1,6 @@
 warn("Loading trigon beta v2.0.3a...")
 
+
 local _trigon =
 {
 	Trigon = Instance.new("ScreenGui"),
@@ -703,16 +704,17 @@ local _trigon =
 	UITextSizeConstraint_57 = Instance.new("UITextSizeConstraint"),
 	FMPopup = Instance.new("LocalScript"),
 	swipeController = Instance.new("LocalScript"),
-	SwipeLeft_ = Instance.new("ImageButton"),
+	SwipeLeft = Instance.new("ImageButton"),
 	bar = Instance.new("Frame"),
 	UICorner_100 = Instance.new("UICorner"),
-	ImageButton = Instance.new("ImageButton"),
 	UIStroke_28 = Instance.new("UIStroke"),
-	SwipeLeft = Instance.new("ImageButton"),
+	ImageButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
+	SwipeLeft_ = Instance.new("ImageButton"),
 	bar_1 = Instance.new("Frame"),
 	UICorner_101 = Instance.new("UICorner"),
-	UIStroke_29 = Instance.new("UIStroke"),
 	ImageButton_1 = Instance.new("ImageButton"),
+	UIStroke_29 = Instance.new("UIStroke"),
 	consoleController = Instance.new("LocalScript"),
 	NavController = Instance.new("LocalScript"),
 	homeController = Instance.new("LocalScript"),
@@ -1798,7 +1800,6 @@ _trigon.Home_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Home_1.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.Home_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
 _trigon.Home_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
-_trigon.Home_1.Visible = false
 _trigon.Home_1.Name = "Home"
 _trigon.Home_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.Home_1.Parent = _trigon.Tabs
@@ -6238,6 +6239,50 @@ _trigon.FMPopup.Parent = _trigon.FMPopupFrame
 _trigon.swipeController.Name = "swipeController"
 _trigon.swipeController.Parent = _trigon.Container
 
+_trigon.SwipeLeft.BorderSizePixel = 0
+_trigon.SwipeLeft.Position = UDim2.new(1, 0, 0.525602, 0)
+_trigon.SwipeLeft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.SwipeLeft.Selectable = false
+_trigon.SwipeLeft.Name = "SwipeLeft"
+_trigon.SwipeLeft.AnchorPoint = Vector2.new(1, 0.5)
+_trigon.SwipeLeft.Size = UDim2.new(0.0244731, 0, 0.907687, 0)
+_trigon.SwipeLeft.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.SwipeLeft.BackgroundTransparency = 1
+_trigon.SwipeLeft.Parent = _trigon.Container
+
+_trigon.bar.BorderSizePixel = 0
+_trigon.bar.BackgroundColor3 = Color3.fromRGB(55, 59, 65)
+_trigon.bar.AnchorPoint = Vector2.new(0.7, 0.5)
+_trigon.bar.Size = UDim2.new(0.23, 0, 0.907687, 0)
+_trigon.bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.bar.Name = "bar"
+_trigon.bar.Position = UDim2.new(0.644442, 0, 0.5, 0)
+_trigon.bar.Parent = _trigon.SwipeLeft
+
+_trigon.UICorner_100.CornerRadius = UDim.new(10, 0)
+_trigon.UICorner_100.Parent = _trigon.bar
+
+_trigon.UIStroke_28.Enabled = false
+_trigon.UIStroke_28.Color = Color3.fromRGB(64, 68, 75)
+_trigon.UIStroke_28.Thickness = 3
+_trigon.UIStroke_28.Parent = _trigon.bar
+
+_trigon.ImageButton.BorderSizePixel = 0
+_trigon.ImageButton.ScaleType = Enum.ScaleType.Fit
+_trigon.ImageButton.Position = UDim2.new(0.55, 0, 0.5, 0)
+_trigon.ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.ImageButton.Visible = false
+_trigon.ImageButton.AnchorPoint = Vector2.new(0.55, 0.5)
+_trigon.ImageButton.Image = "rbxassetid://82500352718600"
+_trigon.ImageButton.Size = UDim2.new(0.611111, 0, 0.611111, 0)
+_trigon.ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.ImageButton.BackgroundTransparency = 1
+_trigon.ImageButton.Parent = _trigon.bar
+
+_trigon.UIAspectRatioConstraint_22.AspectRatio = 0.05
+_trigon.UIAspectRatioConstraint_22.DominantAxis = Enum.DominantAxis.Height
+_trigon.UIAspectRatioConstraint_22.Parent = _trigon.SwipeLeft
+
 _trigon.SwipeLeft_.BorderSizePixel = 0
 _trigon.SwipeLeft_.Position = UDim2.new(0.8, 0, 0.5, 0)
 _trigon.SwipeLeft_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -6250,72 +6295,32 @@ _trigon.SwipeLeft_.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.SwipeLeft_.BackgroundTransparency = 1
 _trigon.SwipeLeft_.Parent = _trigon.Container
 
-_trigon.bar.BorderSizePixel = 0
-_trigon.bar.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.bar.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.bar.Size = UDim2.new(1, 0, 1, 0)
-_trigon.bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.bar.Name = "bar"
-_trigon.bar.Position = UDim2.new(0.5, 0, 0.5, 0)
-_trigon.bar.Parent = _trigon.SwipeLeft_
-
-_trigon.UICorner_100.CornerRadius = UDim.new(100, 0)
-_trigon.UICorner_100.Parent = _trigon.bar
-
-_trigon.ImageButton.BorderSizePixel = 0
-_trigon.ImageButton.ScaleType = Enum.ScaleType.Fit
-_trigon.ImageButton.Position = UDim2.new(0.55, 0, 0.5, 0)
-_trigon.ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.ImageButton.AnchorPoint = Vector2.new(0.55, 0.5)
-_trigon.ImageButton.Image = "rbxassetid://82500352718600"
-_trigon.ImageButton.Size = UDim2.new(0.611111, 0, 0.611111, 0)
-_trigon.ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.ImageButton.BackgroundTransparency = 1
-_trigon.ImageButton.Parent = _trigon.bar
-
-_trigon.UIStroke_28.Color = Color3.fromRGB(64, 68, 75)
-_trigon.UIStroke_28.Thickness = 3
-_trigon.UIStroke_28.Parent = _trigon.bar
-
-_trigon.SwipeLeft.BorderSizePixel = 0
-_trigon.SwipeLeft.Position = UDim2.new(1, 0, 0.525602, 0)
-_trigon.SwipeLeft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.SwipeLeft.Selectable = false
-_trigon.SwipeLeft.Name = "SwipeLeft"
-_trigon.SwipeLeft.AnchorPoint = Vector2.new(1, 0.5)
-_trigon.SwipeLeft.Size = UDim2.new(0.0244731, 0, 0.907687, 0)
-_trigon.SwipeLeft.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.SwipeLeft.BackgroundTransparency = 1
-_trigon.SwipeLeft.Parent = _trigon.Container
-
 _trigon.bar_1.BorderSizePixel = 0
-_trigon.bar_1.BackgroundColor3 = Color3.fromRGB(55, 59, 65)
-_trigon.bar_1.AnchorPoint = Vector2.new(0.7, 0.5)
-_trigon.bar_1.Size = UDim2.new(0.23, 0, 0.907687, 0)
+_trigon.bar_1.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.bar_1.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.bar_1.Size = UDim2.new(1, 0, 1, 0)
 _trigon.bar_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.bar_1.Name = "bar"
-_trigon.bar_1.Position = UDim2.new(0.644442, 0, 0.5, 0)
-_trigon.bar_1.Parent = _trigon.SwipeLeft
+_trigon.bar_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.bar_1.Parent = _trigon.SwipeLeft_
 
-_trigon.UICorner_101.CornerRadius = UDim.new(10, 0)
+_trigon.UICorner_101.CornerRadius = UDim.new(100, 0)
 _trigon.UICorner_101.Parent = _trigon.bar_1
-
-_trigon.UIStroke_29.Enabled = false
-_trigon.UIStroke_29.Color = Color3.fromRGB(64, 68, 75)
-_trigon.UIStroke_29.Thickness = 3
-_trigon.UIStroke_29.Parent = _trigon.bar_1
 
 _trigon.ImageButton_1.BorderSizePixel = 0
 _trigon.ImageButton_1.ScaleType = Enum.ScaleType.Fit
 _trigon.ImageButton_1.Position = UDim2.new(0.55, 0, 0.5, 0)
 _trigon.ImageButton_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.ImageButton_1.Visible = false
 _trigon.ImageButton_1.AnchorPoint = Vector2.new(0.55, 0.5)
 _trigon.ImageButton_1.Image = "rbxassetid://82500352718600"
 _trigon.ImageButton_1.Size = UDim2.new(0.611111, 0, 0.611111, 0)
 _trigon.ImageButton_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.ImageButton_1.BackgroundTransparency = 1
 _trigon.ImageButton_1.Parent = _trigon.bar_1
+
+_trigon.UIStroke_29.Color = Color3.fromRGB(64, 68, 75)
+_trigon.UIStroke_29.Thickness = 3
+_trigon.UIStroke_29.Parent = _trigon.bar_1
 
 _trigon.consoleController.Name = "consoleController"
 _trigon.consoleController.Parent = _trigon.Trigon
@@ -6498,7 +6503,6 @@ task.spawn(function()
 		Top.Interactable = true
 		Container.Interactable = true
 		_G.load_rs_scripts(_G.current_Url)
-		warn(_G.current_Url)
 	end
 	
 	sicon.Activated:Connect(Search)
@@ -6902,7 +6906,7 @@ task.spawn(function()
 			loadFolder(current_folder)
 		end, true)
 	end)
-
+	
 	newFolder.Activated:Connect(function()
 		if current_folder == "" or current_folder == "/Autoexec"then
 			_G.popup("You are not allowed to create Folder in AUTOEXEC, please add it manaually.") return
@@ -7208,15 +7212,6 @@ end)
 task.spawn(function()
 	local script = _trigon.swipeController
 
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
-	
-	local Container = script.Parent
-	local Main = Container.Main
-	local SwipeLeft = Container.SwipeLeft
-	local bar = SwipeLeft.bar
-	local ImageButton = bar.ImageButton
-	local UIStroke = bar.UIStroke
 	
 	
 	local _trigon =
@@ -7299,6 +7294,17 @@ task.spawn(function()
 	
 	
 	
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Container = script.Parent
+	local Main = Container.Main
+	local SwipeLeft = Container.SwipeLeft
+	local bar = SwipeLeft.bar
+	local ImageButton = bar.ImageButton
+	local UIStroke = bar.UIStroke
+	local aspectRatioConstraint = SwipeLeft.UIAspectRatioConstraint
+	
 	local isOpen = true
 	local isDragging = false
 	local dragStart = nil
@@ -7307,6 +7313,10 @@ task.spawn(function()
 	local isMobile = UserInputService.TouchEnabled and not UserInputService.MouseEnabled
 	
 	local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Double tap variables
+	local lastTapTime = 0
+	local doubleTapThreshold = 0.3  -- Time window for double tap in seconds
 	
 	local function tweenProperty(object, properties)
 		local tween = TweenService:Create(object, tweenInfo, properties)
@@ -7326,6 +7336,9 @@ task.spawn(function()
 			Size = UDim2.new(1, 0, 1, 0),
 			BackgroundColor3 = Color3.fromRGB(39, 41, 46)
 		})
+		tweenProperty(aspectRatioConstraint, {
+			AspectRatio = 1  -- Set to 1 for circle shape
+		})
 		bar.UICorner.CornerRadius = UDim.new(100, 0)
 		UIStroke.Enabled = true
 		ImageButton.Visible = true
@@ -7342,6 +7355,9 @@ task.spawn(function()
 			AnchorPoint = Vector2.new(0.7, 0.5),
 			Size = UDim2.new(0.23, 0, 0.907687, 0),
 			BackgroundColor3 = Color3.fromRGB(55, 59, 65)
+		})
+		tweenProperty(aspectRatioConstraint, {
+			AspectRatio = 0.05  -- Set to 0.05 for bar shape
 		})
 		bar.UICorner.CornerRadius = UDim.new(10, 0)
 		UIStroke.Enabled = false
@@ -7380,7 +7396,7 @@ task.spawn(function()
 	
 	local function beginDrag(input)
 		isDragging = true
-		dragStart = input.Position
+		dragStart = Vector2.new(input.Position.X, input.Position.Y)
 		startPos = SwipeLeft.Position
 	
 		changeSize(1.1)
@@ -7391,7 +7407,7 @@ task.spawn(function()
 		dragConnection = UserInputService.InputChanged:Connect(function(newInput)
 			if isDragging and (newInput.UserInputType == Enum.UserInputType.MouseMovement or
 				newInput.UserInputType == Enum.UserInputType.Touch) then
-				local delta = newInput.Position - dragStart
+				local delta = Vector2.new(newInput.Position.X, newInput.Position.Y) - dragStart
 				local newPosition = UDim2.new(
 					startPos.X.Scale,
 					startPos.X.Offset + delta.X,
@@ -7411,11 +7427,23 @@ task.spawn(function()
 	
 				changeSize(1/1.1)
 	
-				if (endInput.Position - dragStart).Magnitude < 5 then
-					handleClick()
+				if (Vector2.new(endInput.Position.X, endInput.Position.Y) - dragStart).Magnitude < 5 then
+					handleClick()  -- Always handle click for both mobile and PC
 				end
 			end
 		end)
+	end
+	
+	local function handleTouch(input)
+		local currentTime = tick()
+		if currentTime - lastTapTime < doubleTapThreshold then
+			-- Double tap detected
+			handleClick()
+		else
+			-- Single tap, start drag
+			beginDrag(input)
+		end
+		lastTapTime = currentTime
 	end
 	
 	SwipeLeft.InputBegan:Connect(function(input)
@@ -7425,44 +7453,40 @@ task.spawn(function()
 			else
 				beginDrag(input)
 			end
-		elseif input.UserInputType == Enum.UserInputType.Touch and isOpen then
-			-- For mobile, we'll handle closing via swipe instead of touch
+		elseif input.UserInputType == Enum.UserInputType.Touch then
+			if isMobile then
+				handleTouch(input)
+			end
 		end
 	end)
 	
 	ImageButton.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 and not isOpen then
-			beginDrag(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and not isOpen then
+			if isMobile then
+				handleTouch(input)
+			else
+				beginDrag(input)
+			end
 		end
 	end)
 	
 	local function handleSwipe(swipeDirection)
 		if swipeDirection == Enum.SwipeDirection.Left and isOpen then
 			_G.toggleMain()
-		elseif swipeDirection == Enum.SwipeDirection.Right and not isOpen then
-			_G.toggleMain()
 		end
 	end
 	
 	UserInputService.TouchSwipe:Connect(handleSwipe)
 	
-	UserInputService.TouchLongPress:Connect(function(touchPositions, state)
-		if state == Enum.UserInputState.Begin and not isOpen then
-			beginDrag({Position = touchPositions[1]})
-		end
-	end)
-	
 	-- Initialize the UI
 	SwipeLeft.Position = defaultPosition
 	morphToBar()
 	
-	-- Automatically transition to circle state after 1.5 seconds
+	-- Automatically transition to circle state after 1 second
 	task.wait(1)
 	_G.toggleMain()
 	
-	
 	_trigon.IconButton.Activated:Connect(_G.toggleMain)
-	
 end)
 
 task.spawn(function()
@@ -7541,7 +7565,6 @@ task.spawn(function()
 	Settings = ReadSetting()
 	defaultSettings()
 	saveSettings()
-	
 	
 	
 	TextService = game:GetService("TextService")
@@ -8041,11 +8064,10 @@ task.spawn(function()
 	rejoin.Activated:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 	end)
-
-	copyServer.Activated:Connect(function()
-		game:GetService("TeleportService"):TeleportToPlaceInstance(15842274261, "fdf9107f-cffd-4d20-80fb-a945bba74340", game.Players.LocalPlayer)	
-	end)
 	
+	copyServer.Activated:Connect(function()
+		setclipboard('game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)')
+	end)
 	
 end)
 
@@ -8409,5 +8431,13 @@ task.spawn(function()
 		end
 	end)
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 end)
-
