@@ -476,8 +476,8 @@ local function updateLines(scriptEditor)
 end
 
 local function getSortedHookModules()
-    local AutoIndent = loadstring(game:HttpGet("https://trigonevo.fun/x/AutoIndent",true))() 
-    local AutoWrap = loadstring(game:HttpGet("https://trigonevo.fun/x/AutoWrap",true))() 
+    local AutoIndent = loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/OdeScriptEditor/AutoIndent.lua",true))() 
+    local AutoWrap = loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/OdeScriptEditor/AutoWrap.lua",true))() 
 
 	local hookModules = {AutoIndent, AutoWrap}
 
