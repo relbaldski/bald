@@ -1,4 +1,4 @@
-local Lexer = loadstring(game:HttpGet("https://trigonevo.fun/x/lexer",true))()
+local Lexer = loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/OdeScriptEditor/lexer.lua",true))()
 local LuaTable = loadstring(game:HttpGet("https://trigonevo.fun/x/LuaTable",true))() 
 local SignalModule = loadstring(game:HttpGet("https://trigonevo.fun/x/SignalModule",true))() 
 local GetTextBoxScrolling = loadstring(game:HttpGet("https://trigonevo.fun/x/GetTextBoxScrolling",true))() 
