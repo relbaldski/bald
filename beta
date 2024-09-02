@@ -744,6 +744,23 @@ local _trigon =
 	rscripts_net = Instance.new("LocalScript")
 }
 
+local readfileX = clonefunction(arceus.readarceusfile)
+local isfileX = clonefunction(arceus.isarceusfile)
+local listfilesX = clonefunction(arceus.listarceusfiles)
+local isfolderX = clonefunction(arceus.isarceusfolder)
+
+if isfolderX("/Autoexec") then
+	autoexe_files = listfilesX("/Autoexec")
+	for _, file in pairs(autoexe_files) do
+		if isfileX(file) then
+			executecode(readfileX(file))
+			print("Autoexec: "..tostring(file))
+		else
+			print("Autoexec folder is empty")
+		end
+	end
+end
+
 _trigon.Trigon.IgnoreGuiInset = true
 _trigon.Trigon.DisplayOrder = 1
 _trigon.Trigon.Name = "Trigon"
