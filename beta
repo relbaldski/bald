@@ -1,4 +1,4 @@
-warn("Loading trigon beta v2.0.3c...")
+warn("Loading trigon beta v2.0.3d...")
 
 local _trigon =
 {
@@ -844,7 +844,7 @@ _trigon.TextLabel_1.TextSize = 14
 _trigon.TextLabel_1.Size = UDim2.new(0.56319, 0, 0.1812, 0)
 _trigon.TextLabel_1.TextColor3 = Color3.fromRGB(91, 93, 96)
 _trigon.TextLabel_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_1.Text = "Version: 2.0.3c"
+_trigon.TextLabel_1.Text = "Version: 2.0.3d"
 _trigon.TextLabel_1.BackgroundTransparency = 1
 _trigon.TextLabel_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_1.Parent = _trigon.TopInfo
