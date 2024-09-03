@@ -23,7 +23,7 @@ local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
 local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
 -- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
 
-local lang = loadstring(game:HttpGet("https://trigonevo.fun/x/language",true))()
+local lang = loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/OdeScriptEditor/language.lua",true))()
 local lua_keyword = lang.keyword
 local lua_builtin = lang.builtin
 local lua_libraries = lang.libraries
