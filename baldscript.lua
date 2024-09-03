@@ -1,7 +1,7 @@
 warn("Loading Trigon...")
 --repeat  task.wait() until game:IsLoaded()
 _G.Trigon = true
-player = game.Players.LocalPlayer
+player = game.Players.LocalPlayer 
 ver = arceus.getversion()
 
 --ver == "1.0.4"
