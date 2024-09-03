@@ -8385,7 +8385,7 @@ task.spawn(function()
 		UserInputService.TouchEnded:Connect(function(touch, gameProcessed)
 			if not gameProcessed then
 				local touchPosition = touch.Position
-				local guiObjects = gethui():GetGuiObjectsAtPosition(touchPosition.X, touchPosition.Y)
+				local guiObjects = game.Players.LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(touchPosition.X, touchPosition.Y)
 				if not table.find(guiObjects, item) then
 					resetAnimation()
 				end
