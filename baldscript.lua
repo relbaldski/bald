@@ -4,8 +4,8 @@ _G.Trigon = true
 player = game.Players.LocalPlayer
 ver = arceus.getversion()
 
-
-if ver == "1.0.4"then
+--ver == "1.0.4"
+if true then
 	if player.Name == "rel_baldski"  then
 	    print("loading test version..")
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
