@@ -1,5 +1,4 @@
-warn("Loading trigon beta v2.0.3a...")
-
+warn("Loading trigon beta v2.0.3c...")
 
 local _trigon =
 {
@@ -407,106 +406,99 @@ local _trigon =
 	background = Instance.new("ImageLabel"),
 	UICorner_55 = Instance.new("UICorner"),
 	UICorner_56 = Instance.new("UICorner"),
-	bottom2 = Instance.new("Frame"),
-	UIGradient_23 = Instance.new("UIGradient"),
-	UIPadding_39 = Instance.new("UIPadding"),
-	TextButton = Instance.new("TextButton"),
-	UICorner_57 = Instance.new("UICorner"),
-	UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint"),
-	UIStroke_18 = Instance.new("UIStroke"),
 	top_left = Instance.new("Frame"),
 	views = Instance.new("Frame"),
-	UICorner_58 = Instance.new("UICorner"),
+	UICorner_57 = Instance.new("UICorner"),
 	icon = Instance.new("ImageLabel"),
 	TextLabel_20 = Instance.new("TextLabel"),
-	UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint"),
-	UIPadding_40 = Instance.new("UIPadding"),
+	UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint"),
+	UIPadding_39 = Instance.new("UIPadding"),
 	UIListLayout_18 = Instance.new("UIListLayout"),
 	UIListLayout_19 = Instance.new("UIListLayout"),
-	UIPadding_41 = Instance.new("UIPadding"),
+	UIPadding_40 = Instance.new("UIPadding"),
 	date = Instance.new("Frame"),
-	UICorner_59 = Instance.new("UICorner"),
+	UICorner_58 = Instance.new("UICorner"),
 	UIListLayout_20 = Instance.new("UIListLayout"),
 	icon_1 = Instance.new("ImageLabel"),
 	TextLabel_21 = Instance.new("TextLabel"),
-	UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint"),
-	UIPadding_42 = Instance.new("UIPadding"),
+	UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint"),
+	UIPadding_41 = Instance.new("UIPadding"),
 	top_right = Instance.new("Frame"),
-	UIPadding_43 = Instance.new("UIPadding"),
+	UIPadding_42 = Instance.new("UIPadding"),
 	rating = Instance.new("Frame"),
-	UICorner_60 = Instance.new("UICorner"),
+	UICorner_59 = Instance.new("UICorner"),
 	UIListLayout_21 = Instance.new("UIListLayout"),
 	icon_2 = Instance.new("ImageLabel"),
 	like_text = Instance.new("TextLabel"),
-	UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint"),
-	UIPadding_44 = Instance.new("UIPadding"),
+	UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint"),
+	UIPadding_43 = Instance.new("UIPadding"),
 	icon_3 = Instance.new("ImageLabel"),
 	dislike_text = Instance.new("TextLabel"),
-	UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint"),
 	info = Instance.new("Frame"),
 	UIListLayout_22 = Instance.new("UIListLayout"),
-	UIPadding_45 = Instance.new("UIPadding"),
+	UIPadding_44 = Instance.new("UIPadding"),
 	paid = Instance.new("Frame"),
-	UICorner_61 = Instance.new("UICorner"),
+	UICorner_60 = Instance.new("UICorner"),
 	icon_4 = Instance.new("ImageLabel"),
 	key = Instance.new("Frame"),
-	UICorner_62 = Instance.new("UICorner"),
+	UICorner_61 = Instance.new("UICorner"),
 	icon_5 = Instance.new("ImageLabel"),
 	mobile = Instance.new("Frame"),
-	UICorner_63 = Instance.new("UICorner"),
+	UICorner_62 = Instance.new("UICorner"),
 	icon_6 = Instance.new("ImageLabel"),
 	UIListLayout_23 = Instance.new("UIListLayout"),
 	verified = Instance.new("ImageLabel"),
 	bottom_2 = Instance.new("Frame"),
-	UIGradient_24 = Instance.new("UIGradient"),
+	UIGradient_23 = Instance.new("UIGradient"),
 	UIListLayout_24 = Instance.new("UIListLayout"),
 	title = Instance.new("TextLabel"),
-	UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint"),
 	desc = Instance.new("TextLabel"),
-	UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint"),
-	UIPadding_46 = Instance.new("UIPadding"),
+	UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint"),
+	UIPadding_45 = Instance.new("UIPadding"),
 	user = Instance.new("TextLabel"),
-	UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint"),
 	pagination = Instance.new("Frame"),
 	UIListLayout_25 = Instance.new("UIListLayout"),
-	UICorner_64 = Instance.new("UICorner"),
+	UICorner_63 = Instance.new("UICorner"),
 	first = Instance.new("ImageButton"),
-	UICorner_65 = Instance.new("UICorner"),
+	UICorner_64 = Instance.new("UICorner"),
 	icon_7 = Instance.new("ImageLabel"),
 	prev = Instance.new("ImageButton"),
-	UICorner_66 = Instance.new("UICorner"),
+	UICorner_65 = Instance.new("UICorner"),
 	icon_8 = Instance.new("ImageLabel"),
 	page_num = Instance.new("ImageButton"),
-	UIStroke_19 = Instance.new("UIStroke"),
-	UICorner_67 = Instance.new("UICorner"),
+	UIStroke_18 = Instance.new("UIStroke"),
+	UICorner_66 = Instance.new("UICorner"),
 	txt = Instance.new("TextLabel"),
-	UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint"),
 	Top_2 = Instance.new("Frame"),
 	SearchFrame = Instance.new("Frame"),
 	UIListLayout_26 = Instance.new("UIListLayout"),
-	UIPadding_47 = Instance.new("UIPadding"),
+	UIPadding_46 = Instance.new("UIPadding"),
 	sicon = Instance.new("ImageButton"),
 	TextBox = Instance.new("TextBox"),
-	UIPadding_48 = Instance.new("UIPadding"),
-	UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint"),
+	UIPadding_47 = Instance.new("UIPadding"),
+	UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint"),
 	searchBtn = Instance.new("ImageButton"),
 	UIListLayout_27 = Instance.new("UIListLayout"),
 	TextLabel_22 = Instance.new("TextLabel"),
-	UITextSizeConstraint_50 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint"),
+	UICorner_67 = Instance.new("UICorner"),
 	UICorner_68 = Instance.new("UICorner"),
-	UICorner_69 = Instance.new("UICorner"),
 	FilterBtn = Instance.new("ImageButton"),
 	filterscript = Instance.new("LocalScript"),
 	icon_9 = Instance.new("ImageLabel"),
 	TextLabel_23 = Instance.new("TextLabel"),
-	UITextSizeConstraint_51 = Instance.new("UITextSizeConstraint"),
-	UICorner_70 = Instance.new("UICorner"),
+	UITextSizeConstraint_50 = Instance.new("UITextSizeConstraint"),
+	UICorner_69 = Instance.new("UICorner"),
 	UIListLayout_28 = Instance.new("UIListLayout"),
-	UICorner_71 = Instance.new("UICorner"),
+	UICorner_70 = Instance.new("UICorner"),
 	FilterFrame = Instance.new("Frame"),
-	UIGradient_25 = Instance.new("UIGradient"),
+	UIGradient_24 = Instance.new("UIGradient"),
 	FilterPanel = Instance.new("Frame"),
-	UIStroke_20 = Instance.new("UIStroke"),
+	UIStroke_19 = Instance.new("UIStroke"),
 	Frame = Instance.new("Frame"),
 	TextLabel_24 = Instance.new("TextLabel"),
 	UIListLayout_29 = Instance.new("UIListLayout"),
@@ -516,205 +508,236 @@ local _trigon =
 	icon_10 = Instance.new("ImageLabel"),
 	ZTITLE = Instance.new("TextLabel"),
 	circle = Instance.new("ImageLabel"),
-	UIPadding_49 = Instance.new("UIPadding"),
-	UICorner_72 = Instance.new("UICorner"),
+	UIPadding_48 = Instance.new("UIPadding"),
+	UICorner_71 = Instance.new("UICorner"),
 	UIListLayout_31 = Instance.new("UIListLayout"),
-	UIPadding_50 = Instance.new("UIPadding"),
+	UIPadding_49 = Instance.new("UIPadding"),
 	MobileOnly = Instance.new("ImageButton"),
 	UIListLayout_32 = Instance.new("UIListLayout"),
 	icon_11 = Instance.new("ImageLabel"),
 	ZTITLE_1 = Instance.new("TextLabel"),
 	circle_1 = Instance.new("ImageLabel"),
-	UIPadding_51 = Instance.new("UIPadding"),
-	UICorner_73 = Instance.new("UICorner"),
+	UIPadding_50 = Instance.new("UIPadding"),
+	UICorner_72 = Instance.new("UICorner"),
 	NotPaid = Instance.new("ImageButton"),
 	UIListLayout_33 = Instance.new("UIListLayout"),
 	icon_12 = Instance.new("ImageLabel"),
 	ZTITLE_2 = Instance.new("TextLabel"),
 	circle_2 = Instance.new("ImageLabel"),
-	UIPadding_52 = Instance.new("UIPadding"),
-	UICorner_74 = Instance.new("UICorner"),
+	UIPadding_51 = Instance.new("UIPadding"),
+	UICorner_73 = Instance.new("UICorner"),
 	NotPatched = Instance.new("ImageButton"),
 	UIListLayout_34 = Instance.new("UIListLayout"),
 	icon_13 = Instance.new("ImageLabel"),
 	ZTITLE_3 = Instance.new("TextLabel"),
 	circle_3 = Instance.new("ImageLabel"),
-	UIPadding_53 = Instance.new("UIPadding"),
-	UICorner_75 = Instance.new("UICorner"),
+	UIPadding_52 = Instance.new("UIPadding"),
+	UICorner_74 = Instance.new("UICorner"),
 	Veried = Instance.new("ImageButton"),
 	UIListLayout_35 = Instance.new("UIListLayout"),
 	icon_14 = Instance.new("ImageLabel"),
 	ZTITLE_4 = Instance.new("TextLabel"),
 	circle_4 = Instance.new("ImageLabel"),
-	UIPadding_54 = Instance.new("UIPadding"),
-	UICorner_76 = Instance.new("UICorner"),
+	UIPadding_53 = Instance.new("UIPadding"),
+	UICorner_75 = Instance.new("UICorner"),
 	OrderBy = Instance.new("Frame"),
 	UIListLayout_36 = Instance.new("UIListLayout"),
 	title_1 = Instance.new("Frame"),
 	UIListLayout_37 = Instance.new("UIListLayout"),
-	UIPadding_55 = Instance.new("UIPadding"),
+	UIPadding_54 = Instance.new("UIPadding"),
 	icon_15 = Instance.new("ImageLabel"),
 	ZTITLE_5 = Instance.new("TextLabel"),
 	Frame_1 = Instance.new("Frame"),
 	date_1 = Instance.new("ImageButton"),
-	UIStroke_21 = Instance.new("UIStroke"),
-	UICorner_77 = Instance.new("UICorner"),
+	UIStroke_20 = Instance.new("UIStroke"),
+	UICorner_76 = Instance.new("UICorner"),
 	icon_16 = Instance.new("ImageLabel"),
 	UIListLayout_38 = Instance.new("UIListLayout"),
 	views_1 = Instance.new("ImageButton"),
-	UICorner_78 = Instance.new("UICorner"),
-	UIStroke_22 = Instance.new("UIStroke"),
+	UICorner_77 = Instance.new("UICorner"),
+	UIStroke_21 = Instance.new("UIStroke"),
 	icon_17 = Instance.new("ImageLabel"),
 	likes = Instance.new("ImageButton"),
-	UICorner_79 = Instance.new("UICorner"),
-	UIStroke_23 = Instance.new("UIStroke"),
+	UICorner_78 = Instance.new("UICorner"),
+	UIStroke_22 = Instance.new("UIStroke"),
 	icon_18 = Instance.new("ImageLabel"),
 	dislikes = Instance.new("ImageButton"),
-	UICorner_80 = Instance.new("UICorner"),
-	UIStroke_24 = Instance.new("UIStroke"),
+	UICorner_79 = Instance.new("UICorner"),
+	UIStroke_23 = Instance.new("UIStroke"),
 	icon_19 = Instance.new("ImageLabel"),
-	UIPadding_56 = Instance.new("UIPadding"),
+	UIPadding_55 = Instance.new("UIPadding"),
 	Frame2 = Instance.new("Frame"),
 	ASC = Instance.new("ImageButton"),
-	UIStroke_25 = Instance.new("UIStroke"),
-	UICorner_81 = Instance.new("UICorner"),
+	UIStroke_24 = Instance.new("UIStroke"),
+	UICorner_80 = Instance.new("UICorner"),
 	text = Instance.new("TextLabel"),
 	UIListLayout_39 = Instance.new("UIListLayout"),
 	DESC = Instance.new("ImageButton"),
-	UICorner_82 = Instance.new("UICorner"),
-	UIStroke_26 = Instance.new("UIStroke"),
+	UICorner_81 = Instance.new("UICorner"),
+	UIStroke_25 = Instance.new("UIStroke"),
 	text_1 = Instance.new("TextLabel"),
-	UIPadding_57 = Instance.new("UIPadding"),
+	UIPadding_56 = Instance.new("UIPadding"),
 	empty = Instance.new("ImageButton"),
 	Save = Instance.new("ImageButton"),
 	TextLabel_26 = Instance.new("TextLabel"),
-	UICorner_83 = Instance.new("UICorner"),
+	UICorner_82 = Instance.new("UICorner"),
 	LFrame = Instance.new("Frame"),
 	TextLabel_27 = Instance.new("TextLabel"),
-	UITextSizeConstraint_52 = Instance.new("UITextSizeConstraint"),
-	FileManager_1 = Instance.new("Frame"),
-	UICorner_84 = Instance.new("UICorner"),
-	UIStroke_27 = Instance.new("UIStroke"),
-	UIGradient_26 = Instance.new("UIGradient"),
-	bottom_3 = Instance.new("Frame"),
+	UITextSizeConstraint_51 = Instance.new("UITextSizeConstraint"),
+	SHPopupFrame = Instance.new("Frame"),
+	Container_4 = Instance.new("Frame"),
+	Frame_2 = Instance.new("Frame"),
 	UIListLayout_40 = Instance.new("UIListLayout"),
-	execFile = Instance.new("ImageButton"),
-	UICorner_85 = Instance.new("UICorner"),
+	icon_20 = Instance.new("ImageLabel"),
+	content = Instance.new("TextLabel"),
+	UITextSizeConstraint_52 = Instance.new("UITextSizeConstraint"),
+	UICorner_83 = Instance.new("UICorner"),
+	text_2 = Instance.new("TextLabel"),
+	UITextSizeConstraint_53 = Instance.new("UITextSizeConstraint"),
+	cancel = Instance.new("ImageButton"),
+	UICorner_84 = Instance.new("UICorner"),
 	Main_18 = Instance.new("Frame"),
-	UIPadding_58 = Instance.new("UIPadding"),
+	UIPadding_57 = Instance.new("UIPadding"),
 	UIListLayout_41 = Instance.new("UIListLayout"),
 	Icon_20 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_28 = Instance.new("TextLabel"),
-	UIPadding_59 = Instance.new("UIPadding"),
-	newFile = Instance.new("ImageButton"),
-	UICorner_86 = Instance.new("UICorner"),
+	UIPadding_58 = Instance.new("UIPadding"),
+	surebtn = Instance.new("ImageButton"),
+	UICorner_85 = Instance.new("UICorner"),
 	Main_19 = Instance.new("Frame"),
-	UIPadding_60 = Instance.new("UIPadding"),
+	UIPadding_59 = Instance.new("UIPadding"),
 	UIListLayout_42 = Instance.new("UIListLayout"),
 	Icon_21 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_29 = Instance.new("TextLabel"),
-	UIPadding_61 = Instance.new("UIPadding"),
-	newFolder = Instance.new("ImageButton"),
+	UIPadding_60 = Instance.new("UIPadding"),
+	textInput = Instance.new("TextBox"),
+	UITextSizeConstraint_54 = Instance.new("UITextSizeConstraint"),
+	SHPopup = Instance.new("LocalScript"),
+	FileManager_1 = Instance.new("Frame"),
+	UICorner_86 = Instance.new("UICorner"),
+	UIStroke_26 = Instance.new("UIStroke"),
+	UIGradient_25 = Instance.new("UIGradient"),
+	bottom_3 = Instance.new("Frame"),
+	UIListLayout_43 = Instance.new("UIListLayout"),
+	execFile = Instance.new("ImageButton"),
 	UICorner_87 = Instance.new("UICorner"),
 	Main_20 = Instance.new("Frame"),
-	UIPadding_62 = Instance.new("UIPadding"),
-	UIListLayout_43 = Instance.new("UIListLayout"),
+	UIPadding_61 = Instance.new("UIPadding"),
+	UIListLayout_44 = Instance.new("UIListLayout"),
 	Icon_22 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_30 = Instance.new("TextLabel"),
-	UIPadding_63 = Instance.new("UIPadding"),
-	DeleteFF = Instance.new("ImageButton"),
+	UIPadding_62 = Instance.new("UIPadding"),
+	newFile = Instance.new("ImageButton"),
 	UICorner_88 = Instance.new("UICorner"),
 	Main_21 = Instance.new("Frame"),
-	UIPadding_64 = Instance.new("UIPadding"),
-	UIListLayout_44 = Instance.new("UIListLayout"),
+	UIPadding_63 = Instance.new("UIPadding"),
+	UIListLayout_45 = Instance.new("UIListLayout"),
 	Icon_23 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_31 = Instance.new("TextLabel"),
-	UIPadding_65 = Instance.new("UIPadding"),
-	preview_btn = Instance.new("ImageButton"),
+	UIPadding_64 = Instance.new("UIPadding"),
+	newFolder = Instance.new("ImageButton"),
 	UICorner_89 = Instance.new("UICorner"),
 	Main_22 = Instance.new("Frame"),
-	UIPadding_66 = Instance.new("UIPadding"),
-	UIListLayout_45 = Instance.new("UIListLayout"),
+	UIPadding_65 = Instance.new("UIPadding"),
+	UIListLayout_46 = Instance.new("UIListLayout"),
 	Icon_24 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_32 = Instance.new("TextLabel"),
-	UIPadding_67 = Instance.new("UIPadding"),
-	Section = Instance.new("Folder"),
-	Container_4 = Instance.new("ScrollingFrame"),
+	UIPadding_66 = Instance.new("UIPadding"),
+	DeleteFF = Instance.new("ImageButton"),
 	UICorner_90 = Instance.new("UICorner"),
-	UIGridLayout_1 = Instance.new("UIGridLayout"),
-	UIPadding_68 = Instance.new("UIPadding"),
-	template = Instance.new("ImageButton"),
-	UICorner_91 = Instance.new("UICorner"),
+	Main_23 = Instance.new("Frame"),
+	UIPadding_67 = Instance.new("UIPadding"),
+	UIListLayout_47 = Instance.new("UIListLayout"),
 	Icon_25 = Instance.new("ImageLabel"),
 	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_33 = Instance.new("TextLabel"),
-	treeviewFrame = Instance.new("Frame"),
-	UICorner_92 = Instance.new("UICorner"),
+	UIPadding_68 = Instance.new("UIPadding"),
+	preview_btn = Instance.new("ImageButton"),
+	UICorner_91 = Instance.new("UICorner"),
+	Main_24 = Instance.new("Frame"),
 	UIPadding_69 = Instance.new("UIPadding"),
+	UIListLayout_48 = Instance.new("UIListLayout"),
+	Icon_26 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
+	TextLabel_34 = Instance.new("TextLabel"),
+	UIPadding_70 = Instance.new("UIPadding"),
+	Section = Instance.new("Folder"),
+	Container_5 = Instance.new("ScrollingFrame"),
+	UICorner_92 = Instance.new("UICorner"),
+	UIGridLayout_1 = Instance.new("UIGridLayout"),
+	UIPadding_71 = Instance.new("UIPadding"),
+	template = Instance.new("ImageButton"),
+	UICorner_93 = Instance.new("UICorner"),
+	Icon_27 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
+	TextLabel_35 = Instance.new("TextLabel"),
+	treeviewFrame = Instance.new("Frame"),
+	UICorner_94 = Instance.new("UICorner"),
+	UIPadding_72 = Instance.new("UIPadding"),
 	treeview_Studio = Instance.new("LocalScript"),
 	top = Instance.new("Frame"),
-	UICorner_93 = Instance.new("UICorner"),
-	reload = Instance.new("ImageButton"),
-	UICorner_94 = Instance.new("UICorner"),
-	Icon_26 = Instance.new("ImageLabel"),
-	TextLabel_34 = Instance.new("TextLabel"),
-	UITextSizeConstraint_53 = Instance.new("UITextSizeConstraint"),
-	back = Instance.new("ImageButton"),
 	UICorner_95 = Instance.new("UICorner"),
-	Icon_27 = Instance.new("ImageLabel"),
+	reload = Instance.new("ImageButton"),
+	UICorner_96 = Instance.new("UICorner"),
+	Icon_28 = Instance.new("ImageLabel"),
+	TextLabel_36 = Instance.new("TextLabel"),
+	UITextSizeConstraint_55 = Instance.new("UITextSizeConstraint"),
+	back = Instance.new("ImageButton"),
+	UICorner_97 = Instance.new("UICorner"),
+	Icon_29 = Instance.new("ImageLabel"),
 	FMController = Instance.new("LocalScript"),
 	top_dir = Instance.new("Frame"),
-	UICorner_96 = Instance.new("UICorner"),
-	TextLabel_35 = Instance.new("TextLabel"),
-	UITextSizeConstraint_54 = Instance.new("UITextSizeConstraint"),
-	FMPopupFrame = Instance.new("Frame"),
-	Container_5 = Instance.new("Frame"),
-	Frame_2 = Instance.new("Frame"),
-	UIListLayout_46 = Instance.new("UIListLayout"),
-	icon_20 = Instance.new("ImageLabel"),
-	content = Instance.new("TextLabel"),
-	UITextSizeConstraint_55 = Instance.new("UITextSizeConstraint"),
-	UICorner_97 = Instance.new("UICorner"),
-	text_2 = Instance.new("TextLabel"),
-	UITextSizeConstraint_56 = Instance.new("UITextSizeConstraint"),
-	cancel = Instance.new("ImageButton"),
 	UICorner_98 = Instance.new("UICorner"),
-	Main_23 = Instance.new("Frame"),
-	UIPadding_70 = Instance.new("UIPadding"),
-	UIListLayout_47 = Instance.new("UIListLayout"),
-	Icon_28 = Instance.new("ImageLabel"),
-	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
-	TextLabel_36 = Instance.new("TextLabel"),
-	UIPadding_71 = Instance.new("UIPadding"),
-	surebtn = Instance.new("ImageButton"),
-	UICorner_99 = Instance.new("UICorner"),
-	Main_24 = Instance.new("Frame"),
-	UIPadding_72 = Instance.new("UIPadding"),
-	UIListLayout_48 = Instance.new("UIListLayout"),
-	Icon_29 = Instance.new("ImageLabel"),
-	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
 	TextLabel_37 = Instance.new("TextLabel"),
-	UIPadding_73 = Instance.new("UIPadding"),
-	textInput = Instance.new("TextBox"),
+	UITextSizeConstraint_56 = Instance.new("UITextSizeConstraint"),
+	FMPopupFrame = Instance.new("Frame"),
+	Container_6 = Instance.new("Frame"),
+	Frame_3 = Instance.new("Frame"),
+	UIListLayout_49 = Instance.new("UIListLayout"),
+	icon_21 = Instance.new("ImageLabel"),
+	content_1 = Instance.new("TextLabel"),
 	UITextSizeConstraint_57 = Instance.new("UITextSizeConstraint"),
+	UICorner_99 = Instance.new("UICorner"),
+	text_3 = Instance.new("TextLabel"),
+	UITextSizeConstraint_58 = Instance.new("UITextSizeConstraint"),
+	cancel_1 = Instance.new("ImageButton"),
+	UICorner_100 = Instance.new("UICorner"),
+	Main_25 = Instance.new("Frame"),
+	UIPadding_73 = Instance.new("UIPadding"),
+	UIListLayout_50 = Instance.new("UIListLayout"),
+	Icon_30 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
+	TextLabel_38 = Instance.new("TextLabel"),
+	UIPadding_74 = Instance.new("UIPadding"),
+	surebtn_1 = Instance.new("ImageButton"),
+	UICorner_101 = Instance.new("UICorner"),
+	Main_26 = Instance.new("Frame"),
+	UIPadding_75 = Instance.new("UIPadding"),
+	UIListLayout_51 = Instance.new("UIListLayout"),
+	Icon_31 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint"),
+	TextLabel_39 = Instance.new("TextLabel"),
+	UIPadding_76 = Instance.new("UIPadding"),
+	textInput_1 = Instance.new("TextBox"),
+	UITextSizeConstraint_59 = Instance.new("UITextSizeConstraint"),
 	FMPopup = Instance.new("LocalScript"),
 	swipeController = Instance.new("LocalScript"),
 	SwipeLeft = Instance.new("ImageButton"),
 	bar = Instance.new("Frame"),
-	UICorner_100 = Instance.new("UICorner"),
-	UIStroke_28 = Instance.new("UIStroke"),
+	UICorner_102 = Instance.new("UICorner"),
+	UIStroke_27 = Instance.new("UIStroke"),
 	ImageButton = Instance.new("ImageButton"),
-	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint"),
 	SwipeLeft_ = Instance.new("ImageButton"),
 	bar_1 = Instance.new("Frame"),
-	UICorner_101 = Instance.new("UICorner"),
+	UICorner_103 = Instance.new("UICorner"),
 	ImageButton_1 = Instance.new("ImageButton"),
-	UIStroke_29 = Instance.new("UIStroke"),
+	UIStroke_28 = Instance.new("UIStroke"),
 	consoleController = Instance.new("LocalScript"),
 	NavController = Instance.new("LocalScript"),
 	homeController = Instance.new("LocalScript"),
@@ -734,39 +757,22 @@ local _trigon =
 	OSEBackground = Instance.new("Frame"),
 	LineNumberBackground = Instance.new("Frame"),
 	LineNumberContainer = Instance.new("Frame"),
-	UIListLayout_49 = Instance.new("UIListLayout"),
+	UIListLayout_52 = Instance.new("UIListLayout"),
 	RichOverlayContainer = Instance.new("Frame"),
 	ShiftContainer = Instance.new("Frame"),
-	UIListLayout_50 = Instance.new("UIListLayout"),
+	UIListLayout_53 = Instance.new("UIListLayout"),
 	CodeField = Instance.new("TextBox"),
 	editorController = Instance.new("LocalScript"),
 	ScriptsController = Instance.new("Folder"),
 	rscripts_net = Instance.new("LocalScript")
 }
 
-local readfileX = clonefunction(arceus.readarceusfile)
-local isfileX = clonefunction(arceus.isarceusfile)
-local listfilesX = clonefunction(arceus.listarceusfiles)
-local isfolderX = clonefunction(arceus.isarceusfolder)
-
-if isfolderX("/Autoexec") then
-	autoexe_files = listfilesX("/Autoexec")
-	for _, file in pairs(autoexe_files) do
-		if isfileX(file) then
-			executecode(readfileX(file))
-			print("Autoexec: "..tostring(file))
-		else
-			print("Autoexec folder is empty")
-		end
-	end
-end
-
 _trigon.Trigon.IgnoreGuiInset = true
-_trigon.Trigon.DisplayOrder = 1
 _trigon.Trigon.Name = "Trigon"
 _trigon.Trigon.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 _trigon.Trigon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 _trigon.Trigon.Parent = gethui()
+_trigon.Trigon.DisplayOrder = -1
 
 _trigon.Canvas.BorderSizePixel = 0
 _trigon.Canvas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -838,7 +844,7 @@ _trigon.TextLabel_1.TextSize = 14
 _trigon.TextLabel_1.Size = UDim2.new(0.56319, 0, 0.1812, 0)
 _trigon.TextLabel_1.TextColor3 = Color3.fromRGB(91, 93, 96)
 _trigon.TextLabel_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_1.Text = "Version: 2.0.3a"
+_trigon.TextLabel_1.Text = "Version: 2.0.3c"
 _trigon.TextLabel_1.BackgroundTransparency = 1
 _trigon.TextLabel_1.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_1.Parent = _trigon.TopInfo
@@ -1817,6 +1823,7 @@ _trigon.Home_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Home_1.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.Home_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
 _trigon.Home_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
+_trigon.Home_1.Visible = false
 _trigon.Home_1.Name = "Home"
 _trigon.Home_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.Home_1.Parent = _trigon.Tabs
@@ -2005,7 +2012,7 @@ _trigon.Role_1.Size = UDim2.new(0.574099, 0, 0.213333, 0)
 _trigon.Role_1.ZIndex = 151
 _trigon.Role_1.TextColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.Role_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
-_trigon.Role_1.Text = "time_left"
+_trigon.Role_1.Text = "31 Days 20 Min"
 _trigon.Role_1.BackgroundTransparency = 1
 _trigon.Role_1.Parent = _trigon.userinfo
 
@@ -3915,7 +3922,6 @@ _trigon.Scripts_1.AnchorPoint = Vector2.new(0.5, 0.5)
 _trigon.Scripts_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
 _trigon.Scripts_1.ClipsDescendants = true
 _trigon.Scripts_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
-_trigon.Scripts_1.Visible = false
 _trigon.Scripts_1.Name = "Scripts"
 _trigon.Scripts_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
 _trigon.Scripts_1.Parent = _trigon.Tabs
@@ -3978,54 +3984,6 @@ _trigon.UICorner_55.Parent = _trigon.background
 
 _trigon.UICorner_56.Parent = _trigon.item_name
 
-_trigon.bottom2.BorderSizePixel = 0
-_trigon.bottom2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.bottom2.AnchorPoint = Vector2.new(0.5, 1)
-_trigon.bottom2.Size = UDim2.new(1, 0, 0.561886, 0)
-_trigon.bottom2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.bottom2.Visible = false
-_trigon.bottom2.Name = "bottom2"
-_trigon.bottom2.Position = UDim2.new(0.5, 0, 1, 0)
-_trigon.bottom2.Parent = _trigon.item_name
-
-_trigon.UIGradient_23.Offset = Vector2.new(0, 1)
-_trigon.UIGradient_23.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.26808, 0.1125), NumberSequenceKeypoint.new(0.558604, 0.39375), NumberSequenceKeypoint.new(0.756858, 0.46875), NumberSequenceKeypoint.new(0.948878, 0.95625), NumberSequenceKeypoint.new(1, 1) }
-_trigon.UIGradient_23.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(52, 54, 61)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
-_trigon.UIGradient_23.Rotation = -90
-_trigon.UIGradient_23.Parent = _trigon.bottom2
-
-_trigon.UIPadding_39.PaddingTop = UDim.new(0.045, 0)
-_trigon.UIPadding_39.PaddingRight = UDim.new(0.02, 0)
-_trigon.UIPadding_39.PaddingLeft = UDim.new(0.02, 0)
-_trigon.UIPadding_39.Parent = _trigon.bottom2
-
-_trigon.TextButton.TextWrapped = true
-_trigon.TextButton.BorderSizePixel = 0
-_trigon.TextButton.AutoButtonColor = false
-_trigon.TextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-_trigon.TextButton.TextScaled = true
-_trigon.TextButton.BackgroundColor3 = Color3.fromRGB(52, 54, 61)
-_trigon.TextButton.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextButton.TextSize = 14
-_trigon.TextButton.Size = UDim2.new(0.553903, 0, 0.397528, 0)
-_trigon.TextButton.TextColor3 = Color3.fromRGB(226, 226, 226)
-_trigon.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextButton.Text = "Execute?"
-_trigon.TextButton.BackgroundTransparency = 0.05
-_trigon.TextButton.Parent = _trigon.bottom2
-
-_trigon.UICorner_57.Parent = _trigon.TextButton
-
-_trigon.UITextSizeConstraint_40.MaxTextSize = 22
-_trigon.UITextSizeConstraint_40.Parent = _trigon.TextButton
-
-_trigon.UIStroke_18.Color = Color3.fromRGB(255, 255, 255)
-_trigon.UIStroke_18.Thickness = 2.5
-_trigon.UIStroke_18.Transparency = 0.69
-_trigon.UIStroke_18.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-_trigon.UIStroke_18.Parent = _trigon.TextButton
-
 _trigon.top_left.BorderSizePixel = 0
 _trigon.top_left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _trigon.top_left.Size = UDim2.new(0.406771, 0, 0.438114, 0)
@@ -4044,8 +4002,8 @@ _trigon.views.Name = "views"
 _trigon.views.Position = UDim2.new(0.308518, 0, 0.16, 0)
 _trigon.views.Parent = _trigon.top_left
 
-_trigon.UICorner_58.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_58.Parent = _trigon.views
+_trigon.UICorner_57.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_57.Parent = _trigon.views
 
 _trigon.icon.ScaleType = Enum.ScaleType.Fit
 _trigon.icon.Position = UDim2.new(-7.1367e-07, 0, 0.00662612, 0)
@@ -4070,11 +4028,11 @@ _trigon.TextLabel_20.BackgroundTransparency = 1
 _trigon.TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_20.Parent = _trigon.views
 
-_trigon.UITextSizeConstraint_41.MaxTextSize = 20
-_trigon.UITextSizeConstraint_41.Parent = _trigon.TextLabel_20
+_trigon.UITextSizeConstraint_40.MaxTextSize = 20
+_trigon.UITextSizeConstraint_40.Parent = _trigon.TextLabel_20
 
-_trigon.UIPadding_40.PaddingLeft = UDim.new(0.07, 0)
-_trigon.UIPadding_40.Parent = _trigon.views
+_trigon.UIPadding_39.PaddingLeft = UDim.new(0.07, 0)
+_trigon.UIPadding_39.Parent = _trigon.views
 
 _trigon.UIListLayout_18.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_18.VerticalAlignment = Enum.VerticalAlignment.Center
@@ -4086,9 +4044,9 @@ _trigon.UIListLayout_19.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_19.Padding = UDim.new(0.05, 0)
 _trigon.UIListLayout_19.Parent = _trigon.top_left
 
-_trigon.UIPadding_41.PaddingTop = UDim.new(0.14, 0)
-_trigon.UIPadding_41.PaddingLeft = UDim.new(0.05, 0)
-_trigon.UIPadding_41.Parent = _trigon.top_left
+_trigon.UIPadding_40.PaddingTop = UDim.new(0.14, 0)
+_trigon.UIPadding_40.PaddingLeft = UDim.new(0.05, 0)
+_trigon.UIPadding_40.Parent = _trigon.top_left
 
 _trigon.date.BorderSizePixel = 0
 _trigon.date.BackgroundColor3 = Color3.fromRGB(34, 36, 40)
@@ -4100,8 +4058,8 @@ _trigon.date.Name = "date"
 _trigon.date.Position = UDim2.new(0.349415, 0, 0.428299, 0)
 _trigon.date.Parent = _trigon.top_left
 
-_trigon.UICorner_59.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_59.Parent = _trigon.date
+_trigon.UICorner_58.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_58.Parent = _trigon.date
 
 _trigon.UIListLayout_20.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_20.VerticalAlignment = Enum.VerticalAlignment.Center
@@ -4132,11 +4090,11 @@ _trigon.TextLabel_21.BackgroundTransparency = 1
 _trigon.TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_21.Parent = _trigon.date
 
-_trigon.UITextSizeConstraint_42.MaxTextSize = 22
-_trigon.UITextSizeConstraint_42.Parent = _trigon.TextLabel_21
+_trigon.UITextSizeConstraint_41.MaxTextSize = 22
+_trigon.UITextSizeConstraint_41.Parent = _trigon.TextLabel_21
 
-_trigon.UIPadding_42.PaddingLeft = UDim.new(0.07, 0)
-_trigon.UIPadding_42.Parent = _trigon.date
+_trigon.UIPadding_41.PaddingLeft = UDim.new(0.07, 0)
+_trigon.UIPadding_41.Parent = _trigon.date
 
 _trigon.top_right.BorderSizePixel = 0
 _trigon.top_right.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4148,9 +4106,9 @@ _trigon.top_right.Name = "top_right"
 _trigon.top_right.Position = UDim2.new(1, 0, 0, 0)
 _trigon.top_right.Parent = _trigon.item_name
 
-_trigon.UIPadding_43.PaddingTop = UDim.new(0.14, 0)
-_trigon.UIPadding_43.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_43.Parent = _trigon.top_right
+_trigon.UIPadding_42.PaddingTop = UDim.new(0.14, 0)
+_trigon.UIPadding_42.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_42.Parent = _trigon.top_right
 
 _trigon.rating.BorderSizePixel = 0
 _trigon.rating.BackgroundColor3 = Color3.fromRGB(34, 36, 40)
@@ -4162,8 +4120,8 @@ _trigon.rating.Name = "rating"
 _trigon.rating.Position = UDim2.new(0.674591, 0, 0.15, 0)
 _trigon.rating.Parent = _trigon.top_right
 
-_trigon.UICorner_60.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_60.Parent = _trigon.rating
+_trigon.UICorner_59.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_59.Parent = _trigon.rating
 
 _trigon.UIListLayout_21.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_21.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -4197,10 +4155,10 @@ _trigon.like_text.BackgroundTransparency = 1
 _trigon.like_text.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.like_text.Parent = _trigon.rating
 
-_trigon.UITextSizeConstraint_43.MaxTextSize = 19
-_trigon.UITextSizeConstraint_43.Parent = _trigon.like_text
+_trigon.UITextSizeConstraint_42.MaxTextSize = 19
+_trigon.UITextSizeConstraint_42.Parent = _trigon.like_text
 
-_trigon.UIPadding_44.Parent = _trigon.rating
+_trigon.UIPadding_43.Parent = _trigon.rating
 
 _trigon.icon_3.ImageColor3 = Color3.fromRGB(255, 94, 130)
 _trigon.icon_3.ScaleType = Enum.ScaleType.Fit
@@ -4227,8 +4185,8 @@ _trigon.dislike_text.BackgroundTransparency = 1
 _trigon.dislike_text.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.dislike_text.Parent = _trigon.rating
 
-_trigon.UITextSizeConstraint_44.MaxTextSize = 19
-_trigon.UITextSizeConstraint_44.Parent = _trigon.dislike_text
+_trigon.UITextSizeConstraint_43.MaxTextSize = 19
+_trigon.UITextSizeConstraint_43.Parent = _trigon.dislike_text
 
 _trigon.info.BorderSizePixel = 0
 _trigon.info.BackgroundColor3 = Color3.fromRGB(34, 36, 40)
@@ -4247,7 +4205,7 @@ _trigon.UIListLayout_22.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_22.Padding = UDim.new(0.03, 0)
 _trigon.UIListLayout_22.Parent = _trigon.info
 
-_trigon.UIPadding_45.Parent = _trigon.info
+_trigon.UIPadding_44.Parent = _trigon.info
 
 _trigon.paid.BorderSizePixel = 0
 _trigon.paid.BackgroundColor3 = Color3.fromRGB(34, 36, 40)
@@ -4258,8 +4216,8 @@ _trigon.paid.Name = "paid"
 _trigon.paid.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.paid.Parent = _trigon.info
 
-_trigon.UICorner_61.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_61.Parent = _trigon.paid
+_trigon.UICorner_60.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_60.Parent = _trigon.paid
 
 _trigon.icon_4.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_4.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4279,8 +4237,8 @@ _trigon.key.Name = "key"
 _trigon.key.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.key.Parent = _trigon.info
 
-_trigon.UICorner_62.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_62.Parent = _trigon.key
+_trigon.UICorner_61.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_61.Parent = _trigon.key
 
 _trigon.icon_5.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_5.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4300,8 +4258,8 @@ _trigon.mobile.Name = "mobile"
 _trigon.mobile.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.mobile.Parent = _trigon.info
 
-_trigon.UICorner_63.CornerRadius = UDim.new(0.2, 0)
-_trigon.UICorner_63.Parent = _trigon.mobile
+_trigon.UICorner_62.CornerRadius = UDim.new(0.2, 0)
+_trigon.UICorner_62.Parent = _trigon.mobile
 
 _trigon.icon_6.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_6.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4336,9 +4294,9 @@ _trigon.bottom_2.Name = "bottom"
 _trigon.bottom_2.Position = UDim2.new(0.5, 0, 1, 0)
 _trigon.bottom_2.Parent = _trigon.item_name
 
-_trigon.UIGradient_24.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.346633, 0), NumberSequenceKeypoint.new(0.502494, 0.0875), NumberSequenceKeypoint.new(0.72818, 0.24375), NumberSequenceKeypoint.new(0.845387, 0.5), NumberSequenceKeypoint.new(1, 1) }
-_trigon.UIGradient_24.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 36, 40)), ColorSequenceKeypoint.new(0.359862, Color3.fromRGB(36.8789, 38.8789, 43.2388)), ColorSequenceKeypoint.new(1, Color3.fromRGB(42, 44, 49)) }
-_trigon.UIGradient_24.Parent = _trigon.bottom_2
+_trigon.UIGradient_23.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.346633, 0), NumberSequenceKeypoint.new(0.502494, 0.0875), NumberSequenceKeypoint.new(0.72818, 0.24375), NumberSequenceKeypoint.new(0.845387, 0.5), NumberSequenceKeypoint.new(1, 1) }
+_trigon.UIGradient_23.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 36, 40)), ColorSequenceKeypoint.new(0.359862, Color3.fromRGB(36.8789, 38.8789, 43.2388)), ColorSequenceKeypoint.new(1, Color3.fromRGB(42, 44, 49)) }
+_trigon.UIGradient_23.Parent = _trigon.bottom_2
 
 _trigon.UIListLayout_24.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_24.Padding = UDim.new(0.03, 0)
@@ -4360,8 +4318,8 @@ _trigon.title.BackgroundTransparency = 1
 _trigon.title.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.title.Parent = _trigon.bottom_2
 
-_trigon.UITextSizeConstraint_45.MaxTextSize = 34
-_trigon.UITextSizeConstraint_45.Parent = _trigon.title
+_trigon.UITextSizeConstraint_44.MaxTextSize = 34
+_trigon.UITextSizeConstraint_44.Parent = _trigon.title
 
 _trigon.desc.TextWrapped = true
 _trigon.desc.BorderSizePixel = 0
@@ -4379,13 +4337,13 @@ _trigon.desc.BackgroundTransparency = 1
 _trigon.desc.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.desc.Parent = _trigon.bottom_2
 
-_trigon.UITextSizeConstraint_46.MaxTextSize = 18
-_trigon.UITextSizeConstraint_46.Parent = _trigon.desc
+_trigon.UITextSizeConstraint_45.MaxTextSize = 18
+_trigon.UITextSizeConstraint_45.Parent = _trigon.desc
 
-_trigon.UIPadding_46.PaddingTop = UDim.new(0.045, 0)
-_trigon.UIPadding_46.PaddingRight = UDim.new(0.02, 0)
-_trigon.UIPadding_46.PaddingLeft = UDim.new(0.02, 0)
-_trigon.UIPadding_46.Parent = _trigon.bottom_2
+_trigon.UIPadding_45.PaddingTop = UDim.new(0.045, 0)
+_trigon.UIPadding_45.PaddingRight = UDim.new(0.02, 0)
+_trigon.UIPadding_45.PaddingLeft = UDim.new(0.02, 0)
+_trigon.UIPadding_45.Parent = _trigon.bottom_2
 
 _trigon.user.TextWrapped = true
 _trigon.user.BorderSizePixel = 0
@@ -4403,8 +4361,8 @@ _trigon.user.BackgroundTransparency = 1
 _trigon.user.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.user.Parent = _trigon.bottom_2
 
-_trigon.UITextSizeConstraint_47.MaxTextSize = 15
-_trigon.UITextSizeConstraint_47.Parent = _trigon.user
+_trigon.UITextSizeConstraint_46.MaxTextSize = 15
+_trigon.UITextSizeConstraint_46.Parent = _trigon.user
 
 _trigon.pagination.BorderSizePixel = 0
 _trigon.pagination.BackgroundColor3 = Color3.fromRGB(30, 32, 36)
@@ -4423,8 +4381,8 @@ _trigon.UIListLayout_25.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_25.Padding = UDim.new(0.023, 0)
 _trigon.UIListLayout_25.Parent = _trigon.pagination
 
-_trigon.UICorner_64.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_64.Parent = _trigon.pagination
+_trigon.UICorner_63.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_63.Parent = _trigon.pagination
 
 _trigon.first.BorderSizePixel = 0
 _trigon.first.AutoButtonColor = false
@@ -4436,8 +4394,8 @@ _trigon.first.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.first.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.first.Parent = _trigon.pagination
 
-_trigon.UICorner_65.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_65.Parent = _trigon.first
+_trigon.UICorner_64.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_64.Parent = _trigon.first
 
 _trigon.icon_7.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_7.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4458,8 +4416,8 @@ _trigon.prev.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.prev.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.prev.Parent = _trigon.pagination
 
-_trigon.UICorner_66.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_66.Parent = _trigon.prev
+_trigon.UICorner_65.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_65.Parent = _trigon.prev
 
 _trigon.icon_8.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_8.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4480,13 +4438,13 @@ _trigon.page_num.Size = UDim2.new(0.0711744, 0, 0.508475, 0)
 _trigon.page_num.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.page_num.Parent = _trigon.pagination
 
-_trigon.UIStroke_19.Enabled = false
-_trigon.UIStroke_19.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_19.Thickness = 3
-_trigon.UIStroke_19.Parent = _trigon.page_num
+_trigon.UIStroke_18.Enabled = false
+_trigon.UIStroke_18.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_18.Thickness = 3
+_trigon.UIStroke_18.Parent = _trigon.page_num
 
-_trigon.UICorner_67.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_67.Parent = _trigon.page_num
+_trigon.UICorner_66.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_66.Parent = _trigon.page_num
 
 _trigon.txt.TextWrapped = true
 _trigon.txt.BorderSizePixel = 0
@@ -4502,8 +4460,8 @@ _trigon.txt.Text = "1"
 _trigon.txt.BackgroundTransparency = 1
 _trigon.txt.Parent = _trigon.page_num
 
-_trigon.UITextSizeConstraint_48.MaxTextSize = 41
-_trigon.UITextSizeConstraint_48.Parent = _trigon.txt
+_trigon.UITextSizeConstraint_47.MaxTextSize = 41
+_trigon.UITextSizeConstraint_47.Parent = _trigon.txt
 
 _trigon.Top_2.BorderSizePixel = 0
 _trigon.Top_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -4531,8 +4489,8 @@ _trigon.UIListLayout_26.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_26.Padding = UDim.new(0.013, 0)
 _trigon.UIListLayout_26.Parent = _trigon.SearchFrame
 
-_trigon.UIPadding_47.PaddingLeft = UDim.new(0.014, 0)
-_trigon.UIPadding_47.Parent = _trigon.SearchFrame
+_trigon.UIPadding_46.PaddingLeft = UDim.new(0.014, 0)
+_trigon.UIPadding_46.Parent = _trigon.SearchFrame
 
 _trigon.sicon.ScaleType = Enum.ScaleType.Fit
 _trigon.sicon.ImageTransparency = 0.39
@@ -4559,15 +4517,16 @@ _trigon.TextBox.Size = UDim2.new(0.822157, 0, 0.842111, 0)
 _trigon.TextBox.TextColor3 = Color3.fromRGB(230, 230, 230)
 _trigon.TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.TextBox.Text = ""
+_trigon.TextBox.CursorPosition = -1
 _trigon.TextBox.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextBox.ClearTextOnFocus = false
 _trigon.TextBox.Parent = _trigon.SearchFrame
 
-_trigon.UIPadding_48.PaddingLeft = UDim.new(0.001, 0)
-_trigon.UIPadding_48.Parent = _trigon.TextBox
+_trigon.UIPadding_47.PaddingLeft = UDim.new(0.001, 0)
+_trigon.UIPadding_47.Parent = _trigon.TextBox
 
-_trigon.UITextSizeConstraint_49.MaxTextSize = 17
-_trigon.UITextSizeConstraint_49.Parent = _trigon.TextBox
+_trigon.UITextSizeConstraint_48.MaxTextSize = 17
+_trigon.UITextSizeConstraint_48.Parent = _trigon.TextBox
 
 _trigon.searchBtn.BorderSizePixel = 0
 _trigon.searchBtn.AutoButtonColor = false
@@ -4599,14 +4558,14 @@ _trigon.TextLabel_22.Text = "Search"
 _trigon.TextLabel_22.BackgroundTransparency = 1
 _trigon.TextLabel_22.Parent = _trigon.searchBtn
 
-_trigon.UITextSizeConstraint_50.MaxTextSize = 15
-_trigon.UITextSizeConstraint_50.Parent = _trigon.TextLabel_22
+_trigon.UITextSizeConstraint_49.MaxTextSize = 15
+_trigon.UITextSizeConstraint_49.Parent = _trigon.TextLabel_22
 
-_trigon.UICorner_68.CornerRadius = UDim.new(0.17, 0)
-_trigon.UICorner_68.Parent = _trigon.searchBtn
+_trigon.UICorner_67.CornerRadius = UDim.new(0.17, 0)
+_trigon.UICorner_67.Parent = _trigon.searchBtn
 
-_trigon.UICorner_69.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_69.Parent = _trigon.SearchFrame
+_trigon.UICorner_68.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_68.Parent = _trigon.SearchFrame
 
 _trigon.FilterBtn.BorderSizePixel = 0
 _trigon.FilterBtn.Position = UDim2.new(0.851051, 0, 0.5, 0)
@@ -4645,11 +4604,11 @@ _trigon.TextLabel_23.BackgroundTransparency = 1
 _trigon.TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.TextLabel_23.Parent = _trigon.FilterBtn
 
-_trigon.UITextSizeConstraint_51.MaxTextSize = 22
-_trigon.UITextSizeConstraint_51.Parent = _trigon.TextLabel_23
+_trigon.UITextSizeConstraint_50.MaxTextSize = 22
+_trigon.UITextSizeConstraint_50.Parent = _trigon.TextLabel_23
 
-_trigon.UICorner_70.CornerRadius = UDim.new(0.07, 0)
-_trigon.UICorner_70.Parent = _trigon.FilterBtn
+_trigon.UICorner_69.CornerRadius = UDim.new(0.07, 0)
+_trigon.UICorner_69.Parent = _trigon.FilterBtn
 
 _trigon.UIListLayout_28.FillDirection = Enum.FillDirection.Horizontal
 _trigon.UIListLayout_28.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -4658,8 +4617,8 @@ _trigon.UIListLayout_28.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_28.Padding = UDim.new(0.04, 0)
 _trigon.UIListLayout_28.Parent = _trigon.FilterBtn
 
-_trigon.UICorner_71.CornerRadius = UDim.new(0.01, 0)
-_trigon.UICorner_71.Parent = _trigon.Scripts_1
+_trigon.UICorner_70.CornerRadius = UDim.new(0.01, 0)
+_trigon.UICorner_70.Parent = _trigon.Scripts_1
 
 _trigon.FilterFrame.BorderSizePixel = 0
 _trigon.FilterFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4673,9 +4632,9 @@ _trigon.FilterFrame.Position = UDim2.new(0.50063, 0, 0.5, 0)
 _trigon.FilterFrame.ZIndex = 2
 _trigon.FilterFrame.Parent = _trigon.Scripts_1
 
-_trigon.UIGradient_25.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.100998, 0.7375), NumberSequenceKeypoint.new(0.201995, 0.51875), NumberSequenceKeypoint.new(0.350374, 0.25625), NumberSequenceKeypoint.new(0.498753, 0), NumberSequenceKeypoint.new(1, 0) }
-_trigon.UIGradient_25.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(39, 41, 46)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
-_trigon.UIGradient_25.Parent = _trigon.FilterFrame
+_trigon.UIGradient_24.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.100998, 0.7375), NumberSequenceKeypoint.new(0.201995, 0.51875), NumberSequenceKeypoint.new(0.350374, 0.25625), NumberSequenceKeypoint.new(0.498753, 0), NumberSequenceKeypoint.new(1, 0) }
+_trigon.UIGradient_24.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(39, 41, 46)), ColorSequenceKeypoint.new(1, Color3.fromRGB(39, 41, 46)) }
+_trigon.UIGradient_24.Parent = _trigon.FilterFrame
 
 _trigon.FilterPanel.Active = true
 _trigon.FilterPanel.BorderSizePixel = 0
@@ -4688,11 +4647,11 @@ _trigon.FilterPanel.Position = UDim2.new(1, 0, 0.5, 0)
 _trigon.FilterPanel.ZIndex = 3
 _trigon.FilterPanel.Parent = _trigon.FilterFrame
 
-_trigon.UIStroke_20.Color = Color3.fromRGB(30, 32, 36)
-_trigon.UIStroke_20.Thickness = 5
-_trigon.UIStroke_20.Transparency = 0.68
-_trigon.UIStroke_20.LineJoinMode = Enum.LineJoinMode.Miter
-_trigon.UIStroke_20.Parent = _trigon.FilterPanel
+_trigon.UIStroke_19.Color = Color3.fromRGB(30, 32, 36)
+_trigon.UIStroke_19.Thickness = 5
+_trigon.UIStroke_19.Transparency = 0.68
+_trigon.UIStroke_19.LineJoinMode = Enum.LineJoinMode.Miter
+_trigon.UIStroke_19.Parent = _trigon.FilterPanel
 
 _trigon.Frame.BorderSizePixel = 0
 _trigon.Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4788,20 +4747,20 @@ _trigon.circle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle.BackgroundTransparency = 1
 _trigon.circle.Parent = _trigon.NoKey
 
-_trigon.UIPadding_49.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_49.Parent = _trigon.NoKey
+_trigon.UIPadding_48.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_48.Parent = _trigon.NoKey
 
-_trigon.UICorner_72.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_72.Parent = _trigon.NoKey
+_trigon.UICorner_71.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_71.Parent = _trigon.NoKey
 
 _trigon.UIListLayout_31.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_31.Padding = UDim.new(0.008, 0)
 _trigon.UIListLayout_31.Parent = _trigon.FilterPanel
 
-_trigon.UIPadding_50.PaddingTop = UDim.new(0.01, 0)
-_trigon.UIPadding_50.PaddingRight = UDim.new(0.043, 0)
-_trigon.UIPadding_50.PaddingLeft = UDim.new(0.04, 0)
-_trigon.UIPadding_50.Parent = _trigon.FilterPanel
+_trigon.UIPadding_49.PaddingTop = UDim.new(0.01, 0)
+_trigon.UIPadding_49.PaddingRight = UDim.new(0.043, 0)
+_trigon.UIPadding_49.PaddingLeft = UDim.new(0.04, 0)
+_trigon.UIPadding_49.Parent = _trigon.FilterPanel
 
 _trigon.MobileOnly.BorderSizePixel = 0
 _trigon.MobileOnly.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4858,11 +4817,11 @@ _trigon.circle_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_1.BackgroundTransparency = 1
 _trigon.circle_1.Parent = _trigon.MobileOnly
 
-_trigon.UIPadding_51.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_51.Parent = _trigon.MobileOnly
+_trigon.UIPadding_50.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_50.Parent = _trigon.MobileOnly
 
-_trigon.UICorner_73.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_73.Parent = _trigon.MobileOnly
+_trigon.UICorner_72.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_72.Parent = _trigon.MobileOnly
 
 _trigon.NotPaid.BorderSizePixel = 0
 _trigon.NotPaid.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4919,11 +4878,11 @@ _trigon.circle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_2.BackgroundTransparency = 1
 _trigon.circle_2.Parent = _trigon.NotPaid
 
-_trigon.UIPadding_52.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_52.Parent = _trigon.NotPaid
+_trigon.UIPadding_51.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_51.Parent = _trigon.NotPaid
 
-_trigon.UICorner_74.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_74.Parent = _trigon.NotPaid
+_trigon.UICorner_73.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_73.Parent = _trigon.NotPaid
 
 _trigon.NotPatched.BorderSizePixel = 0
 _trigon.NotPatched.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -4980,11 +4939,11 @@ _trigon.circle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_3.BackgroundTransparency = 1
 _trigon.circle_3.Parent = _trigon.NotPatched
 
-_trigon.UIPadding_53.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_53.Parent = _trigon.NotPatched
+_trigon.UIPadding_52.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_52.Parent = _trigon.NotPatched
 
-_trigon.UICorner_75.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_75.Parent = _trigon.NotPatched
+_trigon.UICorner_74.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_74.Parent = _trigon.NotPatched
 
 _trigon.Veried.BorderSizePixel = 0
 _trigon.Veried.Position = UDim2.new(0.453633, 0, 0.166372, 0)
@@ -5041,11 +5000,11 @@ _trigon.circle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.circle_4.BackgroundTransparency = 1
 _trigon.circle_4.Parent = _trigon.Veried
 
-_trigon.UIPadding_54.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_54.Parent = _trigon.Veried
+_trigon.UIPadding_53.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_53.Parent = _trigon.Veried
 
-_trigon.UICorner_76.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_76.Parent = _trigon.Veried
+_trigon.UICorner_75.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_75.Parent = _trigon.Veried
 
 _trigon.OrderBy.Active = true
 _trigon.OrderBy.BorderSizePixel = 0
@@ -5075,8 +5034,8 @@ _trigon.UIListLayout_37.SortOrder = Enum.SortOrder.LayoutOrder
 _trigon.UIListLayout_37.Padding = UDim.new(0.05, 0)
 _trigon.UIListLayout_37.Parent = _trigon.title_1
 
-_trigon.UIPadding_55.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_55.Parent = _trigon.title_1
+_trigon.UIPadding_54.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_54.Parent = _trigon.title_1
 
 _trigon.icon_15.BorderSizePixel = 0
 _trigon.icon_15.ScaleType = Enum.ScaleType.Fit
@@ -5122,12 +5081,12 @@ _trigon.date_1.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.date_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.date_1.Parent = _trigon.Frame_1
 
-_trigon.UIStroke_21.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_21.Thickness = 3
-_trigon.UIStroke_21.Parent = _trigon.date_1
+_trigon.UIStroke_20.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_20.Thickness = 3
+_trigon.UIStroke_20.Parent = _trigon.date_1
 
-_trigon.UICorner_77.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_77.Parent = _trigon.date_1
+_trigon.UICorner_76.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_76.Parent = _trigon.date_1
 
 _trigon.icon_16.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_16.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5153,13 +5112,13 @@ _trigon.views_1.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.views_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.views_1.Parent = _trigon.Frame_1
 
-_trigon.UICorner_78.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_78.Parent = _trigon.views_1
+_trigon.UICorner_77.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_77.Parent = _trigon.views_1
 
-_trigon.UIStroke_22.Enabled = false
-_trigon.UIStroke_22.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_22.Thickness = 3
-_trigon.UIStroke_22.Parent = _trigon.views_1
+_trigon.UIStroke_21.Enabled = false
+_trigon.UIStroke_21.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_21.Thickness = 3
+_trigon.UIStroke_21.Parent = _trigon.views_1
 
 _trigon.icon_17.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_17.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5178,13 +5137,13 @@ _trigon.likes.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.likes.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.likes.Parent = _trigon.Frame_1
 
-_trigon.UICorner_79.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_79.Parent = _trigon.likes
+_trigon.UICorner_78.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_78.Parent = _trigon.likes
 
-_trigon.UIStroke_23.Enabled = false
-_trigon.UIStroke_23.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_23.Thickness = 3
-_trigon.UIStroke_23.Parent = _trigon.likes
+_trigon.UIStroke_22.Enabled = false
+_trigon.UIStroke_22.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_22.Thickness = 3
+_trigon.UIStroke_22.Parent = _trigon.likes
 
 _trigon.icon_18.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_18.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5203,13 +5162,13 @@ _trigon.dislikes.Size = UDim2.new(0.19, 0, 0.8, 0)
 _trigon.dislikes.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.dislikes.Parent = _trigon.Frame_1
 
-_trigon.UICorner_80.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_80.Parent = _trigon.dislikes
+_trigon.UICorner_79.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_79.Parent = _trigon.dislikes
 
-_trigon.UIStroke_24.Enabled = false
-_trigon.UIStroke_24.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_24.Thickness = 3
-_trigon.UIStroke_24.Parent = _trigon.dislikes
+_trigon.UIStroke_23.Enabled = false
+_trigon.UIStroke_23.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_23.Thickness = 3
+_trigon.UIStroke_23.Parent = _trigon.dislikes
 
 _trigon.icon_19.ScaleType = Enum.ScaleType.Fit
 _trigon.icon_19.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -5220,7 +5179,7 @@ _trigon.icon_19.Size = UDim2.new(0.438497, 0, 0.462458, 0)
 _trigon.icon_19.BackgroundTransparency = 1
 _trigon.icon_19.Parent = _trigon.dislikes
 
-_trigon.UIPadding_56.Parent = _trigon.Frame_1
+_trigon.UIPadding_55.Parent = _trigon.Frame_1
 
 _trigon.Frame2.BorderSizePixel = 0
 _trigon.Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -5241,12 +5200,12 @@ _trigon.ASC.Size = UDim2.new(0.41, 0, 0.8, 0)
 _trigon.ASC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.ASC.Parent = _trigon.Frame2
 
-_trigon.UIStroke_25.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_25.Thickness = 3
-_trigon.UIStroke_25.Parent = _trigon.ASC
+_trigon.UIStroke_24.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_24.Thickness = 3
+_trigon.UIStroke_24.Parent = _trigon.ASC
 
-_trigon.UICorner_81.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_81.Parent = _trigon.ASC
+_trigon.UICorner_80.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_80.Parent = _trigon.ASC
 
 _trigon.text.TextWrapped = true
 _trigon.text.BorderSizePixel = 0
@@ -5280,13 +5239,13 @@ _trigon.DESC.Size = UDim2.new(0.407083, 0, 0.8, 0)
 _trigon.DESC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.DESC.Parent = _trigon.Frame2
 
-_trigon.UICorner_82.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_82.Parent = _trigon.DESC
+_trigon.UICorner_81.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_81.Parent = _trigon.DESC
 
-_trigon.UIStroke_26.Enabled = false
-_trigon.UIStroke_26.Color = Color3.fromRGB(50, 53, 59)
-_trigon.UIStroke_26.Thickness = 3
-_trigon.UIStroke_26.Parent = _trigon.DESC
+_trigon.UIStroke_25.Enabled = false
+_trigon.UIStroke_25.Color = Color3.fromRGB(50, 53, 59)
+_trigon.UIStroke_25.Thickness = 3
+_trigon.UIStroke_25.Parent = _trigon.DESC
 
 _trigon.text_1.TextWrapped = true
 _trigon.text_1.BorderSizePixel = 0
@@ -5304,7 +5263,7 @@ _trigon.text_1.Text = "Desc"
 _trigon.text_1.BackgroundTransparency = 1
 _trigon.text_1.Parent = _trigon.DESC
 
-_trigon.UIPadding_57.Parent = _trigon.Frame2
+_trigon.UIPadding_56.Parent = _trigon.Frame2
 
 _trigon.empty.BorderSizePixel = 0
 _trigon.empty.Position = UDim2.new(0.5, 0, 0.859441, 0)
@@ -5342,8 +5301,8 @@ _trigon.TextLabel_26.Text = "Apply Settings"
 _trigon.TextLabel_26.BackgroundTransparency = 1
 _trigon.TextLabel_26.Parent = _trigon.Save
 
-_trigon.UICorner_83.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_83.Parent = _trigon.Save
+_trigon.UICorner_82.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_82.Parent = _trigon.Save
 
 _trigon.LFrame.BorderSizePixel = 0
 _trigon.LFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
@@ -5371,652 +5330,27 @@ _trigon.TextLabel_27.Text = "Loading..."
 _trigon.TextLabel_27.BackgroundTransparency = 1
 _trigon.TextLabel_27.Parent = _trigon.LFrame
 
-_trigon.UITextSizeConstraint_52.MaxTextSize = 27
-_trigon.UITextSizeConstraint_52.Parent = _trigon.TextLabel_27
+_trigon.UITextSizeConstraint_51.MaxTextSize = 27
+_trigon.UITextSizeConstraint_51.Parent = _trigon.TextLabel_27
 
-_trigon.FileManager_1.BorderSizePixel = 0
-_trigon.FileManager_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.FileManager_1.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.FileManager_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
-_trigon.FileManager_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
-_trigon.FileManager_1.Visible = false
-_trigon.FileManager_1.Name = "FileManager"
-_trigon.FileManager_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
-_trigon.FileManager_1.Parent = _trigon.Tabs
+_trigon.SHPopupFrame.BorderSizePixel = 0
+_trigon.SHPopupFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.SHPopupFrame.Size = UDim2.new(1, 0, 1, 0)
+_trigon.SHPopupFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.SHPopupFrame.BackgroundTransparency = 0.25
+_trigon.SHPopupFrame.Visible = false
+_trigon.SHPopupFrame.Name = "SHPopupFrame"
+_trigon.SHPopupFrame.Position = UDim2.new(-0.000628869, 0, 0.00102009, 0)
+_trigon.SHPopupFrame.Parent = _trigon.Scripts_1
 
-_trigon.UICorner_84.CornerRadius = UDim.new(0.01, 0)
-_trigon.UICorner_84.Parent = _trigon.FileManager_1
-
-_trigon.UIStroke_27.Color = Color3.fromRGB(30, 31, 35)
-_trigon.UIStroke_27.Thickness = 2
-_trigon.UIStroke_27.Transparency = 0.77
-_trigon.UIStroke_27.Parent = _trigon.FileManager_1
-
-_trigon.UIGradient_26.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(42, 44, 49)), ColorSequenceKeypoint.new(1, Color3.fromRGB(34, 36, 40)) }
-_trigon.UIGradient_26.Rotation = 53
-_trigon.UIGradient_26.Parent = _trigon.FileManager_1
-
-_trigon.bottom_3.BorderSizePixel = 0
-_trigon.bottom_3.BackgroundColor3 = Color3.fromRGB(0, 0, 245)
-_trigon.bottom_3.AnchorPoint = Vector2.new(1, 0)
-_trigon.bottom_3.Size = UDim2.new(0.798567, 0, 0.0699802, 0)
-_trigon.bottom_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.bottom_3.BackgroundTransparency = 1
-_trigon.bottom_3.Name = "bottom"
-_trigon.bottom_3.Position = UDim2.new(0.991552, 0, 0.908752, 0)
-_trigon.bottom_3.Parent = _trigon.FileManager_1
-
-_trigon.UIListLayout_40.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_40.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_40.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_40.Padding = UDim.new(0.006, 0)
-_trigon.UIListLayout_40.Parent = _trigon.bottom_3
-
-_trigon.execFile.Interactable = false
-_trigon.execFile.BorderSizePixel = 0
-_trigon.execFile.Position = UDim2.new(0.112178, 0, 0.5, 0)
-_trigon.execFile.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-_trigon.execFile.Name = "execFile"
-_trigon.execFile.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.execFile.Size = UDim2.new(0.224356, 0, 0.90212, 0)
-_trigon.execFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.execFile.BackgroundTransparency = 0.95
-_trigon.execFile.Parent = _trigon.bottom_3
-
-_trigon.UICorner_85.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_85.Parent = _trigon.execFile
-
-_trigon.Main_18.BorderSizePixel = 0
-_trigon.Main_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_18.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_18.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_18.ClipsDescendants = true
-_trigon.Main_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_18.BackgroundTransparency = 1
-_trigon.Main_18.Name = "Main"
-_trigon.Main_18.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_18.Parent = _trigon.execFile
-
-_trigon.UIPadding_58.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_58.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_58.Parent = _trigon.Main_18
-
-_trigon.UIListLayout_41.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_41.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_41.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_41.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_41.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_41.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_41.Parent = _trigon.Main_18
-
-_trigon.Icon_20.ImageColor3 = Color3.fromRGB(150, 150, 150)
-_trigon.Icon_20.BorderSizePixel = 0
-_trigon.Icon_20.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_20.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_20.Name = "Icon"
-_trigon.Icon_20.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_20.Image = "rbxassetid://14906044812"
-_trigon.Icon_20.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_20.BackgroundTransparency = 1
-_trigon.Icon_20.Parent = _trigon.Main_18
-
-_trigon.UIAspectRatioConstraint_14.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_14.Parent = _trigon.Icon_20
-
-_trigon.TextLabel_28.TextWrapped = true
-_trigon.TextLabel_28.BorderSizePixel = 0
-_trigon.TextLabel_28.TextScaled = true
-_trigon.TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_28.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_28.Position = UDim2.new(0.481194, 0, 0.5, 0)
-_trigon.TextLabel_28.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_28.TextSize = 14
-_trigon.TextLabel_28.Size = UDim2.new(0.530312, 0, 0.452381, 0)
-_trigon.TextLabel_28.TextColor3 = Color3.fromRGB(150, 150, 150)
-_trigon.TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_28.Text = "Execute File"
-_trigon.TextLabel_28.BackgroundTransparency = 1
-_trigon.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_28.Parent = _trigon.Main_18
-
-_trigon.UIPadding_59.Parent = _trigon.TextLabel_28
-
-_trigon.newFile.BorderSizePixel = 0
-_trigon.newFile.Position = UDim2.new(0.31446, 0, 0.5, 0)
-_trigon.newFile.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-_trigon.newFile.Name = "newFile"
-_trigon.newFile.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.newFile.Size = UDim2.new(0.168208, 0, 0.90212, 0)
-_trigon.newFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.newFile.BackgroundTransparency = 0.95
-_trigon.newFile.Parent = _trigon.bottom_3
-
-_trigon.UICorner_86.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_86.Parent = _trigon.newFile
-
-_trigon.Main_19.BorderSizePixel = 0
-_trigon.Main_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_19.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_19.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_19.ClipsDescendants = true
-_trigon.Main_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_19.BackgroundTransparency = 1
-_trigon.Main_19.Name = "Main"
-_trigon.Main_19.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_19.Parent = _trigon.newFile
-
-_trigon.UIPadding_60.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_60.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_60.Parent = _trigon.Main_19
-
-_trigon.UIListLayout_42.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_42.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_42.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_42.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_42.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_42.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_42.Parent = _trigon.Main_19
-
-_trigon.Icon_21.ImageColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.Icon_21.BorderSizePixel = 0
-_trigon.Icon_21.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_21.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_21.Name = "Icon"
-_trigon.Icon_21.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_21.Image = "rbxassetid://14906044812"
-_trigon.Icon_21.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_21.BackgroundTransparency = 1
-_trigon.Icon_21.Parent = _trigon.Main_19
-
-_trigon.UIAspectRatioConstraint_15.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_15.Parent = _trigon.Icon_21
-
-_trigon.TextLabel_29.TextWrapped = true
-_trigon.TextLabel_29.BorderSizePixel = 0
-_trigon.TextLabel_29.TextScaled = true
-_trigon.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_29.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_29.Position = UDim2.new(0.481194, 0, 0.5, 0)
-_trigon.TextLabel_29.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_29.TextSize = 14
-_trigon.TextLabel_29.Size = UDim2.new(0.530312, 0, 0.452381, 0)
-_trigon.TextLabel_29.TextColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_29.Text = "New File"
-_trigon.TextLabel_29.BackgroundTransparency = 1
-_trigon.TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_29.Parent = _trigon.Main_19
-
-_trigon.UIPadding_61.Parent = _trigon.TextLabel_29
-
-_trigon.newFolder.BorderSizePixel = 0
-_trigon.newFolder.Position = UDim2.new(0.509899, 0, 0.5, 0)
-_trigon.newFolder.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-_trigon.newFolder.Name = "newFolder"
-_trigon.newFolder.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.newFolder.Size = UDim2.new(0.215473, 0, 0.90212, 0)
-_trigon.newFolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.newFolder.BackgroundTransparency = 0.95
-_trigon.newFolder.Parent = _trigon.bottom_3
-
-_trigon.UICorner_87.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_87.Parent = _trigon.newFolder
-
-_trigon.Main_20.BorderSizePixel = 0
-_trigon.Main_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_20.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_20.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_20.ClipsDescendants = true
-_trigon.Main_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_20.BackgroundTransparency = 1
-_trigon.Main_20.Name = "Main"
-_trigon.Main_20.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_20.Parent = _trigon.newFolder
-
-_trigon.UIPadding_62.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_62.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_62.Parent = _trigon.Main_20
-
-_trigon.UIListLayout_43.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_43.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_43.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_43.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_43.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_43.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_43.Parent = _trigon.Main_20
-
-_trigon.Icon_22.ImageColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.Icon_22.BorderSizePixel = 0
-_trigon.Icon_22.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_22.Position = UDim2.new(0.204349, 0, 0.477645, 0)
-_trigon.Icon_22.Name = "Icon"
-_trigon.Icon_22.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_22.Image = "rbxassetid://13864075732"
-_trigon.Icon_22.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_22.BackgroundTransparency = 1
-_trigon.Icon_22.Parent = _trigon.Main_20
-
-_trigon.UIAspectRatioConstraint_16.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_16.Parent = _trigon.Icon_22
-
-_trigon.TextLabel_30.TextWrapped = true
-_trigon.TextLabel_30.BorderSizePixel = 0
-_trigon.TextLabel_30.TextScaled = true
-_trigon.TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_30.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_30.Position = UDim2.new(0.481194, 0, 0.5, 0)
-_trigon.TextLabel_30.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_30.TextSize = 14
-_trigon.TextLabel_30.Size = UDim2.new(0.530312, 0, 0.452381, 0)
-_trigon.TextLabel_30.TextColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.TextLabel_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_30.Text = "New Folder"
-_trigon.TextLabel_30.BackgroundTransparency = 1
-_trigon.TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_30.Parent = _trigon.Main_20
-
-_trigon.UIPadding_63.Parent = _trigon.TextLabel_30
-
-_trigon.DeleteFF.BorderSizePixel = 0
-_trigon.DeleteFF.Position = UDim2.new(0.701825, 0, 0.5, 0)
-_trigon.DeleteFF.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-_trigon.DeleteFF.Name = "DeleteFF"
-_trigon.DeleteFF.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.DeleteFF.Size = UDim2.new(0.152783, 0, 0.90212, 0)
-_trigon.DeleteFF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.DeleteFF.BackgroundTransparency = 0.95
-_trigon.DeleteFF.Parent = _trigon.bottom_3
-
-_trigon.UICorner_88.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_88.Parent = _trigon.DeleteFF
-
-_trigon.Main_21.BorderSizePixel = 0
-_trigon.Main_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_21.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_21.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_21.ClipsDescendants = true
-_trigon.Main_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_21.BackgroundTransparency = 1
-_trigon.Main_21.Name = "Main"
-_trigon.Main_21.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_21.Parent = _trigon.DeleteFF
-
-_trigon.UIPadding_64.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_64.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_64.Parent = _trigon.Main_21
-
-_trigon.UIListLayout_44.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_44.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_44.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_44.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_44.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_44.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_44.Parent = _trigon.Main_21
-
-_trigon.Icon_23.ImageColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.Icon_23.BorderSizePixel = 0
-_trigon.Icon_23.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_23.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_23.Name = "Icon"
-_trigon.Icon_23.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_23.Image = "rbxassetid://14939270108"
-_trigon.Icon_23.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_23.BackgroundTransparency = 1
-_trigon.Icon_23.Parent = _trigon.Main_21
-
-_trigon.UIAspectRatioConstraint_17.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_17.Parent = _trigon.Icon_23
-
-_trigon.TextLabel_31.TextWrapped = true
-_trigon.TextLabel_31.BorderSizePixel = 0
-_trigon.TextLabel_31.TextScaled = true
-_trigon.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_31.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_31.Position = UDim2.new(0.481194, 0, 0.5, 0)
-_trigon.TextLabel_31.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_31.TextSize = 14
-_trigon.TextLabel_31.Size = UDim2.new(0.530312, 0, 0.452381, 0)
-_trigon.TextLabel_31.TextColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.TextLabel_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_31.Text = "Delete"
-_trigon.TextLabel_31.BackgroundTransparency = 1
-_trigon.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_31.Parent = _trigon.Main_21
-
-_trigon.UIPadding_65.Parent = _trigon.TextLabel_31
-
-_trigon.preview_btn.Interactable = false
-_trigon.preview_btn.BorderSizePixel = 0
-_trigon.preview_btn.Position = UDim2.new(0.891852, 0, 0.5, 0)
-_trigon.preview_btn.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-_trigon.preview_btn.Name = "preview_btn"
-_trigon.preview_btn.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.preview_btn.Size = UDim2.new(0.214065, 0, 0.90212, 0)
-_trigon.preview_btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.preview_btn.BackgroundTransparency = 0.95
-_trigon.preview_btn.Parent = _trigon.bottom_3
-
-_trigon.UICorner_89.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_89.Parent = _trigon.preview_btn
-
-_trigon.Main_22.BorderSizePixel = 0
-_trigon.Main_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_22.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_22.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_22.ClipsDescendants = true
-_trigon.Main_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_22.BackgroundTransparency = 1
-_trigon.Main_22.Name = "Main"
-_trigon.Main_22.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_22.Parent = _trigon.preview_btn
-
-_trigon.UIPadding_66.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_66.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_66.Parent = _trigon.Main_22
-
-_trigon.UIListLayout_45.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_45.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_45.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_45.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_45.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_45.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_45.Parent = _trigon.Main_22
-
-_trigon.Icon_24.ImageColor3 = Color3.fromRGB(150, 150, 150)
-_trigon.Icon_24.BorderSizePixel = 0
-_trigon.Icon_24.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_24.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_24.Name = "Icon"
-_trigon.Icon_24.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_24.Image = "rbxassetid://14906044812"
-_trigon.Icon_24.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_24.BackgroundTransparency = 1
-_trigon.Icon_24.Parent = _trigon.Main_22
-
-_trigon.UIAspectRatioConstraint_18.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_18.Parent = _trigon.Icon_24
-
-_trigon.TextLabel_32.TextWrapped = true
-_trigon.TextLabel_32.BorderSizePixel = 0
-_trigon.TextLabel_32.TextScaled = true
-_trigon.TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_32.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_32.Position = UDim2.new(0.481194, 0, 0.5, 0)
-_trigon.TextLabel_32.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_32.TextSize = 14
-_trigon.TextLabel_32.Size = UDim2.new(0.530312, 0, 0.452381, 0)
-_trigon.TextLabel_32.TextColor3 = Color3.fromRGB(150, 150, 150)
-_trigon.TextLabel_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_32.Text = "Preview File"
-_trigon.TextLabel_32.BackgroundTransparency = 1
-_trigon.TextLabel_32.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_32.Parent = _trigon.Main_22
-
-_trigon.UIPadding_67.Parent = _trigon.TextLabel_32
-
-_trigon.Section.Name = "Section"
-_trigon.Section.Parent = _trigon.FileManager_1
-
-_trigon.Container_4.ScrollingDirection = Enum.ScrollingDirection.Y
 _trigon.Container_4.BorderSizePixel = 0
-_trigon.Container_4.CanvasSize = UDim2.new(0, 0, 1, 0)
-_trigon.Container_4.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-_trigon.Container_4.BackgroundTransparency = 0.98
+_trigon.Container_4.BackgroundColor3 = Color3.fromRGB(33, 35, 39)
 _trigon.Container_4.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Container_4.AutomaticCanvasSize = Enum.AutomaticSize.Y
-_trigon.Container_4.Size = UDim2.new(0.797677, 0, 0.796968, 0)
-_trigon.Container_4.Active = true
-_trigon.Container_4.BorderColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.Container_4.ScrollBarImageTransparency = 0.91
-_trigon.Container_4.ScrollBarThickness = 6
+_trigon.Container_4.Size = UDim2.new(0, 641, 0, 392)
+_trigon.Container_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.Container_4.Name = "Container"
-_trigon.Container_4.Position = UDim2.new(0.591823, 0, 0.501136, 0)
-_trigon.Container_4.Parent = _trigon.Section
-
-_trigon.UICorner_90.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_90.Parent = _trigon.Container_4
-
-_trigon.UIGridLayout_1.CellPadding = UDim2.new(0.015, 0, 0.018, 0)
-_trigon.UIGridLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIGridLayout_1.CellSize = UDim2.new(0.3, 0, 0.08, 0)
-_trigon.UIGridLayout_1.Parent = _trigon.Container_4
-
-_trigon.UIPadding_68.PaddingTop = UDim.new(0.01, 0)
-_trigon.UIPadding_68.PaddingRight = UDim.new(0.001, 0)
-_trigon.UIPadding_68.PaddingLeft = UDim.new(0.022, 0)
-_trigon.UIPadding_68.Parent = _trigon.Container_4
-
-_trigon.template.BorderSizePixel = 0
-_trigon.template.Position = UDim2.new(7.07989e-08, 0, 0.00271541, 0)
-_trigon.template.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.template.Selectable = false
-_trigon.template.Name = "template"
-_trigon.template.Size = UDim2.new(0.315, 0, 0.0804184, 0)
-_trigon.template.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.template.Active = false
-_trigon.template.BackgroundTransparency = 0.9
-_trigon.template.Parent = _trigon.Container_4
-
-_trigon.UICorner_91.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_91.Parent = _trigon.template
-
-_trigon.Icon_25.ImageColor3 = Color3.fromRGB(223, 223, 223)
-_trigon.Icon_25.BorderSizePixel = 0
-_trigon.Icon_25.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_25.ImageTransparency = 0.06
-_trigon.Icon_25.Position = UDim2.new(0.08, 0, 0.5, 0)
-_trigon.Icon_25.Name = "Icon"
-_trigon.Icon_25.AnchorPoint = Vector2.new(0.08, 0.5)
-_trigon.Icon_25.Image = "rbxassetid://13864075732"
-_trigon.Icon_25.Size = UDim2.new(0.93272, 0, 0.555214, 0)
-_trigon.Icon_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_25.BackgroundTransparency = 1
-_trigon.Icon_25.Parent = _trigon.template
-
-_trigon.UIAspectRatioConstraint_19.Parent = _trigon.Icon_25
-
-_trigon.TextLabel_33.TextWrapped = true
-_trigon.TextLabel_33.BorderSizePixel = 0
-_trigon.TextLabel_33.TextScaled = true
-_trigon.TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_33.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_33.Position = UDim2.new(0.967462, 0, 0.5, 0)
-_trigon.TextLabel_33.AnchorPoint = Vector2.new(1, 0.5)
-_trigon.TextLabel_33.TextSize = 14
-_trigon.TextLabel_33.Size = UDim2.new(0.749153, 0, 0.499616, 0)
-_trigon.TextLabel_33.TextColor3 = Color3.fromRGB(239, 239, 239)
-_trigon.TextLabel_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_33.Text = "Folder Name"
-_trigon.TextLabel_33.BackgroundTransparency = 1
-_trigon.TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_33.Parent = _trigon.template
-
-_trigon.treeviewFrame.Active = true
-_trigon.treeviewFrame.BorderSizePixel = 0
-_trigon.treeviewFrame.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-_trigon.treeviewFrame.Selectable = true
-_trigon.treeviewFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.treeviewFrame.Size = UDim2.new(0.176914, 0, 0.872656, 0)
-_trigon.treeviewFrame.ClipsDescendants = true
-_trigon.treeviewFrame.BorderColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.treeviewFrame.BackgroundTransparency = 0.98
-_trigon.treeviewFrame.Name = "treeviewFrame"
-_trigon.treeviewFrame.Position = UDim2.new(0.0967093, 0, 0.53898, 0)
-_trigon.treeviewFrame.SelectionGroup = true
-_trigon.treeviewFrame.Parent = _trigon.Section
-
-_trigon.UICorner_92.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_92.Parent = _trigon.treeviewFrame
-
-_trigon.UIPadding_69.PaddingTop = UDim.new(0.02, 0)
-_trigon.UIPadding_69.PaddingRight = UDim.new(0.025, 0)
-_trigon.UIPadding_69.PaddingLeft = UDim.new(0.1, 0)
-_trigon.UIPadding_69.Parent = _trigon.treeviewFrame
-
-_trigon.treeview_Studio.Enabled = false
-_trigon.treeview_Studio.Disabled = true
-_trigon.treeview_Studio.Name = "treeview_Studio"
-_trigon.treeview_Studio.Parent = _trigon.treeviewFrame
-
-_trigon.top.Active = true
-_trigon.top.BorderSizePixel = 0
-_trigon.top.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-_trigon.top.Selectable = true
-_trigon.top.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.top.Size = UDim2.new(0.797677, 0, 0.0619975, 0)
-_trigon.top.ClipsDescendants = true
-_trigon.top.BorderColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.top.BackgroundTransparency = 0.98
-_trigon.top.Name = "top"
-_trigon.top.Position = UDim2.new(0.591823, 0, 0.0585036, 0)
-_trigon.top.SelectionGroup = true
-_trigon.top.Parent = _trigon.Section
-
-_trigon.UICorner_93.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_93.Parent = _trigon.top
-
-_trigon.reload.BorderSizePixel = 0
-_trigon.reload.Position = UDim2.new(0.00986859, 0, 0.5, 0)
-_trigon.reload.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.reload.Selectable = false
-_trigon.reload.Name = "reload"
-_trigon.reload.AnchorPoint = Vector2.new(0.01, 0.5)
-_trigon.reload.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
-_trigon.reload.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.reload.BackgroundTransparency = 0.94
-_trigon.reload.Parent = _trigon.top
-
-_trigon.UICorner_94.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_94.Parent = _trigon.reload
-
-_trigon.Icon_26.ImageColor3 = Color3.fromRGB(223, 223, 223)
-_trigon.Icon_26.BorderSizePixel = 0
-_trigon.Icon_26.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_26.ImageTransparency = 0.06
-_trigon.Icon_26.Position = UDim2.new(0.5, 0, 0.5, 0)
-_trigon.Icon_26.Name = "Icon"
-_trigon.Icon_26.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_26.Image = "rbxassetid://13858598136"
-_trigon.Icon_26.Size = UDim2.new(0.567899, 0, 1, 0)
-_trigon.Icon_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_26.BackgroundTransparency = 1
-_trigon.Icon_26.Parent = _trigon.reload
-
-_trigon.TextLabel_34.TextWrapped = true
-_trigon.TextLabel_34.BorderSizePixel = 0
-_trigon.TextLabel_34.TextScaled = true
-_trigon.TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_34.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_34.Position = UDim2.new(0.558405, 0, 0.5, 0)
-_trigon.TextLabel_34.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_34.TextSize = 14
-_trigon.TextLabel_34.Size = UDim2.new(0.88319, 0, 1, 0)
-_trigon.TextLabel_34.TextColor3 = Color3.fromRGB(221, 221, 221)
-_trigon.TextLabel_34.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_34.BackgroundTransparency = 1
-_trigon.TextLabel_34.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_34.Parent = _trigon.top
-
-_trigon.UITextSizeConstraint_53.MaxTextSize = 20
-_trigon.UITextSizeConstraint_53.Parent = _trigon.TextLabel_34
-
-_trigon.back.BorderSizePixel = 0
-_trigon.back.Position = UDim2.new(0.0595362, 0, 0.5, 0)
-_trigon.back.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.back.Selectable = false
-_trigon.back.Name = "back"
-_trigon.back.AnchorPoint = Vector2.new(0.01, 0.5)
-_trigon.back.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
-_trigon.back.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.back.BackgroundTransparency = 0.94
-_trigon.back.Parent = _trigon.top
-
-_trigon.UICorner_95.CornerRadius = UDim.new(0.1, 0)
-_trigon.UICorner_95.Parent = _trigon.back
-
-_trigon.Icon_27.ImageColor3 = Color3.fromRGB(223, 223, 223)
-_trigon.Icon_27.BorderSizePixel = 0
-_trigon.Icon_27.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_27.ImageTransparency = 0.06
-_trigon.Icon_27.Position = UDim2.new(0.0979753, 0, 0.5, 0)
-_trigon.Icon_27.Name = "Icon"
-_trigon.Icon_27.AnchorPoint = Vector2.new(0, 0.5)
-_trigon.Icon_27.Image = "rbxassetid://13846730754"
-_trigon.Icon_27.Size = UDim2.new(0.771058, 0, 1, 0)
-_trigon.Icon_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_27.BackgroundTransparency = 1
-_trigon.Icon_27.Parent = _trigon.back
-
-_trigon.FMController.Name = "FMController"
-_trigon.FMController.Parent = _trigon.Section
-
-_trigon.top_dir.Active = true
-_trigon.top_dir.BorderSizePixel = 0
-_trigon.top_dir.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-_trigon.top_dir.Selectable = true
-_trigon.top_dir.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.top_dir.Size = UDim2.new(0.17644, 0, 0.076, 0)
-_trigon.top_dir.ClipsDescendants = true
-_trigon.top_dir.BorderColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.top_dir.BackgroundTransparency = 0.98
-_trigon.top_dir.Name = "top_dir"
-_trigon.top_dir.Position = UDim2.new(0.0969462, 0, 0.0650783, 0)
-_trigon.top_dir.SelectionGroup = true
-_trigon.top_dir.Parent = _trigon.Section
-
-_trigon.UICorner_96.CornerRadius = UDim.new(0.013, 0)
-_trigon.UICorner_96.Parent = _trigon.top_dir
-
-_trigon.TextLabel_35.TextWrapped = true
-_trigon.TextLabel_35.BorderSizePixel = 0
-_trigon.TextLabel_35.TextScaled = true
-_trigon.TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_35.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_35.Position = UDim2.new(0.528831, 0, 0.497194, 0)
-_trigon.TextLabel_35.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_35.TextSize = 14
-_trigon.TextLabel_35.Size = UDim2.new(0.942338, 0, 0.994387, 0)
-_trigon.TextLabel_35.TextColor3 = Color3.fromRGB(221, 221, 221)
-_trigon.TextLabel_35.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_35.Text = "Directory List:"
-_trigon.TextLabel_35.BackgroundTransparency = 1
-_trigon.TextLabel_35.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_35.Parent = _trigon.top_dir
-
-_trigon.UITextSizeConstraint_54.MaxTextSize = 20
-_trigon.UITextSizeConstraint_54.Parent = _trigon.TextLabel_35
-
-_trigon.FMPopupFrame.BorderSizePixel = 0
-_trigon.FMPopupFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
-_trigon.FMPopupFrame.Size = UDim2.new(1, 0, 1, 0)
-_trigon.FMPopupFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.FMPopupFrame.BackgroundTransparency = 0.25
-_trigon.FMPopupFrame.Visible = false
-_trigon.FMPopupFrame.Name = "FMPopupFrame"
-_trigon.FMPopupFrame.Position = UDim2.new(-0.000628869, 0, 0.00102009, 0)
-_trigon.FMPopupFrame.Parent = _trigon.FileManager_1
-
-_trigon.Container_5.BorderSizePixel = 0
-_trigon.Container_5.BackgroundColor3 = Color3.fromRGB(33, 35, 39)
-_trigon.Container_5.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Container_5.Size = UDim2.new(0, 641, 0, 392)
-_trigon.Container_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Container_5.Name = "Container"
-_trigon.Container_5.Position = UDim2.new(0.5, 0, 0.5, 0)
-_trigon.Container_5.Parent = _trigon.FMPopupFrame
+_trigon.Container_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.Container_4.Parent = _trigon.SHPopupFrame
 
 _trigon.Frame_2.BorderSizePixel = 0
 _trigon.Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -6025,14 +5359,14 @@ _trigon.Frame_2.Size = UDim2.new(1, 0, -0.0697278, 100)
 _trigon.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.Frame_2.BackgroundTransparency = 1
 _trigon.Frame_2.Position = UDim2.new(0.5, 0, 0.1, 0)
-_trigon.Frame_2.Parent = _trigon.Container_5
+_trigon.Frame_2.Parent = _trigon.Container_4
 
-_trigon.UIListLayout_46.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_46.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_46.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_46.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_46.Padding = UDim.new(0.02, 0)
-_trigon.UIListLayout_46.Parent = _trigon.Frame_2
+_trigon.UIListLayout_40.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_40.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_40.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_40.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_40.Padding = UDim.new(0.02, 0)
+_trigon.UIListLayout_40.Parent = _trigon.Frame_2
 
 _trigon.icon_20.BorderSizePixel = 0
 _trigon.icon_20.ScaleType = Enum.ScaleType.Fit
@@ -6061,11 +5395,11 @@ _trigon.content.BackgroundTransparency = 1
 _trigon.content.TextXAlignment = Enum.TextXAlignment.Left
 _trigon.content.Parent = _trigon.Frame_2
 
-_trigon.UITextSizeConstraint_55.MaxTextSize = 36
-_trigon.UITextSizeConstraint_55.Parent = _trigon.content
+_trigon.UITextSizeConstraint_52.MaxTextSize = 36
+_trigon.UITextSizeConstraint_52.Parent = _trigon.content
 
-_trigon.UICorner_97.CornerRadius = UDim.new(0.04, 0)
-_trigon.UICorner_97.Parent = _trigon.Container_5
+_trigon.UICorner_83.CornerRadius = UDim.new(0.04, 0)
+_trigon.UICorner_83.Parent = _trigon.Container_4
 
 _trigon.text_2.TextWrapped = true
 _trigon.text_2.BorderSizePixel = 0
@@ -6081,10 +5415,10 @@ _trigon.text_2.TextColor3 = Color3.fromRGB(220, 220, 220)
 _trigon.text_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.text_2.Text = "You are about to create a new folder in /Workspace/hydroxide/user. Are you sure?"
 _trigon.text_2.BackgroundTransparency = 1
-_trigon.text_2.Parent = _trigon.Container_5
+_trigon.text_2.Parent = _trigon.Container_4
 
-_trigon.UITextSizeConstraint_56.MaxTextSize = 26
-_trigon.UITextSizeConstraint_56.Parent = _trigon.text_2
+_trigon.UITextSizeConstraint_53.MaxTextSize = 26
+_trigon.UITextSizeConstraint_53.Parent = _trigon.text_2
 
 _trigon.cancel.BorderSizePixel = 0
 _trigon.cancel.Position = UDim2.new(0.8, 0, 0.9, 0)
@@ -6094,67 +5428,67 @@ _trigon.cancel.AnchorPoint = Vector2.new(0.8, 0.9)
 _trigon.cancel.Size = UDim2.new(0.345535, 0, 0.143617, 0)
 _trigon.cancel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.cancel.BackgroundTransparency = 0.95
-_trigon.cancel.Parent = _trigon.Container_5
+_trigon.cancel.Parent = _trigon.Container_4
 
-_trigon.UICorner_98.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_98.Parent = _trigon.cancel
+_trigon.UICorner_84.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_84.Parent = _trigon.cancel
 
-_trigon.Main_23.BorderSizePixel = 0
-_trigon.Main_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_23.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_23.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_23.ClipsDescendants = true
-_trigon.Main_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_23.BackgroundTransparency = 1
-_trigon.Main_23.Name = "Main"
-_trigon.Main_23.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_23.Parent = _trigon.cancel
+_trigon.Main_18.BorderSizePixel = 0
+_trigon.Main_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_18.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_18.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_18.ClipsDescendants = true
+_trigon.Main_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_18.BackgroundTransparency = 1
+_trigon.Main_18.Name = "Main"
+_trigon.Main_18.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_18.Parent = _trigon.cancel
 
-_trigon.UIPadding_70.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_70.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_70.Parent = _trigon.Main_23
+_trigon.UIPadding_57.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_57.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_57.Parent = _trigon.Main_18
 
-_trigon.UIListLayout_47.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_47.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_47.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_47.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_47.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_47.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_47.Parent = _trigon.Main_23
+_trigon.UIListLayout_41.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_41.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_41.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_41.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_41.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_41.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_41.Parent = _trigon.Main_18
 
-_trigon.Icon_28.ImageColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.Icon_28.BorderSizePixel = 0
-_trigon.Icon_28.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_28.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_28.Name = "Icon"
-_trigon.Icon_28.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_28.Image = "rbxassetid://13858536425"
-_trigon.Icon_28.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_28.BackgroundTransparency = 1
-_trigon.Icon_28.Parent = _trigon.Main_23
+_trigon.Icon_20.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_20.BorderSizePixel = 0
+_trigon.Icon_20.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_20.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_20.Name = "Icon"
+_trigon.Icon_20.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_20.Image = "rbxassetid://13858536425"
+_trigon.Icon_20.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_20.BackgroundTransparency = 1
+_trigon.Icon_20.Parent = _trigon.Main_18
 
-_trigon.UIAspectRatioConstraint_20.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_20.Parent = _trigon.Icon_28
+_trigon.UIAspectRatioConstraint_14.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_14.Parent = _trigon.Icon_20
 
-_trigon.TextLabel_36.TextWrapped = true
-_trigon.TextLabel_36.BorderSizePixel = 0
-_trigon.TextLabel_36.TextScaled = true
-_trigon.TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_36.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_36.Position = UDim2.new(0.57305, 0, 0.5, 0)
-_trigon.TextLabel_36.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_36.TextSize = 14
-_trigon.TextLabel_36.Size = UDim2.new(0.385785, 0, 0.452381, 0)
-_trigon.TextLabel_36.TextColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.TextLabel_36.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_36.Text = "Cancel"
-_trigon.TextLabel_36.BackgroundTransparency = 1
-_trigon.TextLabel_36.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_36.Parent = _trigon.Main_23
+_trigon.TextLabel_28.TextWrapped = true
+_trigon.TextLabel_28.BorderSizePixel = 0
+_trigon.TextLabel_28.TextScaled = true
+_trigon.TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_28.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_28.Position = UDim2.new(0.57305, 0, 0.5, 0)
+_trigon.TextLabel_28.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_28.TextSize = 14
+_trigon.TextLabel_28.Size = UDim2.new(0.385785, 0, 0.452381, 0)
+_trigon.TextLabel_28.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_28.Text = "Cancel"
+_trigon.TextLabel_28.BackgroundTransparency = 1
+_trigon.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_28.Parent = _trigon.Main_18
 
-_trigon.UIPadding_71.Parent = _trigon.TextLabel_36
+_trigon.UIPadding_58.Parent = _trigon.TextLabel_28
 
 _trigon.surebtn.BorderSizePixel = 0
 _trigon.surebtn.Position = UDim2.new(0.2, 0, 0.9, 0)
@@ -6164,67 +5498,67 @@ _trigon.surebtn.AnchorPoint = Vector2.new(0.2, 0.9)
 _trigon.surebtn.Size = UDim2.new(0.345535, 0, 0.143617, 0)
 _trigon.surebtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.surebtn.BackgroundTransparency = 0.95
-_trigon.surebtn.Parent = _trigon.Container_5
+_trigon.surebtn.Parent = _trigon.Container_4
 
-_trigon.UICorner_99.CornerRadius = UDim.new(0.08, 0)
-_trigon.UICorner_99.Parent = _trigon.surebtn
+_trigon.UICorner_85.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_85.Parent = _trigon.surebtn
 
-_trigon.Main_24.BorderSizePixel = 0
-_trigon.Main_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Main_24.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Main_24.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-_trigon.Main_24.ClipsDescendants = true
-_trigon.Main_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Main_24.BackgroundTransparency = 1
-_trigon.Main_24.Name = "Main"
-_trigon.Main_24.Position = UDim2.new(0.502747, 0, 0.5, 0)
-_trigon.Main_24.Parent = _trigon.surebtn
+_trigon.Main_19.BorderSizePixel = 0
+_trigon.Main_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_19.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_19.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_19.ClipsDescendants = true
+_trigon.Main_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_19.BackgroundTransparency = 1
+_trigon.Main_19.Name = "Main"
+_trigon.Main_19.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_19.Parent = _trigon.surebtn
 
-_trigon.UIPadding_72.PaddingRight = UDim.new(0.05, 0)
-_trigon.UIPadding_72.PaddingLeft = UDim.new(0.06, 0)
-_trigon.UIPadding_72.Parent = _trigon.Main_24
+_trigon.UIPadding_59.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_59.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_59.Parent = _trigon.Main_19
 
-_trigon.UIListLayout_48.FillDirection = Enum.FillDirection.Horizontal
-_trigon.UIListLayout_48.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_48.VerticalAlignment = Enum.VerticalAlignment.Center
-_trigon.UIListLayout_48.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_48.Padding = UDim.new(0.05, 0)
-_trigon.UIListLayout_48.ItemLineAlignment = Enum.ItemLineAlignment.Center
-_trigon.UIListLayout_48.Parent = _trigon.Main_24
+_trigon.UIListLayout_42.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_42.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_42.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_42.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_42.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_42.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_42.Parent = _trigon.Main_19
 
-_trigon.Icon_29.ImageColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.Icon_29.BorderSizePixel = 0
-_trigon.Icon_29.ScaleType = Enum.ScaleType.Fit
-_trigon.Icon_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.Icon_29.Position = UDim2.new(0.175027, 0, 0.5, 0)
-_trigon.Icon_29.Name = "Icon"
-_trigon.Icon_29.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.Icon_29.Image = "rbxassetid://13858807130"
-_trigon.Icon_29.Size = UDim2.new(0.154936, 0, 1.09524, 0)
-_trigon.Icon_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.Icon_29.BackgroundTransparency = 1
-_trigon.Icon_29.Parent = _trigon.Main_24
+_trigon.Icon_21.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_21.BorderSizePixel = 0
+_trigon.Icon_21.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_21.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_21.Name = "Icon"
+_trigon.Icon_21.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_21.Image = "rbxassetid://13858807130"
+_trigon.Icon_21.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_21.BackgroundTransparency = 1
+_trigon.Icon_21.Parent = _trigon.Main_19
 
-_trigon.UIAspectRatioConstraint_21.AspectRatio = 0.417535
-_trigon.UIAspectRatioConstraint_21.Parent = _trigon.Icon_29
+_trigon.UIAspectRatioConstraint_15.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_15.Parent = _trigon.Icon_21
 
-_trigon.TextLabel_37.TextWrapped = true
-_trigon.TextLabel_37.BorderSizePixel = 0
-_trigon.TextLabel_37.TextScaled = true
-_trigon.TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_trigon.TextLabel_37.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-_trigon.TextLabel_37.Position = UDim2.new(0.544145, 0, 0.5, 0)
-_trigon.TextLabel_37.AnchorPoint = Vector2.new(0.5, 0.5)
-_trigon.TextLabel_37.TextSize = 14
-_trigon.TextLabel_37.Size = UDim2.new(0.448696, 0, 0.452381, 0)
-_trigon.TextLabel_37.TextColor3 = Color3.fromRGB(241, 241, 241)
-_trigon.TextLabel_37.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_trigon.TextLabel_37.Text = "Proceed"
-_trigon.TextLabel_37.BackgroundTransparency = 1
-_trigon.TextLabel_37.TextXAlignment = Enum.TextXAlignment.Left
-_trigon.TextLabel_37.Parent = _trigon.Main_24
+_trigon.TextLabel_29.TextWrapped = true
+_trigon.TextLabel_29.BorderSizePixel = 0
+_trigon.TextLabel_29.TextScaled = true
+_trigon.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_29.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_29.Position = UDim2.new(0.544145, 0, 0.5, 0)
+_trigon.TextLabel_29.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_29.TextSize = 14
+_trigon.TextLabel_29.Size = UDim2.new(0.448696, 0, 0.452381, 0)
+_trigon.TextLabel_29.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_29.Text = "Proceed"
+_trigon.TextLabel_29.BackgroundTransparency = 1
+_trigon.TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_29.Parent = _trigon.Main_19
 
-_trigon.UIPadding_73.Parent = _trigon.TextLabel_37
+_trigon.UIPadding_60.Parent = _trigon.TextLabel_29
 
 _trigon.textInput.TextWrapped = true
 _trigon.textInput.BorderSizePixel = 0
@@ -6245,10 +5579,889 @@ _trigon.textInput.Text = ""
 _trigon.textInput.Selectable = false
 _trigon.textInput.Name = "textInput"
 _trigon.textInput.ClearTextOnFocus = false
-_trigon.textInput.Parent = _trigon.Container_5
+_trigon.textInput.Parent = _trigon.Container_4
 
-_trigon.UITextSizeConstraint_57.MaxTextSize = 26
-_trigon.UITextSizeConstraint_57.Parent = _trigon.textInput
+_trigon.UITextSizeConstraint_54.MaxTextSize = 26
+_trigon.UITextSizeConstraint_54.Parent = _trigon.textInput
+
+_trigon.SHPopup.Name = "SHPopup"
+_trigon.SHPopup.Parent = _trigon.SHPopupFrame
+
+_trigon.FileManager_1.BorderSizePixel = 0
+_trigon.FileManager_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.FileManager_1.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.FileManager_1.Size = UDim2.new(0.811974, 0, 0.907687, 0)
+_trigon.FileManager_1.BorderColor3 = Color3.fromRGB(30, 31, 35)
+_trigon.FileManager_1.Visible = false
+_trigon.FileManager_1.Name = "FileManager"
+_trigon.FileManager_1.Position = UDim2.new(0.569549, 0, 0.525602, 0)
+_trigon.FileManager_1.Parent = _trigon.Tabs
+
+_trigon.UICorner_86.CornerRadius = UDim.new(0.01, 0)
+_trigon.UICorner_86.Parent = _trigon.FileManager_1
+
+_trigon.UIStroke_26.Color = Color3.fromRGB(30, 31, 35)
+_trigon.UIStroke_26.Thickness = 2
+_trigon.UIStroke_26.Transparency = 0.77
+_trigon.UIStroke_26.Parent = _trigon.FileManager_1
+
+_trigon.UIGradient_25.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(42, 44, 49)), ColorSequenceKeypoint.new(1, Color3.fromRGB(34, 36, 40)) }
+_trigon.UIGradient_25.Rotation = 53
+_trigon.UIGradient_25.Parent = _trigon.FileManager_1
+
+_trigon.bottom_3.BorderSizePixel = 0
+_trigon.bottom_3.BackgroundColor3 = Color3.fromRGB(0, 0, 245)
+_trigon.bottom_3.AnchorPoint = Vector2.new(1, 0)
+_trigon.bottom_3.Size = UDim2.new(0.798567, 0, 0.0699802, 0)
+_trigon.bottom_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.bottom_3.BackgroundTransparency = 1
+_trigon.bottom_3.Name = "bottom"
+_trigon.bottom_3.Position = UDim2.new(0.991552, 0, 0.908752, 0)
+_trigon.bottom_3.Parent = _trigon.FileManager_1
+
+_trigon.UIListLayout_43.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_43.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_43.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_43.Padding = UDim.new(0.006, 0)
+_trigon.UIListLayout_43.Parent = _trigon.bottom_3
+
+_trigon.execFile.Interactable = false
+_trigon.execFile.BorderSizePixel = 0
+_trigon.execFile.Position = UDim2.new(0.112178, 0, 0.5, 0)
+_trigon.execFile.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.execFile.Name = "execFile"
+_trigon.execFile.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.execFile.Size = UDim2.new(0.224356, 0, 0.90212, 0)
+_trigon.execFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.execFile.BackgroundTransparency = 0.95
+_trigon.execFile.Parent = _trigon.bottom_3
+
+_trigon.UICorner_87.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_87.Parent = _trigon.execFile
+
+_trigon.Main_20.BorderSizePixel = 0
+_trigon.Main_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_20.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_20.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_20.ClipsDescendants = true
+_trigon.Main_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_20.BackgroundTransparency = 1
+_trigon.Main_20.Name = "Main"
+_trigon.Main_20.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_20.Parent = _trigon.execFile
+
+_trigon.UIPadding_61.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_61.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_61.Parent = _trigon.Main_20
+
+_trigon.UIListLayout_44.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_44.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_44.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_44.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_44.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_44.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_44.Parent = _trigon.Main_20
+
+_trigon.Icon_22.ImageColor3 = Color3.fromRGB(150, 150, 150)
+_trigon.Icon_22.BorderSizePixel = 0
+_trigon.Icon_22.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_22.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_22.Name = "Icon"
+_trigon.Icon_22.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_22.Image = "rbxassetid://14906044812"
+_trigon.Icon_22.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_22.BackgroundTransparency = 1
+_trigon.Icon_22.Parent = _trigon.Main_20
+
+_trigon.UIAspectRatioConstraint_16.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_16.Parent = _trigon.Icon_22
+
+_trigon.TextLabel_30.TextWrapped = true
+_trigon.TextLabel_30.BorderSizePixel = 0
+_trigon.TextLabel_30.TextScaled = true
+_trigon.TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_30.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_30.Position = UDim2.new(0.481194, 0, 0.5, 0)
+_trigon.TextLabel_30.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_30.TextSize = 14
+_trigon.TextLabel_30.Size = UDim2.new(0.530312, 0, 0.452381, 0)
+_trigon.TextLabel_30.TextColor3 = Color3.fromRGB(150, 150, 150)
+_trigon.TextLabel_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_30.Text = "Execute File"
+_trigon.TextLabel_30.BackgroundTransparency = 1
+_trigon.TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_30.Parent = _trigon.Main_20
+
+_trigon.UIPadding_62.Parent = _trigon.TextLabel_30
+
+_trigon.newFile.BorderSizePixel = 0
+_trigon.newFile.Position = UDim2.new(0.31446, 0, 0.5, 0)
+_trigon.newFile.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.newFile.Name = "newFile"
+_trigon.newFile.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.newFile.Size = UDim2.new(0.168208, 0, 0.90212, 0)
+_trigon.newFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.newFile.BackgroundTransparency = 0.95
+_trigon.newFile.Parent = _trigon.bottom_3
+
+_trigon.UICorner_88.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_88.Parent = _trigon.newFile
+
+_trigon.Main_21.BorderSizePixel = 0
+_trigon.Main_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_21.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_21.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_21.ClipsDescendants = true
+_trigon.Main_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_21.BackgroundTransparency = 1
+_trigon.Main_21.Name = "Main"
+_trigon.Main_21.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_21.Parent = _trigon.newFile
+
+_trigon.UIPadding_63.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_63.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_63.Parent = _trigon.Main_21
+
+_trigon.UIListLayout_45.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_45.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_45.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_45.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_45.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_45.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_45.Parent = _trigon.Main_21
+
+_trigon.Icon_23.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_23.BorderSizePixel = 0
+_trigon.Icon_23.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_23.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_23.Name = "Icon"
+_trigon.Icon_23.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_23.Image = "rbxassetid://14906044812"
+_trigon.Icon_23.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_23.BackgroundTransparency = 1
+_trigon.Icon_23.Parent = _trigon.Main_21
+
+_trigon.UIAspectRatioConstraint_17.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_17.Parent = _trigon.Icon_23
+
+_trigon.TextLabel_31.TextWrapped = true
+_trigon.TextLabel_31.BorderSizePixel = 0
+_trigon.TextLabel_31.TextScaled = true
+_trigon.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_31.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_31.Position = UDim2.new(0.481194, 0, 0.5, 0)
+_trigon.TextLabel_31.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_31.TextSize = 14
+_trigon.TextLabel_31.Size = UDim2.new(0.530312, 0, 0.452381, 0)
+_trigon.TextLabel_31.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_31.Text = "New File"
+_trigon.TextLabel_31.BackgroundTransparency = 1
+_trigon.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_31.Parent = _trigon.Main_21
+
+_trigon.UIPadding_64.Parent = _trigon.TextLabel_31
+
+_trigon.newFolder.BorderSizePixel = 0
+_trigon.newFolder.Position = UDim2.new(0.509899, 0, 0.5, 0)
+_trigon.newFolder.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.newFolder.Name = "newFolder"
+_trigon.newFolder.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.newFolder.Size = UDim2.new(0.215473, 0, 0.90212, 0)
+_trigon.newFolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.newFolder.BackgroundTransparency = 0.95
+_trigon.newFolder.Parent = _trigon.bottom_3
+
+_trigon.UICorner_89.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_89.Parent = _trigon.newFolder
+
+_trigon.Main_22.BorderSizePixel = 0
+_trigon.Main_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_22.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_22.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_22.ClipsDescendants = true
+_trigon.Main_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_22.BackgroundTransparency = 1
+_trigon.Main_22.Name = "Main"
+_trigon.Main_22.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_22.Parent = _trigon.newFolder
+
+_trigon.UIPadding_65.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_65.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_65.Parent = _trigon.Main_22
+
+_trigon.UIListLayout_46.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_46.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_46.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_46.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_46.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_46.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_46.Parent = _trigon.Main_22
+
+_trigon.Icon_24.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_24.BorderSizePixel = 0
+_trigon.Icon_24.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_24.Position = UDim2.new(0.204349, 0, 0.477645, 0)
+_trigon.Icon_24.Name = "Icon"
+_trigon.Icon_24.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_24.Image = "rbxassetid://13864075732"
+_trigon.Icon_24.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_24.BackgroundTransparency = 1
+_trigon.Icon_24.Parent = _trigon.Main_22
+
+_trigon.UIAspectRatioConstraint_18.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_18.Parent = _trigon.Icon_24
+
+_trigon.TextLabel_32.TextWrapped = true
+_trigon.TextLabel_32.BorderSizePixel = 0
+_trigon.TextLabel_32.TextScaled = true
+_trigon.TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_32.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_32.Position = UDim2.new(0.481194, 0, 0.5, 0)
+_trigon.TextLabel_32.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_32.TextSize = 14
+_trigon.TextLabel_32.Size = UDim2.new(0.530312, 0, 0.452381, 0)
+_trigon.TextLabel_32.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_32.Text = "New Folder"
+_trigon.TextLabel_32.BackgroundTransparency = 1
+_trigon.TextLabel_32.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_32.Parent = _trigon.Main_22
+
+_trigon.UIPadding_66.Parent = _trigon.TextLabel_32
+
+_trigon.DeleteFF.BorderSizePixel = 0
+_trigon.DeleteFF.Position = UDim2.new(0.701825, 0, 0.5, 0)
+_trigon.DeleteFF.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.DeleteFF.Name = "DeleteFF"
+_trigon.DeleteFF.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.DeleteFF.Size = UDim2.new(0.152783, 0, 0.90212, 0)
+_trigon.DeleteFF.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.DeleteFF.BackgroundTransparency = 0.95
+_trigon.DeleteFF.Parent = _trigon.bottom_3
+
+_trigon.UICorner_90.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_90.Parent = _trigon.DeleteFF
+
+_trigon.Main_23.BorderSizePixel = 0
+_trigon.Main_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_23.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_23.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_23.ClipsDescendants = true
+_trigon.Main_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_23.BackgroundTransparency = 1
+_trigon.Main_23.Name = "Main"
+_trigon.Main_23.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_23.Parent = _trigon.DeleteFF
+
+_trigon.UIPadding_67.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_67.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_67.Parent = _trigon.Main_23
+
+_trigon.UIListLayout_47.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_47.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_47.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_47.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_47.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_47.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_47.Parent = _trigon.Main_23
+
+_trigon.Icon_25.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_25.BorderSizePixel = 0
+_trigon.Icon_25.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_25.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_25.Name = "Icon"
+_trigon.Icon_25.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_25.Image = "rbxassetid://14939270108"
+_trigon.Icon_25.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_25.BackgroundTransparency = 1
+_trigon.Icon_25.Parent = _trigon.Main_23
+
+_trigon.UIAspectRatioConstraint_19.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_19.Parent = _trigon.Icon_25
+
+_trigon.TextLabel_33.TextWrapped = true
+_trigon.TextLabel_33.BorderSizePixel = 0
+_trigon.TextLabel_33.TextScaled = true
+_trigon.TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_33.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_33.Position = UDim2.new(0.481194, 0, 0.5, 0)
+_trigon.TextLabel_33.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_33.TextSize = 14
+_trigon.TextLabel_33.Size = UDim2.new(0.530312, 0, 0.452381, 0)
+_trigon.TextLabel_33.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_33.Text = "Delete"
+_trigon.TextLabel_33.BackgroundTransparency = 1
+_trigon.TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_33.Parent = _trigon.Main_23
+
+_trigon.UIPadding_68.Parent = _trigon.TextLabel_33
+
+_trigon.preview_btn.Interactable = false
+_trigon.preview_btn.BorderSizePixel = 0
+_trigon.preview_btn.Position = UDim2.new(0.891852, 0, 0.5, 0)
+_trigon.preview_btn.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.preview_btn.Name = "preview_btn"
+_trigon.preview_btn.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.preview_btn.Size = UDim2.new(0.214065, 0, 0.90212, 0)
+_trigon.preview_btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.preview_btn.BackgroundTransparency = 0.95
+_trigon.preview_btn.Parent = _trigon.bottom_3
+
+_trigon.UICorner_91.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_91.Parent = _trigon.preview_btn
+
+_trigon.Main_24.BorderSizePixel = 0
+_trigon.Main_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_24.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_24.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_24.ClipsDescendants = true
+_trigon.Main_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_24.BackgroundTransparency = 1
+_trigon.Main_24.Name = "Main"
+_trigon.Main_24.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_24.Parent = _trigon.preview_btn
+
+_trigon.UIPadding_69.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_69.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_69.Parent = _trigon.Main_24
+
+_trigon.UIListLayout_48.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_48.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_48.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_48.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_48.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_48.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_48.Parent = _trigon.Main_24
+
+_trigon.Icon_26.ImageColor3 = Color3.fromRGB(150, 150, 150)
+_trigon.Icon_26.BorderSizePixel = 0
+_trigon.Icon_26.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_26.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_26.Name = "Icon"
+_trigon.Icon_26.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_26.Image = "rbxassetid://14906044812"
+_trigon.Icon_26.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_26.BackgroundTransparency = 1
+_trigon.Icon_26.Parent = _trigon.Main_24
+
+_trigon.UIAspectRatioConstraint_20.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_20.Parent = _trigon.Icon_26
+
+_trigon.TextLabel_34.TextWrapped = true
+_trigon.TextLabel_34.BorderSizePixel = 0
+_trigon.TextLabel_34.TextScaled = true
+_trigon.TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_34.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_34.Position = UDim2.new(0.481194, 0, 0.5, 0)
+_trigon.TextLabel_34.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_34.TextSize = 14
+_trigon.TextLabel_34.Size = UDim2.new(0.530312, 0, 0.452381, 0)
+_trigon.TextLabel_34.TextColor3 = Color3.fromRGB(150, 150, 150)
+_trigon.TextLabel_34.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_34.Text = "Preview File"
+_trigon.TextLabel_34.BackgroundTransparency = 1
+_trigon.TextLabel_34.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_34.Parent = _trigon.Main_24
+
+_trigon.UIPadding_70.Parent = _trigon.TextLabel_34
+
+_trigon.Section.Name = "Section"
+_trigon.Section.Parent = _trigon.FileManager_1
+
+_trigon.Container_5.ScrollingDirection = Enum.ScrollingDirection.Y
+_trigon.Container_5.BorderSizePixel = 0
+_trigon.Container_5.CanvasSize = UDim2.new(0, 0, 1, 0)
+_trigon.Container_5.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
+_trigon.Container_5.BackgroundTransparency = 0.98
+_trigon.Container_5.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Container_5.AutomaticCanvasSize = Enum.AutomaticSize.Y
+_trigon.Container_5.Size = UDim2.new(0.797677, 0, 0.796968, 0)
+_trigon.Container_5.Active = true
+_trigon.Container_5.BorderColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.Container_5.ScrollBarImageTransparency = 0.91
+_trigon.Container_5.ScrollBarThickness = 6
+_trigon.Container_5.Name = "Container"
+_trigon.Container_5.Position = UDim2.new(0.591823, 0, 0.501136, 0)
+_trigon.Container_5.Parent = _trigon.Section
+
+_trigon.UICorner_92.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_92.Parent = _trigon.Container_5
+
+_trigon.UIGridLayout_1.CellPadding = UDim2.new(0.015, 0, 0.018, 0)
+_trigon.UIGridLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIGridLayout_1.CellSize = UDim2.new(0.3, 0, 0.08, 0)
+_trigon.UIGridLayout_1.Parent = _trigon.Container_5
+
+_trigon.UIPadding_71.PaddingTop = UDim.new(0.01, 0)
+_trigon.UIPadding_71.PaddingRight = UDim.new(0.001, 0)
+_trigon.UIPadding_71.PaddingLeft = UDim.new(0.022, 0)
+_trigon.UIPadding_71.Parent = _trigon.Container_5
+
+_trigon.template.BorderSizePixel = 0
+_trigon.template.Position = UDim2.new(7.07989e-08, 0, 0.00271541, 0)
+_trigon.template.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.template.Selectable = false
+_trigon.template.Name = "template"
+_trigon.template.Size = UDim2.new(0.315, 0, 0.0804184, 0)
+_trigon.template.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.template.Active = false
+_trigon.template.BackgroundTransparency = 0.9
+_trigon.template.Parent = _trigon.Container_5
+
+_trigon.UICorner_93.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_93.Parent = _trigon.template
+
+_trigon.Icon_27.ImageColor3 = Color3.fromRGB(223, 223, 223)
+_trigon.Icon_27.BorderSizePixel = 0
+_trigon.Icon_27.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_27.ImageTransparency = 0.06
+_trigon.Icon_27.Position = UDim2.new(0.08, 0, 0.5, 0)
+_trigon.Icon_27.Name = "Icon"
+_trigon.Icon_27.AnchorPoint = Vector2.new(0.08, 0.5)
+_trigon.Icon_27.Image = "rbxassetid://13864075732"
+_trigon.Icon_27.Size = UDim2.new(0.93272, 0, 0.555214, 0)
+_trigon.Icon_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_27.BackgroundTransparency = 1
+_trigon.Icon_27.Parent = _trigon.template
+
+_trigon.UIAspectRatioConstraint_21.Parent = _trigon.Icon_27
+
+_trigon.TextLabel_35.TextWrapped = true
+_trigon.TextLabel_35.BorderSizePixel = 0
+_trigon.TextLabel_35.TextScaled = true
+_trigon.TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_35.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_35.Position = UDim2.new(0.967462, 0, 0.5, 0)
+_trigon.TextLabel_35.AnchorPoint = Vector2.new(1, 0.5)
+_trigon.TextLabel_35.TextSize = 14
+_trigon.TextLabel_35.Size = UDim2.new(0.749153, 0, 0.499616, 0)
+_trigon.TextLabel_35.TextColor3 = Color3.fromRGB(239, 239, 239)
+_trigon.TextLabel_35.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_35.Text = "Folder Name"
+_trigon.TextLabel_35.BackgroundTransparency = 1
+_trigon.TextLabel_35.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_35.Parent = _trigon.template
+
+_trigon.treeviewFrame.Active = true
+_trigon.treeviewFrame.BorderSizePixel = 0
+_trigon.treeviewFrame.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
+_trigon.treeviewFrame.Selectable = true
+_trigon.treeviewFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.treeviewFrame.Size = UDim2.new(0.176914, 0, 0.872656, 0)
+_trigon.treeviewFrame.ClipsDescendants = true
+_trigon.treeviewFrame.BorderColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.treeviewFrame.BackgroundTransparency = 0.98
+_trigon.treeviewFrame.Name = "treeviewFrame"
+_trigon.treeviewFrame.Position = UDim2.new(0.0967093, 0, 0.53898, 0)
+_trigon.treeviewFrame.SelectionGroup = true
+_trigon.treeviewFrame.Parent = _trigon.Section
+
+_trigon.UICorner_94.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_94.Parent = _trigon.treeviewFrame
+
+_trigon.UIPadding_72.PaddingTop = UDim.new(0.02, 0)
+_trigon.UIPadding_72.PaddingRight = UDim.new(0.025, 0)
+_trigon.UIPadding_72.PaddingLeft = UDim.new(0.1, 0)
+_trigon.UIPadding_72.Parent = _trigon.treeviewFrame
+
+_trigon.treeview_Studio.Enabled = false
+_trigon.treeview_Studio.Disabled = true
+_trigon.treeview_Studio.Name = "treeview_Studio"
+_trigon.treeview_Studio.Parent = _trigon.treeviewFrame
+
+_trigon.top.Active = true
+_trigon.top.BorderSizePixel = 0
+_trigon.top.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
+_trigon.top.Selectable = true
+_trigon.top.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.top.Size = UDim2.new(0.797677, 0, 0.0619975, 0)
+_trigon.top.ClipsDescendants = true
+_trigon.top.BorderColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.top.BackgroundTransparency = 0.98
+_trigon.top.Name = "top"
+_trigon.top.Position = UDim2.new(0.591823, 0, 0.0585036, 0)
+_trigon.top.SelectionGroup = true
+_trigon.top.Parent = _trigon.Section
+
+_trigon.UICorner_95.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_95.Parent = _trigon.top
+
+_trigon.reload.BorderSizePixel = 0
+_trigon.reload.Position = UDim2.new(0.00986859, 0, 0.5, 0)
+_trigon.reload.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.reload.Selectable = false
+_trigon.reload.Name = "reload"
+_trigon.reload.AnchorPoint = Vector2.new(0.01, 0.5)
+_trigon.reload.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
+_trigon.reload.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.reload.BackgroundTransparency = 0.94
+_trigon.reload.Parent = _trigon.top
+
+_trigon.UICorner_96.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_96.Parent = _trigon.reload
+
+_trigon.Icon_28.ImageColor3 = Color3.fromRGB(223, 223, 223)
+_trigon.Icon_28.BorderSizePixel = 0
+_trigon.Icon_28.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_28.ImageTransparency = 0.06
+_trigon.Icon_28.Position = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.Icon_28.Name = "Icon"
+_trigon.Icon_28.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_28.Image = "rbxassetid://13858598136"
+_trigon.Icon_28.Size = UDim2.new(0.567899, 0, 1, 0)
+_trigon.Icon_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_28.BackgroundTransparency = 1
+_trigon.Icon_28.Parent = _trigon.reload
+
+_trigon.TextLabel_36.TextWrapped = true
+_trigon.TextLabel_36.BorderSizePixel = 0
+_trigon.TextLabel_36.TextScaled = true
+_trigon.TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_36.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_36.Position = UDim2.new(0.558405, 0, 0.5, 0)
+_trigon.TextLabel_36.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_36.TextSize = 14
+_trigon.TextLabel_36.Size = UDim2.new(0.88319, 0, 1, 0)
+_trigon.TextLabel_36.TextColor3 = Color3.fromRGB(221, 221, 221)
+_trigon.TextLabel_36.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_36.BackgroundTransparency = 1
+_trigon.TextLabel_36.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_36.Parent = _trigon.top
+
+_trigon.UITextSizeConstraint_55.MaxTextSize = 20
+_trigon.UITextSizeConstraint_55.Parent = _trigon.TextLabel_36
+
+_trigon.back.BorderSizePixel = 0
+_trigon.back.Position = UDim2.new(0.0595362, 0, 0.5, 0)
+_trigon.back.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.back.Selectable = false
+_trigon.back.Name = "back"
+_trigon.back.AnchorPoint = Vector2.new(0.01, 0.5)
+_trigon.back.Size = UDim2.new(0.0416704, 0, 0.808433, 0)
+_trigon.back.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.back.BackgroundTransparency = 0.94
+_trigon.back.Parent = _trigon.top
+
+_trigon.UICorner_97.CornerRadius = UDim.new(0.1, 0)
+_trigon.UICorner_97.Parent = _trigon.back
+
+_trigon.Icon_29.ImageColor3 = Color3.fromRGB(223, 223, 223)
+_trigon.Icon_29.BorderSizePixel = 0
+_trigon.Icon_29.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_29.ImageTransparency = 0.06
+_trigon.Icon_29.Position = UDim2.new(0.0979753, 0, 0.5, 0)
+_trigon.Icon_29.Name = "Icon"
+_trigon.Icon_29.AnchorPoint = Vector2.new(0, 0.5)
+_trigon.Icon_29.Image = "rbxassetid://13846730754"
+_trigon.Icon_29.Size = UDim2.new(0.771058, 0, 1, 0)
+_trigon.Icon_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_29.BackgroundTransparency = 1
+_trigon.Icon_29.Parent = _trigon.back
+
+_trigon.FMController.Name = "FMController"
+_trigon.FMController.Parent = _trigon.Section
+
+_trigon.top_dir.Active = true
+_trigon.top_dir.BorderSizePixel = 0
+_trigon.top_dir.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
+_trigon.top_dir.Selectable = true
+_trigon.top_dir.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.top_dir.Size = UDim2.new(0.17644, 0, 0.076, 0)
+_trigon.top_dir.ClipsDescendants = true
+_trigon.top_dir.BorderColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.top_dir.BackgroundTransparency = 0.98
+_trigon.top_dir.Name = "top_dir"
+_trigon.top_dir.Position = UDim2.new(0.0969462, 0, 0.0650783, 0)
+_trigon.top_dir.SelectionGroup = true
+_trigon.top_dir.Parent = _trigon.Section
+
+_trigon.UICorner_98.CornerRadius = UDim.new(0.013, 0)
+_trigon.UICorner_98.Parent = _trigon.top_dir
+
+_trigon.TextLabel_37.TextWrapped = true
+_trigon.TextLabel_37.BorderSizePixel = 0
+_trigon.TextLabel_37.TextScaled = true
+_trigon.TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_37.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_37.Position = UDim2.new(0.528831, 0, 0.497194, 0)
+_trigon.TextLabel_37.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_37.TextSize = 14
+_trigon.TextLabel_37.Size = UDim2.new(0.942338, 0, 0.994387, 0)
+_trigon.TextLabel_37.TextColor3 = Color3.fromRGB(221, 221, 221)
+_trigon.TextLabel_37.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_37.Text = "Directory List:"
+_trigon.TextLabel_37.BackgroundTransparency = 1
+_trigon.TextLabel_37.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_37.Parent = _trigon.top_dir
+
+_trigon.UITextSizeConstraint_56.MaxTextSize = 20
+_trigon.UITextSizeConstraint_56.Parent = _trigon.TextLabel_37
+
+_trigon.FMPopupFrame.BorderSizePixel = 0
+_trigon.FMPopupFrame.BackgroundColor3 = Color3.fromRGB(39, 41, 46)
+_trigon.FMPopupFrame.Size = UDim2.new(1, 0, 1, 0)
+_trigon.FMPopupFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.FMPopupFrame.BackgroundTransparency = 0.25
+_trigon.FMPopupFrame.Visible = false
+_trigon.FMPopupFrame.Name = "FMPopupFrame"
+_trigon.FMPopupFrame.Position = UDim2.new(-0.000628869, 0, 0.00102009, 0)
+_trigon.FMPopupFrame.Parent = _trigon.FileManager_1
+
+_trigon.Container_6.BorderSizePixel = 0
+_trigon.Container_6.BackgroundColor3 = Color3.fromRGB(33, 35, 39)
+_trigon.Container_6.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Container_6.Size = UDim2.new(0, 641, 0, 392)
+_trigon.Container_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Container_6.Name = "Container"
+_trigon.Container_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+_trigon.Container_6.Parent = _trigon.FMPopupFrame
+
+_trigon.Frame_3.BorderSizePixel = 0
+_trigon.Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Frame_3.AnchorPoint = Vector2.new(0.5, 0.1)
+_trigon.Frame_3.Size = UDim2.new(1, 0, -0.0697278, 100)
+_trigon.Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Frame_3.BackgroundTransparency = 1
+_trigon.Frame_3.Position = UDim2.new(0.5, 0, 0.1, 0)
+_trigon.Frame_3.Parent = _trigon.Container_6
+
+_trigon.UIListLayout_49.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_49.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_49.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_49.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_49.Padding = UDim.new(0.02, 0)
+_trigon.UIListLayout_49.Parent = _trigon.Frame_3
+
+_trigon.icon_21.BorderSizePixel = 0
+_trigon.icon_21.ScaleType = Enum.ScaleType.Fit
+_trigon.icon_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.icon_21.Position = UDim2.new(0.0998953, 0, 0, 0)
+_trigon.icon_21.Name = "icon"
+_trigon.icon_21.Image = "rbxassetid://13868180009"
+_trigon.icon_21.Size = UDim2.new(0.0561109, 0, 1, 0)
+_trigon.icon_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.icon_21.BackgroundTransparency = 1
+_trigon.icon_21.Parent = _trigon.Frame_3
+
+_trigon.content_1.TextWrapped = true
+_trigon.content_1.BorderSizePixel = 0
+_trigon.content_1.TextScaled = true
+_trigon.content_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.content_1.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.content_1.Position = UDim2.new(0.336027, 0, 0.25, 0)
+_trigon.content_1.Name = "content"
+_trigon.content_1.TextSize = 14
+_trigon.content_1.Size = UDim2.new(0, 146, 0, 50)
+_trigon.content_1.TextColor3 = Color3.fromRGB(220, 220, 220)
+_trigon.content_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.content_1.Text = "Warning!"
+_trigon.content_1.BackgroundTransparency = 1
+_trigon.content_1.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.content_1.Parent = _trigon.Frame_3
+
+_trigon.UITextSizeConstraint_57.MaxTextSize = 36
+_trigon.UITextSizeConstraint_57.Parent = _trigon.content_1
+
+_trigon.UICorner_99.CornerRadius = UDim.new(0.04, 0)
+_trigon.UICorner_99.Parent = _trigon.Container_6
+
+_trigon.text_3.TextWrapped = true
+_trigon.text_3.BorderSizePixel = 0
+_trigon.text_3.TextScaled = true
+_trigon.text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.text_3.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+_trigon.text_3.Position = UDim2.new(0.5, 0, 0.406243, 0)
+_trigon.text_3.Name = "text"
+_trigon.text_3.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.text_3.TextSize = 14
+_trigon.text_3.Size = UDim2.new(0.888195, 0, 0.151262, 50)
+_trigon.text_3.TextColor3 = Color3.fromRGB(220, 220, 220)
+_trigon.text_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.text_3.Text = "You are about to create a new folder in /Workspace/hydroxide/user. Are you sure?"
+_trigon.text_3.BackgroundTransparency = 1
+_trigon.text_3.Parent = _trigon.Container_6
+
+_trigon.UITextSizeConstraint_58.MaxTextSize = 26
+_trigon.UITextSizeConstraint_58.Parent = _trigon.text_3
+
+_trigon.cancel_1.BorderSizePixel = 0
+_trigon.cancel_1.Position = UDim2.new(0.8, 0, 0.9, 0)
+_trigon.cancel_1.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.cancel_1.Name = "cancel"
+_trigon.cancel_1.AnchorPoint = Vector2.new(0.8, 0.9)
+_trigon.cancel_1.Size = UDim2.new(0.345535, 0, 0.143617, 0)
+_trigon.cancel_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.cancel_1.BackgroundTransparency = 0.95
+_trigon.cancel_1.Parent = _trigon.Container_6
+
+_trigon.UICorner_100.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_100.Parent = _trigon.cancel_1
+
+_trigon.Main_25.BorderSizePixel = 0
+_trigon.Main_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_25.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_25.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_25.ClipsDescendants = true
+_trigon.Main_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_25.BackgroundTransparency = 1
+_trigon.Main_25.Name = "Main"
+_trigon.Main_25.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_25.Parent = _trigon.cancel_1
+
+_trigon.UIPadding_73.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_73.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_73.Parent = _trigon.Main_25
+
+_trigon.UIListLayout_50.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_50.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_50.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_50.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_50.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_50.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_50.Parent = _trigon.Main_25
+
+_trigon.Icon_30.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_30.BorderSizePixel = 0
+_trigon.Icon_30.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_30.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_30.Name = "Icon"
+_trigon.Icon_30.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_30.Image = "rbxassetid://13858536425"
+_trigon.Icon_30.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_30.BackgroundTransparency = 1
+_trigon.Icon_30.Parent = _trigon.Main_25
+
+_trigon.UIAspectRatioConstraint_22.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_22.Parent = _trigon.Icon_30
+
+_trigon.TextLabel_38.TextWrapped = true
+_trigon.TextLabel_38.BorderSizePixel = 0
+_trigon.TextLabel_38.TextScaled = true
+_trigon.TextLabel_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_38.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_38.Position = UDim2.new(0.57305, 0, 0.5, 0)
+_trigon.TextLabel_38.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_38.TextSize = 14
+_trigon.TextLabel_38.Size = UDim2.new(0.385785, 0, 0.452381, 0)
+_trigon.TextLabel_38.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_38.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_38.Text = "Cancel"
+_trigon.TextLabel_38.BackgroundTransparency = 1
+_trigon.TextLabel_38.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_38.Parent = _trigon.Main_25
+
+_trigon.UIPadding_74.Parent = _trigon.TextLabel_38
+
+_trigon.surebtn_1.BorderSizePixel = 0
+_trigon.surebtn_1.Position = UDim2.new(0.2, 0, 0.9, 0)
+_trigon.surebtn_1.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
+_trigon.surebtn_1.Name = "surebtn"
+_trigon.surebtn_1.AnchorPoint = Vector2.new(0.2, 0.9)
+_trigon.surebtn_1.Size = UDim2.new(0.345535, 0, 0.143617, 0)
+_trigon.surebtn_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.surebtn_1.BackgroundTransparency = 0.95
+_trigon.surebtn_1.Parent = _trigon.Container_6
+
+_trigon.UICorner_101.CornerRadius = UDim.new(0.08, 0)
+_trigon.UICorner_101.Parent = _trigon.surebtn_1
+
+_trigon.Main_26.BorderSizePixel = 0
+_trigon.Main_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Main_26.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Main_26.Size = UDim2.new(0.994505, 0, 0.913044, 0)
+_trigon.Main_26.ClipsDescendants = true
+_trigon.Main_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Main_26.BackgroundTransparency = 1
+_trigon.Main_26.Name = "Main"
+_trigon.Main_26.Position = UDim2.new(0.502747, 0, 0.5, 0)
+_trigon.Main_26.Parent = _trigon.surebtn_1
+
+_trigon.UIPadding_75.PaddingRight = UDim.new(0.05, 0)
+_trigon.UIPadding_75.PaddingLeft = UDim.new(0.06, 0)
+_trigon.UIPadding_75.Parent = _trigon.Main_26
+
+_trigon.UIListLayout_51.FillDirection = Enum.FillDirection.Horizontal
+_trigon.UIListLayout_51.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_51.VerticalAlignment = Enum.VerticalAlignment.Center
+_trigon.UIListLayout_51.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_51.Padding = UDim.new(0.05, 0)
+_trigon.UIListLayout_51.ItemLineAlignment = Enum.ItemLineAlignment.Center
+_trigon.UIListLayout_51.Parent = _trigon.Main_26
+
+_trigon.Icon_31.ImageColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.Icon_31.BorderSizePixel = 0
+_trigon.Icon_31.ScaleType = Enum.ScaleType.Fit
+_trigon.Icon_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.Icon_31.Position = UDim2.new(0.175027, 0, 0.5, 0)
+_trigon.Icon_31.Name = "Icon"
+_trigon.Icon_31.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.Icon_31.Image = "rbxassetid://13858807130"
+_trigon.Icon_31.Size = UDim2.new(0.154936, 0, 1.09524, 0)
+_trigon.Icon_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.Icon_31.BackgroundTransparency = 1
+_trigon.Icon_31.Parent = _trigon.Main_26
+
+_trigon.UIAspectRatioConstraint_23.AspectRatio = 0.417535
+_trigon.UIAspectRatioConstraint_23.Parent = _trigon.Icon_31
+
+_trigon.TextLabel_39.TextWrapped = true
+_trigon.TextLabel_39.BorderSizePixel = 0
+_trigon.TextLabel_39.TextScaled = true
+_trigon.TextLabel_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.TextLabel_39.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+_trigon.TextLabel_39.Position = UDim2.new(0.544145, 0, 0.5, 0)
+_trigon.TextLabel_39.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.TextLabel_39.TextSize = 14
+_trigon.TextLabel_39.Size = UDim2.new(0.448696, 0, 0.452381, 0)
+_trigon.TextLabel_39.TextColor3 = Color3.fromRGB(241, 241, 241)
+_trigon.TextLabel_39.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.TextLabel_39.Text = "Proceed"
+_trigon.TextLabel_39.BackgroundTransparency = 1
+_trigon.TextLabel_39.TextXAlignment = Enum.TextXAlignment.Left
+_trigon.TextLabel_39.Parent = _trigon.Main_26
+
+_trigon.UIPadding_76.Parent = _trigon.TextLabel_39
+
+_trigon.textInput_1.TextWrapped = true
+_trigon.textInput_1.BorderSizePixel = 0
+_trigon.textInput_1.PlaceholderColor3 = Color3.fromRGB(85, 85, 85)
+_trigon.textInput_1.Position = UDim2.new(0.5, 0, 0.626775, 0)
+_trigon.textInput_1.BackgroundTransparency = 0.98
+_trigon.textInput_1.TextScaled = true
+_trigon.textInput_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_trigon.textInput_1.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+_trigon.textInput_1.AnchorPoint = Vector2.new(0.5, 0.5)
+_trigon.textInput_1.ClipsDescendants = true
+_trigon.textInput_1.PlaceholderText = "Please enter the item name!"
+_trigon.textInput_1.TextSize = 14
+_trigon.textInput_1.Size = UDim2.new(0.738214, 0, 0.0346989, 50)
+_trigon.textInput_1.TextColor3 = Color3.fromRGB(220, 220, 220)
+_trigon.textInput_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_trigon.textInput_1.Text = ""
+_trigon.textInput_1.Selectable = false
+_trigon.textInput_1.Name = "textInput"
+_trigon.textInput_1.ClearTextOnFocus = false
+_trigon.textInput_1.Parent = _trigon.Container_6
+
+_trigon.UITextSizeConstraint_59.MaxTextSize = 26
+_trigon.UITextSizeConstraint_59.Parent = _trigon.textInput_1
 
 _trigon.FMPopup.Name = "FMPopup"
 _trigon.FMPopup.Parent = _trigon.FMPopupFrame
@@ -6276,13 +6489,13 @@ _trigon.bar.Name = "bar"
 _trigon.bar.Position = UDim2.new(0.644442, 0, 0.5, 0)
 _trigon.bar.Parent = _trigon.SwipeLeft
 
-_trigon.UICorner_100.CornerRadius = UDim.new(10, 0)
-_trigon.UICorner_100.Parent = _trigon.bar
+_trigon.UICorner_102.CornerRadius = UDim.new(10, 0)
+_trigon.UICorner_102.Parent = _trigon.bar
 
-_trigon.UIStroke_28.Enabled = false
-_trigon.UIStroke_28.Color = Color3.fromRGB(64, 68, 75)
-_trigon.UIStroke_28.Thickness = 3
-_trigon.UIStroke_28.Parent = _trigon.bar
+_trigon.UIStroke_27.Enabled = false
+_trigon.UIStroke_27.Color = Color3.fromRGB(64, 68, 75)
+_trigon.UIStroke_27.Thickness = 3
+_trigon.UIStroke_27.Parent = _trigon.bar
 
 _trigon.ImageButton.BorderSizePixel = 0
 _trigon.ImageButton.ScaleType = Enum.ScaleType.Fit
@@ -6296,9 +6509,9 @@ _trigon.ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.ImageButton.BackgroundTransparency = 1
 _trigon.ImageButton.Parent = _trigon.bar
 
-_trigon.UIAspectRatioConstraint_22.AspectRatio = 0.05
-_trigon.UIAspectRatioConstraint_22.DominantAxis = Enum.DominantAxis.Height
-_trigon.UIAspectRatioConstraint_22.Parent = _trigon.SwipeLeft
+_trigon.UIAspectRatioConstraint_24.AspectRatio = 0.05
+_trigon.UIAspectRatioConstraint_24.DominantAxis = Enum.DominantAxis.Height
+_trigon.UIAspectRatioConstraint_24.Parent = _trigon.SwipeLeft
 
 _trigon.SwipeLeft_.BorderSizePixel = 0
 _trigon.SwipeLeft_.Position = UDim2.new(0.8, 0, 0.5, 0)
@@ -6321,8 +6534,8 @@ _trigon.bar_1.Name = "bar"
 _trigon.bar_1.Position = UDim2.new(0.5, 0, 0.5, 0)
 _trigon.bar_1.Parent = _trigon.SwipeLeft_
 
-_trigon.UICorner_101.CornerRadius = UDim.new(100, 0)
-_trigon.UICorner_101.Parent = _trigon.bar_1
+_trigon.UICorner_103.CornerRadius = UDim.new(100, 0)
+_trigon.UICorner_103.Parent = _trigon.bar_1
 
 _trigon.ImageButton_1.BorderSizePixel = 0
 _trigon.ImageButton_1.ScaleType = Enum.ScaleType.Fit
@@ -6335,9 +6548,9 @@ _trigon.ImageButton_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 _trigon.ImageButton_1.BackgroundTransparency = 1
 _trigon.ImageButton_1.Parent = _trigon.bar_1
 
-_trigon.UIStroke_29.Color = Color3.fromRGB(64, 68, 75)
-_trigon.UIStroke_29.Thickness = 3
-_trigon.UIStroke_29.Parent = _trigon.bar_1
+_trigon.UIStroke_28.Color = Color3.fromRGB(64, 68, 75)
+_trigon.UIStroke_28.Thickness = 3
+_trigon.UIStroke_28.Parent = _trigon.bar_1
 
 _trigon.consoleController.Name = "consoleController"
 _trigon.consoleController.Parent = _trigon.Trigon
@@ -6430,9 +6643,9 @@ _trigon.LineNumberContainer.Position = UDim2.new(0, 0, 0, 5)
 _trigon.LineNumberContainer.ZIndex = 2
 _trigon.LineNumberContainer.Parent = _trigon.OSEBackground
 
-_trigon.UIListLayout_49.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_trigon.UIListLayout_49.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_49.Parent = _trigon.LineNumberContainer
+_trigon.UIListLayout_52.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_trigon.UIListLayout_52.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_52.Parent = _trigon.LineNumberContainer
 
 _trigon.RichOverlayContainer.Active = true
 _trigon.RichOverlayContainer.Size = UDim2.new(1, -30, 1, -10)
@@ -6450,8 +6663,8 @@ _trigon.ShiftContainer.BackgroundTransparency = 1
 _trigon.ShiftContainer.Name = "ShiftContainer"
 _trigon.ShiftContainer.Parent = _trigon.RichOverlayContainer
 
-_trigon.UIListLayout_50.SortOrder = Enum.SortOrder.LayoutOrder
-_trigon.UIListLayout_50.Parent = _trigon.ShiftContainer
+_trigon.UIListLayout_53.SortOrder = Enum.SortOrder.LayoutOrder
+_trigon.UIListLayout_53.Parent = _trigon.ShiftContainer
 
 _trigon.CodeField.Position = UDim2.new(0, 25, 0, 5)
 _trigon.CodeField.BackgroundTransparency = 1
@@ -6493,7 +6706,6 @@ task.spawn(function()
 	FilterPanel = FilterFrame.FilterPanel
 	Save = FilterPanel.Save
 	sicon = scripts.Top.SearchFrame.sicon
-	searchBtn = scripts.Top.SearchFrame.searchBtn
 	
 	searchTextBox = scripts.Top.SearchFrame.TextBox
 	searchButton = scripts.Top.SearchFrame.searchBtn
@@ -6522,30 +6734,30 @@ task.spawn(function()
 		_G.load_rs_scripts(_G.current_Url)
 	end
 	
-	sicon.Activated:Connect(Search)
-	searchBtn.Activated:Connect(Search)
-	
-	searchTextBox.FocusLost:Connect(function(enterPressed)
-		if enterPressed then
-			Search()
-		end
-	end)
-	
 	
 	FilterBtn.Activated:Connect(function()
 		FilterFrame.Visible = true
+		FilterPanel.Position = UDim2.new(1.23, 0, 0.5, 0)
+	
+		-- Disable interactivity
+		Top.Interactable = false
+		Container.Interactable = false
+	
+		FilterFrame.BackgroundTransparency = 1
+	
+		-- Create and play tweens
+		local bgTween = TweenService:Create(FilterFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.15})
+		local panelTween = TweenService:Create(FilterPanel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(1, 0, 0.5, 0)})
+	
+		bgTween:Play()
+		panelTween:Play()
+	
+		-- Re-enable interactivity after the animation completes
+		panelTween.Completed:Connect(function()
+			Top.Interactable = true
+			Container.Interactable = true
+		end)
 	end)
-	
-	--FilterBtn.Activated:Connect(function()
-	--	FilterFrame.Visible = true
-	--	FilterPanel.Position = UDim2.new(1.23, 0,0.5, 0)
-	--	Top.Interactable = false
-	--	Container.Interactable = false
-	
-	--	FilterFrame.BackgroundTransparency = 1
-	--	TweenService:Create(FilterFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.15}):Play()
-	--	TweenService:Create(FilterPanel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(1, 0, 0.5, 0)}):Play()
-	--end)
 	
 	
 	Save.Activated:Connect(function()
@@ -6672,7 +6884,26 @@ task.spawn(function()
 	sortAscButton.Activated:Connect(function() onSortButtonClick("asc") updateFilterButton(sortAscButton) end)
 	sortDescButton.Activated:Connect(function() onSortButtonClick("desc") updateFilterButton(sortDescButton) end)
 	
-	searchButton.Activated:Connect(onSearchButtonClick)
+	
+	searchButton.Activated:Connect(function()
+		onSearchButtonClick()
+		Search()
+	end)
+	sicon.Activated:Connect(function()
+		onSearchButtonClick()
+		Search()
+	end)
+	
+	searchTextBox:GetPropertyChangedSignal("Text"):Connect(function()
+		onSearchButtonClick()
+	end)
+	
+	searchTextBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			Search()
+		end
+	end)
+	
 	
 	updateURLText()
 	
@@ -6766,10 +6997,125 @@ task.spawn(function()
 end)
 
 task.spawn(function()
+	local script = _trigon.SHPopup
+
+	local TweenService = game:GetService("TweenService")
+	local SHPopupFrame = script.Parent
+	local Container = SHPopupFrame.Container
+	SHPopupFrame.Visible = false
+	Container.Size = UDim2.new(0, 0, 0, 0)
+	Container.BackgroundTransparency = 1
+	local textInput = Container.textInput
+	textInput.Visible = false
+	local isAnimating = false
+	local currentOnConfirm = nil
+	
+	local function animateButton(button)
+		local originalSize = button.Size
+		local originalPosition = button.Position
+		local growTween = TweenService:Create(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Size = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset * 1.1, originalSize.Y.Scale * 1.1, originalSize.Y.Offset * 1.1),
+			Position = UDim2.new(
+				originalPosition.X.Scale, 
+				originalPosition.X.Offset - (originalSize.X.Offset * 0.05),
+				originalPosition.Y.Scale, 
+				originalPosition.Y.Offset - (originalSize.Y.Offset * 0.05)
+			)
+		})
+		local shrinkTween = TweenService:Create(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+			Size = originalSize,
+			Position = originalPosition
+		})
+		growTween:Play()
+		growTween.Completed:Connect(function()
+			shrinkTween:Play()
+		end)
+	end
+	
+	local function closePopup()
+		if isAnimating then return end
+		isAnimating = true
+		local closeTween = TweenService:Create(Container, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.In), {
+			Size = UDim2.new(0, 0, 0, 0),
+			BackgroundTransparency = 1
+		})
+		closeTween:Play()
+		local shadowFadeTween = TweenService:Create(SHPopupFrame, TweenInfo.new(0.3), {BackgroundTransparency = 1})
+		shadowFadeTween:Play()
+		shadowFadeTween.Completed:Connect(function()
+			SHPopupFrame.Visible = false
+			isAnimating = false
+			currentOnConfirm = nil
+			textInput.Visible = false
+			textInput.Text = ""
+		end)
+	end
+	
+	_G.Spopup = function(contentText, onConfirm, showTextInput)
+		if isAnimating then return end
+		isAnimating = true
+		Container.text.Text = contentText
+		textInput.Visible = showTextInput or false
+	
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+		local tweenGoals = {
+			Size = UDim2.new(0, 641, 0, 392),
+			BackgroundTransparency = 0
+		}
+		SHPopupFrame.Visible = true
+		local tween = TweenService:Create(Container, tweenInfo, tweenGoals)
+		tween:Play()
+		local shadowTween = TweenService:Create(SHPopupFrame, TweenInfo.new(0.5), {BackgroundTransparency = 0.25})
+		shadowTween:Play()
+		tween.Completed:Connect(function()
+			isAnimating = false
+		end)
+		currentOnConfirm = onConfirm
+	end
+	
+	Container.cancel.MouseButton1Click:Connect(function()
+		animateButton(Container.cancel)
+		closePopup()
+	end)
+	
+	Container.surebtn.MouseButton1Click:Connect(function()
+		animateButton(Container.surebtn)
+		if currentOnConfirm then
+			if textInput.Visible then
+				print("Text input contents:", textInput.Text)
+			end
+			currentOnConfirm(textInput.Text)
+		end
+		closePopup()
+	end)
+
+end)
+
+task.spawn(function()
 	local script = _trigon.FMController
 
 	if not _G.Trigon then return end
 	
+	local isfolderX = clonefunction(arceus.isarceusfolder)
+	local isfileX = clonefunction(arceus.isarceusfile)
+	local listfilesX = clonefunction(arceus.listarceusfiles)
+	local makefolderX = clonefunction(arceus.makearceusfolder)
+	local writefileX = clonefunction(arceus.writearceusfile)
+	local deletefileX = clonefunction(arceus.deletearceusfile)
+	local deletefolderX = clonefunction(arceus.deletearceusfolder)
+	local readfileX = clonefunction(arceus.readarceusfile)
+	
+	if isfolderX("/Autoexec") then
+		autoexe_files = listfilesX("/Autoexec")
+		for _, file in pairs(autoexe_files) do
+			if isfileX(file) then
+				executecode(readfileX(file))
+				print("Autoexec: "..tostring(file))
+			else
+				print("Autoexec folder is empty")
+			end
+		end
+	end
 	
 	local container = script.Parent.Container
 	local item_template = container.template
@@ -6782,15 +7128,6 @@ task.spawn(function()
 	local reload_btn = script.Parent.top.reload
 	
 	local current_path = script.Parent.top.TextLabel
-	-- Clone these functions from your previous script
-	local isfolderX = clonefunction(arceus.isarceusfolder)
-	local isfileX = clonefunction(arceus.isarceusfile)
-	local listfilesX = clonefunction(arceus.listarceusfiles)
-	local makefolderX = clonefunction(arceus.makearceusfolder)
-	local writefileX = clonefunction(arceus.writearceusfile)
-	local deletefileX = clonefunction(arceus.deletearceusfile)
-	local deletefolderX = clonefunction(arceus.deletearceusfolder)
-	local readfileX = clonefunction(arceus.readarceusfile)
 	
 	local current_folder = ""
 	local current_file = ""
@@ -7753,17 +8090,20 @@ task.spawn(function()
 	end)
 	
 	executeClipbaordBtn.Activated:Connect(function()
+		print("Executing from clipboard - Console")
 		executecode(getclipboard())
 	end)
 	
 	consoleExec.input.FocusLost:Connect(function(enterPressed)
 		if enterPressed then
+			print("Executing script - Console")
 			executecode(consoleExec.input.Text)
 			if AUTO_CLEAR_INPUT then consoleExec.input.Text = "" end
 		end
 	end)
 	
 	consoleExec.consoleExecBtn.Activated:Connect(function()
+		print("Executing script - Console")
 		executecode(consoleExec.input.Text)
 		if AUTO_CLEAR_INPUT then consoleExec.input.Text = "" end
 	end)
@@ -8227,6 +8567,7 @@ task.spawn(function()
 			local scriptEditor = scriptEditors[selectedFrame]
 			if scriptEditor then
 				local rawSource = scriptEditor.RawSource
+				print("Executing script - Editor")
 				executecode(rawSource)
 			end
 		else
@@ -8235,6 +8576,7 @@ task.spawn(function()
 	end)
 	
 	btnExecClipboard.Activated:Connect(function()
+		print("Executing from Clipboard - Editor")
 		executecode(getclipboard())
 	end)
 	
@@ -8260,8 +8602,6 @@ task.spawn(function()
 	HttpService = game:GetService("HttpService")
 	MP = game:GetService('MarketplaceService')
 	ReplicatedStorage = game:GetService("ReplicatedStorage")
-	TweenService = game:GetService("TweenService")
-	UserInputService = game:GetService("UserInputService")
 	
 	Trigon = script.Parent.Parent
 	ScriptsBtn = Trigon.Canvas.Container.Main.Nav.Scripts
@@ -8307,7 +8647,6 @@ task.spawn(function()
 		else return string.format("%d year%s ago", math.floor(diff / 31536000), math.floor(diff / 31536000) > 1 and "s" or "") end
 	end
 	
-	
 	function formatDescription(input)
 		local cleaned = input:gsub("<.->", ""):gsub("&amp;", "&"):gsub("&gt;", ">"):gsub("&lt;", "<")
 			:gsub("&quot;", '"'):gsub("&apos;", "'"):gsub("&nbsp;", " "):gsub("&copy;", "©")
@@ -8317,6 +8656,7 @@ task.spawn(function()
 	end
 	
 	_G.clearScriptContainer = function()
+		print("Clearing")
 		task.wait(0.5)
 		for _, child in ipairs(scripts.Container:GetChildren()) do
 			if child ~= item and child:IsA("GuiObject") and child.Name ~= "item_name" then
@@ -8324,6 +8664,7 @@ task.spawn(function()
 			end
 		end
 	end
+	
 	
 	local function safeGet(obj, ...)
 		local current = obj
@@ -8339,67 +8680,23 @@ task.spawn(function()
 		return current
 	end
 	
-	
-	local function animateItem(item)
-		local bottom = item.bottom
-		local bottom2 = item.bottom2
-		local gradient = bottom2.UIGradient
-		local button = bottom2.TextButton
-	
-		local fadeOutInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local fadeOutTween = TweenService:Create(bottom, fadeOutInfo, {BackgroundTransparency = 1})
-		fadeOutTween:Play()
-		
-		bottom.Visible = false
-		bottom2.Visible = true
-		local gradientInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local gradientTween = TweenService:Create(gradient, gradientInfo, {Offset = Vector2.new(0, 0)})
-		gradientTween:Play()
-	
-		button.BackgroundTransparency = 1
-		button.TextTransparency = 1
-		local fadeInInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local fadeInTween = TweenService:Create(button, fadeInInfo, {BackgroundTransparency = 0.05, TextTransparency = 0})
-		fadeInTween:Play()
-	end
-	
-	local function setupItemAnimation(item)
-		item.MouseEnter:Connect(function()
-			animateItem(item)
-		end)
-	
-		item.TouchTap:Connect(function()
-			animateItem(item)
-		end)
-	
-		local function resetAnimation()
-			item.bottom.BackgroundTransparency = 0
-			item.bottom.Visible = true
-			item.bottom2.Visible = false
-			item.bottom2.UIGradient.Offset = Vector2.new(0, 1)
-			item.bottom2.TextButton.BackgroundTransparency = 1
-			item.bottom2.TextButton.TextTransparency = 1
+	local function generateRandomName()
+		local chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		local randomName = ""
+		for i = 1, 8 do
+			local randomIndex = math.random(1, #chars)
+			randomName = randomName .. chars:sub(randomIndex, randomIndex)
 		end
-	
-		item.MouseLeave:Connect(resetAnimation)
-		UserInputService.TouchEnded:Connect(function(touch, gameProcessed)
-			if not gameProcessed then
-				local touchPosition = touch.Position
-				local guiObjects = game.Players.LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(touchPosition.X, touchPosition.Y)
-				if not table.find(guiObjects, item) then
-					resetAnimation()
-				end
-			end
-		end)
+		return randomName
 	end
-	
 	
 	_G.load_rs_scripts = function(params)
 		_G.clearScriptContainer()
 		url = params or "https://rscripts.net/api/scripts?page=1&orderBy=date&sort=desc"
+		print("Searching: "..url)
 		data = _G.Trigon and HttpService:JSONDecode(game:HttpGet(url)) or HttpService:JSONDecode(dataContainer.Value)
 		repeat wait() until data ~= "x"
-		
+	
 		_G.MaxPages = data.info.maxPages
 		Top.Interactable = false
 		LFrame.Visible = true
@@ -8409,18 +8706,34 @@ task.spawn(function()
 			newItem.Visible = true
 			newItem.Parent = scripts.Container
 	
-			newItem.bottom.title.Text = safeGet(script, "title") or "No title"
+			-- Set the name of the newItem
+			local title = safeGet(script, "title") or ""
+			if title ~= "" then
+				-- Keep only letters from the title
+				newItem.Name = title:gsub("[^%a]", "")
+				if newItem.Name == "" then
+					newItem.Name = generateRandomName()
+				end
+			else
+				newItem.Name = generateRandomName()
+			end
+	
+			newItem.bottom.title.Text = title ~= "" and title or "No title"
 			newItem.bottom.desc.Text = formatDescription(safeGet(script, "description") or "No description")
 			newItem.bottom.user.Text = "@" .. (safeGet(script, "user", 1, "username") or "Unknown user")
 			newItem.top_left.views.TextLabel.Text = formatNumber(tonumber(safeGet(script, "views")) or 0) .. " views"
 			newItem.top_left.date.TextLabel.Text = formatDate(safeGet(script, "date") or "Unknown date")
 			newItem.top_right.rating.like_text.Text = safeGet(script, "likes") or "0"
 			newItem.top_right.rating.dislike_text.Text = safeGet(script, "dislikes") or "0"
-			newItem.bottom2.TextButton.Activated:Connect(function()
-				local raw = "loadstring(game:HttpGet('https://rscripts.net/raw/"..safeGet(script, "download").."',true))()" or "warn('No script found! - rscript hub')"
-				executecode(raw)
+			
+			newItem.Activated:Connect(function()
+				_G.Spopup("Do you want to execute > "..tostring(newItem.bottom.title.Text), function()
+				     local raw = "loadstring(game:HttpGet('https://rscripts.net/raw/"..safeGet(script, "download").."',true))()" or "warn('No script found! - rscript hub')"
+				     executecode(raw)
+				end)
 			end)
-			setupItemAnimation(newItem)
+			
+	
 			pcall(function()
 				local placeId = tonumber(safeGet(script, "placeId"))
 				if placeId then
@@ -8430,7 +8743,7 @@ task.spawn(function()
 					end
 				end
 			end)
-			
+	
 			if not safeGet(script, "user", 1, "verified") then newItem.verified.Visible = false end
 			if not safeGet(script, "mobileReady") then newItem.top_right.info.mobile.Visible = false end
 			if not safeGet(script, "keySystem") then newItem.top_right.info.key.Visible = false end
@@ -8440,21 +8753,11 @@ task.spawn(function()
 		LFrame.Visible = false
 	end
 	
-	firsttimeload= true
+	firsttimeload = true
 	ScriptsBtn.Activated:Connect(function()
 		if firsttimeload then
-			firsttimeload= false
+			firsttimeload = false
 			_G.load_rs_scripts(_G.current_Url)
 		end
 	end)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 end)
