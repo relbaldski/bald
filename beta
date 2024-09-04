@@ -7233,13 +7233,14 @@ task.spawn(function()
 	end
 	
 	
+
 	deleteFFbtn.Activated:Connect(function()	
-		if current_folder == "" or current_folder == "/Autoexec" or current_folder == "/Script Hub" or current_folder == "/Configs" or current_folder == "/Workspace" then
+		if current_file == "" and (current_folder == "" or current_folder == "/Autoexec" or current_folder == "/Script Hub" or current_folder == "/Configs" or current_folder == "/Workspace") then
 			_G.popup("You are not allowed to delete: "..tostring(current_folder)) return
 		end
 		if current_file == "" then 
 			_G.popup("You are about to delete the FOLDER: "..tostring(current_folder), function()
-				deletefileX(tostring(current_file))
+				deletefileX(tostring(current_folder))
 				goBack()
 			end)
 		else
@@ -7250,9 +7251,11 @@ task.spawn(function()
 		end
 	end)
 	
+	
+	
 	newFile.Activated:Connect(function()
 		if current_folder == "" or current_folder == "/Autoexec"then
-			_G.popup("You are not allowed to create file in AUTOEXEC, please add it manaually.") return
+			_G.popup("You are not allowed to create file in here, please add it manaually.") return
 		end
 		_G.popup("Confirm if you want to create a new file with contents pasted from your \"CLIPBOARD\": "..tostring(current_folder).."/", function(inputText)
 			if current_folder == "" then return end
@@ -7263,7 +7266,7 @@ task.spawn(function()
 	
 	newFolder.Activated:Connect(function()
 		if current_folder == "" or current_folder == "/Autoexec"then
-			_G.popup("You are not allowed to create Folder in AUTOEXEC, please add it manaually.") return
+			_G.popup("You are not allowed to create Folder in here, please add it manaually.") return
 		end
 		_G.popup("Confirm if you want to proceed with creating a new folder at: "..tostring(current_folder).."/", function(inputText)
 			makefolderX(current_folder.."/"..inputText)
