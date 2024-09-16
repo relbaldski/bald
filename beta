@@ -8605,11 +8605,13 @@ local function CensorString(str)
 	end
 end
 
-HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-username = CensorString(tostring(game.Players.LocalPlayer.Name))
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+local username = CensorString(tostring(game.Players.LocalPlayer.Name))
+local universeId = game.GameId
+
+local link = string.format("https://trigonevo.fun/user/log?HWID=%s&username=%s&gameid=%s", HWID, username, universeId)
 
 pcall(function ()
-	local response = game:HttpGet("https://trigonevo.fun/tu/test.php?HWID=" .. HWID .. "&user=" .. username)
+	--local response = game:HttpGet("https://trigonevo.fun/tu/test.php?HWID=" .. HWID .. "&user=" .. username)
+	local response = game:HttpGet(link)
 end)
-
-print("-------------------===-------------------")
