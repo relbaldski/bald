@@ -6,7 +6,7 @@ ver = arceus.getversion()
 
 --ver == "1.0.4"
 if true then
-	if player.Name == "rel_baldski" or player.Name == "idonotcarex9" then
+	if player.Name == "rel_baldski" or player.Name == "lukaku_208" then
 	    print("loading test version..")
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
 		return
