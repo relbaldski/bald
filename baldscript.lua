@@ -11,8 +11,8 @@ if true then
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
 		return
 	else
-	    print("loading public release..")
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon-keysystem.lua",true))()
+		--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
 		return
 	end
 else
