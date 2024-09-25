@@ -36,7 +36,7 @@ local function gethwid()
 end
 
 local function getKeylink()
-	return "https://trigonevo.fun/whitelist/index.php?HWID=".. gethwid()
+	return "https://trigonevo.fun/whitelist/?HWID=".. gethwid()
 end
 
 local function checkWhitelist()
