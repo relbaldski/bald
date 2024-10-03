@@ -8090,6 +8090,13 @@ task.spawn(function()
 		            "subtext": "Blox Fruit & Blade Ball script, the best at your disposal!",
 		            "background": "rbxassetid://94629608472312",
 		            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/2133121233/Hyper_Hub/main/menu.lua'))()"
+		        },
+                {
+		            "name": "Xera_Ultron",
+		            "title": "Xera Ultron",
+		            "subtext": "By Kokil , luascripts787 Script Loader With Clean Ui",
+		            "background": "rbxassetid://125456335927282",
+		            "script": "loadstring(game:HttpGet("https://raw.githubusercontent.com/luascriptsROBLOX/XeraultronOBF/main/.lua"))()"
 		        }
 		    ]
 		}
@@ -8183,7 +8190,7 @@ task.spawn(function()
 	local svJobId = svFrame.JobId
 	
 	function updateFriendsInfo()
-		local player = Players.LocalPlayer
+		local player = game:GetService("Players").LocalPlayer
 	
 	local success, result = pcall(function()
 			return player:GetFriendsOnline()
@@ -8215,7 +8222,7 @@ task.spawn(function()
 	function updateServerInfo()
 		svPlayers.Text = tostring(#Players:GetPlayers())
 		svMaxPlayers.Text = tostring(Players.MaxPlayers)
-		svPing.Text = tostring(math.round(Players.LocalPlayer:GetNetworkPing() * 1000)) .. " ms"
+		svPing.Text = tostring(math.round(game:GetService("Players").LocalPlayer:GetNetworkPing() * 1000)) .. " ms"
 		svRegion.Text = game.JobId:sub(1, 2)
 	
 		svJobId.MouseButton1Click:Connect(function()
@@ -8246,11 +8253,11 @@ task.spawn(function()
 	
 	
 	rejoin.Activated:Connect(function()
-		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
 	
 	copyServer.Activated:Connect(function()
-		setclipboard('game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)')
+		setclipboard('game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game:GetService("Players").LocalPlayer)')
 	end)
 	
 end)
@@ -8606,7 +8613,8 @@ local function CensorString(str)
 end
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-local username = CensorString(tostring(game.Players.LocalPlayer.Name))
+local username = CensorString(tostring(game:GetService("Players").LocalPlayer.Name
+))
 local universeId = game.GameId
 
 local link = string.format("https://trigonevo.fun/user/log?HWID=%s&username=%s&gameid=%s", HWID, username, universeId)
