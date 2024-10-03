@@ -1,12 +1,11 @@
 warn("Loading Trigon...")
---repeat  task.wait() until game:IsLoaded()
 _G.Trigon = true
-player = game.Players.LocalPlayer 
+plrName = game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Name or "Player" .. math.random(1000, 9999)
 ver = arceus.getversion()
 
 --ver == "1.0.4"
 if true then
-	if player.Name == "rel_baldski" or player.Name == "lukaku_208" then
+	if plrName == "rel_baldski" or plrName == "lukaku_208" then
 	    print("loading test version..")
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
 		return
