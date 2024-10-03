@@ -8074,33 +8074,34 @@ task.spawn(function()
 		}
 		]]
 	
-	partnered_Jsondata = [[
-		{
-		    "items": [
-		        {
-		            "name": "zen_hub",
-		            "title": "Zen Hub",
-		            "subtext": "Zen Hub – Simplifying Scripts, Amplifying Fun.",
-		            "background": "rbxassetid://80411943564388",
-		            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua', true))()"
-		        },
-		        {
-		            "name": "hyper_hub",
-		            "title": "Hyper Hub | V2",
-		            "subtext": "Blox Fruit & Blade Ball script, the best at your disposal!",
-		            "background": "rbxassetid://94629608472312",
-		            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/2133121233/Hyper_Hub/main/menu.lua'))()"
-		        },
-                {
-		            "name": "Xera_Ultron",
-		            "title": "Xera Ultron",
-		            "subtext": "By Kokil , luascripts787 Script Loader With Clean Ui",
-		            "background": "rbxassetid://125456335927282",
-		            "script": "loadstring(game:HttpGet("https://raw.githubusercontent.com/luascriptsROBLOX/XeraultronOBF/main/.lua"))()"
-		        }
-		    ]
-		}
-		]]
+partnered_Jsondata = [[
+	{
+	    "items": [
+	        {
+	            "name": "zen_hub",
+	            "title": "Zen Hub",
+	            "subtext": "Zen Hub – Simplifying Scripts, Amplifying Fun.",
+	            "background": "rbxassetid://80411943564388",
+	            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua', true))()"
+	        },
+	        {
+	            "name": "hyper_hub",
+	            "title": "Hyper Hub | V2",
+	            "subtext": "Blox Fruit & Blade Ball script, the best at your disposal!",
+	            "background": "rbxassetid://94629608472312",
+	            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/2133121233/Hyper_Hub/main/menu.lua'))()"
+	        },
+            {
+	            "name": "Xera_Ultron",
+	            "title": "Xera Ultron",
+	            "subtext": "By Kokil , luascripts787 Script Loader With Clean Ui",
+	            "background": "rbxassetid://125456335927282",
+	            "script": "loadstring(game:HttpGet('https://raw.githubusercontent.com/luascriptsROBLOX/XeraultronOBF/main/.lua'))()"
+	        }
+	    ]
+	}
+]]
+
 	
 	--[[Note: Trigon home page elements uses some of the parts from an open source Sirius Client Interface, so all credit goes to them <3]]
 	
@@ -8623,3 +8624,6 @@ pcall(function ()
 	--local response = game:HttpGet("https://trigonevo.fun/tu/test.php?HWID=" .. HWID .. "&user=" .. username)
 	local response = game:HttpGet(link)
 end)
+
+
+
