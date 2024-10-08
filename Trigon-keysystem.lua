@@ -47,7 +47,8 @@ local function checkWhitelist()
 	end)
 
 	if success then
-		local decrypted = decrypt(response)
+		--local decrypted = decrypt(response)
+		local decrypted = response
 		if decrypted then
 			local success, data = pcall(function()
 				return HttpService:JSONDecode(decrypted)
