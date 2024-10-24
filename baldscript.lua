@@ -4,7 +4,7 @@ ver = arceus.getversion()
 
 --ver == "1.0.4"
 
-if plrName == "Farthening"  then
+if plrName == "Farthening" or plrName == "webportaI" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
 	return
 end
