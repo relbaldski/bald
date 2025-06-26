@@ -1,72 +1,38 @@
 local HttpService = game:GetService("HttpService")
 
-base64 = {}
-b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-ENCRYPTION_KEY = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
-
-function base64.decode(data)
-	data = string.gsub(data, '[^'..b..'=]', '')
-	return (data:gsub('.', function(x)
-		if (x == '=') then return '' end
-		r,f='',(b:find(x)-1)
-		for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
-		return r;
-	end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
-		if (#x ~= 8) then return '' end
-		c=0
-		for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end
-		return string.char(c)
-	end))
-end
-
-function decrypt(encrypted)
-	decoded = base64.decode(encrypted)
-	decrypted = ""
-	for i = 1, #decoded do
-		byte = string.byte(decoded, i)
-		key_byte = string.byte(ENCRYPTION_KEY, (i - 1) % #ENCRYPTION_KEY + 1)
-		decrypted = decrypted .. string.char(bit32.bxor(byte, key_byte))
-	end
-	return decrypted
-end
-
 local function gethwid()
 	HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 	return tostring(HWID)
 end
 
 local function getKeylink()
-	return "https://trigonevo.fun/whitelist/?HWID=".. gethwid()
+	return "https://auth.trigonevo.com/whitelist?hwid=".. gethwid().."&os=android"
 end
 
 local function checkWhitelist()
 	local hwid = gethwid()
-	local url = "https://trigonevo.fun/whitelist/status.php?HWID=" .. hwid
+	local url = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid .. "&os=android"
 	local success, response = pcall(function()
 		return game:HttpGet(url)
 	end)
 
 	if success then
-		--local decrypted = decrypt(response)
-		local decrypted = response
-		if decrypted then
-			local success, data = pcall(function()
-				return HttpService:JSONDecode(decrypted)
-			end)
-			if success then
-				if data.verified then
-					return "Your HWID is verified! Expiration date: " .. tostring(data.expiration), true
-				else
-					return "HWID is not verified", false
-				end
+		local success, data = pcall(function()
+			return HttpService:JSONDecode(response)
+		end)
+		
+		if success then
+			if data.success and data.valid then
+				return "Your HWID is verified! Expiration date: " .. tostring(data.expires_at) .. 
+					" (" .. string.format("%.2f", data.remaining_hours) .. " hours remaining)", true
 			else
-				return "Failed to parse the decrypted data", false
+				return "HWID is not verified: " .. tostring(data.error or "Unknown error"), false
 			end
 		else
-			return "Failed to decrypt the response", false
+			return "Failed to parse the response data", false
 		end
 	else
-		return "Failed to fetch whitelist status: " .. response, false
+		return "Failed to fetch whitelist status: " .. tostring(response), false
 	end
 end
 
@@ -75,7 +41,6 @@ local stat, verified = checkWhitelist()
 if verified then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
 	return
-
 else
 
 
@@ -515,6 +480,5 @@ else
 		task.spawn(checkWhitelistPeriodically)
 	end)
 end
-
 
 
