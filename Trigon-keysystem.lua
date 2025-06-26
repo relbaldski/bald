@@ -39,7 +39,8 @@ end
 local stat, verified = checkWhitelist()
 
 if verified then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+	--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
 	return
 else
 
@@ -466,7 +467,9 @@ else
 					addOrUpdateItem(statusText, true, whitelistItem)
 					wait(2)
 					script.Parent:Destroy()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+					--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+
 					break
 				else
 					for i = 8, 1, -1 do
