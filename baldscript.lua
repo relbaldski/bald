@@ -10,8 +10,10 @@ if plrName == "Farthening" or plrName == "webportaI" then
 end
 	
 if true then
-	if plrName == "rel_baldski" or plrName == "523e45awdaw" then
-		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
+	if plrName == "Oni_Princess" then
+		--loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon-keysystem.lua",true))()
+
 		return
 	else
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
