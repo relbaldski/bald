@@ -11,7 +11,7 @@ end
 
 local function checkWhitelist()
 	local hwid = gethwid()
-	local url = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid .. "&os=android"
+	local url = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid
 	local success, response = pcall(function()
 		return game:HttpGet(url)
 	end)
@@ -483,5 +483,4 @@ else
 		task.spawn(checkWhitelistPeriodically)
 	end)
 end
-
 
