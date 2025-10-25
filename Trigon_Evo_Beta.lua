@@ -1,5 +1,3 @@
-warn("Loading trigon beta v2.0.3f...")
-
 arceus.EOWOWQPQPPALSKSNX({
     "rbxassetid://13846942895",
     "rbxassetid://13857927803",
@@ -8421,7 +8419,6 @@ task.spawn(function()
 				scriptEditor:Unload()
 			end
 		else
-			print("No tab has been selected.")
 		end
 	end)
 	
@@ -8433,10 +8430,8 @@ task.spawn(function()
 				local textCode = getclipboard()
 				scriptEditor:LoadStringAsync(textCode)
 			else
-				print("No script editor found for the selected frame.")
 			end
 		else
-			print("No tab has been selected.")
 		end
 	end)
 	
@@ -8446,16 +8441,13 @@ task.spawn(function()
 			local scriptEditor = scriptEditors[selectedFrame]
 			if scriptEditor then
 				local rawSource = scriptEditor.RawSource
-				print("Executing script - Editor")
 				executecode(rawSource)
 			end
 		else
-			print("No tab has been selected.")
 		end
 	end)
 	
 	btnExecClipboard.Activated:Connect(function()
-		print("Executing from Clipboard - Editor")
 		executecode(getclipboard())
 	end)
 	
@@ -8468,7 +8460,6 @@ task.spawn(function()
 				scriptEditor:LoadStringAsync(rawSource.."\n")
 			end
 		else
-			print("No tab has been selected.")
 		end
 	end)
 	
@@ -8535,7 +8526,6 @@ task.spawn(function()
 	end
 	
 	_G.clearScriptContainer = function()
-		print("Clearing")
 		task.wait(0.5)
 		for _, child in ipairs(scripts.Container:GetChildren()) do
 			if child ~= item and child:IsA("GuiObject") and child.Name ~= "item_name" then
