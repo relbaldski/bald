@@ -1,6 +1,5 @@
 warn("Loading trigon beta v2.0.3f...")
 
-
 arceus.EOWOWQPQPPALSKSNX({
     "rbxassetid://13846942895",
     "rbxassetid://13857927803",
