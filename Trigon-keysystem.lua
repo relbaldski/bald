@@ -1,984 +1,823 @@
-
 local HttpService = game:GetService("HttpService")
+local MarketplaceService = game:GetService("MarketplaceService")
 
-local function gethwid()
-	HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-	return tostring(HWID)
+local function getHwid()
+	local hwid = gethwid()
+	return tostring(hwid)
 end
 
 local function getKeylink()
-	return "https://auth.trigonevo.com/whitelist?hwid=".. gethwid().."&os=android"
+	return "https://auth.trigonevo.com/whitelist?hwid=" .. getHwid() .. "&os=android"
 end
 
-local function checkWhitelist()
-	local hwid = gethwid()
-	local url = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid
+local function checkWhitelist(logFunc)
+	logFunc = logFunc or function() end 
+
+	local hwid = getHwid()
+	local primaryUrl = "https://auth.trigonevo.com/api/verify?hwid=C" .. hwid
+	local fallbackUrl = "https://yxxcattrqpkpztxbasae.supabase.co/functions/v1/trigon-database?hwid=C" .. hwid
+
+	--primary API
 	local success, response = pcall(function()
-		return game:HttpGet(url)
+		return request({
+			Url = primaryUrl,
+			Method = "GET"
+		})
 	end)
 
-	if success then
-		local success, data = pcall(function()
-			return HttpService:JSONDecode(response)
-		end)
-		
-		if success then
-			if data.success and data.valid then
-				return "Your HWID is verified! Expiration date: " .. tostring(data.expires_at) .. 
-					" (" .. string.format("%.2f", data.remaining_hours) .. " hours remaining)", true
-			else
-				return "HWID is not verified: " .. tostring(data.error or "Unknown error"), false
-			end
-		else
-			return "Failed to parse the response data", false
-		end
+	local shouldTryFallback = false
+	local primaryError = ""
+
+	-- Check fallback
+	if not success then
+		-- Primary request failed
+		shouldTryFallback = true
+		primaryError = tostring(response)
+		logFunc("✗ Primary API connection failed", Color3.fromRGB(255, 100, 100))
+		logFunc("  Error: " .. primaryError, Color3.fromRGB(180, 180, 180))
+	elseif not response or not response.Body or response.Body == "" then
+		-- Primary returned empty
+		shouldTryFallback = true
+		primaryError = "Empty response from primary server"
+		logFunc("⚠ Primary API returned empty response", Color3.fromRGB(255, 200, 100))
 	else
-		return "Failed to fetch whitelist status: " .. tostring(response), false
+		-- Primary parse body
+		local parseSuccess, data = pcall(function()
+			return HttpService:JSONDecode(response.Body)
+		end)
+
+		if not parseSuccess then
+			-- Primary unparseable JSON
+			shouldTryFallback = true
+			primaryError = tostring(data)
+			logFunc("⚠ Primary API returned invalid JSON", Color3.fromRGB(255, 200, 100))
+			logFunc("  Error: " .. primaryError, Color3.fromRGB(180, 180, 180))
+		else
+			-- valid JSON
+			logFunc("✓ Primary API responded successfully", Color3.fromRGB(100, 255, 150))
+			shouldTryFallback = false
+		end
+	end
+
+	-- Try fallback API
+	if shouldTryFallback then
+		logFunc("→ Switching to fallback API...", Color3.fromRGB(100, 200, 255))
+
+		success, response = pcall(function()
+			return request({
+				Url = fallbackUrl,
+				Method = "GET",
+				Headers = {
+					["Authorization"] = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl4eGNhdHRycXBrcHp0eGJhc2FlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNjU0MjgsImV4cCI6MjA3Njg0MTQyOH0.lx7mwjkzCjJxw_ee3wk-0PwQ43OPmxpUDu3ZO8VgbiQ",
+					["Content-Type"] = "application/json"
+				}
+			})
+		end)
+
+		if not success then
+			-- Both APIs failed
+			local errorMsg = tostring(response)
+			logFunc("✗ Fallback API also failed", Color3.fromRGB(255, 100, 100))
+			logFunc("  Error: " .. errorMsg, Color3.fromRGB(180, 180, 180))
+			return {
+				success = false,
+				message = "Connection Error",
+				details = "Both primary and fallback APIs are unreachable. Primary: " .. primaryError .. " | Fallback: " .. errorMsg,
+				code = "CONNECTION_FAILED",
+				usedFallback = false
+			}
+		end
+
+		-- Fallback succeeded
+		logFunc("✓ Fallback API connected successfully", Color3.fromRGB(100, 255, 150))
+	end
+
+	-- Check if response is valid
+	if not response or not response.Body or response.Body == "" then
+		return {
+			success = false,
+			message = "Empty Response",
+			details = "Server returned an empty response",
+			code = "EMPTY_RESPONSE",
+			usedFallback = shouldTryFallback
+		}
+	end
+
+	-- Try to parse JSON
+	local parseSuccess, data = pcall(function()
+		return HttpService:JSONDecode(response.Body)
+	end)
+
+	if not parseSuccess then
+		local parseError = tostring(data)
+		return {
+			success = false,
+			message = "Parse Error",
+			details = parseError,
+			code = "PARSE_ERROR",
+			usedFallback = shouldTryFallback
+		}
+	end
+
+	-- all API responses
+	if data.success == true and data.valid == true then
+		-- sec 1: Valid
+		return {
+			success = true,
+			message = "HWID Verified",
+			details = "Expires: " .. tostring(data.expires_at) .. " | " .. string.format("%.1f", data.remaining_hours) .. " hours remaining",
+			licenseKey = data.license_key,
+			expiresAt = data.expires_at,
+			remainingHours = data.remaining_hours,
+			os = data.os,
+			createdAt = data.created_at,
+			data = data,
+			usedFallback = shouldTryFallback
+		}
+	elseif data.success == false and data.valid == false then
+		-- sec 2: Invalid / active license (first time user)
+		local errorMsg = data.error or "No active license found"
+		local errorCode = data.code or "NO_LICENSE_FOUND"
+
+		return {
+			success = false,
+			message = "Not Whitelisted",
+			details = errorMsg,
+			code = errorCode,
+			hwid = data.hwid,
+			data = data,
+			usedFallback = shouldTryFallback
+		}
+	elseif data.success == false and data.code then
+		-- sec 3: Invalid format or other errors
+		local errorMsg = data.error or "Invalid request"
+		local errorCode = data.code or "UNKNOWN_ERROR"
+
+		return {
+			success = false,
+			message = "Request Error",
+			details = errorMsg,
+			code = errorCode,
+			data = data,
+			usedFallback = shouldTryFallback
+		}
+	else
+		-- Unexpected response
+		return {
+			success = false,
+			message = "Unexpected Response",
+			details = "Server returned an unexpected response format",
+			code = "UNEXPECTED_FORMAT",
+			data = data,
+			usedFallback = shouldTryFallback
+		}
 	end
 end
 
+local initialCheck = checkWhitelist()
 
-
-
-
-
-
-local stat, verified = checkWhitelist()
-
-if verified then
-	--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
+if initialCheck.success then
+	-- verified
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
 	return
 else
+	--UI
+	local gui = Instance.new("ScreenGui")
+	gui.Name = "TrigonWhitelist"
+	gui.IgnoreGuiInset = true
+	gui.ResetOnSpawn = false
+	gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	gui.Parent = gethui()
 
+	local overlay = Instance.new("Frame")
+	overlay.Name = "Overlay"
+	overlay.Size = UDim2.new(1, 0, 1, 0)
+	overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	overlay.BackgroundTransparency = 0.3
+	overlay.BorderSizePixel = 0
+	overlay.Parent = gui
 
-	local _trigon =
-		{
-			Trigon_Whitelist = Instance.new("ScreenGui"),
-			Canvas = Instance.new("Frame"),
-			copyLink = Instance.new("ImageButton"),
-			Main = Instance.new("Frame"),
-			TextLabel = Instance.new("TextLabel"),
-			UIPadding = Instance.new("UIPadding"),
-			Icon = Instance.new("ImageLabel"),
-			UICorner = Instance.new("UICorner"),
-			logo = Instance.new("ImageLabel"),
-			Title = Instance.new("TextLabel"),
-			sub2 = Instance.new("TextLabel"),
-			sub = Instance.new("TextLabel"),
-			CloseBtn = Instance.new("ImageButton"),
-			Main_1 = Instance.new("Frame"),
-			Icon_1 = Instance.new("ImageLabel"),
-			UICorner_1 = Instance.new("UICorner"),
-			List = Instance.new("Frame"),
-			list_item = Instance.new("Frame"),
-			img = Instance.new("ImageLabel"),
-			txt = Instance.new("TextLabel"),
-			UIPadding_1 = Instance.new("UIPadding"),
-			UICorner_2 = Instance.new("UICorner"),
-			UIListLayout = Instance.new("UIListLayout"),
-			Listx = Instance.new("Frame"),
-			list_item_1 = Instance.new("Frame"),
-			UICorner_3 = Instance.new("UICorner"),
-			UIListLayout_1 = Instance.new("UIListLayout"),
-			img_1 = Instance.new("ImageLabel"),
-			LocalScript = Instance.new("LocalScript"),
-			UIPadding_2 = Instance.new("UIPadding"),
-			txt_1 = Instance.new("TextLabel"),
-			UIListLayout_2 = Instance.new("UIListLayout"),
-			info = Instance.new("TextLabel"),
-			UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
-			LocalScript_1 = Instance.new("LocalScript"),
-			UIStroke = Instance.new("UIStroke")
+	local mainWindow = Instance.new("Frame")
+	mainWindow.Name = "MainWindow"
+	mainWindow.AnchorPoint = Vector2.new(0.5, 0.5)
+	mainWindow.Position = UDim2.new(0.5, 0, 0.5, 0)
+	mainWindow.Size = UDim2.new(0, 700, 0, 450)
+	mainWindow.BackgroundColor3 = Color3.fromRGB(20, 25, 35)
+	mainWindow.BorderSizePixel = 0
+	mainWindow.Parent = gui
 
-		}
+	local mainCorner = Instance.new("UICorner")
+	mainCorner.CornerRadius = UDim.new(0, 12)
+	mainCorner.Parent = mainWindow
 
-	_trigon.Trigon_Whitelist.IgnoreGuiInset = true
-	_trigon.Trigon_Whitelist.DisplayOrder = -1
-	_trigon.Trigon_Whitelist.Name = "Trigon_Whitelist"
-	_trigon.Trigon_Whitelist.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-	_trigon.Trigon_Whitelist.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	_trigon.Trigon_Whitelist.Parent = gethui()
+	local mainStroke = Instance.new("UIStroke")
+	mainStroke.Color = Color3.fromRGB(60, 70, 90)
+	mainStroke.Thickness = 1
+	mainStroke.Parent = mainWindow
 
-	_trigon.Canvas.BorderSizePixel = 0
-	_trigon.Canvas.BackgroundColor3 = Color3.fromRGB(15, 23, 39)
-	_trigon.Canvas.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Canvas.Size = UDim2.new(1, 0, 1, 0)
-	_trigon.Canvas.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Canvas.BackgroundTransparency = 0.06
-	_trigon.Canvas.Name = "Canvas"
-	_trigon.Canvas.Position = UDim2.new(0.5, 0, 0.5, 0)
-	_trigon.Canvas.Parent = _trigon.Trigon_Whitelist
+	local sizeConstraint = Instance.new("UISizeConstraint")
+	sizeConstraint.MaxSize = Vector2.new(700, 450)
+	sizeConstraint.MinSize = Vector2.new(400, 300)
+	sizeConstraint.Parent = mainWindow
 
-	_trigon.copyLink.BorderSizePixel = 0
-	_trigon.copyLink.Position = UDim2.new(0.5, 0, 0.86144, 0)
-	_trigon.copyLink.BackgroundColor3 = Color3.fromRGB(68, 71, 80)
-	_trigon.copyLink.Name = "copyLink"
-	_trigon.copyLink.AnchorPoint = Vector2.new(0.5, 0.9)
-	_trigon.copyLink.Size = UDim2.new(0.190301, 0, 0.062297, 0)
-	_trigon.copyLink.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.copyLink.BackgroundTransparency = 0.75
-	_trigon.copyLink.Parent = _trigon.Canvas
-	
-	_trigon.UIStroke.Color = Color3.fromRGB(98, 104, 116)
-	_trigon.UIStroke.Thickness = 2
-	_trigon.UIStroke.Parent = _trigon.copyLink
+	local titleBar = Instance.new("Frame")
+	titleBar.Name = "TitleBar"
+	titleBar.Size = UDim2.new(1, 0, 0, 50)
+	titleBar.BackgroundColor3 = Color3.fromRGB(15, 20, 30)
+	titleBar.BorderSizePixel = 0
+	titleBar.Parent = mainWindow
 
+	local titleCorner = Instance.new("UICorner")
+	titleCorner.CornerRadius = UDim.new(0, 12)
+	titleCorner.Parent = titleBar
 
-	_trigon.Main.BorderSizePixel = 0
-	_trigon.Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Main.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Main.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-	_trigon.Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Main.BackgroundTransparency = 1
-	_trigon.Main.Name = "Main"
-	_trigon.Main.Position = UDim2.new(0.502747, 0, 0.5, 0)
-	_trigon.Main.Parent = _trigon.copyLink
+	local logo = Instance.new("ImageLabel")
+	logo.Name = "Logo"
+	logo.Position = UDim2.new(0, -13, 0, 10)
+	logo.AnchorPoint = Vector2.new(0, 0)
+	logo.Size = UDim2.new(0, 100, 0, 30)
+	logo.BackgroundTransparency = 1
+	logo.Image = "rbxassetid://82500352718600"
+	logo.ScaleType = Enum.ScaleType.Fit
+	logo.Parent = titleBar
 
-	_trigon.TextLabel.TextWrapped = true
-	_trigon.TextLabel.BorderSizePixel = 0
-	_trigon.TextLabel.TextScaled = true
-	_trigon.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.TextLabel.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.TextLabel.Position = UDim2.new(0.57863, 0, 0.484556, 0)
-	_trigon.TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.TextLabel.TextSize = 21
-	_trigon.TextLabel.Size = UDim2.new(0.736736, 0, 0.452381, 0)
-	_trigon.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.TextLabel.Text = "Copy Whitelist Link"
-	_trigon.TextLabel.BackgroundTransparency = 1
-	_trigon.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.TextLabel.Parent = _trigon.Main
+	local closeBtn = Instance.new("TextButton")
+	closeBtn.Name = "CloseButton"
+	closeBtn.AnchorPoint = Vector2.new(1, 0.5)
+	closeBtn.Position = UDim2.new(1, -10, 0.5, 0)
+	closeBtn.Size = UDim2.new(0, 30, 0, 30)
+	closeBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	closeBtn.BackgroundTransparency = 0.99
+	closeBtn.Text = "X"
+	closeBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+	closeBtn.Font = Enum.Font.GothamBold
+	closeBtn.TextSize = 16
+	closeBtn.Parent = titleBar
 
-	_trigon.UIPadding.Parent = _trigon.TextLabel
+	local closeBtnCorner = Instance.new("UICorner")
+	closeBtnCorner.CornerRadius = UDim.new(0, 6)
+	closeBtnCorner.Parent = closeBtn
 
-	_trigon.Icon.ImageColor3 = Color3.fromRGB(231, 231, 231)
-	_trigon.Icon.BorderSizePixel = 0
-	_trigon.Icon.ScaleType = Enum.ScaleType.Fit
-	_trigon.Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Icon.Position = UDim2.new(0.115661, 0, 0.484019, 0)
-	_trigon.Icon.Name = "Icon"
-	_trigon.Icon.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Icon.Image = "rbxassetid://13848618194"
-	_trigon.Icon.Size = UDim2.new(0.108524, 0, 1.09524, 0)
-	_trigon.Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Icon.BackgroundTransparency = 1
-	_trigon.Icon.Parent = _trigon.Main
+	local contentContainer = Instance.new("Frame")
+	contentContainer.Name = "ContentContainer"
+	contentContainer.Position = UDim2.new(0, 10, 0, 60)
+	contentContainer.Size = UDim2.new(1, -20, 1, -70)
+	contentContainer.BackgroundTransparency = 1
+	contentContainer.Parent = mainWindow
 
-	_trigon.UICorner.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner.Parent = _trigon.copyLink
+	local leftPanel = Instance.new("Frame")
+	leftPanel.Name = "LeftPanel"
+	leftPanel.Size = UDim2.new(0.5, -5, 1, 0)
+	leftPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
+	leftPanel.BorderSizePixel = 0
+	leftPanel.Parent = contentContainer
 
-	_trigon.logo.BorderSizePixel = 0
-	_trigon.logo.ScaleType = Enum.ScaleType.Fit
-	_trigon.logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.logo.Position = UDim2.new(0.493907, 0, 0.0619883, 0)
-	_trigon.logo.Name = "logo"
-	_trigon.logo.AnchorPoint = Vector2.new(0.5, 0)
-	_trigon.logo.Image = "rbxassetid://82500352718600"
-	_trigon.logo.Size = UDim2.new(0.238998, 0, 0.0830409, 0)
-	_trigon.logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.logo.BackgroundTransparency = 1
-	_trigon.logo.Parent = _trigon.Canvas
+	local leftCorner = Instance.new("UICorner")
+	leftCorner.CornerRadius = UDim.new(0, 8)
+	leftCorner.Parent = leftPanel
 
-	_trigon.Title.TextWrapped = true
-	_trigon.Title.TextScaled = true
-	_trigon.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Title.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-	_trigon.Title.Position = UDim2.new(0.5, 0, 0.2, 0)
-	_trigon.Title.Name = "Title"
-	_trigon.Title.AnchorPoint = Vector2.new(0.5, 0.2)
-	_trigon.Title.TextSize = 14
-	_trigon.Title.Size = UDim2.new(0.482036, 0, 0.0760031, 0)
-	_trigon.Title.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.Title.Text = "Trigon..."
-	_trigon.Title.BackgroundTransparency = 1
-	_trigon.Title.Parent = _trigon.Canvas
+	local leftStroke = Instance.new("UIStroke")
+	leftStroke.Color = Color3.fromRGB(50, 60, 80)
+	leftStroke.Thickness = 1
+	leftStroke.Parent = leftPanel
 
-	_trigon.sub2.TextWrapped = true
-	_trigon.sub2.TextScaled = true
-	_trigon.sub2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.sub2.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.sub2.Position = UDim2.new(0.5, 0, 0.906616, 0)
-	_trigon.sub2.Name = "sub2"
-	_trigon.sub2.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.sub2.TextSize = 14
-	_trigon.sub2.Size = UDim2.new(0.482036, 0, 0.0197308, 0)
-	_trigon.sub2.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.sub2.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.sub2.Text = "Support @ discord.gg/trigon"
-	_trigon.sub2.BackgroundTransparency = 1
-	_trigon.sub2.Parent = _trigon.Canvas
+	local headerContainer = Instance.new("Frame")
+	headerContainer.Name = "HeaderContainer"
+	headerContainer.Position = UDim2.new(0, 15, 0, 12)
+	headerContainer.Size = UDim2.new(1, -30, 0, 30)
+	headerContainer.BackgroundTransparency = 1
+	headerContainer.Parent = leftPanel
 
-	_trigon.sub.TextWrapped = true
-	_trigon.sub.TextScaled = true
-	_trigon.sub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.sub.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.sub.Position = UDim2.new(0.5, 0, 0.294854, 0)
-	_trigon.sub.Name = "sub"
-	_trigon.sub.AnchorPoint = Vector2.new(0.5, 0.3)
-	_trigon.sub.TextSize = 14
-	_trigon.sub.Size = UDim2.new(0.482036, 0, 0.0606309, 0)
-	_trigon.sub.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.sub.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.sub.Text = "Please complete the whitelist process to gain access!"
-	_trigon.sub.BackgroundTransparency = 1
-	_trigon.sub.Parent = _trigon.Canvas
+	local statusIcon = Instance.new("Frame")
+	statusIcon.Name = "StatusIcon"
+	statusIcon.Position = UDim2.new(0, 0, 0.5, 0)
+	statusIcon.AnchorPoint = Vector2.new(0, 0.5)
+	statusIcon.Size = UDim2.new(0, 8, 0, 8)
+	statusIcon.BackgroundColor3 = Color3.fromRGB(255, 200, 100)
+	statusIcon.BorderSizePixel = 0
+	statusIcon.Parent = headerContainer
 
-	_trigon.CloseBtn.BorderSizePixel = 0
-	_trigon.CloseBtn.Position = UDim2.new(0.95, 0, 0.05, 0)
-	_trigon.CloseBtn.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-	_trigon.CloseBtn.Name = "CloseBtn"
-	_trigon.CloseBtn.AnchorPoint = Vector2.new(0.95, 0.05)
-	_trigon.CloseBtn.Size = UDim2.new(0.0408389, 0, 0.0688839, 0)
-	_trigon.CloseBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.CloseBtn.BackgroundTransparency = 0.98
-	_trigon.CloseBtn.Parent = _trigon.Canvas
+	local iconCorner = Instance.new("UICorner")
+	iconCorner.CornerRadius = UDim.new(1, 0)
+	iconCorner.Parent = statusIcon
 
-	_trigon.Main_1.BorderSizePixel = 0
-	_trigon.Main_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Main_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Main_1.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-	_trigon.Main_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Main_1.BackgroundTransparency = 1
-	_trigon.Main_1.Name = "Main"
-	_trigon.Main_1.Position = UDim2.new(0.502747, 0, 0.5, 0)
-	_trigon.Main_1.Parent = _trigon.CloseBtn
+	local leftTitle = Instance.new("TextLabel")
+	leftTitle.Name = "Title"
+	leftTitle.Position = UDim2.new(0, 18, 0, 0)
+	leftTitle.Size = UDim2.new(1, -18, 1, 0)
+	leftTitle.BackgroundTransparency = 1
+	leftTitle.Text = "Whitelist Status"
+	leftTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	leftTitle.Font = Enum.Font.GothamBold
+	leftTitle.TextSize = 16
+	leftTitle.TextXAlignment = Enum.TextXAlignment.Left
+	leftTitle.TextYAlignment = Enum.TextYAlignment.Center
+	leftTitle.Parent = headerContainer
 
-	_trigon.Icon_1.ImageColor3 = Color3.fromRGB(231, 231, 231)
-	_trigon.Icon_1.BorderSizePixel = 0
-	_trigon.Icon_1.ScaleType = Enum.ScaleType.Fit
-	_trigon.Icon_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Icon_1.Position = UDim2.new(0.5, 0, 0.5, 0)
-	_trigon.Icon_1.Name = "Icon"
-	_trigon.Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Icon_1.Image = "rbxassetid://13857985197"
-	_trigon.Icon_1.Size = UDim2.new(0.533237, 0, 1, 0)
-	_trigon.Icon_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Icon_1.BackgroundTransparency = 1
-	_trigon.Icon_1.Parent = _trigon.Main_1
+	local statusIndicator = Instance.new("Frame")
+	statusIndicator.Name = "StatusIndicator"
+	statusIndicator.Position = UDim2.new(0, 15, 0, 50)
+	statusIndicator.Size = UDim2.new(1, -30, 0, 65)
+	statusIndicator.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	statusIndicator.BorderSizePixel = 0
+	statusIndicator.Parent = leftPanel
 
-	_trigon.UICorner_1.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_1.Parent = _trigon.CloseBtn
+	local statusCorner = Instance.new("UICorner")
+	statusCorner.CornerRadius = UDim.new(0, 6)
+	statusCorner.Parent = statusIndicator
 
-	_trigon.List.BorderSizePixel = 0
-	_trigon.List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.List.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.List.Size = UDim2.new(0.362221, 0, 0.377778, 0)
-	_trigon.List.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.List.BackgroundTransparency = 1
-	_trigon.List.Name = "List"
-	_trigon.List.Position = UDim2.new(0.5, 0, 0.55848, 0)
-	_trigon.List.Parent = _trigon.Canvas
+	local statusAccent = Instance.new("Frame")
+	statusAccent.Name = "StatusAccent"
+	statusAccent.Size = UDim2.new(1, 0, 0, 3)
+	statusAccent.Position = UDim2.new(0, 0, 0, 0)
+	statusAccent.BackgroundColor3 = Color3.fromRGB(255, 200, 100)
+	statusAccent.BorderSizePixel = 0
+	statusAccent.Parent = statusIndicator
 
-	_trigon.list_item.BorderSizePixel = 0
-	_trigon.list_item.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-	_trigon.list_item.Size = UDim2.new(1, 0, 0.14843, 0)
-	_trigon.list_item.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.list_item.BackgroundTransparency = 0.95
-	_trigon.list_item.Name = "list_item"
-	_trigon.list_item.Parent = _trigon.List
+	local statusAccentCorner = Instance.new("UICorner")
+	statusAccentCorner.CornerRadius = UDim.new(0, 6)
+	statusAccentCorner.Parent = statusAccent
 
-	_trigon.img.BorderSizePixel = 0
-	_trigon.img.ScaleType = Enum.ScaleType.Fit
-	_trigon.img.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.img.ImageTransparency = 0.11
-	_trigon.img.Position = UDim2.new(0.0257837, 0, 0.5, 0)
-	_trigon.img.Name = "img"
-	_trigon.img.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.img.Image = "rbxassetid://81111209361717"
-	_trigon.img.Size = UDim2.new(0.048989, 0, 1, 0)
-	_trigon.img.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.img.ZIndex = 2
-	_trigon.img.BackgroundTransparency = 1
-	_trigon.img.Parent = _trigon.list_item
+	local statusText = Instance.new("TextLabel")
+	statusText.Name = "StatusText"
+	statusText.Size = UDim2.new(1, -20, 0, 25)
+	statusText.Position = UDim2.new(0, 10, 0, 8)
+	statusText.BackgroundTransparency = 1
+	statusText.Text = "Checking..."
+	statusText.TextColor3 = Color3.fromRGB(255, 200, 100)
+	statusText.Font = Enum.Font.GothamBold
+	statusText.TextSize = 14
+	statusText.TextXAlignment = Enum.TextXAlignment.Left
+	statusText.Parent = statusIndicator
 
-	_trigon.txt.TextWrapped = true
-	_trigon.txt.TextScaled = true
-	_trigon.txt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.txt.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.txt.Position = UDim2.new(0.503935, 0, 0.5, 0)
-	_trigon.txt.Name = "txt"
-	_trigon.txt.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.txt.TextSize = 14
-	_trigon.txt.Size = UDim2.new(0.822274, 0, 0.391942, 0)
-	_trigon.txt.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.txt.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.txt.Text = "Initializing for first time use.."
-	_trigon.txt.BackgroundTransparency = 1
-	_trigon.txt.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.txt.Parent = _trigon.list_item
+	local statusDetails = Instance.new("TextLabel")
+	statusDetails.Name = "StatusDetails"
+	statusDetails.Size = UDim2.new(1, -20, 0, 20)
+	statusDetails.Position = UDim2.new(0, 10, 0, 33)
+	statusDetails.BackgroundTransparency = 1
+	statusDetails.Text = "Initializing..."
+	statusDetails.TextColor3 = Color3.fromRGB(180, 180, 180)
+	statusDetails.Font = Enum.Font.Gotham
+	statusDetails.TextSize = 11
+	statusDetails.TextXAlignment = Enum.TextXAlignment.Left
+	statusDetails.TextWrapped = true
+	statusDetails.Parent = statusIndicator
 
-	_trigon.UIPadding_1.PaddingLeft = UDim.new(0.05, 0)
-	_trigon.UIPadding_1.Parent = _trigon.list_item
+	local hwidLabel = Instance.new("TextLabel")
+	hwidLabel.Name = "HwidLabel"
+	hwidLabel.Position = UDim2.new(0, 15, 0, 125)
+	hwidLabel.Size = UDim2.new(1, -30, 0, 18)
+	hwidLabel.BackgroundTransparency = 1
+	hwidLabel.Text = "Hardware ID"
+	hwidLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
+	hwidLabel.Font = Enum.Font.GothamBold
+	hwidLabel.TextSize = 11
+	hwidLabel.TextXAlignment = Enum.TextXAlignment.Left
+	hwidLabel.Parent = leftPanel
 
-	_trigon.UICorner_2.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_2.Parent = _trigon.list_item
+	local hwidDisplay = Instance.new("TextBox")
+	hwidDisplay.Name = "HwidDisplay"
+	hwidDisplay.Position = UDim2.new(0, 15, 0, 145)
+	hwidDisplay.Size = UDim2.new(1, -30, 0, 32)
+	hwidDisplay.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	hwidDisplay.Text = getHwid()
+	hwidDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
+	hwidDisplay.Font = Enum.Font.Code
+	hwidDisplay.TextSize = 10
+	hwidDisplay.TextEditable = false
+	hwidDisplay.ClearTextOnFocus = false
+	hwidDisplay.Parent = leftPanel
 
-	_trigon.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout.Parent = _trigon.List
+	local hwidCorner = Instance.new("UICorner")
+	hwidCorner.CornerRadius = UDim.new(0, 6)
+	hwidCorner.Parent = hwidDisplay
 
-	_trigon.Listx.BorderSizePixel = 0
-	_trigon.Listx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Listx.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Listx.Size = UDim2.new(0.362221, 0, 0.442105, 0)
-	_trigon.Listx.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Listx.BackgroundTransparency = 1
-	_trigon.Listx.Visible = false
-	_trigon.Listx.Name = "Listx"
-	_trigon.Listx.Position = UDim2.new(0.5, 0, 0.590643, 0)
-	_trigon.Listx.Parent = _trigon.Canvas
+	local hwidStroke = Instance.new("UIStroke")
+	hwidStroke.Color = Color3.fromRGB(50, 60, 80)
+	hwidStroke.Thickness = 1
+	hwidStroke.Parent = hwidDisplay
 
-	_trigon.list_item_1.BorderSizePixel = 0
-	_trigon.list_item_1.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-	_trigon.list_item_1.Size = UDim2.new(1, 0, 0.11747, 0)
-	_trigon.list_item_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.list_item_1.BackgroundTransparency = 0.95
-	_trigon.list_item_1.Name = "list_item"
-	_trigon.list_item_1.Position = UDim2.new(0.011215, 0, -0.00793651, 0)
-	_trigon.list_item_1.Parent = _trigon.Listx
+	local connectionInfoContainer = Instance.new("Frame")
+	connectionInfoContainer.Name = "ConnectionInfoContainer"
+	connectionInfoContainer.Position = UDim2.new(0, 15, 0, 187)
+	connectionInfoContainer.Size = UDim2.new(1, -30, 0, 65)
+	connectionInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
+	connectionInfoContainer.BorderSizePixel = 0
+	connectionInfoContainer.Parent = leftPanel
 
-	_trigon.UICorner_3.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_3.Parent = _trigon.list_item_1
+	local connectionInfoCorner = Instance.new("UICorner")
+	connectionInfoCorner.CornerRadius = UDim.new(0, 6)
+	connectionInfoCorner.Parent = connectionInfoContainer
 
-	_trigon.UIListLayout_1.FillDirection = Enum.FillDirection.Horizontal
-	_trigon.UIListLayout_1.VerticalAlignment = Enum.VerticalAlignment.Center
-	_trigon.UIListLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout_1.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout_1.Parent = _trigon.list_item_1
+	local connectionInfoStroke = Instance.new("UIStroke")
+	connectionInfoStroke.Color = Color3.fromRGB(50, 60, 80)
+	connectionInfoStroke.Thickness = 1
+	connectionInfoStroke.Parent = connectionInfoContainer
 
-	_trigon.img_1.BorderSizePixel = 0
-	_trigon.img_1.ScaleType = Enum.ScaleType.Fit
-	_trigon.img_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.img_1.ImageTransparency = 0.11
-	_trigon.img_1.Position = UDim2.new(0.0257837, 0, 0.5, 0)
-	_trigon.img_1.Name = "img"
-	_trigon.img_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.img_1.Image = "rbxassetid://81111209361717"
-	_trigon.img_1.Size = UDim2.new(0.0515674, 0, 1, 0)
-	_trigon.img_1.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.img_1.ZIndex = 2
-	_trigon.img_1.BackgroundTransparency = 1
-	_trigon.img_1.Parent = _trigon.list_item_1
+	local connectionTitle = Instance.new("TextLabel")
+	connectionTitle.Name = "ConnectionTitle"
+	connectionTitle.Position = UDim2.new(0, 10, 0, 5)
+	connectionTitle.Size = UDim2.new(1, -20, 0, 15)
+	connectionTitle.BackgroundTransparency = 1
+	connectionTitle.Text = "Server Status"
+	connectionTitle.TextColor3 = Color3.fromRGB(130, 130, 130)
+	connectionTitle.Font = Enum.Font.Gotham
+	connectionTitle.TextSize = 10
+	connectionTitle.TextXAlignment = Enum.TextXAlignment.Left
+	connectionTitle.Parent = connectionInfoContainer
 
-	_trigon.LocalScript.Parent = _trigon.img_1
+	local primaryLabel = Instance.new("TextLabel")
+	primaryLabel.Name = "PrimaryLabel"
+	primaryLabel.Position = UDim2.new(0, 10, 0, 23)
+	primaryLabel.Size = UDim2.new(0.5, -10, 0, 12)
+	primaryLabel.BackgroundTransparency = 1
+	primaryLabel.Text = "Primary:"
+	primaryLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	primaryLabel.Font = Enum.Font.Gotham
+	primaryLabel.TextSize = 9
+	primaryLabel.TextXAlignment = Enum.TextXAlignment.Left
+	primaryLabel.Parent = connectionInfoContainer
 
-	_trigon.UIPadding_2.PaddingLeft = UDim.new(0.05, 0)
-	_trigon.UIPadding_2.Parent = _trigon.list_item_1
+	local primaryStatus = Instance.new("TextLabel")
+	primaryStatus.Name = "PrimaryStatus"
+	primaryStatus.Position = UDim2.new(0.5, 0, 0, 23)
+	primaryStatus.Size = UDim2.new(0.5, -10, 0, 12)
+	primaryStatus.BackgroundTransparency = 1
+	primaryStatus.Text = "Checking..."
+	primaryStatus.TextColor3 = Color3.fromRGB(255, 200, 100)
+	primaryStatus.Font = Enum.Font.GothamBold
+	primaryStatus.TextSize = 9
+	primaryStatus.TextXAlignment = Enum.TextXAlignment.Right
+	primaryStatus.Parent = connectionInfoContainer
 
-	_trigon.txt_1.TextWrapped = true
-	_trigon.txt_1.TextScaled = true
-	_trigon.txt_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.txt_1.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.txt_1.Position = UDim2.new(0.508278, 0, 0.743936, 0)
-	_trigon.txt_1.Name = "txt"
-	_trigon.txt_1.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.txt_1.TextSize = 14
-	_trigon.txt_1.Size = UDim2.new(0.873422, 0, 0.391942, 0)
-	_trigon.txt_1.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.txt_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.txt_1.Text = "Initializing for first time use.."
-	_trigon.txt_1.BackgroundTransparency = 1
-	_trigon.txt_1.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.txt_1.Parent = _trigon.list_item_1
+	local fallbackLabel = Instance.new("TextLabel")
+	fallbackLabel.Name = "FallbackLabel"
+	fallbackLabel.Position = UDim2.new(0, 10, 0, 37)
+	fallbackLabel.Size = UDim2.new(0.5, -10, 0, 12)
+	fallbackLabel.BackgroundTransparency = 1
+	fallbackLabel.Text = "Fallback:"
+	fallbackLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	fallbackLabel.Font = Enum.Font.Gotham
+	fallbackLabel.TextSize = 9
+	fallbackLabel.TextXAlignment = Enum.TextXAlignment.Left
+	fallbackLabel.Parent = connectionInfoContainer
 
-	_trigon.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout_2.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout_2.Parent = _trigon.Listx
+	local fallbackStatus = Instance.new("TextLabel")
+	fallbackStatus.Name = "FallbackStatus"
+	fallbackStatus.Position = UDim2.new(0.5, 0, 0, 37)
+	fallbackStatus.Size = UDim2.new(0.5, -10, 0, 12)
+	fallbackStatus.BackgroundTransparency = 1
+	fallbackStatus.Text = "Standby"
+	fallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
+	fallbackStatus.Font = Enum.Font.GothamBold
+	fallbackStatus.TextSize = 9
+	fallbackStatus.TextXAlignment = Enum.TextXAlignment.Right
+	fallbackStatus.Parent = connectionInfoContainer
 
-	_trigon.info.TextWrapped = true
-	_trigon.info.TextScaled = true
-	_trigon.info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.info.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.info.Position = UDim2.new(0.5, 0, 0.984978, 0)
-	_trigon.info.Name = "info"
-	_trigon.info.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.info.TextSize = 14
-	_trigon.info.Size = UDim2.new(0.482036, 0, 0.0197308, 0)
-	_trigon.info.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.info.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.info.Text = "{..}"
-	_trigon.info.BackgroundTransparency = 1
-	_trigon.info.Parent = _trigon.Canvas
+	local lastCheckLabel = Instance.new("TextLabel")
+	lastCheckLabel.Name = "LastCheckLabel"
+	lastCheckLabel.Position = UDim2.new(0, 10, 0, 51)
+	lastCheckLabel.Size = UDim2.new(0.5, -10, 0, 12)
+	lastCheckLabel.BackgroundTransparency = 1
+	lastCheckLabel.Text = "Last Check:"
+	lastCheckLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	lastCheckLabel.Font = Enum.Font.Gotham
+	lastCheckLabel.TextSize = 9
+	lastCheckLabel.TextXAlignment = Enum.TextXAlignment.Left
+	lastCheckLabel.Parent = connectionInfoContainer
 
-	_trigon.UIAspectRatioConstraint.AspectRatio = 1.72749
-	_trigon.UIAspectRatioConstraint.Parent = _trigon.Trigon_Whitelist
+	local lastCheckTime = Instance.new("TextLabel")
+	lastCheckTime.Name = "LastCheckTime"
+	lastCheckTime.Position = UDim2.new(0.5, 0, 0, 51)
+	lastCheckTime.Size = UDim2.new(0.5, -10, 0, 12)
+	lastCheckTime.BackgroundTransparency = 1
+	lastCheckTime.Text = os.date("%H:%M:%S")
+	lastCheckTime.TextColor3 = Color3.fromRGB(200, 200, 200)
+	lastCheckTime.Font = Enum.Font.GothamBold
+	lastCheckTime.TextSize = 9
+	lastCheckTime.TextXAlignment = Enum.TextXAlignment.Right
+	lastCheckTime.Parent = connectionInfoContainer
 
-	_trigon.LocalScript_1.Parent = _trigon.Trigon_Whitelist
+	local gameInfoContainer = Instance.new("Frame")
+	gameInfoContainer.Name = "GameInfoContainer"
+	gameInfoContainer.Position = UDim2.new(0, 15, 0, 262)
+	gameInfoContainer.Size = UDim2.new(1, -30, 0, 58)
+	gameInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
+	gameInfoContainer.BorderSizePixel = 0
+	gameInfoContainer.Parent = leftPanel
 
+	local gameInfoCorner = Instance.new("UICorner")
+	gameInfoCorner.CornerRadius = UDim.new(0, 6)
+	gameInfoCorner.Parent = gameInfoContainer
 
-	task.spawn(function()
-		local script = _trigon.LocalScript_1
+	local gameInfoStroke = Instance.new("UIStroke")
+	gameInfoStroke.Color = Color3.fromRGB(50, 60, 80)
+	gameInfoStroke.Thickness = 1
+	gameInfoStroke.Parent = gameInfoContainer
 
-		local TweenService = game:GetService("TweenService")
-		local HttpService = game:GetService("HttpService")
+	local gameNameLabel = Instance.new("TextLabel")
+	gameNameLabel.Name = "GameNameLabel"
+	gameNameLabel.Position = UDim2.new(0, 10, 0, 5)
+	gameNameLabel.Size = UDim2.new(1, -20, 0, 15)
+	gameNameLabel.BackgroundTransparency = 1
+	gameNameLabel.Text = "Current Game:"
+	gameNameLabel.TextColor3 = Color3.fromRGB(130, 130, 130)
+	gameNameLabel.Font = Enum.Font.Gotham
+	gameNameLabel.TextSize = 10
+	gameNameLabel.TextXAlignment = Enum.TextXAlignment.Left
+	gameNameLabel.Parent = gameInfoContainer
 
-		local CHECK = "rbxassetid://13858820419"
-		local CIRCLE = "rbxassetid://81111209361717"
+	local gameName = Instance.new("TextLabel")
+	gameName.Name = "GameName"
+	gameName.Position = UDim2.new(0, 10, 0, 20)
+	gameName.Size = UDim2.new(1, -20, 0, 15)
+	gameName.BackgroundTransparency = 1
 
-		local canv = script.Parent.Canvas
-		local copyLink = canv.copyLink
-		local close = canv.CloseBtn
-		local list = canv.List
-		local listitem = list.list_item
-		listitem.Parent = nil
-
-		local function addOrUpdateItem(text, isCompleted, itemToUpdate)
-			local newItem = itemToUpdate or listitem:Clone()
-			local itemImg = newItem.img
-			local itemText = newItem.txt
-			itemText.Text = text
-			itemImg.Image = isCompleted and CHECK or CIRCLE
-
-			if not itemToUpdate then
-				newItem.Parent = list
-			end
-
-			if not isCompleted then
-				local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-				local tween = TweenService:Create(itemImg, tweenInfo, {Rotation = 360})
-				tween:Play()
-			else
-				TweenService:Create(itemImg, TweenInfo.new(0.5), {Rotation = 0}):Play()
-			end
-
-			if isCompleted and text:find("verified") then
-				newItem.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-			else
-				newItem.BackgroundColor3 = listitem.BackgroundColor3
-			end
-
-			return newItem
-		end
-
-		copyLink.Activated:Connect(function()
-			setclipboard(getKeylink())
-			canv.info.Text = "{ Copied whitelist link to clipboard }"
-		end)
-
-		close.Activated:Connect(function()
-			script.Parent:Destroy()
-		end)
-
-		local initItem = addOrUpdateItem("Initializing for first time use..", false)
-		task.wait(2)  
-		addOrUpdateItem("Initialization complete", true, initItem)
-
-		local whitelistItem = addOrUpdateItem("Checking whitelist status..", false)
-		local function checkWhitelistPeriodically()
-			while true do
-				local statusText, isVerified = checkWhitelist()
-				if isVerified then
-					addOrUpdateItem(statusText, true, whitelistItem)
-					wait(2)
-					script.Parent:Destroy()
-					--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
-
-					break
-				else
-					for i = 8, 1, -1 do
-						addOrUpdateItem(statusText .. " (Checking again in " .. i .. "s)", false, whitelistItem)
-						task.wait(1)
-					end
-				end
-			end
-		end
-
-		task.spawn(checkWhitelistPeriodically)
-	end)
-end
-
-local HttpService = game:GetService("HttpService")
-
-local function gethwid()
-	HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-	return tostring(HWID)
-end
-
-local function getKeylink()
-	return "https://auth.trigonevo.com/whitelist?hwid=".. gethwid().."&os=android"
-end
-
-local function checkWhitelist()
-	local hwid = gethwid()
-	local url = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid
-	local success, response = pcall(function()
-		return game:HttpGet(url)
+	local gameNameText = "Loading..."
+	pcall(function()
+		local gameInfo = MarketplaceService:GetProductInfo(game.PlaceId)
+		gameNameText = gameInfo.Name
 	end)
 
-	if success then
-		local success, data = pcall(function()
-			return HttpService:JSONDecode(response)
-		end)
-		
-		if success then
-			if data.success and data.valid then
-				return "Your HWID is verified! Expiration date: " .. tostring(data.expires_at) .. 
-					" (" .. string.format("%.2f", data.remaining_hours) .. " hours remaining)", true
-			else
-				return "HWID is not verified: " .. tostring(data.error or "Unknown error"), false
-			end
-		else
-			return "Failed to parse the response data", false
-		end
-	else
-		return "Failed to fetch whitelist status: " .. tostring(response), false
+	gameName.Text = gameNameText
+	gameName.TextColor3 = Color3.fromRGB(200, 200, 200)
+	gameName.Font = Enum.Font.GothamBold
+	gameName.TextSize = 11
+	gameName.TextXAlignment = Enum.TextXAlignment.Left
+	gameName.TextTruncate = Enum.TextTruncate.AtEnd
+	gameName.Parent = gameInfoContainer
+
+	local gameIdLabel = Instance.new("TextLabel")
+	gameIdLabel.Name = "GameIdLabel"
+	gameIdLabel.Position = UDim2.new(0, 10, 0, 37)
+	gameIdLabel.Size = UDim2.new(0.5, -10, 0, 13)
+	gameIdLabel.BackgroundTransparency = 1
+	gameIdLabel.Text = "Place ID: " .. tostring(game.PlaceId)
+	gameIdLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	gameIdLabel.Font = Enum.Font.Code
+	gameIdLabel.TextSize = 9
+	gameIdLabel.TextXAlignment = Enum.TextXAlignment.Left
+	gameIdLabel.Parent = gameInfoContainer
+
+	local buttonsContainer = Instance.new("Frame")
+	buttonsContainer.Name = "ButtonsContainer"
+	buttonsContainer.Position = UDim2.new(0, 15, 1, -43)
+	buttonsContainer.Size = UDim2.new(1, -30, 0, 35)
+	buttonsContainer.BackgroundTransparency = 1
+	buttonsContainer.Parent = leftPanel
+
+	local copyButton = Instance.new("TextButton")
+	copyButton.Name = "CopyButton"
+	copyButton.Position = UDim2.new(0, 0, 0, 0)
+	copyButton.Size = UDim2.new(0.48, 0, 1, 0)
+	copyButton.BackgroundColor3 = Color3.fromRGB(80, 90, 120)
+	copyButton.BackgroundTransparency = 0.7
+	copyButton.Text = "Copy Link"
+	copyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	copyButton.Font = Enum.Font.GothamBold
+	copyButton.TextSize = 12
+	copyButton.Parent = buttonsContainer
+
+	local copyCorner = Instance.new("UICorner")
+	copyCorner.CornerRadius = UDim.new(0, 6)
+	copyCorner.Parent = copyButton
+
+	local copyStroke = Instance.new("UIStroke")
+	copyStroke.Color = Color3.fromRGB(100, 110, 140)
+	copyStroke.Transparency = 0.7
+	copyStroke.Thickness = 1
+	copyStroke.Parent = copyButton
+
+	local verifyButton = Instance.new("TextButton")
+	verifyButton.Name = "VerifyButton"
+	verifyButton.Position = UDim2.new(0.52, 0, 0, 0)
+	verifyButton.Size = UDim2.new(0.48, 0, 1, 0)
+	verifyButton.BackgroundColor3 = Color3.fromRGB(60, 150, 100)
+	verifyButton.Text = "Verify Status"
+	verifyButton.BackgroundTransparency = 0.7
+	verifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	verifyButton.Font = Enum.Font.GothamBold
+	verifyButton.TextSize = 12
+	verifyButton.Parent = buttonsContainer
+
+	local verifyCorner = Instance.new("UICorner")
+	verifyCorner.CornerRadius = UDim.new(0, 6)
+	verifyCorner.Parent = verifyButton
+
+	local verifyStroke = Instance.new("UIStroke")
+	verifyStroke.Color = Color3.fromRGB(80, 170, 120)
+	verifyStroke.Transparency = 0.7
+	verifyStroke.Thickness = 1
+	verifyStroke.Parent = verifyButton
+
+	local rightPanel = Instance.new("Frame")
+	rightPanel.Name = "RightPanel"
+	rightPanel.Position = UDim2.new(0.5, 5, 0, 0)
+	rightPanel.Size = UDim2.new(0.5, -5, 1, 0)
+	rightPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
+	rightPanel.BorderSizePixel = 0
+	rightPanel.Parent = contentContainer
+
+	local rightCorner = Instance.new("UICorner")
+	rightCorner.CornerRadius = UDim.new(0, 8)
+	rightCorner.Parent = rightPanel
+
+	local rightStroke = Instance.new("UIStroke")
+	rightStroke.Color = Color3.fromRGB(50, 60, 80)
+	rightStroke.Thickness = 1
+	rightStroke.Parent = rightPanel
+
+	local consoleTitle = Instance.new("TextLabel")
+	consoleTitle.Name = "ConsoleTitle"
+	consoleTitle.Position = UDim2.new(0, 15, 0, 15)
+	consoleTitle.Size = UDim2.new(1, -30, 0, 25)
+	consoleTitle.BackgroundTransparency = 1
+	consoleTitle.Text = "Console Output"
+	consoleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	consoleTitle.Font = Enum.Font.GothamBold
+	consoleTitle.TextSize = 18
+	consoleTitle.TextXAlignment = Enum.TextXAlignment.Left
+	consoleTitle.Parent = rightPanel
+
+	local consoleContainer = Instance.new("ScrollingFrame")
+	consoleContainer.Name = "ConsoleContainer"
+	consoleContainer.Position = UDim2.new(0, 15, 0, 50)
+	consoleContainer.Size = UDim2.new(1, -30, 1, -65)
+	consoleContainer.BackgroundColor3 = Color3.fromRGB(15, 18, 25)
+	consoleContainer.BorderSizePixel = 0
+	consoleContainer.ScrollBarThickness = 4
+	consoleContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+	consoleContainer.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	consoleContainer.Parent = rightPanel
+
+	local consoleCorner = Instance.new("UICorner")
+	consoleCorner.CornerRadius = UDim.new(0, 6)
+	consoleCorner.Parent = consoleContainer
+
+	local consoleLayout = Instance.new("UIListLayout")
+	consoleLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	consoleLayout.Padding = UDim.new(0, 2)
+	consoleLayout.Parent = consoleContainer
+
+	local consolePadding = Instance.new("UIPadding")
+	consolePadding.PaddingLeft = UDim.new(0, 8)
+	consolePadding.PaddingRight = UDim.new(0, 8)
+	consolePadding.PaddingTop = UDim.new(0, 8)
+	consolePadding.PaddingBottom = UDim.new(0, 8)
+	consolePadding.Parent = consoleContainer
+
+	local consoleLineCount = 0
+	local function addConsoleLog(message, color)
+		consoleLineCount = consoleLineCount + 1
+
+		local logLine = Instance.new("TextLabel")
+		logLine.Name = "Log_" .. consoleLineCount
+		logLine.Size = UDim2.new(1, 0, 0, 0)
+		logLine.AutomaticSize = Enum.AutomaticSize.Y
+		logLine.BackgroundTransparency = 1
+		logLine.Text = "[" .. os.date("%H:%M:%S") .. "] " .. message
+		logLine.TextColor3 = color or Color3.fromRGB(200, 200, 200)
+		logLine.Font = Enum.Font.Code
+		logLine.TextSize = 11
+		logLine.TextXAlignment = Enum.TextXAlignment.Left
+		logLine.TextYAlignment = Enum.TextYAlignment.Top
+		logLine.TextWrapped = true
+		logLine.RichText = false
+		logLine.Parent = consoleContainer
+
+		consoleContainer.CanvasPosition = Vector2.new(0, consoleContainer.AbsoluteCanvasSize.Y)
 	end
-end
 
+	local function updateStatus(result)
+		-- Update last check time
+		lastCheckTime.Text = os.date("%H:%M:%S")
 
-
-
-
-
-
-local stat, verified = checkWhitelist()
-
-if verified then
-	--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
-	return
-else
-
-
-	local _trigon =
-		{
-			Trigon_Whitelist = Instance.new("ScreenGui"),
-			Canvas = Instance.new("Frame"),
-			copyLink = Instance.new("ImageButton"),
-			Main = Instance.new("Frame"),
-			TextLabel = Instance.new("TextLabel"),
-			UIPadding = Instance.new("UIPadding"),
-			Icon = Instance.new("ImageLabel"),
-			UICorner = Instance.new("UICorner"),
-			logo = Instance.new("ImageLabel"),
-			Title = Instance.new("TextLabel"),
-			sub2 = Instance.new("TextLabel"),
-			sub = Instance.new("TextLabel"),
-			CloseBtn = Instance.new("ImageButton"),
-			Main_1 = Instance.new("Frame"),
-			Icon_1 = Instance.new("ImageLabel"),
-			UICorner_1 = Instance.new("UICorner"),
-			List = Instance.new("Frame"),
-			list_item = Instance.new("Frame"),
-			img = Instance.new("ImageLabel"),
-			txt = Instance.new("TextLabel"),
-			UIPadding_1 = Instance.new("UIPadding"),
-			UICorner_2 = Instance.new("UICorner"),
-			UIListLayout = Instance.new("UIListLayout"),
-			Listx = Instance.new("Frame"),
-			list_item_1 = Instance.new("Frame"),
-			UICorner_3 = Instance.new("UICorner"),
-			UIListLayout_1 = Instance.new("UIListLayout"),
-			img_1 = Instance.new("ImageLabel"),
-			LocalScript = Instance.new("LocalScript"),
-			UIPadding_2 = Instance.new("UIPadding"),
-			txt_1 = Instance.new("TextLabel"),
-			UIListLayout_2 = Instance.new("UIListLayout"),
-			info = Instance.new("TextLabel"),
-			UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
-			LocalScript_1 = Instance.new("LocalScript"),
-			UIStroke = Instance.new("UIStroke")
-
-		}
-
-	_trigon.Trigon_Whitelist.IgnoreGuiInset = true
-	_trigon.Trigon_Whitelist.DisplayOrder = -1
-	_trigon.Trigon_Whitelist.Name = "Trigon_Whitelist"
-	_trigon.Trigon_Whitelist.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-	_trigon.Trigon_Whitelist.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	_trigon.Trigon_Whitelist.Parent = gethui()
-
-	_trigon.Canvas.BorderSizePixel = 0
-	_trigon.Canvas.BackgroundColor3 = Color3.fromRGB(15, 23, 39)
-	_trigon.Canvas.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Canvas.Size = UDim2.new(1, 0, 1, 0)
-	_trigon.Canvas.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Canvas.BackgroundTransparency = 0.06
-	_trigon.Canvas.Name = "Canvas"
-	_trigon.Canvas.Position = UDim2.new(0.5, 0, 0.5, 0)
-	_trigon.Canvas.Parent = _trigon.Trigon_Whitelist
-
-	_trigon.copyLink.BorderSizePixel = 0
-	_trigon.copyLink.Position = UDim2.new(0.5, 0, 0.86144, 0)
-	_trigon.copyLink.BackgroundColor3 = Color3.fromRGB(68, 71, 80)
-	_trigon.copyLink.Name = "copyLink"
-	_trigon.copyLink.AnchorPoint = Vector2.new(0.5, 0.9)
-	_trigon.copyLink.Size = UDim2.new(0.190301, 0, 0.062297, 0)
-	_trigon.copyLink.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.copyLink.BackgroundTransparency = 0.75
-	_trigon.copyLink.Parent = _trigon.Canvas
-	
-	_trigon.UIStroke.Color = Color3.fromRGB(98, 104, 116)
-	_trigon.UIStroke.Thickness = 2
-	_trigon.UIStroke.Parent = _trigon.copyLink
-
-
-	_trigon.Main.BorderSizePixel = 0
-	_trigon.Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Main.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Main.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-	_trigon.Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Main.BackgroundTransparency = 1
-	_trigon.Main.Name = "Main"
-	_trigon.Main.Position = UDim2.new(0.502747, 0, 0.5, 0)
-	_trigon.Main.Parent = _trigon.copyLink
-
-	_trigon.TextLabel.TextWrapped = true
-	_trigon.TextLabel.BorderSizePixel = 0
-	_trigon.TextLabel.TextScaled = true
-	_trigon.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.TextLabel.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.TextLabel.Position = UDim2.new(0.57863, 0, 0.484556, 0)
-	_trigon.TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.TextLabel.TextSize = 21
-	_trigon.TextLabel.Size = UDim2.new(0.736736, 0, 0.452381, 0)
-	_trigon.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.TextLabel.Text = "Copy Whitelist Link"
-	_trigon.TextLabel.BackgroundTransparency = 1
-	_trigon.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.TextLabel.Parent = _trigon.Main
-
-	_trigon.UIPadding.Parent = _trigon.TextLabel
-
-	_trigon.Icon.ImageColor3 = Color3.fromRGB(231, 231, 231)
-	_trigon.Icon.BorderSizePixel = 0
-	_trigon.Icon.ScaleType = Enum.ScaleType.Fit
-	_trigon.Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Icon.Position = UDim2.new(0.115661, 0, 0.484019, 0)
-	_trigon.Icon.Name = "Icon"
-	_trigon.Icon.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Icon.Image = "rbxassetid://13848618194"
-	_trigon.Icon.Size = UDim2.new(0.108524, 0, 1.09524, 0)
-	_trigon.Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Icon.BackgroundTransparency = 1
-	_trigon.Icon.Parent = _trigon.Main
-
-	_trigon.UICorner.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner.Parent = _trigon.copyLink
-
-	_trigon.logo.BorderSizePixel = 0
-	_trigon.logo.ScaleType = Enum.ScaleType.Fit
-	_trigon.logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.logo.Position = UDim2.new(0.493907, 0, 0.0619883, 0)
-	_trigon.logo.Name = "logo"
-	_trigon.logo.AnchorPoint = Vector2.new(0.5, 0)
-	_trigon.logo.Image = "rbxassetid://82500352718600"
-	_trigon.logo.Size = UDim2.new(0.238998, 0, 0.0830409, 0)
-	_trigon.logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.logo.BackgroundTransparency = 1
-	_trigon.logo.Parent = _trigon.Canvas
-
-	_trigon.Title.TextWrapped = true
-	_trigon.Title.TextScaled = true
-	_trigon.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Title.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal)
-	_trigon.Title.Position = UDim2.new(0.5, 0, 0.2, 0)
-	_trigon.Title.Name = "Title"
-	_trigon.Title.AnchorPoint = Vector2.new(0.5, 0.2)
-	_trigon.Title.TextSize = 14
-	_trigon.Title.Size = UDim2.new(0.482036, 0, 0.0760031, 0)
-	_trigon.Title.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.Title.Text = "Trigon..."
-	_trigon.Title.BackgroundTransparency = 1
-	_trigon.Title.Parent = _trigon.Canvas
-
-	_trigon.sub2.TextWrapped = true
-	_trigon.sub2.TextScaled = true
-	_trigon.sub2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.sub2.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.sub2.Position = UDim2.new(0.5, 0, 0.906616, 0)
-	_trigon.sub2.Name = "sub2"
-	_trigon.sub2.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.sub2.TextSize = 14
-	_trigon.sub2.Size = UDim2.new(0.482036, 0, 0.0197308, 0)
-	_trigon.sub2.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.sub2.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.sub2.Text = "Support @ discord.gg/trigon"
-	_trigon.sub2.BackgroundTransparency = 1
-	_trigon.sub2.Parent = _trigon.Canvas
-
-	_trigon.sub.TextWrapped = true
-	_trigon.sub.TextScaled = true
-	_trigon.sub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.sub.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.sub.Position = UDim2.new(0.5, 0, 0.294854, 0)
-	_trigon.sub.Name = "sub"
-	_trigon.sub.AnchorPoint = Vector2.new(0.5, 0.3)
-	_trigon.sub.TextSize = 14
-	_trigon.sub.Size = UDim2.new(0.482036, 0, 0.0606309, 0)
-	_trigon.sub.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.sub.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.sub.Text = "Please complete the whitelist process to gain access!"
-	_trigon.sub.BackgroundTransparency = 1
-	_trigon.sub.Parent = _trigon.Canvas
-
-	_trigon.CloseBtn.BorderSizePixel = 0
-	_trigon.CloseBtn.Position = UDim2.new(0.95, 0, 0.05, 0)
-	_trigon.CloseBtn.BackgroundColor3 = Color3.fromRGB(221, 221, 245)
-	_trigon.CloseBtn.Name = "CloseBtn"
-	_trigon.CloseBtn.AnchorPoint = Vector2.new(0.95, 0.05)
-	_trigon.CloseBtn.Size = UDim2.new(0.0408389, 0, 0.0688839, 0)
-	_trigon.CloseBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.CloseBtn.BackgroundTransparency = 0.98
-	_trigon.CloseBtn.Parent = _trigon.Canvas
-
-	_trigon.Main_1.BorderSizePixel = 0
-	_trigon.Main_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Main_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Main_1.Size = UDim2.new(0.994505, 0, 0.913044, 0)
-	_trigon.Main_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Main_1.BackgroundTransparency = 1
-	_trigon.Main_1.Name = "Main"
-	_trigon.Main_1.Position = UDim2.new(0.502747, 0, 0.5, 0)
-	_trigon.Main_1.Parent = _trigon.CloseBtn
-
-	_trigon.Icon_1.ImageColor3 = Color3.fromRGB(231, 231, 231)
-	_trigon.Icon_1.BorderSizePixel = 0
-	_trigon.Icon_1.ScaleType = Enum.ScaleType.Fit
-	_trigon.Icon_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Icon_1.Position = UDim2.new(0.5, 0, 0.5, 0)
-	_trigon.Icon_1.Name = "Icon"
-	_trigon.Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Icon_1.Image = "rbxassetid://13857985197"
-	_trigon.Icon_1.Size = UDim2.new(0.533237, 0, 1, 0)
-	_trigon.Icon_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Icon_1.BackgroundTransparency = 1
-	_trigon.Icon_1.Parent = _trigon.Main_1
-
-	_trigon.UICorner_1.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_1.Parent = _trigon.CloseBtn
-
-	_trigon.List.BorderSizePixel = 0
-	_trigon.List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.List.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.List.Size = UDim2.new(0.362221, 0, 0.377778, 0)
-	_trigon.List.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.List.BackgroundTransparency = 1
-	_trigon.List.Name = "List"
-	_trigon.List.Position = UDim2.new(0.5, 0, 0.55848, 0)
-	_trigon.List.Parent = _trigon.Canvas
-
-	_trigon.list_item.BorderSizePixel = 0
-	_trigon.list_item.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-	_trigon.list_item.Size = UDim2.new(1, 0, 0.14843, 0)
-	_trigon.list_item.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.list_item.BackgroundTransparency = 0.95
-	_trigon.list_item.Name = "list_item"
-	_trigon.list_item.Parent = _trigon.List
-
-	_trigon.img.BorderSizePixel = 0
-	_trigon.img.ScaleType = Enum.ScaleType.Fit
-	_trigon.img.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.img.ImageTransparency = 0.11
-	_trigon.img.Position = UDim2.new(0.0257837, 0, 0.5, 0)
-	_trigon.img.Name = "img"
-	_trigon.img.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.img.Image = "rbxassetid://81111209361717"
-	_trigon.img.Size = UDim2.new(0.048989, 0, 1, 0)
-	_trigon.img.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.img.ZIndex = 2
-	_trigon.img.BackgroundTransparency = 1
-	_trigon.img.Parent = _trigon.list_item
-
-	_trigon.txt.TextWrapped = true
-	_trigon.txt.TextScaled = true
-	_trigon.txt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.txt.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.txt.Position = UDim2.new(0.503935, 0, 0.5, 0)
-	_trigon.txt.Name = "txt"
-	_trigon.txt.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.txt.TextSize = 14
-	_trigon.txt.Size = UDim2.new(0.822274, 0, 0.391942, 0)
-	_trigon.txt.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.txt.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.txt.Text = "Initializing for first time use.."
-	_trigon.txt.BackgroundTransparency = 1
-	_trigon.txt.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.txt.Parent = _trigon.list_item
-
-	_trigon.UIPadding_1.PaddingLeft = UDim.new(0.05, 0)
-	_trigon.UIPadding_1.Parent = _trigon.list_item
-
-	_trigon.UICorner_2.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_2.Parent = _trigon.list_item
-
-	_trigon.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout.Parent = _trigon.List
-
-	_trigon.Listx.BorderSizePixel = 0
-	_trigon.Listx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.Listx.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.Listx.Size = UDim2.new(0.362221, 0, 0.442105, 0)
-	_trigon.Listx.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.Listx.BackgroundTransparency = 1
-	_trigon.Listx.Visible = false
-	_trigon.Listx.Name = "Listx"
-	_trigon.Listx.Position = UDim2.new(0.5, 0, 0.590643, 0)
-	_trigon.Listx.Parent = _trigon.Canvas
-
-	_trigon.list_item_1.BorderSizePixel = 0
-	_trigon.list_item_1.BackgroundColor3 = Color3.fromRGB(216, 228, 255)
-	_trigon.list_item_1.Size = UDim2.new(1, 0, 0.11747, 0)
-	_trigon.list_item_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.list_item_1.BackgroundTransparency = 0.95
-	_trigon.list_item_1.Name = "list_item"
-	_trigon.list_item_1.Position = UDim2.new(0.011215, 0, -0.00793651, 0)
-	_trigon.list_item_1.Parent = _trigon.Listx
-
-	_trigon.UICorner_3.CornerRadius = UDim.new(0.1, 0)
-	_trigon.UICorner_3.Parent = _trigon.list_item_1
-
-	_trigon.UIListLayout_1.FillDirection = Enum.FillDirection.Horizontal
-	_trigon.UIListLayout_1.VerticalAlignment = Enum.VerticalAlignment.Center
-	_trigon.UIListLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout_1.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout_1.Parent = _trigon.list_item_1
-
-	_trigon.img_1.BorderSizePixel = 0
-	_trigon.img_1.ScaleType = Enum.ScaleType.Fit
-	_trigon.img_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	_trigon.img_1.ImageTransparency = 0.11
-	_trigon.img_1.Position = UDim2.new(0.0257837, 0, 0.5, 0)
-	_trigon.img_1.Name = "img"
-	_trigon.img_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	_trigon.img_1.Image = "rbxassetid://81111209361717"
-	_trigon.img_1.Size = UDim2.new(0.0515674, 0, 1, 0)
-	_trigon.img_1.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.img_1.ZIndex = 2
-	_trigon.img_1.BackgroundTransparency = 1
-	_trigon.img_1.Parent = _trigon.list_item_1
-
-	_trigon.LocalScript.Parent = _trigon.img_1
-
-	_trigon.UIPadding_2.PaddingLeft = UDim.new(0.05, 0)
-	_trigon.UIPadding_2.Parent = _trigon.list_item_1
-
-	_trigon.txt_1.TextWrapped = true
-	_trigon.txt_1.TextScaled = true
-	_trigon.txt_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.txt_1.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.txt_1.Position = UDim2.new(0.508278, 0, 0.743936, 0)
-	_trigon.txt_1.Name = "txt"
-	_trigon.txt_1.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.txt_1.TextSize = 14
-	_trigon.txt_1.Size = UDim2.new(0.873422, 0, 0.391942, 0)
-	_trigon.txt_1.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.txt_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.txt_1.Text = "Initializing for first time use.."
-	_trigon.txt_1.BackgroundTransparency = 1
-	_trigon.txt_1.TextXAlignment = Enum.TextXAlignment.Left
-	_trigon.txt_1.Parent = _trigon.list_item_1
-
-	_trigon.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-	_trigon.UIListLayout_2.Padding = UDim.new(0.02, 0)
-	_trigon.UIListLayout_2.Parent = _trigon.Listx
-
-	_trigon.info.TextWrapped = true
-	_trigon.info.TextScaled = true
-	_trigon.info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_trigon.info.FontFace = Font.new("rbxassetid://12187362578", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	_trigon.info.Position = UDim2.new(0.5, 0, 0.984978, 0)
-	_trigon.info.Name = "info"
-	_trigon.info.AnchorPoint = Vector2.new(0.5, 0.95)
-	_trigon.info.TextSize = 14
-	_trigon.info.Size = UDim2.new(0.482036, 0, 0.0197308, 0)
-	_trigon.info.TextColor3 = Color3.fromRGB(240, 240, 240)
-	_trigon.info.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	_trigon.info.Text = "{..}"
-	_trigon.info.BackgroundTransparency = 1
-	_trigon.info.Parent = _trigon.Canvas
-
-	_trigon.UIAspectRatioConstraint.AspectRatio = 1.72749
-	_trigon.UIAspectRatioConstraint.Parent = _trigon.Trigon_Whitelist
-
-	_trigon.LocalScript_1.Parent = _trigon.Trigon_Whitelist
-
-
-	task.spawn(function()
-		local script = _trigon.LocalScript_1
-
-		local TweenService = game:GetService("TweenService")
-		local HttpService = game:GetService("HttpService")
-
-		local CHECK = "rbxassetid://13858820419"
-		local CIRCLE = "rbxassetid://81111209361717"
-
-		local canv = script.Parent.Canvas
-		local copyLink = canv.copyLink
-		local close = canv.CloseBtn
-		local list = canv.List
-		local listitem = list.list_item
-		listitem.Parent = nil
-
-		local function addOrUpdateItem(text, isCompleted, itemToUpdate)
-			local newItem = itemToUpdate or listitem:Clone()
-			local itemImg = newItem.img
-			local itemText = newItem.txt
-			itemText.Text = text
-			itemImg.Image = isCompleted and CHECK or CIRCLE
-
-			if not itemToUpdate then
-				newItem.Parent = list
-			end
-
-			if not isCompleted then
-				local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-				local tween = TweenService:Create(itemImg, tweenInfo, {Rotation = 360})
-				tween:Play()
-			else
-				TweenService:Create(itemImg, TweenInfo.new(0.5), {Rotation = 0}):Play()
-			end
-
-			if isCompleted and text:find("verified") then
-				newItem.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-			else
-				newItem.BackgroundColor3 = listitem.BackgroundColor3
-			end
-
-			return newItem
+		-- server status 
+		if result.usedFallback then
+			-- fallback 
+			primaryStatus.Text = "Failed"
+			primaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+			fallbackStatus.Text = "Active"
+			fallbackStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
+		elseif result.code == "CONNECTION_FAILED" then
+			-- Both failed
+			primaryStatus.Text = "Offline"
+			primaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+			fallbackStatus.Text = "Offline"
+			fallbackStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+		else
+			-- Primary work
+			primaryStatus.Text = "Online"
+			primaryStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
+			fallbackStatus.Text = "Standby"
+			fallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
 		end
 
-		copyLink.Activated:Connect(function()
-			setclipboard(getKeylink())
-			canv.info.Text = "{ Copied whitelist link to clipboard }"
-		end)
+		if result.success then
+			statusText.Text = result.message
+			statusText.TextColor3 = Color3.fromRGB(100, 255, 150)
+			statusDetails.Text = result.details
+			statusIndicator.BackgroundColor3 = Color3.fromRGB(20, 60, 40)
+			statusAccent.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
+			statusIcon.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
+			addConsoleLog("✓ Whitelist verified successfully!", Color3.fromRGB(100, 255, 150))
+			addConsoleLog("  " .. result.details, Color3.fromRGB(150, 150, 150))
+		else
+			statusText.Text = result.message
+			statusText.TextColor3 = Color3.fromRGB(255, 100, 100)
+			statusDetails.Text = result.details
+			statusIndicator.BackgroundColor3 = Color3.fromRGB(60, 30, 30)
+			statusAccent.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
+			statusIcon.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
 
-		close.Activated:Connect(function()
-			script.Parent:Destroy()
-		end)
-
-		local initItem = addOrUpdateItem("Initializing for first time use..", false)
-		task.wait(2)  
-		addOrUpdateItem("Initialization complete", true, initItem)
-
-		local whitelistItem = addOrUpdateItem("Checking whitelist status..", false)
-		local function checkWhitelistPeriodically()
-			while true do
-				local statusText, isVerified = checkWhitelist()
-				if isVerified then
-					addOrUpdateItem(statusText, true, whitelistItem)
-					wait(2)
-					script.Parent:Destroy()
-					--loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/main/beta",true))()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
-
-					break
-				else
-					for i = 8, 1, -1 do
-						addOrUpdateItem(statusText .. " (Checking again in " .. i .. "s)", false, whitelistItem)
-						task.wait(1)
-					end
-				end
+			addConsoleLog("✗ Check failed: " .. result.message, Color3.fromRGB(255, 100, 100))
+			addConsoleLog("  Reason: " .. result.details, Color3.fromRGB(180, 180, 180))
+			if result.code then
+				addConsoleLog("  Error code: " .. result.code, Color3.fromRGB(150, 150, 150))
 			end
 		end
+	end
 
-		task.spawn(checkWhitelistPeriodically)
+	copyButton.Activated:Connect(function()
+		local link = getKeylink()
+		setclipboard(link)
+		addConsoleLog("[>] Whitelist link copied to clipboard", Color3.fromRGB(100, 200, 255))
+
+		local originalText = copyButton.Text
+		copyButton.Text = "Copied!"
+		task.wait(1.5)
+		copyButton.Text = originalText
 	end)
+
+	local isChecking = false
+	verifyButton.Activated:Connect(function()
+		if isChecking then return end
+
+		isChecking = true
+		verifyButton.Text = "Checking..."
+		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		addConsoleLog("⟳ Manual whitelist check initiated", Color3.fromRGB(100, 200, 255))
+
+		local result = checkWhitelist(addConsoleLog)
+		updateStatus(result)
+
+		if result.success then
+			addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+			addConsoleLog("✓ Access granted! Closing in 2 seconds...", Color3.fromRGB(100, 255, 150))
+			task.wait(2)
+			
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+
+			gui:Destroy()
+		else
+			addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		end
+
+		verifyButton.Text = "Verify Status"
+		isChecking = false
+	end)
+
+	closeBtn.Activated:Connect(function()
+		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		addConsoleLog("⊗ Closing whitelist window...", Color3.fromRGB(255, 200, 100))
+		task.wait(0.3)
+		gui:Destroy()
+	end)
+
+	local function updateWindowSize()
+		local viewportSize = workspace.CurrentCamera.ViewportSize
+		local aspectRatio = viewportSize.X / viewportSize.Y
+
+		if viewportSize.X < 600 or viewportSize.Y < 400 then
+			mainWindow.Size = UDim2.new(0.95, 0, 0.85, 0)
+			sizeConstraint.MinSize = Vector2.new(300, 250)
+		else
+			mainWindow.Size = UDim2.new(0, 700, 0, 450)
+		end
+	end
+
+	updateWindowSize()
+	workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(updateWindowSize)
+
+	-- Initial log
+	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+	addConsoleLog("[*] Trigon Whitelist System v1.0", Color3.fromRGB(150, 150, 255))
+	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+	addConsoleLog("[#] HWID: " .. getHwid(), Color3.fromRGB(150, 150, 150))
+	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+	addConsoleLog("⟳ Performing initial whitelist check...", Color3.fromRGB(200, 200, 100))
+	addConsoleLog("→ Primary endpoint: Default gateway", Color3.fromRGB(150, 150, 150))
+	addConsoleLog("→ Fallback endpoint: Alternate gateway", Color3.fromRGB(150, 150, 150))
+	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+
+	updateStatus(initialCheck)
+
+	if initialCheck.success then
+		-- addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		-- addConsoleLog("✓ Already verified! Closing in 2 seconds...", Color3.fromRGB(100, 255, 150))
+		-- task.wait(2)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+
+		gui:Destroy()
+	end
 end
