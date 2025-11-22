@@ -14,8 +14,8 @@ local function checkWhitelist(logFunc)
 	logFunc = logFunc or function() end 
 
 	local hwid = getHwid()
-	local primaryUrl = "https://auth.trigonevo.com/api/verify?hwid=C" .. hwid
-	local fallbackUrl = "https://yxxcattrqpkpztxbasae.supabase.co/functions/v1/trigon-database?hwid=C" .. hwid
+	local primaryUrl = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid
+	local fallbackUrl = "https://yxxcattrqpkpztxbasae.supabase.co/functions/v1/trigon-database?hwid=" .. hwid
 
 	--primary API
 	local success, response = pcall(function()
