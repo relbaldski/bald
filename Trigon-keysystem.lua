@@ -1,5 +1,6 @@
-local HttpService = game:GetService("HttpService")
-local MarketplaceService = game:GetService("MarketplaceService")
+local cloneref = cloneref or function(o) return o end
+local HttpService = cloneref(game:GetService("HttpService"))
+local gethui = gethui or function() return cloneref(game:GetService("CoreGui")) end
 
 local function getHwid()
 	local hwid = gethwid()
@@ -181,490 +182,494 @@ if initialCheck.success then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
 	return
 else
-	--UI
-	local gui = Instance.new("ScreenGui")
-	gui.Name = "TrigonWhitelist"
-	gui.IgnoreGuiInset = true
-	gui.ResetOnSpawn = false
-	gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	gui.Parent = gethui()
 
-	local overlay = Instance.new("Frame")
-	overlay.Name = "Overlay"
-	overlay.Size = UDim2.new(1, 0, 1, 0)
-	overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	overlay.BackgroundTransparency = 0.3
-	overlay.BorderSizePixel = 0
-	overlay.Parent = gui
 
-	local mainWindow = Instance.new("Frame")
-	mainWindow.Name = "MainWindow"
-	mainWindow.AnchorPoint = Vector2.new(0.5, 0.5)
-	mainWindow.Position = UDim2.new(0.5, 0, 0.5, 0)
-	mainWindow.Size = UDim2.new(0, 700, 0, 450)
-	mainWindow.BackgroundColor3 = Color3.fromRGB(20, 25, 35)
-	mainWindow.BorderSizePixel = 0
-	mainWindow.Parent = gui
+	local trigon =
+	{
+		TrigonWhitelist = Instance.new("ScreenGui"),
+		Overlay = Instance.new("Frame"),
+		MainWindow = Instance.new("Frame"),
+		UICorner = Instance.new("UICorner"),
+		UIStroke = Instance.new("UIStroke"),
+		UISizeConstraint = Instance.new("UISizeConstraint"),
+		TitleBar = Instance.new("Frame"),
+		UICorner_1 = Instance.new("UICorner"),
+		Logo = Instance.new("ImageLabel"),
+		CloseButton = Instance.new("TextButton"),
+		UICorner_2 = Instance.new("UICorner"),
+		UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
+		ContentContainer = Instance.new("Frame"),
+		LeftPanel = Instance.new("Frame"),
+		UICorner_3 = Instance.new("UICorner"),
+		UIStroke_1 = Instance.new("UIStroke"),
+		HeaderContainer = Instance.new("Frame"),
+		StatusIcon = Instance.new("Frame"),
+		UICorner_4 = Instance.new("UICorner"),
+		Title = Instance.new("TextLabel"),
+		UITextSizeConstraint_1 = Instance.new("UITextSizeConstraint"),
+		StatusIndicator = Instance.new("Frame"),
+		UICorner_5 = Instance.new("UICorner"),
+		StatusText = Instance.new("TextLabel"),
+		UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
+		StatusDetails = Instance.new("TextLabel"),
+		UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
+		HwidLabel = Instance.new("TextLabel"),
+		UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
+		HwidDisplay = Instance.new("TextBox"),
+		UICorner_6 = Instance.new("UICorner"),
+		UIStroke_2 = Instance.new("UIStroke"),
+		UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
+		ConnectionInfoContainer = Instance.new("Frame"),
+		UICorner_7 = Instance.new("UICorner"),
+		UIStroke_3 = Instance.new("UIStroke"),
+		ConnectionTitle = Instance.new("TextLabel"),
+		UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
+		PrimaryLabel = Instance.new("TextLabel"),
+		UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
+		PrimaryStatus = Instance.new("TextLabel"),
+		UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
+		FallbackLabel = Instance.new("TextLabel"),
+		UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
+		FallbackStatus = Instance.new("TextLabel"),
+		UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
+		LastCheckLabel = Instance.new("TextLabel"),
+		UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
+		LastCheckTime = Instance.new("TextLabel"),
+		UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
+		ButtonsContainer = Instance.new("Frame"),
+		CopyButton = Instance.new("TextButton"),
+		UICorner_8 = Instance.new("UICorner"),
+		UIStroke_4 = Instance.new("UIStroke"),
+		UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
+		VerifyButton = Instance.new("TextButton"),
+		UICorner_9 = Instance.new("UICorner"),
+		UIStroke_5 = Instance.new("UIStroke"),
+		UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
+		RightPanel = Instance.new("Frame"),
+		UICorner_10 = Instance.new("UICorner"),
+		UIStroke_6 = Instance.new("UIStroke"),
+		ConsoleContainer = Instance.new("ScrollingFrame"),
+		UICorner_11 = Instance.new("UICorner"),
+		UIListLayout = Instance.new("UIListLayout"),
+		UIPadding = Instance.new("UIPadding")
+	}
 
-	local mainCorner = Instance.new("UICorner")
-	mainCorner.CornerRadius = UDim.new(0, 12)
-	mainCorner.Parent = mainWindow
+	trigon.TrigonWhitelist.ResetOnSpawn = false
+	trigon.TrigonWhitelist.IgnoreGuiInset = true
+	trigon.TrigonWhitelist.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+	trigon.TrigonWhitelist.Name = "TrigonWhitelist"
+	trigon.TrigonWhitelist.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	trigon.TrigonWhitelist.Parent = gethui()
 
-	local mainStroke = Instance.new("UIStroke")
-	mainStroke.Color = Color3.fromRGB(60, 70, 90)
-	mainStroke.Thickness = 1
-	mainStroke.Parent = mainWindow
+	trigon.Overlay.BorderSizePixel = 0
+	trigon.Overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	trigon.Overlay.Size = UDim2.new(1, 0, 1, 0)
+	trigon.Overlay.Name = "Overlay"
+	trigon.Overlay.BackgroundTransparency = 0.3
+	trigon.Overlay.Parent = trigon.TrigonWhitelist
 
-	local sizeConstraint = Instance.new("UISizeConstraint")
-	sizeConstraint.MaxSize = Vector2.new(700, 450)
-	sizeConstraint.MinSize = Vector2.new(400, 300)
-	sizeConstraint.Parent = mainWindow
+	trigon.MainWindow.BorderSizePixel = 0
+	trigon.MainWindow.BackgroundColor3 = Color3.fromRGB(20, 25, 35)
+	trigon.MainWindow.AnchorPoint = Vector2.new(0.5, 0.5)
+	trigon.MainWindow.Size = UDim2.new(0.751073, 0, 0.772816, 0)
+	trigon.MainWindow.Name = "MainWindow"
+	trigon.MainWindow.Position = UDim2.new(0.5, 0, 0.5, 0)
+	trigon.MainWindow.Parent = trigon.TrigonWhitelist
 
-	local titleBar = Instance.new("Frame")
-	titleBar.Name = "TitleBar"
-	titleBar.Size = UDim2.new(1, 0, 0, 50)
-	titleBar.BackgroundColor3 = Color3.fromRGB(15, 20, 30)
-	titleBar.BorderSizePixel = 0
-	titleBar.Parent = mainWindow
+	trigon.UICorner.CornerRadius = UDim.new(0, 12)
+	trigon.UICorner.Parent = trigon.MainWindow
 
-	local titleCorner = Instance.new("UICorner")
-	titleCorner.CornerRadius = UDim.new(0, 12)
-	titleCorner.Parent = titleBar
+	trigon.UIStroke.Color = Color3.fromRGB(60, 70, 90)
+	trigon.UIStroke.Parent = trigon.MainWindow
 
-	local logo = Instance.new("ImageLabel")
-	logo.Name = "Logo"
-	logo.Position = UDim2.new(0, -13, 0, 10)
-	logo.AnchorPoint = Vector2.new(0, 0)
-	logo.Size = UDim2.new(0, 100, 0, 30)
-	logo.BackgroundTransparency = 1
-	logo.Image = "rbxassetid://82500352718600"
-	logo.ScaleType = Enum.ScaleType.Fit
-	logo.Parent = titleBar
+	trigon.UISizeConstraint.MinSize = Vector2.new(400, 300)
+	trigon.UISizeConstraint.MaxSize = Vector2.new(700, 450)
+	trigon.UISizeConstraint.Parent = trigon.MainWindow
 
-	local closeBtn = Instance.new("TextButton")
-	closeBtn.Name = "CloseButton"
-	closeBtn.AnchorPoint = Vector2.new(1, 0.5)
-	closeBtn.Position = UDim2.new(1, -10, 0.5, 0)
-	closeBtn.Size = UDim2.new(0, 30, 0, 30)
-	closeBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	closeBtn.BackgroundTransparency = 0.99
-	closeBtn.Text = "X"
-	closeBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
-	closeBtn.Font = Enum.Font.GothamBold
-	closeBtn.TextSize = 16
-	closeBtn.Parent = titleBar
+	trigon.TitleBar.BorderSizePixel = 0
+	trigon.TitleBar.BackgroundColor3 = Color3.fromRGB(15, 20, 30)
+	trigon.TitleBar.Size = UDim2.new(1, 0, 0.1, 0)
+	trigon.TitleBar.Name = "TitleBar"
+	trigon.TitleBar.Parent = trigon.MainWindow
 
-	local closeBtnCorner = Instance.new("UICorner")
-	closeBtnCorner.CornerRadius = UDim.new(0, 6)
-	closeBtnCorner.Parent = closeBtn
+	trigon.UICorner_1.CornerRadius = UDim.new(0, 12)
+	trigon.UICorner_1.Parent = trigon.TitleBar
 
-	local contentContainer = Instance.new("Frame")
-	contentContainer.Name = "ContentContainer"
-	contentContainer.Position = UDim2.new(0, 10, 0, 60)
-	contentContainer.Size = UDim2.new(1, -20, 1, -70)
-	contentContainer.BackgroundTransparency = 1
-	contentContainer.Parent = mainWindow
+	trigon.Logo.Name = "Logo"
+	trigon.Logo.Image = "rbxassetid://82500352718600"
+	trigon.Logo.ImageContent = Content.fromUri("rbxassetid://82500352718600")
+	trigon.Logo.Size = UDim2.new(0.142857, 0, 0.6, 0)
+	trigon.Logo.BackgroundTransparency = 1
+	trigon.Logo.Position = UDim2.new(-0.0185714, 0, 0.2, 0)
+	trigon.Logo.ScaleType = Enum.ScaleType.Fit
+	trigon.Logo.Parent = trigon.TitleBar
 
-	local leftPanel = Instance.new("Frame")
-	leftPanel.Name = "LeftPanel"
-	leftPanel.Size = UDim2.new(0.5, -5, 1, 0)
-	leftPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
-	leftPanel.BorderSizePixel = 0
-	leftPanel.Parent = contentContainer
+	trigon.CloseButton.TextWrapped = true
+	trigon.CloseButton.TextScaled = true
+	trigon.CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	trigon.CloseButton.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.CloseButton.Name = "CloseButton"
+	trigon.CloseButton.AnchorPoint = Vector2.new(1, 0.5)
+	trigon.CloseButton.TextSize = 16
+	trigon.CloseButton.Size = UDim2.new(0.0428571, 0, 0.6, 0)
+	trigon.CloseButton.Position = UDim2.new(0.985714, 0, 0.5, 0)
+	trigon.CloseButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+	trigon.CloseButton.Text = "X"
+	trigon.CloseButton.BackgroundTransparency = 0.99
+	trigon.CloseButton.Parent = trigon.TitleBar
 
-	local leftCorner = Instance.new("UICorner")
-	leftCorner.CornerRadius = UDim.new(0, 8)
-	leftCorner.Parent = leftPanel
+	trigon.UICorner_2.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_2.Parent = trigon.CloseButton
 
-	local leftStroke = Instance.new("UIStroke")
-	leftStroke.Color = Color3.fromRGB(50, 60, 80)
-	leftStroke.Thickness = 1
-	leftStroke.Parent = leftPanel
+	trigon.UITextSizeConstraint.MaxTextSize = 16
+	trigon.UITextSizeConstraint.Parent = trigon.CloseButton
 
-	local headerContainer = Instance.new("Frame")
-	headerContainer.Name = "HeaderContainer"
-	headerContainer.Position = UDim2.new(0, 15, 0, 12)
-	headerContainer.Size = UDim2.new(1, -30, 0, 30)
-	headerContainer.BackgroundTransparency = 1
-	headerContainer.Parent = leftPanel
+	trigon.ContentContainer.Size = UDim2.new(0.971429, 0, 0.844444, 0)
+	trigon.ContentContainer.Name = "ContentContainer"
+	trigon.ContentContainer.Position = UDim2.new(0.0142857, 0, 0.133333, 0)
+	trigon.ContentContainer.BackgroundTransparency = 1
+	trigon.ContentContainer.Parent = trigon.MainWindow
 
-	local statusIcon = Instance.new("Frame")
-	statusIcon.Name = "StatusIcon"
-	statusIcon.Position = UDim2.new(0, 0, 0.5, 0)
-	statusIcon.AnchorPoint = Vector2.new(0, 0.5)
-	statusIcon.Size = UDim2.new(0, 8, 0, 8)
-	statusIcon.BackgroundColor3 = Color3.fromRGB(255, 200, 100)
-	statusIcon.BorderSizePixel = 0
-	statusIcon.Parent = headerContainer
+	trigon.LeftPanel.BorderSizePixel = 0
+	trigon.LeftPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
+	trigon.LeftPanel.Size = UDim2.new(0.492647, 0, 1.01579, 0)
+	trigon.LeftPanel.Name = "LeftPanel"
+	trigon.LeftPanel.Position = UDim2.new(0, 0, -0.0157895, 0)
+	trigon.LeftPanel.Parent = trigon.ContentContainer
 
-	local iconCorner = Instance.new("UICorner")
-	iconCorner.CornerRadius = UDim.new(1, 0)
-	iconCorner.Parent = statusIcon
+	trigon.UICorner_3.Parent = trigon.LeftPanel
 
-	local leftTitle = Instance.new("TextLabel")
-	leftTitle.Name = "Title"
-	leftTitle.Position = UDim2.new(0, 18, 0, 0)
-	leftTitle.Size = UDim2.new(1, -18, 1, 0)
-	leftTitle.BackgroundTransparency = 1
-	leftTitle.Text = "Whitelist Status"
-	leftTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-	leftTitle.Font = Enum.Font.GothamBold
-	leftTitle.TextSize = 16
-	leftTitle.TextXAlignment = Enum.TextXAlignment.Left
-	leftTitle.TextYAlignment = Enum.TextYAlignment.Center
-	leftTitle.Parent = headerContainer
+	trigon.UIStroke_1.Color = Color3.fromRGB(50, 60, 80)
+	trigon.UIStroke_1.Parent = trigon.LeftPanel
 
-	local statusIndicator = Instance.new("Frame")
-	statusIndicator.Name = "StatusIndicator"
-	statusIndicator.Position = UDim2.new(0, 15, 0, 50)
-	statusIndicator.Size = UDim2.new(1, -30, 0, 65)
-	statusIndicator.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
-	statusIndicator.BorderSizePixel = 0
-	statusIndicator.Parent = leftPanel
+	trigon.HeaderContainer.Size = UDim2.new(0.910448, 0, 0.0777202, 0)
+	trigon.HeaderContainer.Name = "HeaderContainer"
+	trigon.HeaderContainer.Position = UDim2.new(0.0447761, 0, 0.0310881, 0)
+	trigon.HeaderContainer.BackgroundTransparency = 1
+	trigon.HeaderContainer.Parent = trigon.LeftPanel
 
-	local statusCorner = Instance.new("UICorner")
-	statusCorner.CornerRadius = UDim.new(0, 6)
-	statusCorner.Parent = statusIndicator
+	trigon.StatusIcon.BorderSizePixel = 0
+	trigon.StatusIcon.BackgroundColor3 = Color3.fromRGB(255, 200, 100)
+	trigon.StatusIcon.AnchorPoint = Vector2.new(0, 0.5)
+	trigon.StatusIcon.Size = UDim2.new(0.0262295, 0, 0.266667, 0)
+	trigon.StatusIcon.Name = "StatusIcon"
+	trigon.StatusIcon.Position = UDim2.new(0, 0, 0.5, 0)
+	trigon.StatusIcon.Parent = trigon.HeaderContainer
 
-	local statusAccent = Instance.new("Frame")
-	statusAccent.Name = "StatusAccent"
-	statusAccent.Size = UDim2.new(1, 0, 0, 3)
-	statusAccent.Position = UDim2.new(0, 0, 0, 0)
-	statusAccent.BackgroundColor3 = Color3.fromRGB(255, 200, 100)
-	statusAccent.BorderSizePixel = 0
-	statusAccent.Parent = statusIndicator
+	trigon.UICorner_4.CornerRadius = UDim.new(1, 0)
+	trigon.UICorner_4.Parent = trigon.StatusIcon
 
-	local statusAccentCorner = Instance.new("UICorner")
-	statusAccentCorner.CornerRadius = UDim.new(0, 6)
-	statusAccentCorner.Parent = statusAccent
+	trigon.Title.TextWrapped = true
+	trigon.Title.TextScaled = true
+	trigon.Title.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.Title.Name = "Title"
+	trigon.Title.Position = UDim2.new(0.0590164, 0, 0, 0)
+	trigon.Title.TextSize = 16
+	trigon.Title.Size = UDim2.new(0.940984, 0, 1, 0)
+	trigon.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	trigon.Title.Text = "Whitelist Status"
+	trigon.Title.BackgroundTransparency = 1
+	trigon.Title.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.Title.Parent = trigon.HeaderContainer
 
-	local statusText = Instance.new("TextLabel")
-	statusText.Name = "StatusText"
-	statusText.Size = UDim2.new(1, -20, 0, 25)
-	statusText.Position = UDim2.new(0, 10, 0, 8)
-	statusText.BackgroundTransparency = 1
-	statusText.Text = "Checking..."
-	statusText.TextColor3 = Color3.fromRGB(255, 200, 100)
-	statusText.Font = Enum.Font.GothamBold
-	statusText.TextSize = 14
-	statusText.TextXAlignment = Enum.TextXAlignment.Left
-	statusText.Parent = statusIndicator
+	trigon.UITextSizeConstraint_1.MaxTextSize = 16
+	trigon.UITextSizeConstraint_1.Parent = trigon.Title
 
-	local statusDetails = Instance.new("TextLabel")
-	statusDetails.Name = "StatusDetails"
-	statusDetails.Size = UDim2.new(1, -20, 0, 20)
-	statusDetails.Position = UDim2.new(0, 10, 0, 33)
-	statusDetails.BackgroundTransparency = 1
-	statusDetails.Text = "Initializing..."
-	statusDetails.TextColor3 = Color3.fromRGB(180, 180, 180)
-	statusDetails.Font = Enum.Font.Gotham
-	statusDetails.TextSize = 11
-	statusDetails.TextXAlignment = Enum.TextXAlignment.Left
-	statusDetails.TextWrapped = true
-	statusDetails.Parent = statusIndicator
+	trigon.StatusIndicator.BorderSizePixel = 0
+	trigon.StatusIndicator.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	trigon.StatusIndicator.Size = UDim2.new(0.910448, 0, 0.157867, 0)
+	trigon.StatusIndicator.Name = "StatusIndicator"
+	trigon.StatusIndicator.Position = UDim2.new(0.0447761, 0, 0.129534, 0)
+	trigon.StatusIndicator.Parent = trigon.LeftPanel
 
-	local hwidLabel = Instance.new("TextLabel")
-	hwidLabel.Name = "HwidLabel"
-	hwidLabel.Position = UDim2.new(0, 15, 0, 125)
-	hwidLabel.Size = UDim2.new(1, -30, 0, 18)
-	hwidLabel.BackgroundTransparency = 1
-	hwidLabel.Text = "Hardware ID"
-	hwidLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
-	hwidLabel.Font = Enum.Font.GothamBold
-	hwidLabel.TextSize = 11
-	hwidLabel.TextXAlignment = Enum.TextXAlignment.Left
-	hwidLabel.Parent = leftPanel
+	trigon.UICorner_5.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_5.Parent = trigon.StatusIndicator
 
-	local hwidDisplay = Instance.new("TextBox")
-	hwidDisplay.Name = "HwidDisplay"
-	hwidDisplay.Position = UDim2.new(0, 15, 0, 145)
-	hwidDisplay.Size = UDim2.new(1, -30, 0, 32)
-	hwidDisplay.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
-	hwidDisplay.Text = getHwid()
-	hwidDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
-	hwidDisplay.Font = Enum.Font.Code
-	hwidDisplay.TextSize = 10
-	hwidDisplay.TextEditable = false
-	hwidDisplay.ClearTextOnFocus = false
-	hwidDisplay.Parent = leftPanel
+	trigon.StatusText.TextWrapped = true
+	trigon.StatusText.TextScaled = true
+	trigon.StatusText.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.StatusText.Name = "StatusText"
+	trigon.StatusText.Position = UDim2.new(0.0327869, 0, 0.131283, 0)
+	trigon.StatusText.TextSize = 14
+	trigon.StatusText.Size = UDim2.new(0.934426, 0, 0.410261, 0)
+	trigon.StatusText.TextColor3 = Color3.fromRGB(255, 200, 100)
+	trigon.StatusText.Text = "Checking..."
+	trigon.StatusText.BackgroundTransparency = 1
+	trigon.StatusText.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.StatusText.Parent = trigon.StatusIndicator
 
-	local hwidCorner = Instance.new("UICorner")
-	hwidCorner.CornerRadius = UDim.new(0, 6)
-	hwidCorner.Parent = hwidDisplay
+	trigon.UITextSizeConstraint_2.MaxTextSize = 14
+	trigon.UITextSizeConstraint_2.Parent = trigon.StatusText
 
-	local hwidStroke = Instance.new("UIStroke")
-	hwidStroke.Color = Color3.fromRGB(50, 60, 80)
-	hwidStroke.Thickness = 1
-	hwidStroke.Parent = hwidDisplay
+	trigon.StatusDetails.TextWrapped = true
+	trigon.StatusDetails.TextScaled = true
+	trigon.StatusDetails.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.StatusDetails.Name = "StatusDetails"
+	trigon.StatusDetails.Position = UDim2.new(0.0327869, 0, 0.541544, 0)
+	trigon.StatusDetails.TextSize = 11
+	trigon.StatusDetails.Size = UDim2.new(0.934426, 0, 0.328209, 0)
+	trigon.StatusDetails.TextColor3 = Color3.fromRGB(180, 180, 180)
+	trigon.StatusDetails.Text = "Initializing..."
+	trigon.StatusDetails.BackgroundTransparency = 1
+	trigon.StatusDetails.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.StatusDetails.Parent = trigon.StatusIndicator
 
-	local connectionInfoContainer = Instance.new("Frame")
-	connectionInfoContainer.Name = "ConnectionInfoContainer"
-	connectionInfoContainer.Position = UDim2.new(0, 15, 0, 187)
-	connectionInfoContainer.Size = UDim2.new(1, -30, 0, 65)
-	connectionInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
-	connectionInfoContainer.BorderSizePixel = 0
-	connectionInfoContainer.Parent = leftPanel
+	trigon.UITextSizeConstraint_3.MaxTextSize = 11
+	trigon.UITextSizeConstraint_3.Parent = trigon.StatusDetails
 
-	local connectionInfoCorner = Instance.new("UICorner")
-	connectionInfoCorner.CornerRadius = UDim.new(0, 6)
-	connectionInfoCorner.Parent = connectionInfoContainer
+	trigon.HwidLabel.TextWrapped = true
+	trigon.HwidLabel.TextScaled = true
+	trigon.HwidLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.HwidLabel.Name = "HwidLabel"
+	trigon.HwidLabel.Position = UDim2.new(0.0447761, 0, 0.313471, 0)
+	trigon.HwidLabel.TextSize = 11
+	trigon.HwidLabel.Size = UDim2.new(0.910448, 0, 0.0466321, 0)
+	trigon.HwidLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
+	trigon.HwidLabel.Text = "Hardware ID"
+	trigon.HwidLabel.BackgroundTransparency = 1
+	trigon.HwidLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.HwidLabel.Parent = trigon.LeftPanel
 
-	local connectionInfoStroke = Instance.new("UIStroke")
-	connectionInfoStroke.Color = Color3.fromRGB(50, 60, 80)
-	connectionInfoStroke.Thickness = 1
-	connectionInfoStroke.Parent = connectionInfoContainer
+	trigon.UITextSizeConstraint_4.MaxTextSize = 11
+	trigon.UITextSizeConstraint_4.Parent = trigon.HwidLabel
 
-	local connectionTitle = Instance.new("TextLabel")
-	connectionTitle.Name = "ConnectionTitle"
-	connectionTitle.Position = UDim2.new(0, 10, 0, 5)
-	connectionTitle.Size = UDim2.new(1, -20, 0, 15)
-	connectionTitle.BackgroundTransparency = 1
-	connectionTitle.Text = "Server Status"
-	connectionTitle.TextColor3 = Color3.fromRGB(130, 130, 130)
-	connectionTitle.Font = Enum.Font.Gotham
-	connectionTitle.TextSize = 10
-	connectionTitle.TextXAlignment = Enum.TextXAlignment.Left
-	connectionTitle.Parent = connectionInfoContainer
+	trigon.HwidDisplay.TextWrapped = true
+	trigon.HwidDisplay.TextEditable = false
+	trigon.HwidDisplay.Position = UDim2.new(0.0447761, 0, 0.365285, 0)
+	trigon.HwidDisplay.CursorPosition = -1
+	trigon.HwidDisplay.TextScaled = true
+	trigon.HwidDisplay.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	trigon.HwidDisplay.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.HwidDisplay.TextSize = 10
+	trigon.HwidDisplay.Size = UDim2.new(0.910448, 0, 0.0829016, 0)
+	trigon.HwidDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
+	trigon.HwidDisplay.Text = "aaaaaaaaaaaaaaa"
+	trigon.HwidDisplay.Name = "HwidDisplay"
+	trigon.HwidDisplay.ClearTextOnFocus = false
+	trigon.HwidDisplay.Parent = trigon.LeftPanel
 
-	local primaryLabel = Instance.new("TextLabel")
-	primaryLabel.Name = "PrimaryLabel"
-	primaryLabel.Position = UDim2.new(0, 10, 0, 23)
-	primaryLabel.Size = UDim2.new(0.5, -10, 0, 12)
-	primaryLabel.BackgroundTransparency = 1
-	primaryLabel.Text = "Primary:"
-	primaryLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	primaryLabel.Font = Enum.Font.Gotham
-	primaryLabel.TextSize = 9
-	primaryLabel.TextXAlignment = Enum.TextXAlignment.Left
-	primaryLabel.Parent = connectionInfoContainer
+	trigon.UICorner_6.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_6.Parent = trigon.HwidDisplay
 
-	local primaryStatus = Instance.new("TextLabel")
-	primaryStatus.Name = "PrimaryStatus"
-	primaryStatus.Position = UDim2.new(0.5, 0, 0, 23)
-	primaryStatus.Size = UDim2.new(0.5, -10, 0, 12)
-	primaryStatus.BackgroundTransparency = 1
-	primaryStatus.Text = "Checking..."
-	primaryStatus.TextColor3 = Color3.fromRGB(255, 200, 100)
-	primaryStatus.Font = Enum.Font.GothamBold
-	primaryStatus.TextSize = 9
-	primaryStatus.TextXAlignment = Enum.TextXAlignment.Right
-	primaryStatus.Parent = connectionInfoContainer
+	trigon.UIStroke_2.Color = Color3.fromRGB(50, 60, 80)
+	trigon.UIStroke_2.Parent = trigon.HwidDisplay
 
-	local fallbackLabel = Instance.new("TextLabel")
-	fallbackLabel.Name = "FallbackLabel"
-	fallbackLabel.Position = UDim2.new(0, 10, 0, 37)
-	fallbackLabel.Size = UDim2.new(0.5, -10, 0, 12)
-	fallbackLabel.BackgroundTransparency = 1
-	fallbackLabel.Text = "Fallback:"
-	fallbackLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	fallbackLabel.Font = Enum.Font.Gotham
-	fallbackLabel.TextSize = 9
-	fallbackLabel.TextXAlignment = Enum.TextXAlignment.Left
-	fallbackLabel.Parent = connectionInfoContainer
+	trigon.UITextSizeConstraint_5.MaxTextSize = 10
+	trigon.UITextSizeConstraint_5.Parent = trigon.HwidDisplay
 
-	local fallbackStatus = Instance.new("TextLabel")
-	fallbackStatus.Name = "FallbackStatus"
-	fallbackStatus.Position = UDim2.new(0.5, 0, 0, 37)
-	fallbackStatus.Size = UDim2.new(0.5, -10, 0, 12)
-	fallbackStatus.BackgroundTransparency = 1
-	fallbackStatus.Text = "Standby"
-	fallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
-	fallbackStatus.Font = Enum.Font.GothamBold
-	fallbackStatus.TextSize = 9
-	fallbackStatus.TextXAlignment = Enum.TextXAlignment.Right
-	fallbackStatus.Parent = connectionInfoContainer
+	trigon.ConnectionInfoContainer.BorderSizePixel = 0
+	trigon.ConnectionInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
+	trigon.ConnectionInfoContainer.Size = UDim2.new(0.910448, 0, 0.184183, 0)
+	trigon.ConnectionInfoContainer.Name = "ConnectionInfoContainer"
+	trigon.ConnectionInfoContainer.Position = UDim2.new(0.0447761, 0, 0.481865, 0)
+	trigon.ConnectionInfoContainer.Parent = trigon.LeftPanel
 
-	local lastCheckLabel = Instance.new("TextLabel")
-	lastCheckLabel.Name = "LastCheckLabel"
-	lastCheckLabel.Position = UDim2.new(0, 10, 0, 51)
-	lastCheckLabel.Size = UDim2.new(0.5, -10, 0, 12)
-	lastCheckLabel.BackgroundTransparency = 1
-	lastCheckLabel.Text = "Last Check:"
-	lastCheckLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	lastCheckLabel.Font = Enum.Font.Gotham
-	lastCheckLabel.TextSize = 9
-	lastCheckLabel.TextXAlignment = Enum.TextXAlignment.Left
-	lastCheckLabel.Parent = connectionInfoContainer
+	trigon.UICorner_7.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_7.Parent = trigon.ConnectionInfoContainer
 
-	local lastCheckTime = Instance.new("TextLabel")
-	lastCheckTime.Name = "LastCheckTime"
-	lastCheckTime.Position = UDim2.new(0.5, 0, 0, 51)
-	lastCheckTime.Size = UDim2.new(0.5, -10, 0, 12)
-	lastCheckTime.BackgroundTransparency = 1
-	lastCheckTime.Text = os.date("%H:%M:%S")
-	lastCheckTime.TextColor3 = Color3.fromRGB(200, 200, 200)
-	lastCheckTime.Font = Enum.Font.GothamBold
-	lastCheckTime.TextSize = 9
-	lastCheckTime.TextXAlignment = Enum.TextXAlignment.Right
-	lastCheckTime.Parent = connectionInfoContainer
+	trigon.UIStroke_3.Color = Color3.fromRGB(50, 60, 80)
+	trigon.UIStroke_3.Parent = trigon.ConnectionInfoContainer
 
-	local gameInfoContainer = Instance.new("Frame")
-	gameInfoContainer.Name = "GameInfoContainer"
-	gameInfoContainer.Position = UDim2.new(0, 15, 0, 262)
-	gameInfoContainer.Size = UDim2.new(1, -30, 0, 58)
-	gameInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
-	gameInfoContainer.BorderSizePixel = 0
-	gameInfoContainer.Parent = leftPanel
+	trigon.ConnectionTitle.TextWrapped = true
+	trigon.ConnectionTitle.TextScaled = true
+	trigon.ConnectionTitle.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.ConnectionTitle.Name = "ConnectionTitle"
+	trigon.ConnectionTitle.Position = UDim2.new(0.0327869, 0, 0.0703287, 0)
+	trigon.ConnectionTitle.TextSize = 10
+	trigon.ConnectionTitle.Size = UDim2.new(0.934426, 0, 0.210986, 0)
+	trigon.ConnectionTitle.TextColor3 = Color3.fromRGB(130, 130, 130)
+	trigon.ConnectionTitle.Text = "Server Status"
+	trigon.ConnectionTitle.BackgroundTransparency = 1
+	trigon.ConnectionTitle.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.ConnectionTitle.Parent = trigon.ConnectionInfoContainer
 
-	local gameInfoCorner = Instance.new("UICorner")
-	gameInfoCorner.CornerRadius = UDim.new(0, 6)
-	gameInfoCorner.Parent = gameInfoContainer
+	trigon.UITextSizeConstraint_6.MaxTextSize = 10
+	trigon.UITextSizeConstraint_6.Parent = trigon.ConnectionTitle
 
-	local gameInfoStroke = Instance.new("UIStroke")
-	gameInfoStroke.Color = Color3.fromRGB(50, 60, 80)
-	gameInfoStroke.Thickness = 1
-	gameInfoStroke.Parent = gameInfoContainer
+	trigon.PrimaryLabel.TextWrapped = true
+	trigon.PrimaryLabel.TextScaled = true
+	trigon.PrimaryLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.PrimaryLabel.Name = "PrimaryLabel"
+	trigon.PrimaryLabel.Position = UDim2.new(0.0327869, 0, 0.323512, 0)
+	trigon.PrimaryLabel.TextSize = 9
+	trigon.PrimaryLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.PrimaryLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	trigon.PrimaryLabel.Text = "Primary:"
+	trigon.PrimaryLabel.BackgroundTransparency = 1
+	trigon.PrimaryLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.PrimaryLabel.Parent = trigon.ConnectionInfoContainer
 
-	local gameNameLabel = Instance.new("TextLabel")
-	gameNameLabel.Name = "GameNameLabel"
-	gameNameLabel.Position = UDim2.new(0, 10, 0, 5)
-	gameNameLabel.Size = UDim2.new(1, -20, 0, 15)
-	gameNameLabel.BackgroundTransparency = 1
-	gameNameLabel.Text = "Current Game:"
-	gameNameLabel.TextColor3 = Color3.fromRGB(130, 130, 130)
-	gameNameLabel.Font = Enum.Font.Gotham
-	gameNameLabel.TextSize = 10
-	gameNameLabel.TextXAlignment = Enum.TextXAlignment.Left
-	gameNameLabel.Parent = gameInfoContainer
+	trigon.UITextSizeConstraint_7.MaxTextSize = 9
+	trigon.UITextSizeConstraint_7.Parent = trigon.PrimaryLabel
 
-	local gameName = Instance.new("TextLabel")
-	gameName.Name = "GameName"
-	gameName.Position = UDim2.new(0, 10, 0, 20)
-	gameName.Size = UDim2.new(1, -20, 0, 15)
-	gameName.BackgroundTransparency = 1
+	trigon.PrimaryStatus.TextWrapped = true
+	trigon.PrimaryStatus.TextScaled = true
+	trigon.PrimaryStatus.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.PrimaryStatus.Name = "PrimaryStatus"
+	trigon.PrimaryStatus.Position = UDim2.new(0.5, 0, 0.323512, 0)
+	trigon.PrimaryStatus.TextSize = 9
+	trigon.PrimaryStatus.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 200, 100)
+	trigon.PrimaryStatus.Text = "Checking..."
+	trigon.PrimaryStatus.BackgroundTransparency = 1
+	trigon.PrimaryStatus.TextXAlignment = Enum.TextXAlignment.Right
+	trigon.PrimaryStatus.Parent = trigon.ConnectionInfoContainer
 
-	local gameNameText = "Loading..."
-	pcall(function()
-		local gameInfo = MarketplaceService:GetProductInfo(game.PlaceId)
-		gameNameText = gameInfo.Name
-	end)
+	trigon.UITextSizeConstraint_8.MaxTextSize = 9
+	trigon.UITextSizeConstraint_8.Parent = trigon.PrimaryStatus
 
-	gameName.Text = gameNameText
-	gameName.TextColor3 = Color3.fromRGB(200, 200, 200)
-	gameName.Font = Enum.Font.GothamBold
-	gameName.TextSize = 11
-	gameName.TextXAlignment = Enum.TextXAlignment.Left
-	gameName.TextTruncate = Enum.TextTruncate.AtEnd
-	gameName.Parent = gameInfoContainer
+	trigon.FallbackLabel.TextWrapped = true
+	trigon.FallbackLabel.TextScaled = true
+	trigon.FallbackLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.FallbackLabel.Name = "FallbackLabel"
+	trigon.FallbackLabel.Position = UDim2.new(0.0327869, 0, 0.520432, 0)
+	trigon.FallbackLabel.TextSize = 9
+	trigon.FallbackLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.FallbackLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	trigon.FallbackLabel.Text = "Fallback:"
+	trigon.FallbackLabel.BackgroundTransparency = 1
+	trigon.FallbackLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.FallbackLabel.Parent = trigon.ConnectionInfoContainer
 
-	local gameIdLabel = Instance.new("TextLabel")
-	gameIdLabel.Name = "GameIdLabel"
-	gameIdLabel.Position = UDim2.new(0, 10, 0, 37)
-	gameIdLabel.Size = UDim2.new(0.5, -10, 0, 13)
-	gameIdLabel.BackgroundTransparency = 1
-	gameIdLabel.Text = "Place ID: " .. tostring(game.PlaceId)
-	gameIdLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	gameIdLabel.Font = Enum.Font.Code
-	gameIdLabel.TextSize = 9
-	gameIdLabel.TextXAlignment = Enum.TextXAlignment.Left
-	gameIdLabel.Parent = gameInfoContainer
+	trigon.UITextSizeConstraint_9.MaxTextSize = 9
+	trigon.UITextSizeConstraint_9.Parent = trigon.FallbackLabel
 
-	local buttonsContainer = Instance.new("Frame")
-	buttonsContainer.Name = "ButtonsContainer"
-	buttonsContainer.Position = UDim2.new(0, 15, 1, -43)
-	buttonsContainer.Size = UDim2.new(1, -30, 0, 35)
-	buttonsContainer.BackgroundTransparency = 1
-	buttonsContainer.Parent = leftPanel
+	trigon.FallbackStatus.TextWrapped = true
+	trigon.FallbackStatus.TextScaled = true
+	trigon.FallbackStatus.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.FallbackStatus.Name = "FallbackStatus"
+	trigon.FallbackStatus.Position = UDim2.new(0.5, 0, 0.520432, 0)
+	trigon.FallbackStatus.TextSize = 9
+	trigon.FallbackStatus.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.FallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
+	trigon.FallbackStatus.Text = "Standby"
+	trigon.FallbackStatus.BackgroundTransparency = 1
+	trigon.FallbackStatus.TextXAlignment = Enum.TextXAlignment.Right
+	trigon.FallbackStatus.Parent = trigon.ConnectionInfoContainer
 
-	local copyButton = Instance.new("TextButton")
-	copyButton.Name = "CopyButton"
-	copyButton.Position = UDim2.new(0, 0, 0, 0)
-	copyButton.Size = UDim2.new(0.48, 0, 1, 0)
-	copyButton.BackgroundColor3 = Color3.fromRGB(80, 90, 120)
-	copyButton.BackgroundTransparency = 0.7
-	copyButton.Text = "Copy Link"
-	copyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-	copyButton.Font = Enum.Font.GothamBold
-	copyButton.TextSize = 12
-	copyButton.Parent = buttonsContainer
+	trigon.UITextSizeConstraint_10.MaxTextSize = 9
+	trigon.UITextSizeConstraint_10.Parent = trigon.FallbackStatus
 
-	local copyCorner = Instance.new("UICorner")
-	copyCorner.CornerRadius = UDim.new(0, 6)
-	copyCorner.Parent = copyButton
+	trigon.LastCheckLabel.TextWrapped = true
+	trigon.LastCheckLabel.TextScaled = true
+	trigon.LastCheckLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.LastCheckLabel.Name = "LastCheckLabel"
+	trigon.LastCheckLabel.Position = UDim2.new(0.0327869, 0, 0.717353, 0)
+	trigon.LastCheckLabel.TextSize = 9
+	trigon.LastCheckLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.LastCheckLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	trigon.LastCheckLabel.Text = "Last Check:"
+	trigon.LastCheckLabel.BackgroundTransparency = 1
+	trigon.LastCheckLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.LastCheckLabel.Parent = trigon.ConnectionInfoContainer
 
-	local copyStroke = Instance.new("UIStroke")
-	copyStroke.Color = Color3.fromRGB(100, 110, 140)
-	copyStroke.Transparency = 0.7
-	copyStroke.Thickness = 1
-	copyStroke.Parent = copyButton
+	trigon.UITextSizeConstraint_11.MaxTextSize = 9
+	trigon.UITextSizeConstraint_11.Parent = trigon.LastCheckLabel
 
-	local verifyButton = Instance.new("TextButton")
-	verifyButton.Name = "VerifyButton"
-	verifyButton.Position = UDim2.new(0.52, 0, 0, 0)
-	verifyButton.Size = UDim2.new(0.48, 0, 1, 0)
-	verifyButton.BackgroundColor3 = Color3.fromRGB(60, 150, 100)
-	verifyButton.Text = "Verify Status"
-	verifyButton.BackgroundTransparency = 0.7
-	verifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-	verifyButton.Font = Enum.Font.GothamBold
-	verifyButton.TextSize = 12
-	verifyButton.Parent = buttonsContainer
+	trigon.LastCheckTime.TextWrapped = true
+	trigon.LastCheckTime.TextScaled = true
+	trigon.LastCheckTime.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.LastCheckTime.Name = "LastCheckTime"
+	trigon.LastCheckTime.Position = UDim2.new(0.5, 0, 0.717353, 0)
+	trigon.LastCheckTime.TextSize = 9
+	trigon.LastCheckTime.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.LastCheckTime.TextColor3 = Color3.fromRGB(200, 200, 200)
+	trigon.LastCheckTime.Text = "23:57:42"
+	trigon.LastCheckTime.BackgroundTransparency = 1
+	trigon.LastCheckTime.TextXAlignment = Enum.TextXAlignment.Right
+	trigon.LastCheckTime.Parent = trigon.ConnectionInfoContainer
 
-	local verifyCorner = Instance.new("UICorner")
-	verifyCorner.CornerRadius = UDim.new(0, 6)
-	verifyCorner.Parent = verifyButton
+	trigon.UITextSizeConstraint_12.MaxTextSize = 9
+	trigon.UITextSizeConstraint_12.Parent = trigon.LastCheckTime
 
-	local verifyStroke = Instance.new("UIStroke")
-	verifyStroke.Color = Color3.fromRGB(80, 170, 120)
-	verifyStroke.Transparency = 0.7
-	verifyStroke.Thickness = 1
-	verifyStroke.Parent = verifyButton
+	trigon.ButtonsContainer.Size = UDim2.new(0.910448, 0, 0.0906736, 0)
+	trigon.ButtonsContainer.Name = "ButtonsContainer"
+	trigon.ButtonsContainer.Position = UDim2.new(0.0447761, 0, 0.888601, 0)
+	trigon.ButtonsContainer.BackgroundTransparency = 1
+	trigon.ButtonsContainer.Parent = trigon.LeftPanel
 
-	local rightPanel = Instance.new("Frame")
-	rightPanel.Name = "RightPanel"
-	rightPanel.Position = UDim2.new(0.5, 5, 0, 0)
-	rightPanel.Size = UDim2.new(0.5, -5, 1, 0)
-	rightPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
-	rightPanel.BorderSizePixel = 0
-	rightPanel.Parent = contentContainer
+	trigon.CopyButton.TextWrapped = true
+	trigon.CopyButton.TextScaled = true
+	trigon.CopyButton.BackgroundColor3 = Color3.fromRGB(80, 90, 120)
+	trigon.CopyButton.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.CopyButton.Name = "CopyButton"
+	trigon.CopyButton.TextSize = 12
+	trigon.CopyButton.Size = UDim2.new(0.48, 0, 1, 0)
+	trigon.CopyButton.Position = UDim2.new(0, 0, -0.2, 0)
+	trigon.CopyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	trigon.CopyButton.Text = "Copy Link"
+	trigon.CopyButton.BackgroundTransparency = 0.7
+	trigon.CopyButton.Parent = trigon.ButtonsContainer
 
-	local rightCorner = Instance.new("UICorner")
-	rightCorner.CornerRadius = UDim.new(0, 8)
-	rightCorner.Parent = rightPanel
+	trigon.UICorner_8.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_8.Parent = trigon.CopyButton
 
-	local rightStroke = Instance.new("UIStroke")
-	rightStroke.Color = Color3.fromRGB(50, 60, 80)
-	rightStroke.Thickness = 1
-	rightStroke.Parent = rightPanel
+	trigon.UIStroke_4.Color = Color3.fromRGB(100, 110, 140)
+	trigon.UIStroke_4.Transparency = 0.7
+	trigon.UIStroke_4.Parent = trigon.CopyButton
 
-	local consoleTitle = Instance.new("TextLabel")
-	consoleTitle.Name = "ConsoleTitle"
-	consoleTitle.Position = UDim2.new(0, 15, 0, 15)
-	consoleTitle.Size = UDim2.new(1, -30, 0, 25)
-	consoleTitle.BackgroundTransparency = 1
-	consoleTitle.Text = "Console Output"
-	consoleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-	consoleTitle.Font = Enum.Font.GothamBold
-	consoleTitle.TextSize = 18
-	consoleTitle.TextXAlignment = Enum.TextXAlignment.Left
-	consoleTitle.Parent = rightPanel
+	trigon.UITextSizeConstraint_13.MaxTextSize = 12
+	trigon.UITextSizeConstraint_13.Parent = trigon.CopyButton
 
-	local consoleContainer = Instance.new("ScrollingFrame")
-	consoleContainer.Name = "ConsoleContainer"
-	consoleContainer.Position = UDim2.new(0, 15, 0, 50)
-	consoleContainer.Size = UDim2.new(1, -30, 1, -65)
-	consoleContainer.BackgroundColor3 = Color3.fromRGB(15, 18, 25)
-	consoleContainer.BorderSizePixel = 0
-	consoleContainer.ScrollBarThickness = 4
-	consoleContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
-	consoleContainer.AutomaticCanvasSize = Enum.AutomaticSize.Y
-	consoleContainer.Parent = rightPanel
+	trigon.VerifyButton.TextWrapped = true
+	trigon.VerifyButton.TextScaled = true
+	trigon.VerifyButton.BackgroundColor3 = Color3.fromRGB(60, 150, 100)
+	trigon.VerifyButton.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.VerifyButton.Name = "VerifyButton"
+	trigon.VerifyButton.TextSize = 12
+	trigon.VerifyButton.Size = UDim2.new(0.48, 0, 1, 0)
+	trigon.VerifyButton.Position = UDim2.new(0.52, 0, -0.2, 0)
+	trigon.VerifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	trigon.VerifyButton.Text = "Verify Status"
+	trigon.VerifyButton.BackgroundTransparency = 0.7
+	trigon.VerifyButton.Parent = trigon.ButtonsContainer
 
-	local consoleCorner = Instance.new("UICorner")
-	consoleCorner.CornerRadius = UDim.new(0, 6)
-	consoleCorner.Parent = consoleContainer
+	trigon.UICorner_9.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_9.Parent = trigon.VerifyButton
 
-	local consoleLayout = Instance.new("UIListLayout")
-	consoleLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	consoleLayout.Padding = UDim.new(0, 2)
-	consoleLayout.Parent = consoleContainer
+	trigon.UIStroke_5.Color = Color3.fromRGB(80, 170, 120)
+	trigon.UIStroke_5.Transparency = 0.7
+	trigon.UIStroke_5.Parent = trigon.VerifyButton
 
-	local consolePadding = Instance.new("UIPadding")
-	consolePadding.PaddingLeft = UDim.new(0, 8)
-	consolePadding.PaddingRight = UDim.new(0, 8)
-	consolePadding.PaddingTop = UDim.new(0, 8)
-	consolePadding.PaddingBottom = UDim.new(0, 8)
-	consolePadding.Parent = consoleContainer
+	trigon.UITextSizeConstraint_14.MaxTextSize = 12
+	trigon.UITextSizeConstraint_14.Parent = trigon.VerifyButton
+
+	trigon.RightPanel.BorderSizePixel = 0
+	trigon.RightPanel.BackgroundColor3 = Color3.fromRGB(25, 30, 40)
+	trigon.RightPanel.Size = UDim2.new(0.492647, 0, 1.01579, 0)
+	trigon.RightPanel.Name = "RightPanel"
+	trigon.RightPanel.Position = UDim2.new(0.507353, 0, -0.0157895, 0)
+	trigon.RightPanel.Parent = trigon.ContentContainer
+
+	trigon.UICorner_10.Parent = trigon.RightPanel
+
+	trigon.UIStroke_6.Color = Color3.fromRGB(50, 60, 80)
+	trigon.UIStroke_6.Parent = trigon.RightPanel
+
+	trigon.ConsoleContainer.BorderSizePixel = 0
+	trigon.ConsoleContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+	trigon.ConsoleContainer.Position = UDim2.new(0.0447761, 0, 0.0388601, 0)
+	trigon.ConsoleContainer.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	trigon.ConsoleContainer.Size = UDim2.new(0.910448, 0, 0.923712, 0)
+	trigon.ConsoleContainer.ScrollBarThickness = 4
+	trigon.ConsoleContainer.BackgroundColor3 = Color3.fromRGB(15, 18, 25)
+	trigon.ConsoleContainer.Name = "ConsoleContainer"
+	trigon.ConsoleContainer.Parent = trigon.RightPanel
+
+	trigon.UICorner_11.CornerRadius = UDim.new(0, 6)
+	trigon.UICorner_11.Parent = trigon.ConsoleContainer
+
+	trigon.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	trigon.UIListLayout.Padding = UDim.new(0, 2)
+	trigon.UIListLayout.Parent = trigon.ConsoleContainer
+
+	trigon.UIPadding.PaddingBottom = UDim.new(0, 8)
+	trigon.UIPadding.PaddingTop = UDim.new(0, 8)
+	trigon.UIPadding.PaddingLeft = UDim.new(0, 8)
+	trigon.UIPadding.PaddingRight = UDim.new(0, 8)
+	trigon.UIPadding.Parent = trigon.ConsoleContainer
+
+	local consoleContainer = trigon.ConsoleContainer
 
 	local consoleLineCount = 0
 	local function addConsoleLog(message, color)
@@ -688,48 +693,47 @@ else
 		consoleContainer.CanvasPosition = Vector2.new(0, consoleContainer.AbsoluteCanvasSize.Y)
 	end
 
+
 	local function updateStatus(result)
 		-- Update last check time
-		lastCheckTime.Text = os.date("%H:%M:%S")
+		
+		trigon.LastCheckTime.Text = os.date("%H:%M:%S")
 
 		-- server status 
 		if result.usedFallback then
 			-- fallback 
-			primaryStatus.Text = "Failed"
-			primaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
-			fallbackStatus.Text = "Active"
-			fallbackStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
+			trigon.PrimaryStatus.Text = "Failed"
+			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+			trigon.FallbackStatus.Text = "Active"
+			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
 		elseif result.code == "CONNECTION_FAILED" then
 			-- Both failed
-			primaryStatus.Text = "Offline"
-			primaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
-			fallbackStatus.Text = "Offline"
-			fallbackStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+			trigon.PrimaryStatus.Text = "Offline"
+			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+			trigon.FallbackStatus.Text = "Offline"
+			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
 		else
 			-- Primary work
-			primaryStatus.Text = "Online"
-			primaryStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
-			fallbackStatus.Text = "Standby"
-			fallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
+			trigon.PrimaryStatus.Text = "Online"
+			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
+			trigon.FallbackStatus.Text = "Standby"
+			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
 		end
 
 		if result.success then
-			statusText.Text = result.message
-			statusText.TextColor3 = Color3.fromRGB(100, 255, 150)
-			statusDetails.Text = result.details
-			statusIndicator.BackgroundColor3 = Color3.fromRGB(20, 60, 40)
-			statusAccent.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
-			statusIcon.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
+			trigon.StatusText.Text = result.message
+			trigon.StatusText.TextColor3 = Color3.fromRGB(100, 255, 150)
+			trigon.StatusDetails.Text = result.details
+			trigon.StatusIndicator.BackgroundColor3 = Color3.fromRGB(20, 60, 40)
+			trigon.StatusIcon.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
 			addConsoleLog("✓ Whitelist verified successfully!", Color3.fromRGB(100, 255, 150))
 			addConsoleLog("  " .. result.details, Color3.fromRGB(150, 150, 150))
 		else
-			statusText.Text = result.message
-			statusText.TextColor3 = Color3.fromRGB(255, 100, 100)
-			statusDetails.Text = result.details
-			statusIndicator.BackgroundColor3 = Color3.fromRGB(60, 30, 30)
-			statusAccent.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
-			statusIcon.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
-
+			trigon.StatusText.Text = result.message
+			trigon.StatusText.TextColor3 = Color3.fromRGB(255, 100, 100)
+			trigon.StatusDetails.Text = result.details
+			trigon.StatusIndicator.BackgroundColor3 = Color3.fromRGB(60, 30, 30)
+			trigon.StatusIcon.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
 			addConsoleLog("✗ Check failed: " .. result.message, Color3.fromRGB(255, 100, 100))
 			addConsoleLog("  Reason: " .. result.details, Color3.fromRGB(180, 180, 180))
 			if result.code then
@@ -738,23 +742,24 @@ else
 		end
 	end
 
-	copyButton.Activated:Connect(function()
+	trigon.CopyButton.Activated:Connect(function()
 		local link = getKeylink()
 		setclipboard(link)
 		addConsoleLog("[>] Whitelist link copied to clipboard", Color3.fromRGB(100, 200, 255))
 
-		local originalText = copyButton.Text
-		copyButton.Text = "Copied!"
+		local originalText = trigon.CopyButton.Text
+		trigon.CopyButton.Text = "Copied!"
 		task.wait(1.5)
-		copyButton.Text = originalText
+		trigon.CopyButton.Text = originalText
 	end)
 
+
 	local isChecking = false
-	verifyButton.Activated:Connect(function()
+	trigon.VerifyButton.Activated:Connect(function()
 		if isChecking then return end
 
 		isChecking = true
-		verifyButton.Text = "Checking..."
+		trigon.VerifyButton.Text = "Checking..."
 		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 		addConsoleLog("⟳ Manual whitelist check initiated", Color3.fromRGB(100, 200, 255))
 
@@ -768,39 +773,23 @@ else
 			
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
 
-			gui:Destroy()
+			trigon.TrigonWhitelist:Destroy()
 		else
 			addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 		end
 
-		verifyButton.Text = "Verify Status"
+		trigon.VerifyButton.Text = "Verify Status"
 		isChecking = false
 	end)
 
-	closeBtn.Activated:Connect(function()
+	trigon.CloseButton.Activated:Connect(function()
 		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 		addConsoleLog("⊗ Closing whitelist window...", Color3.fromRGB(255, 200, 100))
 		task.wait(0.3)
-		gui:Destroy()
+		trigon.TrigonWhitelist:Destroy()
 	end)
 
-	local function updateWindowSize()
-		local viewportSize = workspace.CurrentCamera.ViewportSize
-		local aspectRatio = viewportSize.X / viewportSize.Y
-
-		if viewportSize.X < 600 or viewportSize.Y < 400 then
-			mainWindow.Size = UDim2.new(0.95, 0, 0.85, 0)
-			sizeConstraint.MinSize = Vector2.new(300, 250)
-		else
-			mainWindow.Size = UDim2.new(0, 700, 0, 450)
-		end
-	end
-
-	updateWindowSize()
-	workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(updateWindowSize)
-
 	-- Initial log
-	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 	addConsoleLog("[*] Trigon Whitelist System v1.0", Color3.fromRGB(150, 150, 255))
 	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 	addConsoleLog("[#] HWID: " .. getHwid(), Color3.fromRGB(150, 150, 150))
@@ -813,11 +802,30 @@ else
 	updateStatus(initialCheck)
 
 	if initialCheck.success then
-		-- addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
-		-- addConsoleLog("✓ Already verified! Closing in 2 seconds...", Color3.fromRGB(100, 255, 150))
-		-- task.wait(2)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
-
-		gui:Destroy()
+		trigon.TrigonWhitelist:Destroy()
 	end
+
+    task.spawn(function()
+	while trigon.TrigonWhitelist and trigon.TrigonWhitelist.Parent do
+		task.wait(10)
+		
+		if not isChecking then
+			addConsoleLog("⟳ Auto-check: Verifying whitelist status...", Color3.fromRGB(100, 150, 200))
+			
+			local result = checkWhitelist(addConsoleLog)
+			updateStatus(result)
+			
+			if result.success then
+				addConsoleLog("✓ Auto-check: Whitelist verified! Loading script...", Color3.fromRGB(100, 255, 150))
+				task.wait(1)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+				trigon.TrigonWhitelist:Destroy()
+				break
+			else
+				addConsoleLog("○ Auto-check: Still not whitelisted", Color3.fromRGB(200, 150, 100))
+			end
+		end
+	end
+end)
 end
