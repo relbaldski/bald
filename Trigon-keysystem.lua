@@ -443,7 +443,7 @@ else
 	trigon.HwidDisplay.TextSize = 10
 	trigon.HwidDisplay.Size = UDim2.new(0.910448, 0, 0.0829016, 0)
 	trigon.HwidDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
-	trigon.HwidDisplay.Text = "aaaaaaaaaaaaaaa"
+	trigon.HwidDisplay.Text = getHwid() or "HWID Not found!"
 	trigon.HwidDisplay.Name = "HwidDisplay"
 	trigon.HwidDisplay.ClearTextOnFocus = false
 	trigon.HwidDisplay.Parent = trigon.LeftPanel
