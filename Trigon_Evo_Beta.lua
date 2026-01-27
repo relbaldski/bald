@@ -6601,7 +6601,7 @@ task.spawn(function()
 	sortAscButton = FilterPanel.OrderBy.Frame2.ASC
 	sortDescButton = FilterPanel.OrderBy.Frame2.DESC
 	
-	baseURL = "https://rscripts.net/api/scripts"
+	baseURL = "https://rscripts.net/api/v2/scripts"
 	_G.current_Url = ""
 	
 	function Search()
@@ -8561,7 +8561,7 @@ task.spawn(function()
 	
 	_G.load_rs_scripts = function(params)
 		_G.clearScriptContainer()
-		url = params or "https://rscripts.net/api/scripts?page=1&orderBy=date&sort=desc"
+		url = params or "https://rscripts.net/api/v2/scripts?page=1&orderBy=date&sort=desc"
 		print("Searching: "..url)
 		data = _G.Trigon and HttpService:JSONDecode(game:HttpGet(url)) or HttpService:JSONDecode(dataContainer.Value)
 		repeat wait() until data ~= "x"
