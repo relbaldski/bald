@@ -6972,8 +6972,8 @@ task.spawn(function()
 	local deletefolderX = clonefunction(arceus.deletearceusfolder)
 	local readfileX = clonefunction(arceus.readarceusfile)
 	
-	if isfolderX("/Autoexec") then
-		autoexe_files = listfilesX("/Autoexec")
+	if isfolderX("Autoexec") then
+		autoexe_files = listfilesX("Autoexec")
 		for _, file in pairs(autoexe_files) do
 			if isfileX(file) then
 				executecode(readfileX(file))
@@ -7098,7 +7098,7 @@ task.spawn(function()
 	
 	
 	deleteFFbtn.Activated:Connect(function()	
-		if current_file == "" and (current_folder == "" or current_folder == "/Autoexec" or current_folder == "/Script Hub" or current_folder == "/Configs" or current_folder == "/Workspace") then
+		if current_file == "" and (current_folder == "" or current_folder == "Autoexec" or current_folder == "Script Hub" or current_folder == "Configs" or current_folder == "Workspace") then
 			_G.popup("You are not allowed to delete: "..tostring(current_folder)) return
 		end
 		if current_file == "" then 
@@ -7115,7 +7115,7 @@ task.spawn(function()
 	end)
 	
 	newFile.Activated:Connect(function()
-		if current_folder == "" or current_folder == "/Autoexec"then
+		if current_folder == "" or current_folder == "Autoexec"then
 			_G.popup("You are not allowed to create file in here, please add it manaually.") return
 		end
 		_G.popup("Confirm if you want to create a new file with contents pasted from your \"CLIPBOARD\": "..tostring(current_folder).."/", function(inputText)
@@ -7126,7 +7126,7 @@ task.spawn(function()
 	end)
 	
 	newFolder.Activated:Connect(function()
-		if current_folder == "" or current_folder == "/Autoexec"then
+		if current_folder == "" or current_folder == "Autoexec"then
 			_G.popup("You are not allowed to create Folder in AUTOEXEC, please add it manaually.") return
 		end
 		_G.popup("Confirm if you want to proceed with creating a new folder at: "..tostring(current_folder).."/", function(inputText)
