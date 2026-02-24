@@ -2,184 +2,140 @@ local cloneref = cloneref or function(o) return o end
 local HttpService = cloneref(game:GetService("HttpService"))
 local gethui = gethui or function() return cloneref(game:GetService("CoreGui")) end
 
-local function getHwid()
-	local hwid = gethwid()
-	return tostring(hwid)
+local hwid = gethwid and gethwid()
+if hwid and type(hwid) == "userdata" then
+    hwid = tostring(hwid)
+end
+
+local http_request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+
+local hasLoaded = false
+
+
+local NEBULAUTH_BASE_URL = "https://api.nebulauth.com"
+local NEBULAUTH_API_TOKEN = "mk_at_HL1rO6wsqNxdYcpguj1TSbyIklCfi_zmragsQ9pUrsM"
+
+local function getSavedKey()
+    local success, res = pcall(function() return readfile("TrigonEvo_Key.txt") end)
+    if success and res then return res:gsub("%s+", "") end
+    return ""
+end
+
+local function saveKey(key)
+    pcall(function() writefile("TrigonEvo_Key.txt", key) end)
 end
 
 local function getKeylink()
-	return "https://auth.trigonevo.com/whitelist?hwid=" .. getHwid() .. "&os=android"
+	return "https://trigonevo.com/auth/android/"
 end
 
-local function checkWhitelist(logFunc)
+local function checkWhitelist(key, logFunc)
 	logFunc = logFunc or function() end 
 
-	local hwid = getHwid()
-	local primaryUrl = "https://auth.trigonevo.com/api/verify?hwid=" .. hwid
-	local fallbackUrl = "https://yxxcattrqpkpztxbasae.supabase.co/functions/v1/trigon-database?hwid=" .. hwid
+    if not key or key == "" then
+        return {
+			success = false,
+			message = "No Key Provided",
+			details = "Please enter a valid key.",
+			code = "NO_KEY"
+		}
+    end
 
-	--primary API
+	local body_obj = {
+		key = key,
+		requestId = HttpService:GenerateGUID(false),
+	}
+	local body_string = HttpService:JSONEncode(body_obj)
+
+	local headers = {
+		["Content-Type"] = "application/json",
+		["Authorization"] = "Bearer " .. NEBULAUTH_API_TOKEN,
+	}
+    if hwid and hwid ~= "" then
+        headers["X-Hwid"] = tostring(hwid)
+    end
+
 	local success, response = pcall(function()
-		return request({
-			Url = primaryUrl,
-			Method = "GET"
+		return http_request({
+			Url = NEBULAUTH_BASE_URL .. "/api/v1/keys/verify",
+			Method = "POST",
+			Headers = headers,
+			Body = body_string
 		})
 	end)
 
-	local shouldTryFallback = false
-	local primaryError = ""
-
-	-- Check fallback
 	if not success then
-		-- Primary request failed
-		shouldTryFallback = true
-		primaryError = tostring(response)
-		logFunc("✗ Primary API connection failed", Color3.fromRGB(255, 100, 100))
+		local primaryError = tostring(response)
+		logFunc("✗ API connection failed", Color3.fromRGB(255, 100, 100))
 		logFunc("  Error: " .. primaryError, Color3.fromRGB(180, 180, 180))
-	elseif not response or not response.Body or response.Body == "" then
-		-- Primary returned empty
-		shouldTryFallback = true
-		primaryError = "Empty response from primary server"
-		logFunc("⚠ Primary API returned empty response", Color3.fromRGB(255, 200, 100))
-	else
-		-- Primary parse body
-		local parseSuccess, data = pcall(function()
-			return HttpService:JSONDecode(response.Body)
-		end)
-
-		if not parseSuccess then
-			-- Primary unparseable JSON
-			shouldTryFallback = true
-			primaryError = tostring(data)
-			logFunc("⚠ Primary API returned invalid JSON", Color3.fromRGB(255, 200, 100))
-			logFunc("  Error: " .. primaryError, Color3.fromRGB(180, 180, 180))
-		else
-			-- valid JSON
-			logFunc("✓ Primary API responded successfully", Color3.fromRGB(100, 255, 150))
-			shouldTryFallback = false
-		end
+        return {
+			success = false,
+			message = "Connection Error",
+			details = "API is unreachable. " .. primaryError,
+			code = "CONNECTION_FAILED"
+		}
 	end
 
-	-- Try fallback API
-	if shouldTryFallback then
-		logFunc("→ Switching to fallback API...", Color3.fromRGB(100, 200, 255))
-
-		success, response = pcall(function()
-			return request({
-				Url = fallbackUrl,
-				Method = "GET",
-				Headers = {
-					["Authorization"] = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl4eGNhdHRycXBrcHp0eGJhc2FlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNjU0MjgsImV4cCI6MjA3Njg0MTQyOH0.lx7mwjkzCjJxw_ee3wk-0PwQ43OPmxpUDu3ZO8VgbiQ",
-					["Content-Type"] = "application/json"
-				}
-			})
-		end)
-
-		if not success then
-			-- Both APIs failed
-			local errorMsg = tostring(response)
-			logFunc("✗ Fallback API also failed", Color3.fromRGB(255, 100, 100))
-			logFunc("  Error: " .. errorMsg, Color3.fromRGB(180, 180, 180))
-			return {
-				success = false,
-				message = "Connection Error",
-				details = "Both primary and fallback APIs are unreachable. Primary: " .. primaryError .. " | Fallback: " .. errorMsg,
-				code = "CONNECTION_FAILED",
-				usedFallback = false
-			}
-		end
-
-		-- Fallback succeeded
-		logFunc("✓ Fallback API connected successfully", Color3.fromRGB(100, 255, 150))
-	end
-
-	-- Check if response is valid
 	if not response or not response.Body or response.Body == "" then
+		logFunc("⚠ API returned empty response", Color3.fromRGB(255, 200, 100))
 		return {
 			success = false,
 			message = "Empty Response",
 			details = "Server returned an empty response",
-			code = "EMPTY_RESPONSE",
-			usedFallback = shouldTryFallback
+			code = "EMPTY_RESPONSE"
 		}
 	end
 
-	-- Try to parse JSON
 	local parseSuccess, data = pcall(function()
 		return HttpService:JSONDecode(response.Body)
 	end)
 
 	if not parseSuccess then
 		local parseError = tostring(data)
+		logFunc("⚠ API returned invalid JSON", Color3.fromRGB(255, 200, 100))
+		logFunc("  Error: " .. parseError, Color3.fromRGB(180, 180, 180))
 		return {
 			success = false,
 			message = "Parse Error",
 			details = parseError,
-			code = "PARSE_ERROR",
-			usedFallback = shouldTryFallback
+			code = "PARSE_ERROR"
 		}
 	end
 
-	-- all API responses
-	if data.success == true and data.valid == true then
-		-- sec 1: Valid
+	if data.valid == true then
+		logFunc("✓ API responded successfully", Color3.fromRGB(100, 255, 150))
 		return {
 			success = true,
-			message = "HWID Verified",
-			details = "Expires: " .. tostring(data.expires_at) .. " | " .. string.format("%.1f", data.remaining_hours) .. " hours remaining",
-			licenseKey = data.license_key,
-			expiresAt = data.expires_at,
-			remainingHours = data.remaining_hours,
-			os = data.os,
-			createdAt = data.created_at,
-			data = data,
-			usedFallback = shouldTryFallback
-		}
-	elseif data.success == false and data.valid == false then
-		-- sec 2: Invalid / active license (first time user)
-		local errorMsg = data.error or "No active license found"
-		local errorCode = data.code or "NO_LICENSE_FOUND"
-
-		return {
-			success = false,
-			message = "Not Whitelisted",
-			details = errorMsg,
-			code = errorCode,
-			hwid = data.hwid,
-			data = data,
-			usedFallback = shouldTryFallback
-		}
-	elseif data.success == false and data.code then
-		-- sec 3: Invalid format or other errors
-		local errorMsg = data.error or "Invalid request"
-		local errorCode = data.code or "UNKNOWN_ERROR"
-
-		return {
-			success = false,
-			message = "Request Error",
-			details = errorMsg,
-			code = errorCode,
-			data = data,
-			usedFallback = shouldTryFallback
+			message = "Key Verified",
+			details = "Expires: " .. (data.validUntil or "Never"),
+			licenseKey = key,
+			data = data
 		}
 	else
-		-- Unexpected response
+		local errorMsg = data.reason or "Invalid Key"
 		return {
 			success = false,
-			message = "Unexpected Response",
-			details = "Server returned an unexpected response format",
-			code = "UNEXPECTED_FORMAT",
-			data = data,
-			usedFallback = shouldTryFallback
+			message = "Verification Failed",
+			details = errorMsg,
+			code = data.reason
 		}
 	end
 end
 
-local initialCheck = checkWhitelist()
+local savedKey = getSavedKey()
+local initialCheck = nil
+if savedKey ~= "" then
+    initialCheck = checkWhitelist(savedKey)
+else
+    initialCheck = { success = false, message = "No saved key" }
+end
 
 if initialCheck.success then
 	-- verified
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+	if not hasLoaded then
+		hasLoaded = true
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+	end
 	return
 else
 
@@ -213,20 +169,25 @@ else
 		UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
 		StatusDetails = Instance.new("TextLabel"),
 		UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
-		HwidLabel = Instance.new("TextLabel"),
+		KeyLabel = Instance.new("TextLabel"),
 		UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
-		HwidDisplay = Instance.new("TextBox"),
+		KeyInput = Instance.new("Frame"),
 		UICorner_6 = Instance.new("UICorner"),
 		UIStroke_2 = Instance.new("UIStroke"),
+		KeyInputTextBox = Instance.new("TextBox"),
 		UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
+		PasteButton = Instance.new("ImageButton"),
+		PasteButtonImage = Instance.new("ImageLabel"),
+		PasteCorner = Instance.new("UICorner"),
+		PasteStroke = Instance.new("UIStroke"),
 		ConnectionInfoContainer = Instance.new("Frame"),
 		UICorner_7 = Instance.new("UICorner"),
 		UIStroke_3 = Instance.new("UIStroke"),
 		ConnectionTitle = Instance.new("TextLabel"),
 		UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
-		PrimaryLabel = Instance.new("TextLabel"),
+		ApiLabel = Instance.new("TextLabel"),
 		UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
-		PrimaryStatus = Instance.new("TextLabel"),
+		ApiStatus = Instance.new("TextLabel"),
 		UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
 		FallbackLabel = Instance.new("TextLabel"),
 		UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
@@ -417,45 +378,80 @@ else
 	trigon.UITextSizeConstraint_3.MaxTextSize = 11
 	trigon.UITextSizeConstraint_3.Parent = trigon.StatusDetails
 
-	trigon.HwidLabel.TextWrapped = true
-	trigon.HwidLabel.TextScaled = true
-	trigon.HwidLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	trigon.HwidLabel.Name = "HwidLabel"
-	trigon.HwidLabel.Position = UDim2.new(0.0447761, 0, 0.313471, 0)
-	trigon.HwidLabel.TextSize = 11
-	trigon.HwidLabel.Size = UDim2.new(0.910448, 0, 0.0466321, 0)
-	trigon.HwidLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
-	trigon.HwidLabel.Text = "Hardware ID"
-	trigon.HwidLabel.BackgroundTransparency = 1
-	trigon.HwidLabel.TextXAlignment = Enum.TextXAlignment.Left
-	trigon.HwidLabel.Parent = trigon.LeftPanel
+	trigon.KeyLabel.TextWrapped = true
+	trigon.KeyLabel.TextScaled = true
+	trigon.KeyLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.KeyLabel.Name = "HwidLabel"
+	trigon.KeyLabel.Position = UDim2.new(0.0447761, 0, 0.313471, 0)
+	trigon.KeyLabel.TextSize = 11
+	trigon.KeyLabel.Size = UDim2.new(0.910448, 0, 0.0466321, 0)
+	trigon.KeyLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
+	trigon.KeyLabel.Text = "License Key"
+	trigon.KeyLabel.BackgroundTransparency = 1
+	trigon.KeyLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.KeyLabel.Parent = trigon.LeftPanel
 
 	trigon.UITextSizeConstraint_4.MaxTextSize = 11
-	trigon.UITextSizeConstraint_4.Parent = trigon.HwidLabel
+	trigon.UITextSizeConstraint_4.Parent = trigon.KeyLabel
 
-	trigon.HwidDisplay.TextWrapped = true
-	trigon.HwidDisplay.TextEditable = false
-	trigon.HwidDisplay.Position = UDim2.new(0.0447761, 0, 0.365285, 0)
-	trigon.HwidDisplay.CursorPosition = -1
-	trigon.HwidDisplay.TextScaled = true
-	trigon.HwidDisplay.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
-	trigon.HwidDisplay.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	trigon.HwidDisplay.TextSize = 10
-	trigon.HwidDisplay.Size = UDim2.new(0.910448, 0, 0.0829016, 0)
-	trigon.HwidDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
-	trigon.HwidDisplay.Text = getHwid() or "HWID Not found!"
-	trigon.HwidDisplay.Name = "HwidDisplay"
-	trigon.HwidDisplay.ClearTextOnFocus = false
-	trigon.HwidDisplay.Parent = trigon.LeftPanel
+	trigon.KeyInput.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	trigon.KeyInput.Position = UDim2.new(0.0447761, 0, 0.365285, 0)
+	trigon.KeyInput.Size = UDim2.new(0.75, 0, 0.0829016, 0)
+	trigon.KeyInput.Name = "HwidContainer"
+	trigon.KeyInput.Parent = trigon.LeftPanel
 
 	trigon.UICorner_6.CornerRadius = UDim.new(0, 6)
-	trigon.UICorner_6.Parent = trigon.HwidDisplay
+	trigon.UICorner_6.Parent = trigon.KeyInput
 
 	trigon.UIStroke_2.Color = Color3.fromRGB(50, 60, 80)
-	trigon.UIStroke_2.Parent = trigon.HwidDisplay
+	trigon.UIStroke_2.Parent = trigon.KeyInput
 
-	trigon.UITextSizeConstraint_5.MaxTextSize = 10
-	trigon.UITextSizeConstraint_5.Parent = trigon.HwidDisplay
+	-- The actual TextBox that user types in
+	local KeyRealInput = Instance.new("TextBox")
+	KeyRealInput.Name = "HwidDisplay"
+	KeyRealInput.BackgroundTransparency = 1
+	KeyRealInput.Size = UDim2.new(1, -12, 1, 0)
+	KeyRealInput.Position = UDim2.new(0, 6, 0, 0)
+	KeyRealInput.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	KeyRealInput.TextSize = 10
+	KeyRealInput.TextColor3 = Color3.fromRGB(200, 200, 200)
+	KeyRealInput.Text = savedKey
+	KeyRealInput.PlaceholderText = " "
+	KeyRealInput.TextEditable = true
+	KeyRealInput.ClearTextOnFocus = false
+	KeyRealInput.TextXAlignment = Enum.TextXAlignment.Left
+	KeyRealInput.TextWrapped = true
+	KeyRealInput.TextScaled = true
+	KeyRealInput.Parent = trigon.KeyInput
+
+	-- Replace internal references from the frame to the actual text input box
+	trigon.KeyInputInner = KeyRealInput
+
+	-- Paste Button Wrapper
+	trigon.PasteButton.Name = "PasteButton"
+	trigon.PasteButton.Position = UDim2.new(0.81, 0, 0.365285, 0)
+	trigon.PasteButton.Size = UDim2.new(0.145, 0, 0.0829016, 0)
+	trigon.PasteButton.BackgroundColor3 = Color3.fromRGB(35, 40, 50)
+	trigon.PasteButton.Parent = trigon.LeftPanel
+
+	trigon.PasteCorner.CornerRadius = UDim.new(0, 6)
+	trigon.PasteCorner.Parent = trigon.PasteButton
+
+	trigon.PasteStroke.Color = Color3.fromRGB(50, 60, 80)
+	trigon.PasteStroke.Parent = trigon.PasteButton
+
+	-- Paste Button Icon (matching console size)
+	local pasteIcon = Instance.new("ImageLabel")
+	pasteIcon.Name = "icon"
+	pasteIcon.BorderSizePixel = 0
+	pasteIcon.BackgroundTransparency = 1
+	pasteIcon.AnchorPoint = Vector2.new(0.5, 0.5)
+	pasteIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
+	pasteIcon.Size = UDim2.new(0, 16, 0, 16)
+	pasteIcon.Image = "rbxassetid://13846942895"
+	pasteIcon.ImageColor3 = Color3.fromRGB(200, 200, 200)
+	pasteIcon.ScaleType = Enum.ScaleType.Fit
+	pasteIcon.Parent = trigon.PasteButton
 
 	trigon.ConnectionInfoContainer.BorderSizePixel = 0
 	trigon.ConnectionInfoContainer.BackgroundColor3 = Color3.fromRGB(30, 35, 45)
@@ -486,34 +482,34 @@ else
 	trigon.UITextSizeConstraint_6.MaxTextSize = 10
 	trigon.UITextSizeConstraint_6.Parent = trigon.ConnectionTitle
 
-	trigon.PrimaryLabel.TextWrapped = true
-	trigon.PrimaryLabel.TextScaled = true
-	trigon.PrimaryLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	trigon.PrimaryLabel.Name = "PrimaryLabel"
-	trigon.PrimaryLabel.Position = UDim2.new(0.0327869, 0, 0.323512, 0)
-	trigon.PrimaryLabel.TextSize = 9
-	trigon.PrimaryLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
-	trigon.PrimaryLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	trigon.PrimaryLabel.Text = "Primary:"
-	trigon.PrimaryLabel.BackgroundTransparency = 1
-	trigon.PrimaryLabel.TextXAlignment = Enum.TextXAlignment.Left
-	trigon.PrimaryLabel.Parent = trigon.ConnectionInfoContainer
+	trigon.ApiLabel.TextWrapped = true
+	trigon.ApiLabel.TextScaled = true
+	trigon.ApiLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	trigon.ApiLabel.Name = "PrimaryLabel"
+	trigon.ApiLabel.Position = UDim2.new(0.0327869, 0, 0.323512, 0)
+	trigon.ApiLabel.TextSize = 9
+	trigon.ApiLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.ApiLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+	trigon.ApiLabel.Text = "Status:"
+	trigon.ApiLabel.BackgroundTransparency = 1
+	trigon.ApiLabel.TextXAlignment = Enum.TextXAlignment.Left
+	trigon.ApiLabel.Parent = trigon.ConnectionInfoContainer
 
 	trigon.UITextSizeConstraint_7.MaxTextSize = 9
 	trigon.UITextSizeConstraint_7.Parent = trigon.PrimaryLabel
 
-	trigon.PrimaryStatus.TextWrapped = true
-	trigon.PrimaryStatus.TextScaled = true
-	trigon.PrimaryStatus.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	trigon.PrimaryStatus.Name = "PrimaryStatus"
-	trigon.PrimaryStatus.Position = UDim2.new(0.5, 0, 0.323512, 0)
-	trigon.PrimaryStatus.TextSize = 9
-	trigon.PrimaryStatus.Size = UDim2.new(0.467213, 0, 0.168789, 0)
-	trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 200, 100)
-	trigon.PrimaryStatus.Text = "Checking..."
-	trigon.PrimaryStatus.BackgroundTransparency = 1
-	trigon.PrimaryStatus.TextXAlignment = Enum.TextXAlignment.Right
-	trigon.PrimaryStatus.Parent = trigon.ConnectionInfoContainer
+	trigon.ApiStatus.TextWrapped = true
+	trigon.ApiStatus.TextScaled = true
+	trigon.ApiStatus.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	trigon.ApiStatus.Name = "PrimaryStatus"
+	trigon.ApiStatus.Position = UDim2.new(0.5, 0, 0.323512, 0)
+	trigon.ApiStatus.TextSize = 9
+	trigon.ApiStatus.Size = UDim2.new(0.467213, 0, 0.168789, 0)
+	trigon.ApiStatus.TextColor3 = Color3.fromRGB(255, 200, 100)
+	trigon.ApiStatus.Text = "Checking..."
+	trigon.ApiStatus.BackgroundTransparency = 1
+	trigon.ApiStatus.TextXAlignment = Enum.TextXAlignment.Right
+	trigon.ApiStatus.Parent = trigon.ConnectionInfoContainer
 
 	trigon.UITextSizeConstraint_8.MaxTextSize = 9
 	trigon.UITextSizeConstraint_8.Parent = trigon.PrimaryStatus
@@ -526,7 +522,7 @@ else
 	trigon.FallbackLabel.TextSize = 9
 	trigon.FallbackLabel.Size = UDim2.new(0.467213, 0, 0.168789, 0)
 	trigon.FallbackLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-	trigon.FallbackLabel.Text = "Fallback:"
+	trigon.FallbackLabel.Visible = false
 	trigon.FallbackLabel.BackgroundTransparency = 1
 	trigon.FallbackLabel.TextXAlignment = Enum.TextXAlignment.Left
 	trigon.FallbackLabel.Parent = trigon.ConnectionInfoContainer
@@ -542,7 +538,7 @@ else
 	trigon.FallbackStatus.TextSize = 9
 	trigon.FallbackStatus.Size = UDim2.new(0.467213, 0, 0.168789, 0)
 	trigon.FallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
-	trigon.FallbackStatus.Text = "Standby"
+	trigon.FallbackStatus.Visible = false
 	trigon.FallbackStatus.BackgroundTransparency = 1
 	trigon.FallbackStatus.TextXAlignment = Enum.TextXAlignment.Right
 	trigon.FallbackStatus.Parent = trigon.ConnectionInfoContainer
@@ -694,30 +690,15 @@ else
 	end
 
 
-	local function updateStatus(result)
-		-- Update last check time
-		
+		local function updateStatus(result)
 		trigon.LastCheckTime.Text = os.date("%H:%M:%S")
 
-		-- server status 
-		if result.usedFallback then
-			-- fallback 
-			trigon.PrimaryStatus.Text = "Failed"
-			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
-			trigon.FallbackStatus.Text = "Active"
-			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
-		elseif result.code == "CONNECTION_FAILED" then
-			-- Both failed
-			trigon.PrimaryStatus.Text = "Offline"
-			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
-			trigon.FallbackStatus.Text = "Offline"
-			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
+		if result.code == "CONNECTION_FAILED" then
+			trigon.ApiStatus.Text = "Offline"
+			trigon.ApiStatus.TextColor3 = Color3.fromRGB(255, 100, 100)
 		else
-			-- Primary work
-			trigon.PrimaryStatus.Text = "Online"
-			trigon.PrimaryStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
-			trigon.FallbackStatus.Text = "Standby"
-			trigon.FallbackStatus.TextColor3 = Color3.fromRGB(150, 150, 150)
+			trigon.ApiStatus.Text = "Online"
+			trigon.ApiStatus.TextColor3 = Color3.fromRGB(100, 255, 150)
 		end
 
 		if result.success then
@@ -726,7 +707,7 @@ else
 			trigon.StatusDetails.Text = result.details
 			trigon.StatusIndicator.BackgroundColor3 = Color3.fromRGB(20, 60, 40)
 			trigon.StatusIcon.BackgroundColor3 = Color3.fromRGB(100, 255, 150)
-			addConsoleLog("✓ Whitelist verified successfully!", Color3.fromRGB(100, 255, 150))
+			addConsoleLog("✓ Key verified successfully!", Color3.fromRGB(100, 255, 150))
 			addConsoleLog("  " .. result.details, Color3.fromRGB(150, 150, 150))
 		else
 			trigon.StatusText.Text = result.message
@@ -758,20 +739,31 @@ else
 	trigon.VerifyButton.Activated:Connect(function()
 		if isChecking then return end
 
+		local currentKey = trigon.KeyInputInner.Text:gsub("%s+", "")
+		
+		if currentKey == "" then
+			addConsoleLog("✗ Please enter a key first!", Color3.fromRGB(255, 100, 100))
+			return
+		end
+
 		isChecking = true
 		trigon.VerifyButton.Text = "Checking..."
 		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
-		addConsoleLog("⟳ Manual whitelist check initiated", Color3.fromRGB(100, 200, 255))
+		addConsoleLog("⟳ Manual key check initiated", Color3.fromRGB(100, 200, 255))
 
-		local result = checkWhitelist(addConsoleLog)
+		local result = checkWhitelist(currentKey, addConsoleLog)
 		updateStatus(result)
 
 		if result.success then
+			saveKey(currentKey)
 			addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
 			addConsoleLog("✓ Access granted! Closing in 2 seconds...", Color3.fromRGB(100, 255, 150))
 			task.wait(2)
 			
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+			if not hasLoaded then
+				hasLoaded = true
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+			end
 
 			trigon.TrigonWhitelist:Destroy()
 		else
@@ -792,39 +784,65 @@ else
 	-- Initial log
 	addConsoleLog("[*] Trigon Whitelist System v1.0", Color3.fromRGB(150, 150, 255))
 	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
-	addConsoleLog("[#] HWID: " .. getHwid(), Color3.fromRGB(150, 150, 150))
+	addConsoleLog("[#] HWID: " .. tostring(hwid or "UNKNOWN"), Color3.fromRGB(150, 150, 150))
 	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
-	addConsoleLog("⟳ Performing initial whitelist check...", Color3.fromRGB(200, 200, 100))
-	addConsoleLog("→ Primary endpoint: Default gateway", Color3.fromRGB(150, 150, 150))
-	addConsoleLog("→ Fallback endpoint: Alternate gateway", Color3.fromRGB(150, 150, 150))
-	addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
-
-	updateStatus(initialCheck)
+	
+	if savedKey ~= "" then
+		addConsoleLog("⟳ Performing initial key check...", Color3.fromRGB(200, 200, 100))
+		addConsoleLog("→ Key: " .. savedKey:sub(1, 4) .. "***", Color3.fromRGB(150, 150, 150))
+		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		updateStatus(initialCheck)
+	else
+		addConsoleLog("⚠ No saved key found. Please enter your key.", Color3.fromRGB(255, 200, 100))
+		addConsoleLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", Color3.fromRGB(80, 80, 80))
+		updateStatus({success=false, message="Not Whitelisted", details="Please enter a valid key.", code="NO_KEY"})
+	end
 
 	if initialCheck.success then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+		if not hasLoaded then
+			hasLoaded = true
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+		end
 		trigon.TrigonWhitelist:Destroy()
 	end
+
+	trigon.PasteButton.Activated:Connect(function()
+		local success, clipText = pcall(function()
+			return (getclipboard and getclipboard()) or (toclipboard and "") or ""
+		end)
+		
+		if success and clipText and clipText ~= "" then
+			trigon.KeyInputInner.Text = clipText
+		else
+			addConsoleLog("⚠ Could not read clipboard", Color3.fromRGB(255, 200, 100))
+		end
+	end)
 
     task.spawn(function()
 	while trigon.TrigonWhitelist and trigon.TrigonWhitelist.Parent do
 		task.wait(10)
 		
-		if not isChecking then
-			addConsoleLog("⟳ Auto-check: Verifying whitelist status...", Color3.fromRGB(100, 150, 200))
-			
-			local result = checkWhitelist(addConsoleLog)
-			updateStatus(result)
-			
-			if result.success then
-				addConsoleLog("✓ Auto-check: Whitelist verified! Loading script...", Color3.fromRGB(100, 255, 150))
-				task.wait(1)
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
-				trigon.TrigonWhitelist:Destroy()
-				break
-			else
-				addConsoleLog("○ Auto-check: Still not whitelisted", Color3.fromRGB(200, 150, 100))
-			end
+        if not isChecking then
+            local currentKey = trigon.KeyInputInner.Text:gsub("%s+", "")
+            if currentKey ~= "" then
+                addConsoleLog("⟳ Auto-check: Verifying key status...", Color3.fromRGB(100, 150, 200))		
+                local result = checkWhitelist(currentKey, addConsoleLog)
+                updateStatus(result)
+                
+                if result.success then
+                    saveKey(currentKey)
+                    addConsoleLog("✓ Auto-check: Key verified! Loading script...", Color3.fromRGB(100, 255, 150))
+                    task.wait(1)
+                    if not hasLoaded then
+                        hasLoaded = true
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/relbaldski/bald/refs/heads/main/Trigon_Evo_Beta.lua",true))()
+                    end
+                    trigon.TrigonWhitelist:Destroy()
+                    break
+                else
+                    addConsoleLog("○ Auto-check: Invalid key", Color3.fromRGB(200, 150, 100))
+                end
+            end
 		end
 	end
 end)
